@@ -1,3 +1,3 @@
 # Adela Seo
 
-- https://hdraws.com
+- https://adelaseo.com
