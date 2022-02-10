@@ -1,3 +1,3 @@
 # Adela Seo
 
-- https://adelaseo.com
+- https://adelaseo.com/aau/wnm608
