@@ -1,2 +1,11 @@
-# wnm608_202190_ol2
-WNM 608 OL2 (Spring 2022)
+Mahsa Mirchenari
+
+
+WNM608 Project Folder
+
+WNM 608 OL1 -Spring 2022
+
+GitHub and Sublime Text
+
+Assignment: Push to GitHub
+
