@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> CSS Styleguide </title>
+
+	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+			<a href="index.html">
+				<img src="../img/whitelogo.png" alt="logo">
+			</a>
+			</div>
+
+			<div class="flex-stretch"></div>
+			<nav>
+				<ul class="nav-division">	
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="shop.html">Shop</a></li>
+				</ul>
+			</nav>
+
+			<ul class="cta flex-none">
+				<a class="cart" href="#"><img src="../img/shoppingcart.png" class="cart_img" style="width:25px; height:22px;"></a>
+			</ul>
+			<ul class="ctatwo flex">
+				<a class="login" href="#"><button>Log In</button></a>
+			</ul>
+		</div>
+	</header>
+	
+
+	<h2 class="styletable"> Table of Contents</h2>
+		<div class="styleguidecontainer" id="tableofcontents">
+				<nav class="nav">
+				<ul>
+						<li><a href="#typography">Typography</a></li>
+					<ul>
+						<li><a href="#Headings">Headings</a></li>
+						<li><a href="#Paragraphs">Paragraphs</a></li>
+					</ul>
+					<li><a href="#cards">Cards</a></li>
+					<li><a href="#viewwindow">View Window</a></li>
+					<li><a href="#navigation">Navigation</a></li>
+				</ul>
+				</nav>
+	</div>
+
+	<div class="container" id="typography">
+		<h2> Typography</h2>
+
+		<div class="card soft" id="headings">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+		<div class="card soft" id="Paragraphs">
+			<h3>Paragraphs</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum et possimus perspiciatis, minus hic soluta odio nostrum officia aut. Sequi vitae quidem veritatis veniam excepturi similique consectetur dolores voluptatem.</p>
+			<p>Qui rem, aliquam natus est harum nisi dolores nihil ipsam cupiditate quod sunt rerum voluptas? Placeat cumque dicta illum facilis aut soluta excepturi atque, sit quas vitae fuga odit, facere.</p>
+			<p>Laboriosam, repellendus natus sit aut consequatur sunt! Fugit, doloremque! Fugit incidunt, vero placeat, voluptates soluta magni velit accusantium, itaque voluptatum nemo esse ullam, cum ratione provident cumque quo ipsam sed.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<h2>Cards</h2>
+
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<div class="card">Card</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card soft">Card Soft</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card hard">Card Hard</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card flat">Card Flat</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card dark">Card Dark</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card medium">Card Medium</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<h2>View Window</h2>
+	</div>
+
+	<div class="container">
+		<h2>Navigations</h2>
+
+		<script>
+		const makeNav = (Classes='') => {
+			const links = ['home','store','about'];
+			let ran = Math.floor(Math.random()*links.length);
+
+		document.write(`
+		<div>
+			<nav class="${classes}">
+				<ul>
+				${links.reduce((r,o,i)=>{
+					return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+				},'')}
+				</ul>
+			</nav>
+		</div>
+		`);
+		}
+		</script>
+
+		<div class="styleguidecontainer soft">
+			<h3>Basic Nav</h3>
+
+			<nav class="nav">
+				<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+				</ul>
+			</nav>			
+		</div>
+
+	<div class="styleguidecard soft">
+			<h3>Flex Nav</h3>
+
+			<!-- nav.nav>ul>li*4>a[href=#}>{Link $} -->
+			
+			<nav class="stylenav nav-flex">
+				<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="styleguidecard soft">
+			<h3>Stretch Nav</h3>
+
+			<!-- nav.nav>ul>li*4>a[href=#}>{Link $} -->
+			
+			<nav class="nav nav-stretch">
+				<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="styleguidecard soft">
+			<h3>Pills Nav</h3>
+
+			<!-- nav.nav>ul>li*4>a[href=#}>{Link $} -->
+			
+			<nav class="stylenav nav-pills">
+				<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="styleguidecard soft">
+			<h3>Crumbs Nav</h3>
+
+			<!-- nav.nav>ul>li*4>a[href=#}>{Link $} -->
+			
+			<nav class="nav nav-crumbs">
+				<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+
+
+
+
+	<h2 id="figures"> Figures </h2>
+
+		<div class="card">
+			<h3>Basic Figure</h3>
+
+			<figure class="figure">
+				<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				<figcaption>Product</figcaption>
+			</figure>
+		</div>
+
+	<h3>Basic Product</h3>
+		<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption>Product</figcaption>
+				    </figure>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption>Product</figcaption>
+					</figure>
+				</div>
+		
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption>Product</figcaption>
+				    </figure>
+				</div>
+		</div>
+
+
+		<h3>Product Grid</h3>
+
+		<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div>Product Name</div> 
+				    	<div>$3.99</div>
+				    </figcaption>
+				    </figure>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div>Product Name</div>
+				    	<div>$3.99</div>
+				    </figcaption>
+					</figure>
+				</div>
+		
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div>Product Name</div>
+				    	<div>$3.99</div>
+				    </figcaption>
+				    </figure>
+				</div>
+		</div>
+
+
+		<h3>Product Overlay</h3>
+
+		<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div class="caption-body">
+					    	<div>Product Name</div> 
+					    	<div>$3.99</div>
+				    	</div>
+				    </figcaption>
+				    </figure>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div class="caption-body">
+					    	<div>Product Name</div> 
+					    	<div>$3.99</div>
+				    	</div>
+				    </figcaption>
+					</figure>
+				</div>
+		
+
+				<div class="col-xs-12 col-md-4">
+					<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+				    <figcaption> 
+				    	<div class="caption-body">
+					    	<div>Product Name</div> 
+					    	<div>$3.99</div>
+				    	</div>
+				    </figcaption>
+				    </figure>
+				</div>
+		</div>
+
+
+		 <div class="container">
+		<div class="grid gap xs-small md-medium">
+			<div class="col-xs-6 col-md-3">
+				<div class="card">
+					<img src="https://via.placeholder.com/500" alt="" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card">
+					<img src="https://via.placeholder.com/500" alt="" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card">
+					<img src="https://via.placeholder.com/500" alt="" class="media-image">
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card">
+					<img src="https://via.placeholder.com/500" alt="" class="media-image">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="grid">
+			<div class="col-xs-4">column 4</div>
+			<div class="col-xs-4">column 4</div>
+		</div>
+	</div>
+</body>
+</html>

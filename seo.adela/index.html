@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Petcrew Company Website</title>
+	<title>Petcrew Website</title>
 
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-	</style>
+	<meta name="viewport" content="width=device-width">
 
+	
 
 	<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" type="text/css" href="css/storetheme.css">
 
 </head>
@@ -18,35 +18,49 @@
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
-				<h1> petcrew </h1>
+			<a href="index.html">
+				<img src="img/whitelogo.png" alt="logo">
+			</a>
 			</div>
 
 			<div class="flex-stretch"></div>
-				<nav class="flex-none nav">
-					<ul class="container display-flex">
-						<li><a href="#article1">About</a></li>
-						<li><a href="#article2">Newsletter</a></li>
-						<li><a href="#article3">Product</a></li>
-						<li><a href="#article4">Store</a></li>
-						<li><a href="#article5">Log In</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav>
+				<ul class="nav-division">	
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="shop.html">Shop</a></li>
+				</ul>
+			</nav>
 
-	</header>
-	
-	<div class="first">
-		<div class="view-window1" style="background-image:url('img/main.jpeg')">
-			</div>
-
-		<div class="slogan">
-			<p1>MAKING PET'S LIFE BETTER</p1>
-			<p>We make healthy and organic food for our pet.</p>
-			<p>Amet laborum rem repellendus a obcaecati, assumenda quis dolore quo, tenetur, dolor itaque odit, delectus temporibus reprehenderit odio quae similique quia? Ducimus commodi, unde et vel, tenetur saepe iusto nam officiis laborum, magnam, ipsam fugit dolore sed rem voluptatem.</p>
+			<ul class="cta flex-none">
+				<a class="cart" href="#"><img src="img/shoppingcart.png" class="cart_img" style="width:25px; height:22px;"></a>
+			</ul>
+			<ul class="ctatwo flex">
+				<a class="login" href="#"><button>Log In</button></a>
+			</ul>
 		</div>
+	</header>
+
+	<div class="mainslogan">
+		<img src="img/pinkdog.jpeg">
 	</div>
 
-	<div class="product">
+	<div class="intro_text">
+			<h1>MAKING PET'S LIFE BETTER</h1>
+			<p>We make healthy and organic food for our pet.</p>
+			<p>Amet laborum rem repellendus a obcaecati, </p>
+			<a href=""> More</a>
+	</div>
+
+	<h1 class="newpro">NEW PRODUCT</h1>
+	<div class="flex advertisement">
+		<img src="https://via.placeholder.com/900x800?text=product">
+		<img src="https://via.placeholder.com/500x800?text=product" alt="">
+	</div>
+
+	<h1 class="newpro"> BEST SELLERS </h1>
+
+	<div class="product flex">
 		<div class="box box1">
 			<img src="img/yellow2.jpg"> 
 		</div>
@@ -60,8 +74,12 @@
 		</div>
 	</div>
 
-
-	<div class="view-window2" style="background-image:url('img/petcrewryg1.jpg')"></div>
+	<div class="last">
+		<div class="loginbox">
+			<h1>Join us</h1>
+		</div>
+		<div class="view-window2" style="background-image:url('img/petcrewryg1.jpg')"></div>
+	</div>
 
 	<div class="container2 display-flex">
 		<article id="article4" class="article">
@@ -77,21 +95,23 @@
 				
 			</div>
 		</article>
-		<article id="article5" class="article">
-			<div class="display-flex flex-align-center">
-				<div class="flex-stretch">
-					<h2>Review</h2>
+	</div>
+
+		<div class="review">
+			<h2>Review</h2>
+			<div class="post">
+				<div class="reviewuser">
+					<img src="https://via.placeholder.com/500x800?text=product" alt="">
 				</div>
-			<div class="flex-none"><small>more→</small></div>
+				<div class="reviewname">Alex Kim</div>
+			</div>
+			<div class="reviewarticle">
+				<div class="reviewarticle_content">This is good</div>
+				<div class="date">Feb 12</div>
+			</div>
 		</div>
 
-			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquid praesentium perspiciatis atque, a adipisci amet provident corporis fuga saepe accusantium ea dolores illo minus natus maxime doloremque distinctio nam obcaecati aspernatur repudiandae repellendus hic placeat. Sint, veritatis delectus fugiat.</p>
-				<p>Aspernatur assumenda molestiae natus ducimus ea alias sint, amet in, dolorum voluptatem vero odio iusto vitae ipsam dolore cupiditate. Libero distinctio asperiores quis ut iste suscipit quasi eligendi consequatur perferendis sint omnis eum nihil, nam laborum animi tempora voluptatum itaque.</p>
-				
-			</div>
-		</article>
-	</div>
+		
 </body>
 </html>
 
