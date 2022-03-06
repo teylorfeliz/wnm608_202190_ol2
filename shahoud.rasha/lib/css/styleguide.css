@@ -10,45 +10,62 @@
 	--color-neutral-medium: #999;
 	--color-neutral-dark: #555;
 
-	--color-black: #000;
-	--color-white: #fff;
+	--color-main-light: #lightyellow;
+	--color-main-medium: #yellow;
+	--color-main-dark: #darkyellow;
+
 
 	--header-height:  3rem;
 	--spacing: 1rem;
 
-	--font-serif:  Georgia, "Times New Roman", serif;
-	--font-sans:  helvetica, arial, sans-serif;
+	
+	--color-palegold: #FDDE6C;
+	--color-marigold-yellow: #FBE870;
+	--color-black: #0F0F0F;
+	--color-white: #FEFCFF;
 }
 
 header{
-		background-color: var(--color-neutral-light);
+		background-color: var(--color-marigold-yellow);
 		opacity: 0.5;
+		height: 50px;
+}
+
+.title{
+	width: 10%;
+	margin-right: 10%;
+	margin-left: 40%;
+	font-size: 2.5em;
+	opacity: 100%;
 }
 
 .view-window{
-	height: 100vh;
+	height: 170vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+	background-position: top left;
+	background-attachment: scroll;
 }
 
 
 body{
 	margin: 0;
 	font-size: 100%;
-	font-family: var(--font-sans);
+	font-family: var(--Arial 12);
 
 }
 
-h1,
+h1{
+	font-family: var(--Aria 24 Bold);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6{
-	font-family: var(--font-serif);
+	font-family: var(--Arial 20 Bold);
 }
 
 
@@ -60,12 +77,11 @@ a{
 
 }
 
-a:hover{
-	text-decoration: underline;
-}
 
 
 /* LAYOUT CLASSES*/
+
+
 
 .container{
 	max-width: 1200px;
@@ -85,6 +101,14 @@ a:hover{
 .flex-align-center{align-items: center;}
 .flex-justify-center{justify-items: center;}
 
+/* Small Classes */
+
+.media-image{
+	max-width: 100%;
+	vertical-align: text-top;
+}
+
+
 
 
 /* COMPONANT CLASS */
@@ -96,6 +120,100 @@ a:hover{
 	padding-left: 0;
 }
 
+.nav a{
+	display: block;
+	padding: 0.2 em 0.5 em;
+
+}
+
+.nav a: hover {
+	background-color: var(--color-main-medium);
+	color: var(--color-white);
+	text-decoration: none;
+
+}
+
+
+.nav .active a{
+	background-color: var(--color-main-light);
+	color: inherit;
+	
+
+}
+
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul{
+	display: flex;
+
+}
+
+
+.nav-material li,
+.nav-stretch li{
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a{
+	border-radius:  2em;
+	padding: 0.5em 1em;
+}
+
+
+.nav-crumbs a{
+	display: inline-block;
+}
+
+
+
+.nav .crumbs .active a,
+.nav-crumbs a:hover { 
+	background-color: transparent;
+	color: inherit;
+	text-decoration: underline;
+}
+
+
+.nav-crumbs li:not(:first-child)::before { 
+	content: '/';
+}
+
+.nav-material a{
+	padding: 0.5em, 1em;
+	position: relative;
+}
+
+.nav-material a:hover{
+	background-color: var(--color-neutral-light);
+	color: inherit;
+
+}
+
+
+.nav-material a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-main-medium);
+	transition: all 0.3s;
+
+
+}
+
+.nav-material .active a{
+	color: inherit;
+}
+
+.nav-material .active a::after{
+	height: 4px;
+}
 
 .navbar{
 	background-color: var(--color-neutral-light);
@@ -103,7 +221,7 @@ a:hover{
 	line-height: var(--header-height);
 }
 
-,navbar h1 {
+.navbar h1 {
 	font-size: 1em;
 	margin: 0;
 	font-family: var(--font-sans) ;
@@ -162,9 +280,23 @@ a:hover{
 
 
 
+/*Tables*/
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table th,
+.table td{
+	text-align: left;
+	padding: 0.2em, 0.5em;
+}
 
 
-
+.table .striped tbody tr:nth-child(odd){
+	background-color: var(--color-neutral-light
+	);
+}
 
 
 
