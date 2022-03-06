@@ -10,6 +10,12 @@
 	--color-neutral-medium:#999 ;
 	--color-neutral-dark:#555 ;
 
+
+
+ --color-main-light:#1AAEC6;
+	--color-main-medium:#058EA5 ;
+	--color-main-dark:#035563;
+
 	--color-black:#000 ;
 	--color-white:#fff ;
 
@@ -49,9 +55,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover{
-	text-decoration: underline;
-}
 
 
 
@@ -89,6 +92,15 @@ width:80%;
 
 
 
+/* small classes*/
+
+.media-image{
+	max-width: 100%;
+	vertical-align: text-bottom;
+}
+
+
+
 
 
 
@@ -101,6 +113,114 @@ width:80%;
 	margin-bottom: 0;
 	padding-left: 0;
 }
+
+
+
+.nav a{
+	display: block;
+	padding: 0.2em 0.5 em;
+}
+
+.nav .active a {
+	background-color: var(--color-main-light);
+	color: inherit;
+	
+}
+
+
+
+.nav a:hover{
+	background-color: black;
+	color: var(--color-white);
+	text-decoration: none;
+}
+
+
+.nav-material li,
+.nav-crumbs ul,
+.nav-pills ul, 
+.nav-stretch ul, 
+.nav-flex ul{
+	display: flex;
+}
+
+
+.nav-material li,
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a{
+	border-radius: 2em;
+	padding: 0.5em 1em;
+
+}
+
+
+
+.nav-crumbs a {
+	display: inline-block;
+
+}
+
+
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+background-color: transparent;
+color: inherit;
+text-decoration: underline;
+
+}
+
+
+.nav-crumbs li :not(:first-child)::before{
+content: '/';
+}
+
+
+
+.nav-material a{
+	padding: 0.5em 1em;
+	position: relative;
+}
+
+
+
+.nav-material .active a {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+.nav-material a:hover{
+	background-color: var(--color-neutral-light);
+	color: inherit;
+}
+
+
+.nav-material a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-main-medium);
+	transition: all 0.3s;
+}
+
+
+.nav-material .active a {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+.nav-material .active a ::after{
+	height: 4PX;
+}
+
 
 
 .navbar{
@@ -163,7 +283,6 @@ width:80%;
 	border-radius: 0.5m;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
 
-	margin-bottom: 60px;
 
 	}
 
@@ -238,14 +357,13 @@ width:80%;
 
 .view-window{
   height: 550px;
+width: 800px;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
   background-attachment: fixed;
   overflow: hidden;
   background-position: center;
-
-  margin-bottom: 500px;
  
 
 }
@@ -288,14 +406,67 @@ padding: 30px;
 
 
 
-h1{
-	color: yellow;
-	margin: 0;
+
+/*Tables*/
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+
+}
+.table th,
+.table td{
+	text-align: left;
+	position: 0.2em 0.5 em;
+
+}
+
+
+.table.striped tbody tr :nth-child(odd){
+	background-color: var(--color-neutral-light);
+}
+
+
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child){
+	border-left: 1px solid black;
+}
+
+
+.table.lined.all,body tr,
+
+.table.lined.horizontal tbody tr {
+	border-top: 1px solid black;
+}
+
+
+.table.lined.all,
+.table.lined.border{
+	border: 1px solid black;
 }
 
 
 
 
+/*Figure*/
+
+.figure{
+	margin: 0;
+	background-color: whitesmoke;
+}
+.figure img	{
+	width: 100%;
+	vertical-align: text-bottom;
+
+}
+ .figure figcaption{
+ 	width: 100%;
+ 	padding: 3em ;
+
+ }
 
 
 
