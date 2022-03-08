@@ -15,8 +15,8 @@
 	--color-neutral-light: #b7b7b7ff;
 	--color-neutral-medium: #666666ff;
 	--color-neutral-dark: #434343ff;
-	--color-sub-light: #ff8280;
-	--color-sub-medium: #ff8280;
+	--color-sub-light: #feafaeff;
+	--color-sub-medium: #ff8280ff;
 	--color-sub-dark: #f74e4cff;
 	--color-main-light: #79f6daff;
 	--color-main-medium: #04c2bb;
@@ -526,6 +526,131 @@ ul.ctatwo.flex{
 		padding: 1em;
 	}
 
+
+
+/* Color */
+
+	.palette {
+		display: grid;
+		grid-template-columns: auto;
+		grid-gap: 10px;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.colorbox {
+		height: 130px;
+	}
+
+
+
+	#mainclight {
+		background-color: var(--color-main-light);
+	}
+
+	#maincmedium {
+		background-color: var(--color-main-medium);
+
+	}
+
+	#maincdark {
+		background-color: var(--color-main-dark);
+	}
+
+	.colorname{
+		display: block;
+		text-align: center;
+		line-height: 20px;
+		background-color: white;
+		margin-top: 10px;
+	}
+	
+	#mainslight {
+		background-color: var(--color-sub-light);
+	}
+
+	#mainsmedium {
+		background-color: var(--color-sub-medium);
+
+	}
+
+	#mainsdark {
+		background-color: var(--color-sub-dark);
+	}
+
+	#mainnlight {
+		background-color: var(--color-neutral-light);
+	}
+
+	#mainnmedium {
+		background-color: var(--color-neutral-medium);
+
+	}
+
+	#mainndark {
+		background-color: var(--color-neutral-dark);
+	}
+
+	.empty {
+		height: 30px;
+	}
+/*Grid*/
+
+.gridbox{
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 10px;
+	padding: 5px;
+	text-align: center;
+}
+
+.grid1{
+	grid-column-start: 1;
+	grid-column-end: 13;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
+
+.grid2{
+	grid-column-start: 1;
+	grid-column-end: 7;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
+
+.grid3{
+	grid-column-start: 7;
+	grid-column-end: 13;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
+
+.grid4{
+	grid-column-start: 1;
+	grid-column-end: 5;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
+
+.grid5{
+	grid-column-start: 5;
+	grid-column-end: 9;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
+
+.grid6{
+	grid-column-start: 9;
+	grid-column-end: 13;
+	background-color: var(--color-neutral-light);
+	height: 30px;
+    padding-top: 6px;
+}
 
 /* REVIEW */
 

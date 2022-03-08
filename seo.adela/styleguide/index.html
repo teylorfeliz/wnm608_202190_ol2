@@ -45,6 +45,8 @@
 			<nav class="nav">
 				<ul>
 						<li><a href="#typography">Typography</a></li>
+						<li><a href="#color">Colors</a></li>
+						<li><a href="#grid">Grid system</a></li>
 					<ul>
 						<li><a href="#Headings">Headings</a></li>
 						<li><a href="#Paragraphs">Paragraphs</a></li>
@@ -59,6 +61,8 @@
 				</ul>
 			</nav>
 	</div>
+
+<div class="empty"></div>
 
 	<div class="styleguidecontainer" id="typography">
 		<h2> Typography</h2>
@@ -79,6 +83,90 @@
 			<p>Laboriosam, repellendus natus sit aut consequatur sunt! Fugit, doloremque! Fugit incidunt, vero placeat, voluptates soluta magni velit accusantium, itaque voluptatum nemo esse ullam, cum ratione provident cumque quo ipsam sed.</p>
 		</div>
 	</div>
+
+<div class="empty"></div>
+
+<div class="styleguidecontainer">
+	<h2>Colors</h2>
+
+	<div class="palette grid gap">
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainclight">
+				<div class="colorname">Main Light (#79f6daff)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="maincmedium">
+				<div class="colorname">Main Medium (#04c2bb)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="maincdark">
+				<div class="colorname">Main Dark (#078075ff)</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="palette grid gap">
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainslight">
+				<div class="colorname">Sub Light (#79f6daff)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainsmedium">
+				<div class="colorname">Sub Medium (#ff8280ff)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainsdark">
+				<div class="colorname">Sub Dark (#f74e4cff)</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="palette grid gap">
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainnlight">
+				<div class="colorname">Neutral Light (#b7b7b7ff)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainnmedium">
+				<div class="colorname">Neutral Medium (#666666ff)</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+			<div class="colorbox" id="mainndark">
+				<div class="colorname">Neutral Dark (#434343ff)</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="empty"></div>
+
+<div class="styleguidecontainer">
+	<h2>Grids</h2>
+	<div class="gridbox">
+		<div class="grid1">1/1</div>
+		<div class="grid2">1/2</div>
+		<div class="grid3">1/2</div>
+		<div class="grid4">1/3</div>
+		<div class="grid5">1/3</div>
+		<div class="grid6">1/3</div>
+	</div>
+</div>
+
+<div class="empty"></div>
 
 	<div class="styleguidecontainer">
 		<h2>Cards</h2>
@@ -106,32 +194,10 @@
 	</div>
 
 
-
-	<div class="styleguidecontainer">
-		<h2>View Window</h2>
-	</div>
+<div class="empty"></div>
 
 	<div class="styleguidecontainer">
 		<h2>Navigations</h2>
-
-		<script>
-		const makeNav = (Classes='') => {
-			const links = ['home','store','about'];
-			let ran = Math.floor(Math.random()*links.length);
-
-		document.write(`
-		<div>
-			<nav class="${classes}">
-				<ul>
-				${links.reduce((r,o,i)=>{
-					return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
-				},'')}
-				</ul>
-			</nav>
-		</div>
-		`);
-		}
-		</script>
 
 		<div class="container soft">
 			<h3>Basic Nav</h3>
@@ -206,10 +272,7 @@
 		</nav>
 	</div>
 
-
-
-
-
+<div class="empty"></div>
 
 	<h2 id="figures"> Figures </h2>
 
@@ -357,6 +420,8 @@
 			<div class="col-xs-4">column 4</div>
 		</div>
 	</div>
+
+<div class="empty"></div>
 
 	<div class="styleguidecontainer" id="forms">
 		<h2>Forms</h2>
