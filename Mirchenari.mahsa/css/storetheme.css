@@ -1,19 +1,42 @@
 
+:root{
+	--color-offwhite: #f4f4f4;
 
+	--color-main-light: #cbebf9;
+	--color-main-medium: #2592c3;
+	--color-main-dark: #052b3c;
+
+
+}
 
 
 body{
-	background-color:lightblue;
-
-	background-repeat: repeat;
-	background-size: cover;
-	background width: 100%;
-	display: flex;
-	flex-direction: column;
-	margin: 0;
+	background-color:var(--color-offwhite);
+padding-bottom: 10em;
 	
 
 }
+
+
+.favorite  label{
+transition: all 0.3s;
+position: relative;
+display: inline-block;
+transform: scale(1,1);
+color: var(--color-neutral-medium);
+
+}
+
+
+.favorite input:checked + label{
+color: red;
+transform: scale(1.5,1.5);
+
+}
+
+
+
+
 
 @media (max-width:800px){
 	.container{
@@ -120,6 +143,7 @@ background-color: initial;
 	transform: none;
 	padding: 0;
 }
+
 
 
 
