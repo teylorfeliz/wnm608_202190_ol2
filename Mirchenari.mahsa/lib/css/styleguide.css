@@ -1,657 +1,616 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-	<link rel="stylesheet"href="../lib/css/styleguide.css">
-	<link rel="stylesheet"href="../lib/css/gridsystem.css">
-	<link rel="stylesheet"href="../css/storetheme.css">
-
-
-	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-
-<header class="navbar">
-	<div class="container display-flex">
-      <div class="flex-none ">
- 
-	<h1>Styleguide</h1>
-</div>
-  <div class="flex-stretch"></div>
-<nav class="flex-none nav">
-	<ul class="container display-flex">
-		<li><a href="#tableofcontents">Table of Contents </a></li>
-	
-	</ul>
-</nav>
-</div>
-</header>
-
-
-<div class="container" id= "tableofcontents">
-	 <h2>Table of Contents</h2>
-	<div class=" card black ">
-		<nav class=" nav ">
-    <ul>
-		<li><a href="#typography">Typography</a></li>
- <ul>
-	<li><a href="#headings">Headings</a></li>
-	<li><a href="#paragraphs">Paragraphs</a></li>
-	</ul>
-
-	<li><a href="#cards">Cards</a></li>
-	<li><a href="#viewwindow">View Window</a></li>
-	<li><a href="#navigations">Navigations</a></li>
-	<li><a href="#gridsystem">Grid system</a></li>
-	<li><a href="#flexsystem">Flex System </a></li>
-   <li><a href="#tables">Tables </a></li>
-   <li><a href="forms">Forms </a></li>
-	<ul>
-   <li><a href="inputs">Inputs </a></li>
-   <li><a href="inputs">Lables </a></li>
-   <li><a href="inputs">Controls </a></li>
-   <li><a href="inputs">Buttons </a></li>
-           </ul>
-         </ul>
-		</nav>
-     </div>
- </div>
-
-
-<div class="container" id= "typography">
-	  <h2>Typography</h2>
-
-	<div class=" card soft " id="headings">
-
-          <h1>Heading1</h1>
-          <h2>Heading2</h2>
-          <h3>Heading13</h3>
-          <h4>Heading4</h4>
-          <h5>Heading5</h5>
-          <h6>Heading1</h6>
- </div>
-
-<div class=" card soft " id="paragraphs">
-  <h3>Paragraphs</h3>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, velit itaque dolores fugiat laudantium omnis inventore et corporis, ullam officia debitis voluptates unde eligendi minus animi ab odio voluptatum, harum!</p>
-  <p>Accusantium obcaecati voluptate natus, quis, maiores accusamus voluptatem, facilis nobis odio non, quia vero ab. Accusamus soluta tempora, modi vero recusandae. Eligendi tempora deleniti enim mollitia, nisi tempore repudiandae corporis.</p>
-  <p>Delectus adipisci nostrum cum, aliquid fugit veritatis blanditiis animi ut facilis fuga atque molestiae harum accusantium sapiente? Deserunt modi, facere dolor totam sed quos facilis fugit debitis beatae fugiat. Itaque!</p>
-
-      </div>
- </div>
-
-
-    <div class="container">
-
-      <h2>Grids</h2>
-      <div class="gridbox card">
-        <div class="grid1">1/1</div>
-        <div class="grid2">1/2</div>
-        <div class="grid3">1/2</div>
-        <div class="grid4">1/3</div>
-        <div class="grid5">1/3</div>
-        <div class="grid6">1/3</div>
-      </div>
-    </div>
-
-    <div class="container">
+/* CSS RESET */
 
-      <h2>Cards</h2>
 
-      <div class="grid gap">
-        <div class="col-xs-12 col-md-4">
-          <div class="card">Card</div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card soft">Card Soft</div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card hard">Card Hard</div>
-        </div>
+*, *: :after, *: :before {
+	box-sizing: border-box;
+}
 
-        <div class="col-xs-12 col-md-4">
-          <div class="card dark">Card Dark</div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card medium">Card Medium</div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="card black">Card black</div>
-        </div>
-      </div>
-    </div>
+:root{
+	--color-neutral-light: #eee;
+	--color-neutral-medium:#999 ;
+	--color-neutral-dark:#555 ;
 
 
 
+ --color-main-light:#1AAEC6;
+	--color-main-medium:#058EA5 ;
+	--color-main-dark:#035563;
 
-<div class="container">
-	  <h2>View Window</h2>
-	 <div class="view-window" style="background-image: url('../img/shop.jpeg')">
+	--color-black:#000 ;
+	--color-white:#fff ;
 
-   </div>
- </div>
 
 
-<div class="container" id="navigations">
-	  <h2>Navigations</h2>
+	--header-height: 3rem;
+	--spacing: 1rem;
 
 
-	  <script>
-	  	const makeNav = (classes='') => {
-	  		const links =['home','store','about'];
-	  		let ran = Math.floor(Math.random()*links.length);
-	  	document.write(`
-	  		<div>
-	  		<nav class= "${classes}">
-	  		<ul>
-	  		${links.reduce((r,o,i)=> {
-	  			return r+ `<li class="${ran==i?'active': ''}"><a href="#">${o}</a></li>`;
-	  		},'')}
-      </ul>
-	   </nav>
-    </div>
-    `);
-     }
 
-	  	</script>
+--font-serif:Georgia, "Times New Roman", serif;
+--font-sans:Helvetica, Arial, sans-serif ;
 
-	  <div class="card soft">
-	  	<h3>Basic Nav</h3>
+}
 
-	  	<script>makeNav('nav')</script>
-	  		</div>
+body {
 
-	  	
+	background-color: var(--color-neutral-light);
+margin: 0;
+font-size: 100%;
+font-family:var(--font-sans);
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: var(--font-serif);
+}
 
 
+a {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
 
-	  <div class="card light">
-	  	<h3>Flex Nav</h3>
 
-	  	<script>makeNav('nav nav-flex')</script>
-	  		</div>
 
 
-   <div class="card light">
-	  	<h3>Stretch Nav</h3>
 
-	  <script>makeNav('nav nav-stretch')</script>
-	  		</div>
 
+/* LAYOUT CLASSES */
 
+.container {
+	max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
-   <div class="card light">
-	  	<h3>Pills Nav</h3>
 
-	 <script>makeNav('nav nav-pills')</script>
-	  		</div>
 
+.display-flex{ display: flex; }
 
-   <div class="card light">
-	  	<h3>Crumbs Nav</h3>
+.display-inline-flex {display: inline-flex;}
 
-	 <script>makeNav('nav nav-crumbs')</script>
-	  		</div>
- 
+.display-inline-flex-promo {display: inline-flex;}
+width:80%;
 
+.display-block {display: block;}
 
-   <div class="card light">
-	  	<h3> Material nav</h3>
+.display-inline-block{ display:inline-block; }
 
-	 <script>makeNav('nav nav-material')</script>
-	  		</div>
+.flex-stretch{flex: 1 1 auto; }
 
+.flex-none{ flex:none; }
 
- <script>
-$("#navigations a").on("click",function (e){
-	e.preventDefault();
-	$(this).closet("li").addClass("active")
-	.sibling().removeclass("active")
-})
-</script>
 
+.flex-align-center { align-items: center; }
 
-</div>
+.flex-justify-center { justify-content: center; }
 
 
 
-<div class="container">
-	  <h2>Grid System</h2>
+/* small classes*/
 
-   </div>
+.media-image{
+	max-width: 100%;
+	vertical-align: text-bottom;
+}
 
+.hidden{display: none;}
 
-<div class="container">
-	  <h2>Flex System</h2>
 
-   </div>
 
 
-   
 
+/* COMPONENT CLASSES */
 
-<script>
 
+.nav ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
 
 
 
-const makeTable =(classes='') =>{
-	const head = ['ID','office','Name','Email','Phone'];
-	const body = [
-	['600','jack','jack.m@gmail.com]','76876467'],
-	['601','jack','jack.m@gmail.com]','76876467'],
-	['602','jack','jack.m@gmail.com]','76876467'],
-	] ;
-	//let ran = Match.floor(Match.random()*links.Length);
-	document.write(`
-		<table class ="${classes}">
-		<thead> <tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
-			<tbody> ${body.reduce((r,o,i)=>r+
-				`<tr>${
+.nav a{
+	display: block;
+	padding: 0.2em 0.5 em;
+}
 
-					[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
-
-				}</tr>`,'')
-		}</tbody>
-
-		</table>
-
-		`);
+.nav .active a {
+	background-color: var(--color-main-light);
+	color: inherit;
 	
 }
-</script>
 
-<div class="container">
 
-	  <h2>Tables</h2>
 
-	  <div class="card soft">
-	  	  <h3>Basic Table</h3>
+.nav a:hover{
+	background-color: black;
+	color: var(--color-white);
+	text-decoration: none;
+}
 
-<script>makeTable("table")</script>
 
-   </div>
+.nav-material li,
+.nav-crumbs ul,
+.nav-pills ul, 
+.nav-stretch ul, 
+.nav-flex ul{
+	display: flex;
+}
 
-   <div class="card soft">
-	  	  <h3>Striped Table</h3>
 
-<script>makeTable("table striped")</script>
+.nav-material li,
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
 
-   </div>
+.nav-pills a{
+	border-radius: 2em;
+	padding: 0.5em 1em;
 
-   <div class="card soft">
-	  	  <h3>Striped lined Vertical </h3>
+}
 
-<script>makeTable("table lined vertical")</script>
 
-   </div>
 
-  <div class="card soft">
-	  	  <h3>Striped lined Horizontal </h3>
+.nav-crumbs a {
+	display: inline-block;
 
-<script>makeTable("table lined horizontal")</script>
+}
 
-   </div>
 
-     <div class="card soft">
-	  	  <h3>Striped lined Border </h3>
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+background-color: transparent;
+color: inherit;
+text-decoration: underline;
 
-<script>makeTable("table lined border")</script>
+}
 
-   </div>
-      <div class="card soft">
-	  	  <h3>Striped lined all </h3>
 
-<script>makeTable("table lined all")</script>
+.nav-crumbs li :not(:first-child)::before{
+content: '/';
+}
 
-   </div>
 
-      <div class="card soft">
-	  	  <h3>Combination </h3>
 
-<script>makeTable("table lined vertical border striped")</script>
+.nav-material a{
+	padding: 0.5em 1em;
+	position: relative;
+}
 
-   </div>
-
-  
-
-
-
-
- <h2 id="figures">Figures</h2>
-
-      <div class="card">
-        <h3>Basic Figure</h3>
-
-        <figure class="figure">
-          <img src="https://via.placeholder.com/400x400?text=product" alt="" />
-          <figcaption>Product</figcaption>
-        </figure>
-      </div>
-
-      <h3>Basic Product</h3>
-      <div class="grid gap">
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>Product</figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>Product</figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>Product</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <h3>Product Grid</h3>
-
-      <div class="grid gap">
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div>Product Name</div>
-              <div>$3.99</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div>Product Name</div>
-              <div>$3.99</div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div>Product Name</div>
-              <div>$3.99</div>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <h3>Product Overlay</h3>
-
-      <div class="grid gap">
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product-overlay">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div class="caption-body">
-                <div>Product Name</div>
-                <div>$3.99</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product-overlay">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div class="caption-body">
-                <div>Product Name</div>
-                <div>$3.99</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-12 col-md-4">
-          <figure class="figure product-overlay">
-            <img
-              src="https://via.placeholder.com/400x400?text=product"
-              alt=""
-            />
-            <figcaption>
-              <div class="caption-body">
-                <div>Product Name</div>
-                <div>$3.99</div>
-              </div>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-
-
-
-<div class="container" id="forms">
-
-	  <h2>Forms</h2>
-
-	  <h3>Inputs</h3>
-
-<div class="card light">
-
-	  <h3>Default Inputs</h3>
-	<form>
-<input type="text"><br>
-<input type="number"><br>
-<input type="password"><br>
-<input type="url"><br>
-<input type="email"><br>
-<input type="datetime-local"><br>
-<input type="date"><br>
-<input type="search">
-	</form>
-	<h3>Form Input</h3>
-	<form>
-<input type="text"  placeholder= "Text " class="form-input">
-<input type="text"  placeholder= "Number " class="form-input">
-<input type="text"  placeholder= "Password " class="form-input">
-<input type="text"  placeholder= "Search" class="form-input">
-
-	</form>
-
-
-<h3>Form Label</h3>
-<form>
-
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Text " class="form-input">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Number " class="form-input">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Password " class="form-input">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Search" class="form-input">
-
-	</form>
-
-
-<h3>Form Control</h3>
-<form>
-	<div class="form-control">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Text " class="form-input">
- </div>
-	<div class="form-control">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Number " class="form-input">
- </div>
- <div class="form-control">
-<label class= "form-label"> Example</label>
-<input type="text"  placeholder= "Password " class="form-input">
- </div>
-
-<div class="form-control display-flex flex-align-center">	 
-<div class="flex-none">
-<label class= "form-label"> Example</label>
- </div>
-<div class="flex-stretch">
-<input type="search"  placeholder= "search" class="form-input">
- </div>
-<div class="flex-none">
-<label class= "form-label"> Example</label>
- </div>
-<div class="flex-stretch">
-<input type="search"  placeholder= "search" class="form-input">
- </div>
-
- </div>
-
-	</form>
- </div>
-
-
-<h3>Buttons</h3>
-
-	<div class="card soft">
-<h3> Default Buttons</h3>
-
-<button>Button</button>
-
-<h3> Form Buttons</h3>
-
-<div class="form-control">
-<button type="button" class="form-button">Button</button>
-</div>
-<div class="form-control">
-<input type="button" class="form-button" value="Input">
-</div>
-
- </div>
-
-
-
-
- 	<h2>Hotdog</h2>
- <div class="card soft">
-
-<div class="form-control">
- 	<form>
- 		<input type="search " class="hotdog" placeholder="Search">
- 	</form>
- 	 </div>
-
- 	 <div class="form-control">
- 	<form>
- 		<input type="search " class="hotdog dark" placeholder="Search">
- 	</form>
- 	 </div>
- 	  <div class="form-control">
-       <form class="card dark">
+
+
+.nav-material .active a {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+.nav-material a:hover{
+	background-color: var(--color-neutral-light);
+	color: inherit;
+}
+
+
+.nav-material a::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-main-medium);
+	transition: all 0.3s;
+}
+
+
+.nav-material .active a {
+	background-color: transparent;
+	color: inherit;
+}
+
+
+.nav-material .active a ::after{
+	height: 4PX;
+}
+
+
+
+.navbar{
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	line-height: var(--header-height);
+}
+
+
+.navbar h1 {
+	font-size: 2em;
+	margin: 0;
+	font-family: var(--font-sans);
+}
+
+.navbar a {
+	padding: 0 1em;
+
+}
+
+.navbar ul a:hover {
+  color: var(--color-black);
+}
+
+
+
+/* CARD */
+
+
+.card {
+	background-color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+}
+.card.soft {
+	border-radius: 0.5em;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.card.hard {
+	border-radius: 0.2em;
+	border:  2px solid var(--color-neutral-medium);
+}
+.card.dark {
+	background-color: var(--color-neutral-dark);
+		color: var(--color-neutral-light);
+}
+.card.medium {
+	background-color: var(--color-neutral-medium);
+}
+.card.flat {
+	padding: 0;
+}
+
+
+
+
+
+.card.black{
+	background-color: var(--color-black);
+	color: var(--color-neutral-medium);
+margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+
+
+	}
+
+
+
+.card.grey{
+	background-color: dark darkgrey;
+	color: var(--color-white);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	border-radius: 0.5m;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+
+	margin-bottom: 60px;
+
+	
+}
+
+
+
+
+.card.light{
+	background-color: var(--color-white);
+	color: var(--color-neutral-medium);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	border-radius: 0.5m;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+
+	margin-bottom: 60px;
+
+	
+}
+
+
+
+
+.view-window{
+  height: 550px;
+width: 800px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-position: center;
  
- 		<input type="search " class="hotdog light" placeholder="Search">
- 	</form>
- 	 </div>
 
- 	 <div class="form-control">
- 	<form class="hotdog">
- 		<span>&equiv;</span>
- 		<input type="search" placeholder="Search">
- 		
- 	</form>
- </div>
- </div>
- </div>
+}
 
 
 
 
-<h2 id="select"> Select</h2>
- <div class="form-control">
 
- <div class="card light">
- 	
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:grey;
+  color: var(--color-black);
+  height: 25px;
+  padding-top: 10px;
+  padding-left: 5%;
 
- 	<select>
- 		<option>1</option>
- 		<option>2</option>
- 		<option>3</option>
- 		<option>4</option>
- 	</select>
-
- </div>
- </div>
-
-
-<h2 id="checkboxes">Check Boxes</h2>
-<div class="card light">
-
-	<h3>Basic Checkbox</h3>
-
-	<label>Label<input type="checkbox" id="input-1"></label>
-	<label for="input-1"> Label</label>
-
-	<h3>Heart Checkbox </h3>
-	<div class="favorite">
-		<input type="checkbox" id="heart-example" class="hidden">
-		<label for="heart-example">&hearts;</label>
-		
-	</div>
-
-	<h3>Toggle</h3>
-	<div class="toggle">
-		<input type="checkbox" id="toggle-1" class="hidden">
-		<label for="toggle-1"></label>
-	</div>
-	<div class="display-flex">
-		<div class="flex-stretch">
-		<label for= "toggle-2" class="form-label"> Display</label>
-	</div>
+  font-family: var(--font-sans);
+  font-size: 15px;
+  margin-top: 40px;
+}
 
 
-		<div class="flex-none">
-			<div class="toggle" style="font-size: 2em" >
-		<input type="checkbox" id="toggle-2" class="hidden">
-		<label for="toggle-2"></label>
-		</div>
-	</div>
-		
-	</div>
 
- </div>
- </div>
 
-</body>
 
-</html>
+.img{
+
+	height: 60;
+	wid
+	margin-right: auto;
+	margin-left: auto;
+	margin: 0;
+padding: 30px;
+}
+
+
+
+
+
+
+/*Tables*/
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+
+}
+.table th,
+.table td{
+	text-align: left;
+	position: 0.2em 0.5 em;
+
+}
+
+
+.table.striped tbody tr :nth-child(odd){
+	background-color: var(--color-neutral-light);
+}
+
+
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child){
+	border-left: 1px solid black;
+}
+
+
+.table.lined.all,body tr,
+
+.table.lined.horizontal tbody tr {
+	border-top: 1px solid black;
+}
+
+
+.table.lined.all,
+.table.lined.border{
+	border: 1px solid black;
+}
+
+
+
+
+/*Figure*/
+
+.figure {
+		margin: 0;
+		background-color: var(--color-white);
+		display: block;
+	}
+	.figure img {
+		width: 100%;
+	}
+	.figure figcaption {
+		padding: 1em;
+	}
+
+
+/*FORMS*/
+
+.form-control{
+	margin: 1em 0;
+}
+
+
+
+.form-select>select,
+.hotdog input,
+.hotdog,
+.form-button,
+.form-input,
+ .form-item{
+	display: inline-block;
+	background-color: transparent;
+	border-width: 0;
+font: inherit;
+-webkit-appearance: none;
+color: inherit;
+width: 100%;
+outline: 0;
+
+}
+ 
+
+
+
+.form-input{
 	
+border-bottom: 1px solid var(--color-neutral-light);
+padding: 0.5em 1em;
+
+}
+
+
+.form-input:focus{
+border-bottom-color: var(--color-main-light);
+}
+
+.form-label{
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	display: block;
+	width: 100%;
+}
+
+
+
+.form-button{
+	display: inline-block;
+	background-color: var(--color-neutral-light);
+	border-width: 0;
+	padding: 0.5em 1em;
+font: inherit;
+-webkit-apperance: none;
+color: inherit;
+width: 100%;
+outline: 0;
+border-radius: 0.2em;
+cursor: pointer;
+text-align: center;
+
 	
+}
+
+
+.form-button:hover{
+	text-decoration: none;
+}
+
+
+.form-button:active{
+	background-color: var(--color-main-light);
+}
+
+
+
+
+
+/*Hotdog*/
+
+.hotdog{
+	background-color: var(--color-neutral-medium);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	display: flex;
+	width: 90%;
+}
+
+.hotdog.dark{
+	background-color: var(--color-neutral-dark);
+	color: var(--color-neutral-light);
+}
+
+
+.hotdog.light{
+	background-color: var(--color-white);
+	color: var(--color-black);
+}
+
+
+
+
+
+.form-select>select{
+	padding: 0.5em 1em;
+	background-color: var(--color-neutral-light);
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+
+.form-select{
+	position: relative;
+
+}
+.form-select::after{
+content: '▼';
+font-family:arial,sans-serif;
+font-size: 1.2em;
+position: absolute;
+top: 50%;
+right: 0.1em;
+transform: translateY(-50%);
+pointer-events: none;
+color: var(--color-neutral-medium);
+}
+
+
+
+/*Toggle*/
+
+.toggle label{
+	font-size: 1.3em;
+	display: inline-block;
+	width: 2em;
+	height: 1em;
+	border: 0.3em black;
+	background-color:whitesmoke;
+	border-radius: 2em;
+	position: relative;
+}
+
+.toggle label::after{
+	content: '';
+  display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	border-radius: 1em;
+	position: absolute;
+	background-color: darkgrey;
+	transition: all 0.3s;
+}
+
+.toggle input:checked+ label::after{
+	transform: translateX(1em);
+}
+
+
+
+
+
+
