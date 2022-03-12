@@ -559,7 +559,7 @@ padding: 30px;
     width: 0.8em;
     height: 0.8em;
     border-radius: 1em;
-    position: center;
+    position: absolute;
     background-color: var(--color-neutral-medium);
     transition: all 0.3s;
 }
