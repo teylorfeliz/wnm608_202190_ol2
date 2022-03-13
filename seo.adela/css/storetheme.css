@@ -7,6 +7,22 @@ body{
 }
 
 
+.favorite label {
+   transition: all 0.3s;
+   display: inline-block;
+   transform: scale(1,1);
+   color: var(--color-neutral-medium);
+}
+
+.favorite input:checked + label {
+    color: red;
+    transform: scale(1.5,1.5);
+}
+
+
+
+
+
  @media (max-width: 800px) {
  	.container {
  		padding-left: 1em;
@@ -93,3 +109,27 @@ body{
  	 	transform: none;
  	 	padding: 0;
  }
+
+
+.toggle label {
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 0.1em solid var(--color-neutral-medium);
+    border-radius: 1em;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
