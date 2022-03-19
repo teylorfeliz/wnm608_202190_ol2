@@ -1,0 +1,153 @@
+/*CSS RESET*/
+
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+:root{
+    --color-neutral-light:#dcdddd;
+    --color-neutral-medium:#898989;
+    --color-neutral-dark:#3e3a3a;
+
+    --color-main-light:#f1f3f0;
+    --color-main-medium:#b3bda7;
+    --color-main-dark:#7d8a6d;
+
+    --color-sub-light:#e3eaf1;
+    --color-sub-medium:#a3b5c0;
+    --color-sub-dark:#4f6e8a;
+
+    --color-white:#fff;
+    --color-black:#000;
+
+    --header-height:3rem;
+    --spacing:1rem;
+
+--font-serif:"Halant", "Minion Pro", serif;
+--font-sans: "Nunito", "Montserrat", Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    font-size: 100%;
+    font-family: var(--font-sans);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--font-serif);
+}
+a {
+    color:inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/*LAYOUT CLASSES*/
+
+.container{
+    max-width:1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.display-flex{
+    display: flex;
+}
+.display-inline-flex{
+    display: inline-flex;
+}
+.display-block{
+    display: block;
+}
+.display-inline-block{
+    display: inline-block;
+}
+
+.flex-stretch{
+    flex: 1 1 auto;
+}
+.flex-none{
+    flex: none;
+}
+
+.flex-align-center{
+    align-items:center;
+}
+.flex-justify-center{
+    justify-content: center;
+}
+
+/*SMALL CLASSES*/
+.media-image{
+    max-width: 100%;
+    vertical-align: text-bottom;
+}
+.hidden{
+    display: none;
+}
+
+/*COMPONENT CLASSES*/
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:var(--color-neutral-dark);
+    opacity: 80%;
+    color: var(--color-white);
+    line-height:var(--header-height);
+    cursor: pointer;
+
+}
+.navbar img{
+    max-width: 40px;
+    margin-top: 15px;
+}
+.navbar h1{
+    font-size: 1em;
+    margin: 0;
+    font-family: var(--font-serif);
+}
+.navbar a{
+    padding: 0 0.5em;
+    font-family: var(--font-serif);
+    margin-top: 20px;
+}
+.nav ul{
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.nav a{
+    display: block;
+    padding: 0.2em 0.8em;
+}
+.nav a:hover{
+    background-color: var(--color-main-medium);
+    color: var(--color-white);
+    text-decoration: none;
+}
+.nav .active a{
+    background-color: var(--color-main-light);
+    color: inherit;
+}
+.hero{
+    max-width: 100%;
+}
+.title{
+    color: var(--color-main-dark);
+}
+.sub-title{
+    color: var(--color-main-medium);
+}
+.intro{
+    max-width: 600px;
+    padding: 10px 20px 30px 20px;
+}
+.footer{
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-medium);
+    text-align: center;
+    padding: 5px;
+}
