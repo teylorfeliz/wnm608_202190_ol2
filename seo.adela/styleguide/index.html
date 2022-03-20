@@ -8,42 +8,38 @@
 	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat&display=swap" rel="stylesheet">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-none">
+	<header>
+		<div class="headername">
+		<div class="logo">
 			<a href="index.html">
-				<img src="../img/whitelogo.png" alt="logo">
+				<img src="../img/whitelogo.png" alt="logo" class="logoimg">
 			</a>
-			</div>
+		</div>
 
-			<div class="flex-stretch"></div>
 			<nav>
 				<ul class="nav-division">	
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="shop.html">Shop</a></li>
+					<li><a href="index.html">Styleguide</a></li>
 				</ul>
 			</nav>
 
-			<ul class="cta flex-none">
-				<a class="cart" href="#"><img src="../img/shoppingcart.png" class="cart_img" style="width:25px; height:22px;"></a>
-			</ul>
-			<ul class="ctatwo flex">
-				<a class="login" href="#"><button>Log In</button></a>
+			<ul class="cta">
+				<li><a class="cart" href="#"><img src="../img/shoppingcart.png" class="cart_img" style="width:22px; height:22px;"></a></li>
+				</li><a class="login" href="login.html"><button>Log In</button></a></li>
 			</ul>
 		</div>
 	</header>
 	
 
 	<h2 class="styletable"> Table of Contents</h2>
-		<div class="container" id="tableofcontents">
+		<div class="container card hard" id="tableofcontents">
 			<nav class="nav">
-				<ul>
+				<ul class="content">
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#color">Colors</a></li>
 						<li><a href="#grid">Grid system</a></li>
@@ -56,15 +52,15 @@
 					<li><a href="#navigation">Navigation</a></li>
 					<li><a href="#navigation">Tables</a></li>
 					<li><a href="#forms">Forms</a></li>
-					<ul>
-						<li><a href="#inputs">Inputs</a></li>
-						<li><a href="#inputs">Labels</a></li>
-						<li><a href="#inputs">Controls</a></li>
-						<li><a href="#inputs">Buttons</a></li>
-						<li><a href="#inputs">Hotdog</a></li>
-						<li><a href="#inputs">Select</a></li>
-						<li><a href="#inputs">Check Boxes</a></li>
-					</ul>
+						<ul>
+							<li><a href="#inputs">Inputs</a></li>
+							<li><a href="#inputs">Labels</a></li>
+							<li><a href="#inputs">Controls</a></li>
+							<li><a href="#inputs">Buttons</a></li>
+							<li><a href="#inputs">Hotdog</a></li>
+							<li><a href="#inputs">Select</a></li>
+							<li><a href="#inputs">Check Boxes</a></li>
+						</ul>
 				</ul>
 			</nav>
 	</div>
@@ -539,7 +535,17 @@
 
 	<h2 id="figures"> Figures </h2>
 
-		<div class="table card">
+	<div class="card">
+			<img src="https://via.placeholder.com/800x200?text=product" alt="" width="100%">
+	
+
+		<div class="welcome-text">
+			<h3>Main Slogan</h3>
+			<a href="#">Contact Us</a>
+		</div>
+	</div>
+
+		<div class="card">
 			<h3>Basic Figure</h3>
 
 			<figure class="figure">
@@ -547,6 +553,8 @@
 				<figcaption>Product</figcaption>
 			</figure>
 		</div>
+	
+
 
 	<h3>Basic Product</h3>
 		<div class="grid gap">
@@ -572,6 +580,7 @@
 				    </figure>
 				</div>
 		</div>
+
 
 
 		<h3>Product Grid</h3>
@@ -609,13 +618,12 @@
 				</div>
 		</div>
 
-
 		<h3>Product Overlay</h3>
 
 		<div class="grid gap">
 				<div class="col-xs-12 col-md-4">
 					<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<img src="https://via.placeholder.com/400x400?text=product">
 				    <figcaption> 
 				    	<div class="caption-body">
 					    	<div>Product Name</div> 
@@ -685,6 +693,30 @@
 	</div>
 
 <div class="empty"></div>
+
+<div class="styleguidecontainer">
+	<section id="detailcompany">
+		<h2>About the company</h2>
+		<div class="card">
+		<div class="detail">
+			<img src="https://via.placeholder.com/300" alt="">
+			<b><h4>What is it about</h4></b>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exerc</p>
+		</div>
+		<div class="detailceo">
+			<h4>About CEO</h4>
+			<ul>
+				<li>A: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, </li>
+				<li>B: Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Eligendi deserunt error voluptatibus, repellat </li>
+			</ul>
+		</div>
+	</div>
+	</section>
+</div>
+
+<div class="empty"></div>
+
 
 	<div class="styleguidecontainer" id="forms">
 		<h2>Forms</h2>
@@ -760,7 +792,7 @@
 		</div>
 	</div>
 
-	<h2>Buttons</h2>
+	<h3>Buttons</h3>
 
 	<div class="card">
 		<h3>Default Buttons</h3>
@@ -780,7 +812,7 @@
 
 
 
-<div class="card soft">
+<div class="card">
 	<h3>Hotdog</h3>
 	<div class="form-control">
 		<form>
@@ -804,7 +836,7 @@
 	</div>
 </div>
 
-<h2 id="select">Select</h2>
+<h3 id="select">Select</h>
 
 <div class="card">
 	<div class="form-select">
@@ -857,23 +889,70 @@
 		<div class="flex-stretch"></div>
 		<div class="flex-none"></div>
 
-		<div class="toggle" style="font-size: 2.4em;">
+		<div class="toggle" style="font-size: 2em;">
 			<input type="checkbox" id="toggle-2" class="hidden">
 			<label for="toggle-2"></label>
 	</div>
 	</div>
-
-
-
-
 </div>
 </div>
 
 
+<div class="styleguidecontainer">
+	<h2 id="login">Log In Forms</h2>
+	<div class="card">
+	<h3>Petcrew Form</h3>
+		<form>
+			<fieldset>
+				<legend>Information</legend>
+					<ul class="signup">
+						<li>
+							<label for="uid">ID</label>
+							<input type="TEXT" id="uid">
+						</li>
+						<li>
+							<label for="umail">Email</label>
+							<input type="email" id="umail">
+						</li>
+						<li>
+							<label for="pwd1">Password</label>
+							<input type="password" id="pwd1">
+						</li>
+						<li>
+							<label for="pwd2">Password2</label>
+							<input type="password" id="pwd2">
+						</li>
+					</ul>
+			</fieldset>
+
+		<fieldset class="event">
+			<legend>Event and News</legend>
+			<div class="eventbutton">
+				<input type="radio" name="mailing" id="maling_y">
+				<label for="mailing_y"> Subscribe</label>
+				<input type="radio" name="mailing" id="mailing_n" checked>
+				<label for="mailing_n">Unsubscribe</label>
+			</div>
+		</fieldset>
+
+		<div class="signbutton">
+			<input type="submit" class="form-button" value="Ok">
+			<input type="reset" class="form-button" value="Cancel">
+		</div>
+
+</form>
 
 
-
-
+<form>
+	<h3>Log In</h3>
+	<fieldset>
+		<label>ID:<input type="text" id="user_id" size="10"></label>
+		<label>Password: <input type="password" id="user_pw" size="10"></label>
+		<input type="submitlogin" class="form-button-login" value="LOG IN">
+	</fieldset>
+</form>
+</div>
+</div>
 
 
 
