@@ -81,12 +81,17 @@ body{
  	background-color: white;
  	border-radius: 0.5em;
  	padding: 1em;
- 	transform: translateY(1em);
+ 	transform: translateY(2em);
  	transition: all 0.3s;
  }
 
  .product-overlay:hover .caption-body{
  	transform: translateY(0);
+}
+
+.product-overlay img{
+    transform: scale(1,1);
+    transition: all 0.3s;
 }
 
  .product-overlay:hover img{
@@ -111,14 +116,7 @@ body{
  }
 
 
-.toggle label {
-    display: inline-block;
-    width: 2em;
-    height: 1em;
-    border: 0.1em solid var(--color-neutral-medium);
-    border-radius: 1em;
-    position: relative;
-}
+
 
 
 

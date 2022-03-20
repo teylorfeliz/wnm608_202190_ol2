@@ -1,14 +1,11 @@
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
-
-</style>
 
 /* CSS RESET */
 
 *, *::after, *::before {
 	box-sizing: border-box;
+	margin: o;
+	padding: 0;
 }
 
 :root {
@@ -72,21 +69,33 @@ p{
 	font-family: Georgia;
 }
 
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--color-main-medium);
+}
+
+h2.styletable {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 5px;
+}
 
 /* LAYOUT CLASSES */
 
 
 
 .container {
-	max-width: 800px;
+	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
 	align-items: center;
 	background-color: var(--color-main-medium);
 }
-	
+
+
 .container2 {
-	max-width: 800px;
+	max-width: 1200px;
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
@@ -96,14 +105,14 @@ p{
 }
 
 .styleguidecontainer{
-	max-width: 800px;
+	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
 	align-items: center;
 }
 
 .styletable {
-	max-width: 800px;
+	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -145,7 +154,8 @@ p{
 .nav ul {
 	list-style-type: none;
 	margin-bottom: 0;
-	padding-left: 0;
+	padding-left: 1em;
+	padding-bottom: 5px;
 }
 
 .nav a {
@@ -204,7 +214,6 @@ p{
 .nav-pills a{
 	border-radius: 2em;
 	padding: 0.5em 1em;
-
 }
 
 .nav-crumbs a {
@@ -249,14 +258,11 @@ p{
 }
 
 .navbar {
-	display: flex;
+	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	justify-content: space-between;
 	align-items: center;
-	padding-top: 5px;
-	background-color: var(--color-main-medium);
-	color: var(--color-white);
+	display: flex;	
 }
 
 .navbar img{
@@ -271,15 +277,13 @@ p{
     margin-bottom: 10px;
 }
 
-.navbar a {
-	
-}
 
 .nav-division {
 	display: flex;
 	justify-content: flex-end;
 	list-style: none;
 	margin-left: 50px;
+	margin-right: 50px;
 }
 
 .nav-division li{
@@ -289,13 +293,19 @@ p{
 
 .nav-division li a{
 	transition: all 0.3s ease 0s;
-	padding: 0 0.5em
+	padding: 0 12em
 }
 
 .nav-division li a:hover{
 	color: var(--color-sub-medium);
 }
 
+.mainnav {
+	max-width: 1200px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 button {
 	padding: 7px 14px;
@@ -310,32 +320,50 @@ button:hover {
 	background-color: var(--color-sub-dark);
 }
 
+.headername {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+   }
+
 .logo {
-	position: absolute;
+	float: left;
+	width: 150px;
 	cursor: pointer;
 	bottom: 0.5em;
 	top: 0.5em;
 }
 
-.navbar img {
+img.logoimg{
 	width: 150px;
-    padding: 0 0.5em;
-    padding-top: 8px;
+    padding-top: 10px;
+    margin-left: 0em;
 }
 
-ul.ctatwo.flex{
-	padding-left: 0;
-	padding-top: 3px;
+ul.cta {
+    padding-top: 8px;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2em;
+}
+
+img.cart_img {
+    margin-top: 4px;
+    margin-right: 10px;
 }
 
 .advertisement {
 	flex-grow: 2;
 }
 
-.cta login button {
-	padding top: 100px;
-}
 
+div#tableofcontents {
+    background-color: white;
+    color: black;
+}
 
 /* MAIN SLOGAN */
 
@@ -345,7 +373,7 @@ ul.ctatwo.flex{
 	width: 100%;
 	position: relative;
 	background-attachment: fixed;
-	}
+}
 
 .view-window1 img {
 	object-position: 30px 30px;
@@ -362,7 +390,6 @@ ul.ctatwo.flex{
 	width: 100%;
 	height:  100%;
 	position: relative;
-
 }
 
 
@@ -375,8 +402,8 @@ ul.ctatwo.flex{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-
 }
+
 .box {
     width: 100%;
     position: relative;
@@ -389,6 +416,11 @@ ul.ctatwo.flex{
     align-content: center;
     position: relative;
 }
+
+ul.content li {
+	color: var(--color-main-medium);
+}
+
 /* ADVERTISEMENT */
 
 .newpro {
@@ -405,7 +437,6 @@ ul.ctatwo.flex{
 
 .last{
 	position: relative;
-
 }
 
 /* CARD */
@@ -428,8 +459,8 @@ ul.ctatwo.flex{
     	border-radius: 2.5em;
     	box-shadow: 0 0 5px rgb(0 0 0 / 10%);
     	border: 3px solid var(--color-main-dark);
-}
 	}
+
 
 	.card.hard {
 		border-radius: 0.3em;
@@ -524,13 +555,18 @@ ul.ctatwo.flex{
 		background-color: var(--color-white);
 		display: block;
 	}
+
 	.figure img {
 		width: 100%;
 	}
+
 	.figure figcaption {
 		padding: 1em;
 	}
 
+	figure.figure.product-overlay {
+    display: grid;
+	}
 
 
 /* Color */
@@ -599,6 +635,7 @@ ul.ctatwo.flex{
 	.empty {
 		height: 30px;
 	}
+
 /*Grid*/
 
 
@@ -741,7 +778,9 @@ form {
 
 .form-select{
 	position: relative;
+	margin-top: 10px;
 }
+
 .form-select::after{
 	content: '▼';
 	font-family: arial, sans-serif;
@@ -779,11 +818,12 @@ span {
 
 	
 .form-button {
-	background-color: var(--color-neutral-light);
-	border-radius: 0.2em;
+	background-color: var(--color-main-dark);
+	border-radius: 4em;
 	cursor: pointer;
 	text-align: center;
 	padding: 0.5em 0em;
+	color: white;
 }
 
 .form-button:hover{
@@ -806,7 +846,7 @@ span {
 
 .hotdog.dark {
 	background-color: var(--color-neutral-dark);
-	color: var(--color-neutral-light);
+	color: white;
 }
 
 .hotdog.light{
@@ -817,7 +857,7 @@ span {
 .hidden { display: none;}
 
 .toggle label {
-	font-size: 1.3em;
+	font-size: 1.6em;
     display: inline-block;
     width: 2em;
     height: 1em;
@@ -829,8 +869,8 @@ span {
 .toggle label::after {
 	content: '';
 	display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 0.8em;
+    height: 0.8em;
     border-color: var(--color-main-medium);
     border-radius: 1em;
     position: absolute;
@@ -841,6 +881,247 @@ span {
 .toggle input:checked + label::after {
 	transform: translateX(1em);
 }
+
+/* Petcrew Signup */
+
+label {
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.event {
+	margin-top: 20px;
+}
+
+.signup input {
+	background-color: white;
+	border-radius: 5px;
+	border:  1px solid var(--color-neutral-light);
+}
+
+.signbutton {
+	margin-top: 30px;
+}
+
+.signbutton input {
+	height: 35px;
+    color: white;
+    background-color: var(--color-main-medium);
+    border: none;
+    border-radius: 1em;
+    width: 80px;
+    margin-right: 5px;n
+}
+
+.eventbutton {
+	margin:  10px 10px;
+}
+
+
+.welcome-text {
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin:  5% auto;
+    color: white;
+}
+
+.welcome-text h3{
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+	margin: 40px auto 5px auto;
+}
+
+.welcome-text a{
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+/* More */
+
+.detail p{
+	line-height: 2.0;
+	color: #222;
+}
+
+.detail > img {
+	float: left;
+	margin-right: 50px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+}
+
+.detail h4,
+.detailceo h4 {
+	font-size: 1.2em;
+}
+
+.detailceo ul {
+	list-style: none;
+}
+
+.detailceo ul li{
+	line-height: 2;
+}
+
+
+.detailceo li {
+	color: black;
+	font-family: var(--font-serif);
+}
+
+.detail h4{
+	padding-top: 20px;
+}
+
+
+/* Log In Form */
+
+ul.signup {
+    list-style: none;
+}
+
+
+
+
+input[type="submitlogin"] {
+    border-style: none;
+    width: 6em;
+    height: 1.7em;
+    border-radius: 1em;
+    background-color: var(--color-main-medium);
+    text-align: center;
+    color: white;
+    margin-left: 40px;
+}
+
+input.form-button-login {
+	width: 6em;
+    height: 2em;
+	border-radius: 1em;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.5em 0em;
+	color: white;
+
+}
+
+
+.form-button-login:hover{
+	text-decoration: none;
+	background-color: var(--color-main-light);
+}
+
+.form-button-login:active {
+	background-color: var(--color-main-light);
+}
+
+.loginpage{
+	align-items: center;
+	margin: auto 20px;
+}
+
+.loginbody {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login-form{
+	position: relative;
+	z-index: 2;
+}
+
+.login-form h1{
+	font-size: 32px;
+	text-align: center;
+	color: var(--color-sub-medium);
+	margin-top: 68px;
+}
+
+
+.int-area{
+	width: 400px;
+	position: relative;
+	margin-top: 20px;
+}
+
+.int-area:first-child {
+	margin-top: 0;
+}
+.int-area input {
+	width: 100%;
+	padding: 20px 10px 10px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #999;
+	font-size: 18px;
+	color: var(--color-sub-light);
+	outline: none;
+}
+
+.int-area label {
+	position:relative;
+	left: 10px;
+	top: 15px;
+	font-size: 18px;
+	color: #999;
+	transition: top .5s ease;
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+	top: -2px;
+	font-size: 13px;
+	color: #166cea;
+}
+
+.btn-area {
+	margin-top: 30px;
+}
+
+.btn-area button {
+	width: 100%;
+	height: 50px;
+	background-color: var(--color-sub-medium);
+	color: fff;
+	font-size: 20px;
+	border: none;
+	border-radius: 25px;
+}
+
+.caption {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.caption a {
+	font-size: 13px;
+	color: #999;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
