@@ -12,7 +12,7 @@
 	--color-neutral-light: #ccccccff;
 	--color-neutral-medium: #818181ff;
 	--color-neutral-dark: #434343ff;
-	--color-sub-light: #feafaeff;
+	--color-sub-light: #bef6e9ff;
 	--color-sub-medium: #ff8280ff;
 	--color-sub-dark: #f74e4cff;
 	--color-main-light: #79f6daff;
@@ -293,7 +293,7 @@ h2.styletable {
 
 .nav-division li a{
 	transition: all 0.3s ease 0s;
-	padding: 0 12em
+	padding: 0 0em
 }
 
 .nav-division li a:hover{
