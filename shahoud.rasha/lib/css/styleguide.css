@@ -6,11 +6,14 @@
 }
 
 :root {
+	--color-offwhite:  #F4F4F4;
+
 	--color-neutral-light: #eee;
 	--color-neutral-medium: #999;
 	--color-neutral-dark: #555;
 
 	--color-main-light: #F9F0A6;
+	--color-main-medium-light:  #D5974D;
 	--color-main-medium: #FCC435;
 	--color-main-dark: #4D201E;
 
@@ -26,7 +29,8 @@
 header{
 	width: 100%;
 	background-color: var(--color-neutral-light);
-	opacity: 0.5;
+	opacity: 0.6;
+	color: var(--color-main-dark);
 }
 
 .logo{
@@ -36,9 +40,10 @@ header{
 
 .logo-img{
 	height: auto;
-	width: 40%;
+	width: 50%;
 	margin: 10px;
 	padding: 5px;
+	align-items: center;
 }
 
 
@@ -46,24 +51,73 @@ header{
 	text-align: center;
 	width: 40%;
 	float: center;
+	padding-left: 0;
+	padding-top: 0;
 	
 
 }
 
-.main-title{
+.title h1{
 	padding: 0;
-}	
-
-
-
-.view-window{
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
 }
+
+.colorscheme {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	overflow: hidden;
+	position: relative;
+	border-radius: 0.5em;
+	box-shadow: 5px 7px 5px 0px var(--color-main-dark);
+	border: solid 2px var(--color-main-medium-light);
+}
+
+.colorscheme.offwhite {
+    background-color: var(--color-offwhite);
+}
+
+
+.colorscheme.mainlight {
+	background-color: var(--color-main-light);
+}
+
+.colorscheme.mainmediumlight {
+	background-color: var(--color-main-medium-light);
+}
+
+.colorscheme.main-medium {
+	background-color: var(--color-main-medium);
+}
+
+.colorscheme.main-dark {
+	background-color: var(--color-main-dark);
+}
+
+.colorscheme.neutral-light {
+	background-color: var(--color-neutral-light);
+}
+
+.colorscheme.neutral-medium {
+	background-color: var(--color-neutral-medium);
+}
+
+.colorscheme.neutral-dark {
+	background-color: var(--color-neutral-dark);
+}
+
+
+
+.view-window {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border: 1px solid var(--color-neutral-dark);
+}
+
 
 
 body{
@@ -80,7 +134,8 @@ h4,
 h5,
 h6{
 	font-family: Arial Bold ,var(--font-sans);
-	padding-top: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	width: 100%;
 }
 
@@ -147,7 +202,7 @@ a:hover{
 
 
 .main-nav{
-	width: 25%;
+	width: 30%;
 	float: right;
 	list-style-type: none;
 	
@@ -294,7 +349,7 @@ a:hover{
 .card.soft{
 	border-radius: 0.5em;
 	box-shadow: 5px 7px 5px 0px var(--color-main-dark);
-	border: solid 2px var(--color-main-medium);
+	border: solid 2px var(--color-main-medium-light);
 	background-color: var(--color-offwhite);
 }
 
@@ -302,13 +357,14 @@ a:hover{
 
 .card.hard{
 	border-radius: 0.2em;
-	border: 2px solid var(--color-main-medium);
-	background-color: var(--color-main-medium);
+	border: 2px solid var(--color-main-dark);
+	background-color: var(--color-neutral-dark);
+	color: var(--color-main-light);
 }
 
 .card.flat{
 	padding: 0;
-	border: solid 2px var(--color-main-dark);
+	border: solid 2px var(--color-main-medium-light);
 }
 
 
@@ -316,14 +372,14 @@ a:hover{
 	background-color: var(--color-main-dark);
 	border-radius: 0.5em;
 	border: solid 2px var(--color-main-dark);
-	color: var(--color-white);
+	color: var(--color-main-light);
 }
 
 
 
 .card.medium{
 	background-color: var(--color-main-light);
-	border: 2px double var(--color-main-medium);
+	border: 2px double var(--color-main-medium-light);
 	border-radius: 0.5em;
 	color: var(--color-main-dark);
 }
@@ -478,7 +534,7 @@ a:hover{
 	display: inline-block;
 	width: 2em;
 	height: 1em;
-	border: 0.1em solid var(--color-neutral-medium);
+	border: 0.1em solid var(--color-main-medium-light);
 	border-radius: 1em;
 	position: relative;
 }
@@ -491,7 +547,7 @@ a:hover{
 	height: 0.8em;
 	border-radius: 1em;
 	position: absolute;
-	background-color: var(--color-main-dark);
+	background-color: var(--color-main-medium-light);
 	transition: all 0.3s;
 }
 
@@ -506,6 +562,7 @@ a:hover{
 .figure{
 	margin: 0;
 	background-color: var(--color-white);
+	border: 2px solid var(--color-main-medium-light);
 
 }
 
