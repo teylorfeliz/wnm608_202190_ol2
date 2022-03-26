@@ -53,3 +53,18 @@ body{
     transform: scale(1.1);
     transition: all 0.5s;
 }
+
+/*Landing Page*/
+.hero{
+    max-width: 100%;
+}
+.title{
+    color: var(--color-main-dark);
+}
+.sub-title{
+    color: var(--color-main-medium);
+}
+.intro{
+    max-width: 600px;
+    padding: 10px 20px 30px 20px;
+}

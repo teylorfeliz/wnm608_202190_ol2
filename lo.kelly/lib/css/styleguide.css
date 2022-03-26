@@ -89,13 +89,14 @@ a:hover{
 
 /*COMPONENT CLASSES*/
 .navbar{
-
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index:1000000;
-    background-color: var(--color-neutral-dark);
+    background-color:var(--color-neutral-dark);
+    opacity: 80%;
     color: var(--color-white);
     line-height:var(--header-height);
+    cursor: pointer;
 }
 .navbar img{
     max-width: 40px;
@@ -129,6 +130,13 @@ a:hover{
 .nav .active a{
     background-color: var(--color-main-light);
     color: inherit;
+}
+
+.footer{
+    background-color: var(--color-neutral-dark);
+    color: var(--color-neutral-medium);
+    text-align: center;
+    padding: 5px;
 }
 
 #tableofcontents{
