@@ -338,7 +338,8 @@ button:hover {
 img.logoimg{
 	width: 150px;
     padding-top: 10px;
-    margin-left: 0em;
+    margin-left: 2em;
+    margin-top: 5px;
 }
 
 ul.cta {

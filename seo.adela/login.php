@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title> CSS Styleguide </title>
+	<title> Log In Page </title>
 
 	<?php include "parts/meta.php"; ?>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
