@@ -14,15 +14,15 @@
 
 <div class="container2">
 	<div class="card soft">
-		<h2>Shopping Cart</h2>
+		<h2>Payment</h2>
 		<p>This is item # <?= $_GET['id'] ?></p>
 
 		<div class="btn-area">
-				<a class="buy" href="shop.php"><button type="submit">KEEP SHOPPING</button></a>
+				<a class="cancel" href="cart.php"><button type="submit">Cancel</button></a>
 			</div>
 
 		<div class="btn-area">
-				<a class="buy" href="payment.php"><button type="submit">BUY</button></a>
+				<a class="buy" href="#"><button type="submit">Buy</button></a>
 			</div>
 
 	</div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title> Log In Page </title>
+	<title> Log In </title>
 
 	<?php include "parts/meta.php"; ?>
 
