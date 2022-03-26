@@ -17,10 +17,9 @@
 			
 			<nav class="nav nav-material">
 				<ul>
-				<li><a href="product_item.php?id=1">Product 1</a></li>
-				<li><a href="product_item.php?id=2">Product 2</a></li>
-				<li><a href="product_item.php?id=3">Product 3</a></li>
-				<li><a href="product_item.php?id=4">Product 4</a></li>
+				<li><a href="product_category.php?id=1">Food</a></li>
+				<li><a href="product_category.php?id=2">Treats</a></li>
+				<li><a href="product_category.php?id=3">Accessories</a></li>
 			</ul>
 		</nav>
 	</div>

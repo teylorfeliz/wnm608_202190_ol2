@@ -19,7 +19,9 @@
 			<h1>MAKING PET'S LIFE BETTER</h1>
 			<p>We make healthy and organic food for our pet.</p>
 			<p>Amet laborum rem repellendus a obcaecati, </p>
-			<a href=""> More</a>
+			<div class="welcome-text">
+			<a href="#"> More</a>
+		    </div>
 	</div>
 
 	<h1 class="newpro">NEW PRODUCT</h1>

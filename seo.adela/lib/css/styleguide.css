@@ -81,6 +81,10 @@ h2.styletable {
     padding-bottom: 5px;
 }
 
+li.productname a{
+	color: black;
+}
+
 /* LAYOUT CLASSES */
 
 
@@ -943,7 +947,7 @@ label {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
-	margin-top: 20px;
+	margin-top: 60px;
 	display: inline-block;
 }
 
