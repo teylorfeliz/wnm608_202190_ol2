@@ -3,12 +3,12 @@
 <head>
 <link rel="stylesheet" href="css/storetheme.css">
 <link rel="stylesheet" href="lib/css/styleguide.css">
-    <link rel="stylesheet" href="lib/css/gridsystem.css">
-    <?php include "parts/meta.php";?>
+ <link rel="stylesheet" href="lib/css/gridsystem.css">
     <title>Island Soapworks</title>
 </head>
 <body>
     <?php include "parts/navbar.php";?>
+
     <div class="hero">
         <img src="img/hero.jpg" alt="hero">
     </div>

@@ -5,10 +5,9 @@
     <title>Product List</title>
 </head>
 <body>
-
  <?php include "parts/navbar.php";?>
 
-    <div class="container">
+    <div class="container" id="productlist">
         <div class="card soft">
             <h2>Product List</h2>
 
