@@ -2,13 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Gilded</title>
 
-	<link rel="stylesheet" type="text/css" href="lib/css/styleguide.css">
-	<link rel="stylesheet" type="text/css" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" type="text/css" href="css/storetheme.css">
-
+<?php include "parts/meta.php"; ?>
 
 </head>
 <body>
@@ -16,24 +11,7 @@
 	
 	
 
-<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-stretch logo">
-				<img class="logo-img" src="img/gold-watch.jpg">
-			</div>
-			<div class="flex-stretch title"><h1>Gilded</h1></div>
-			<!-- nav.nav>ul>li*4>a[href=#article$]>{link$ -->
-			<nav class="flex-stretch nav main-nav">
-		<ul class="container display-flex">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="cart.html">Cart</a></li>
-			<li><a href="styleguide/index.html">Styleguide</a></li>
-		</ul>
-	</nav>
-</div>
-</header>
+<?php include "parts/navbar.php"; ?>
 	
 
 </div>
@@ -60,5 +38,7 @@
 	
 
 </div>
+
+<?php include 'parts/footer.php';?>
 </body>
 </html>

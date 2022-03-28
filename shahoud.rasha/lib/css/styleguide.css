@@ -578,7 +578,13 @@ a:hover{
 }
 
 
-
+.footer {
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	margin-top: 40px;
+	width: 100%;
+}
 
 
 

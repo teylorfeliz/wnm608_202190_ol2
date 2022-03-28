@@ -2,12 +2,17 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+
+
 	<meta name="viewport" content="width=device-width">
-	<title>Document</title>
+	<title>Gilded</title>
 
 	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
+
+
+
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
@@ -20,283 +25,283 @@
 			<div class="flex-stretch logo">
 				<img class="logo-img" src="../img/gold-watch.jpg">
 			</div>
-			<div class="flex-stretch title"><h1>Styleguide</h1></div>
+			<div class="flex-stretch title"><h1>Gilded</h1></div>
 			<!-- nav.nav>ul>li*4>a[href=#article$]>{link$ -->
 			<nav class="flex-stretch nav main-nav">
 				<ul class="container display-flex">
-					<li><a href="../index.html">Home</a></li>
-					<li><a href="../about.html">About</a></li>
-					<li><a href="../products.html">Products</a></li>
-					<li><a href="../cart.html">Cart</a></li>
-					<li><a href="index.html">Styleguide</a></li>
+					<li><a href="../index.php">Home</a></li>
+					<li><a href="../about.php">About</a></li>
+					<li><a href="../products.php">Products</a></li>
+					<li><a href="../cart.php">Cart</a></li>
+					<li><a href="index.php">Styleguide</a></li>
+
+
 				</ul>
-			</ul>
-
-		</nav>
-	</div>
-</header>
+			</nav>
+		</div>
+	</header>
 
 
-<div class="container" id="tableofcontents">
-	<h2>Table of Contents</h2>
-	<div class="card soft">
-		<nav class="nav tableofcontents">
-			<ul>
-				<li><a href="#colorscheme">Color Scheme</a></li>
-				<li><a href="#typography">Typography</a></li>
+	<div class="container" id="tableofcontents">
+		<h2>Table of Contents</h2>
+		<div class="card soft">
+			<nav class="nav tableofcontents">
 				<ul>
-					<li><a href="#headings">Headings</a></li>
-					<li><a href="#paragraphs">Paraghraphs</a></li>
-				</ul>
-				<li><a href="#typography">Cards</a></li>
-				<li><a href="#viewwindow">View window</a></li>
-				<li><a href="#navigation">Navigation</a></li>
-				<li><a href="#gridsystem">Grid System</a></li>
-				<li><a href="#flexsystem">Flex System</a></li>
-				<li><a href="#tables">Tables</a></li>
-				<li><a href="#forms">Forms</a></li>
-				<ul>
-					<li><a href="#inputs">Inputs</a></li>
-					<li><a href="#labels">Labels</a></li>
-					<li><a href="#controls">Controls</a></li>
-					<li><a href="#buttons">Buttons</a></li>
-					<li><a href="#hotdog">Hotdog</a></li>
-				</ul>
-			</ul>
-		</nav>
-	</div>
-</div>
-
-<div class="container">
-	<h2>Color Scheme</h2>
-
-	<div class="grid gap">
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme offwhite">Offwhite:  #F4F4F4</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme mainlight">Main Light: #F9F0A6</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme mainmediumlight">Main Medium Light:  #D5974D</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme main-medium">Main Medium: #FCC435</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme main-dark">Main Dark: #4D201E</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme neutral-light">Neutral Light: #EEE </div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme neutral-medium">Neutral Medium: #999</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="colorscheme neutral-dark">Neutral Dark: #555</div>
-		</div>
-
-	</div>
-<div class="container" id="typography">
-	<h2>Typography</h2>
-
-	<div class="card soft" id="headings">
-
-		<h3>Headings</h3>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
-		<h5>Heading 5</h5>
-		<h6>Heading 6</h6>
-	</div>
-	<div class="card soft" id="paragraphs">
-		<h3>Paragraphs</h3>
-		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit numquam aspernatur atque natus modi ratione quam esse! Ratione blanditiis, porro illo temporibus eum optio repellat tempora odit, ad animi consequuntur?</p>
-		<p>Doloremque, tempore rem! Assumenda officiis voluptatibus quam minima quasi! Totam veniam minima nesciunt ut quo facere odit sint ex ab, quas accusantium recusandae obcaecati dolor, ipsam quaerat accusamus maxime dolore!</p>
-		<p>Iusto iure rerum in perspiciatis minima quae nam quibusdam optio error sunt! Voluptate id, error maiores repellat mollitia vitae. Recusandae molestiae omnis labore corrupti sed illo dolores dolorem animi odio!</p>
-	</div>
-</div>
-
-<div class="container">
-	<h2>Cards</h2>
-
-	<div class="grid gap">
-		<div class="col-xs-12 col-md-4">
-			<div class="card">Card</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="card soft">Card Soft</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="card hard">Card Hard</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="card flat">Card Flat</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="card dark">Card Dark</div>
-		</div>
-
-		<div class="col-xs-12 col-md-4">
-			<div class="card medium">Card Medium</div>
-		</div>
-
-	</div>
-	
-	<h2>View Window</h2>
-	<div class="view-window" style="background-image: url(../img/gold.jpeg);"></div>
-
-
-
-
-
-	<div class="container" id="navigations">
-		<h2>Navigations</h2>
-
-		<script>
-			const makeNav = (classes='') => {
-				const links = ['home', 'store','about'];
-				let ran = Math.floor(Math.random()*links.length);
-				document.write(`
-					<div>
-					<nav class="${classes}">
+					<li><a href="#colorscheme">Color Scheme</a></li>
+					<li><a href="#typography">Typography</a></li>
 					<ul>
-					${links.reduce((r,o,i)=>{
-						return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
-					},'')}
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#paragraphs">Paraghraphs</a></li>
 					</ul>
-					</nav>
-					</div>	
-					`);
-			}
-		</script>
-
-		<div class="card soft">
-			<h3>Basic Nav</h3>
-			<script>makeNav('nav')</script>
-		</div>
-
-
-
-
-
-		<div class="card soft">
-			<h3>Flex Nav</h3>
-			<script>
-				makeNav('nav nav-flex')
-			</script>
-
-
-
-		</div>
-
-
-		<div class="card soft">
-			<h3>Stretch Nav</h3>
-			<script>
-				makeNav('nav nav-stretch')
-			</script>
-
+					<li><a href="#typography">Cards</a></li>
+					<li><a href="#viewwindow">View window</a></li>
+					<li><a href="#navigation">Navigation</a></li>
+					<li><a href="#gridsystem">Grid System</a></li>
+					<li><a href="#flexsystem">Flex System</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<ul>
+						<li><a href="#inputs">Inputs</a></li>
+						<li><a href="#labels">Labels</a></li>
+						<li><a href="#controls">Controls</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#hotdog">Hotdog</a></li>
+					</ul>
+				</ul>
+			</nav>
 		</div>
 	</div>
-
-	<div class="card soft">
-		<h3>Pills Nav</h3>
-		<script>
-			makeNav('nav nav-pills')
-		</script>
-	</div>
-
-
-	<div class="card soft">
-		<h3>Crumbs Nav</h3>
-		<script>
-			makeNav('nav nav-crumbs')
-		</script>
-	</div>
-
-
-	<div class="card soft">
-		<h3>Material Nav</h3>
-		<script>
-			makeNav('nav nav-material')
-		</script>
-	</div>
-
-
-	<script>
-		$("#navigations a").on("click",function(e){
-			e.preventDefault();
-			$(this).closest("li").addClass("active")
-			.siblings().removeClass("active")
-		})
-	</script>
-
-</div>
-
-
-<div class="container">
-	<h2>Grid System</h2>
-	<div class="container">
-		<div class="grid gap xs-small md-meduim">
-			<div class="col-xs-6 col-md-3"><div class="card soft">
-				<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
-			</div></div>
-			<div class="col-xs-6 col-md-3"><div class="card soft">
-				<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
-			</div></div>
-			<div class="col-xs-6 col-md-3"><div class="card soft">
-				<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
-			</div></div>
-			<div class="col-xs-6 col-md-3"><div class="card soft">
-				<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
-			</div></div>
-
-		</div>
-	</div>
-
-
 
 	<div class="container">
-		<div class="card soft">
-			<h2>Responsive Grid</h2>
+		<h2>Color Scheme</h2>
 
-			<div class="grid">
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme offwhite">Offwhite:  #F4F4F4</div>
+			</div>
 
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-3"> column 3</div>
-				<div class="col-xs-3"> column 3</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme mainlight">Main Light: #F9F0A6</div>
+			</div>
 
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme mainmediumlight">Main Medium Light:  #D5974D</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme main-medium">Main Medium: #FCC435</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme main-dark">Main Dark: #4D201E</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme neutral-light">Neutral Light: #EEE </div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme neutral-medium">Neutral Medium: #999</div>
+			</div>
+
+			<div class="col-xs-12 col-md-4">
+				<div class="colorscheme neutral-dark">Neutral Dark: #555</div>
 			</div>
 
 		</div>
-	</div>
+		<div class="container" id="typography">
+			<h2>Typography</h2>
 
-</div>
+			<div class="card soft" id="headings">
+
+				<h3>Headings</h3>
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+			</div>
+			<div class="card soft" id="paragraphs">
+				<h3>Paragraphs</h3>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit numquam aspernatur atque natus modi ratione quam esse! Ratione blanditiis, porro illo temporibus eum optio repellat tempora odit, ad animi consequuntur?</p>
+				<p>Doloremque, tempore rem! Assumenda officiis voluptatibus quam minima quasi! Totam veniam minima nesciunt ut quo facere odit sint ex ab, quas accusantium recusandae obcaecati dolor, ipsam quaerat accusamus maxime dolore!</p>
+				<p>Iusto iure rerum in perspiciatis minima quae nam quibusdam optio error sunt! Voluptate id, error maiores repellat mollitia vitae. Recusandae molestiae omnis labore corrupti sed illo dolores dolorem animi odio!</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2>Cards</h2>
+
+			<div class="grid gap">
+				<div class="col-xs-12 col-md-4">
+					<div class="card">Card</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="card soft">Card Soft</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="card hard">Card Hard</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="card flat">Card Flat</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="card dark">Card Dark</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="card medium">Card Medium</div>
+				</div>
+
+			</div>
+
+			<h2>View Window</h2>
+			<div class="view-window" style="background-image: url(../img/gold.jpeg);"></div>
 
 
-<script>
-	const makeTable = (classes='') =>{
-		const head =[ 'ID','Office','Name','Email','Phone'];
-		const body =[
-		['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
-		['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
-		['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
-		['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
-		['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
-		];
+
+
+
+			<div class="container" id="navigations">
+				<h2>Navigations</h2>
+
+				<script>
+					const makeNav = (classes='') => {
+						const links = ['home', 'store','about'];
+						let ran = Math.floor(Math.random()*links.length);
+						document.write(`
+							<div>
+							<nav class="${classes}">
+							<ul>
+							${links.reduce((r,o,i)=>{
+								return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+							},'')}
+							</ul>
+							</nav>
+							</div>	
+							`);
+					}
+				</script>
+
+				<div class="card soft">
+					<h3>Basic Nav</h3>
+					<script>makeNav('nav')</script>
+				</div>
+
+
+
+
+
+				<div class="card soft">
+					<h3>Flex Nav</h3>
+					<script>
+						makeNav('nav nav-flex')
+					</script>
+
+
+
+				</div>
+
+
+				<div class="card soft">
+					<h3>Stretch Nav</h3>
+					<script>
+						makeNav('nav nav-stretch')
+					</script>
+
+				</div>
+			</div>
+
+			<div class="card soft">
+				<h3>Pills Nav</h3>
+				<script>
+					makeNav('nav nav-pills')
+				</script>
+			</div>
+
+
+			<div class="card soft">
+				<h3>Crumbs Nav</h3>
+				<script>
+					makeNav('nav nav-crumbs')
+				</script>
+			</div>
+
+
+			<div class="card soft">
+				<h3>Material Nav</h3>
+				<script>
+					makeNav('nav nav-material')
+				</script>
+			</div>
+
+
+			<script>
+				$("#navigations a").on("click",function(e){
+					e.preventDefault();
+					$(this).closest("li").addClass("active")
+					.siblings().removeClass("active")
+				})
+			</script>
+
+		</div>
+
+
+		<div class="container">
+			<h2>Grid System</h2>
+			<div class="container">
+				<div class="grid gap xs-small md-meduim">
+					<div class="col-xs-6 col-md-3"><div class="card soft">
+						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+					</div></div>
+					<div class="col-xs-6 col-md-3"><div class="card soft">
+						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+					</div></div>
+					<div class="col-xs-6 col-md-3"><div class="card soft">
+						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+					</div></div>
+					<div class="col-xs-6 col-md-3"><div class="card soft">
+						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+					</div></div>
+
+				</div>
+			</div>
+
+
+
+			<div class="container">
+				<div class="card soft">
+					<h2>Responsive Grid</h2>
+
+					<div class="grid">
+
+						<div class="col-xs-3">column 3</div>
+						<div class="col-xs-3"> column 3</div>
+						<div class="col-xs-3"> column 3</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+		<script>
+			const makeTable = (classes='') =>{
+				const head =[ 'ID','Office','Name','Email','Phone'];
+				const body =[
+				['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
+				['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
+				['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
+				['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
+				['522','H M', 'khsdbk@kjdxn.ljkf','938-303-9382'],
+				];
 
 	// let ran = Math.floor(Math.random()*links.length);
 	document.write(`
@@ -681,7 +686,16 @@
 
 		</div>
 
+		<footer class="footer">
 
+			
+			<p>Contact Us</p>
+			<a href="https://www.instagram.com/rasha.shahoud.design/"><img src="../img/instagram.png" style="width: 40px;"></a>
+			<a href="https://www.instagram.com/rasha.shahoud.design/"><img src="../img/email.png" style="width: 40px;"></a>
+
+			<p>Copyright © 2022 Rasha Alzaitoun Shahoud - AAU WNM 608 Assignment</p>
+			
+		</footer>
 
 	</body>
 	</html>
