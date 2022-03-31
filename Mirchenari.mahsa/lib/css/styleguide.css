@@ -21,6 +21,17 @@
 
 
 
+	--color-main-dark-blue:#005287;
+	--color-main-blue:#41BED5;
+	--color-main-dark -yellow:#CD8C44;
+
+
+	--color-sub- blue:#86D5E0;
+	--color-sub-gold:#EDB694;
+	--color-sub-light -grey: #CDCDCD;
+
+
+
 	--header-height: 3rem;
 	--spacing: 1rem;
 
@@ -33,10 +44,10 @@
 
 body {
 
-background-color: var(--color-neutral-light);
 margin: 0;
 font-size: 100%;
-font-family:Futura
+font-family:Futura,sans-serif;
+background-color: var(--color-sub-light);
 }
 
 h1,
@@ -57,13 +68,24 @@ a {
 
 
 
+.footer{
+    background-color: var(--color-main-dark-blue);
+    color: var(--color-white);
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+    font-family: Futura,sans-serif;
 
+
+
+
+}
 
 
 /* LAYOUT CLASSES */
 
 .container {
-	max-width: 800px;
+	max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -113,6 +135,7 @@ width:80%;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0;
+	font-family: Helvetica,sans-serif;
 }
 
 
@@ -124,15 +147,15 @@ width:80%;
 
 .nav .active a {
 	background-color: var(--color-main-light);
-	color: inherit;
+	color: var(--color-white);
 	
 }
 
 
 
 .nav a:hover{
-	background-color: black;
-	color: var(--color-white);
+	background-color: var(--color-main-light);
+	color: var(--color-main-dark-blue);
 	text-decoration: none;
 }
 
@@ -225,16 +248,19 @@ content: '/';
 
 
 .navbar{
-	background-color: var(--color-neutral-dark);
+	background-color:var(--color-main-dark-blue);
 	color: var(--color-white);
 	line-height: var(--header-height);
+	margin-bottom: 50PX;
+	height: 80px;
 }
 
 
 .navbar h1 {
 	font-size: 2em;
 	margin: 0;
-	font-family: var(--font-sans);
+	font-family: Helvetica,sans-serif;
+	color: var(--color-main-medium);
 }
 
 .navbar a {
@@ -243,7 +269,7 @@ content: '/';
 }
 
 .navbar ul a:hover {
-  color: var(--color-black);
+  color: var(--color-main-dark-blue);
 }
 
 
@@ -256,13 +282,20 @@ content: '/';
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding: 1em;
-
 	overflow: hidden;
 	position: relative;
+
 }
 .card.soft {
+
 	border-radius: 0.5em;
-	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	overflow: hidden;
+	position: relative;
+
+
 }
 .card.hard {
 	border-radius: 0.2em;
@@ -286,7 +319,7 @@ content: '/';
 .card.black{
 	background-color: var(--color-black);
 	color: var(--color-neutral-medium);
-margin-top: 1em;
+    margin-top: 1em;
 	margin-bottom: 1em;
 	padding: 1em;
 
@@ -321,7 +354,7 @@ margin-top: 1em;
 
 .card.light{
 	background-color: var(--color-white);
-	color: var(--color-neutral-medium);
+	color: var(--color-neutral-dark);
 	margin-top: 1em;
 	margin-bottom: 1em;
 	padding: 1em;
@@ -341,37 +374,19 @@ margin-top: 1em;
 
 
 .view-window{
-  height: 550px;
-width: 800px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  background-attachment: fixed;
-  overflow: hidden;
-  background-position: center;
- 
+    height: 70vh;
+    width: 111vh;
 
+
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
 }
 
 
 
-
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color:var(--color-neutral-dark);
-  color: var(--color-neutral-light);
-  height: 25px;
-  padding-top: 10px;
-  padding-left: 5%;
-
-  font-family: var(--font-sans);
-  font-size: 12px;
-  margin-top: 40px;
-}
 
 
 
@@ -380,7 +395,7 @@ footer {
 .img{
 
 	height: 60;
-	wid
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	margin: 0;
@@ -425,9 +440,12 @@ padding: 30px;
 
 /*Figure*/
 
+./*FIGURES*/
 .figure{
     margin: 0;
-    background-color: var(--color-sub-medium);
+    background-color: var(--color-main-medium);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+
 }
 .figure img{
     width: 100%;
@@ -436,6 +454,8 @@ padding: 30px;
 .figure figcaption{
     padding: 1em;
 }
+
+
 
 
 
@@ -466,6 +486,10 @@ padding: 30px;
 .form-input{
     border-bottom: 1px solid var(--color-neutral-light);
     padding: 0.5em 1em;
+    width: 500px;
+    margin-left: 200px;
+
+
 }
 .form-input:focus{
     border-bottom-color:var(--color-main-medium) ;
@@ -475,13 +499,18 @@ padding: 30px;
     color: var(--color-neutral-medium);
     display: block;
     width: 100%;
+ margin-left: 100px;
 }
 .form-button{
     padding: 0.5em 1em;
     border-radius: 0.2em;
     cursor: pointer;
     text-align: center;
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-sub-gold);
+    width: 200px;
+    margin-left: 200px;
+    margin-top: 20px;
+
 }
 
 .form-button:hover{
