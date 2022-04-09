@@ -1,21 +1,21 @@
 
 :root{
-	--color-offwhite: #f4f4f4;
+
 
 	--color-main-light: #cbebf9;
 	--color-main-medium: #2592c3;
 	--color-main-dark: #052b3c;
-
-
+--color-white: #fff;
 }
 
 
 body{
-	background-color:var(--color-offwhite);
+padding-bottom: O;
 
-	
 
 }
+
+
 
 
 .favorite  label{
@@ -46,7 +46,7 @@ transform: scale(1.5,1.5);
 .navbar h1 {
 	padding-left: 0.5em;
   }
-}
+
 
 @media (max-width:400px){
 	.navbar .display-flex{
@@ -56,20 +56,28 @@ transform: scale(1.5,1.5);
 		line-height: 2em;
 	}
 
-}
+
+
 
 
 
 
 .figure.product{
-border-radius: 0.5em;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-overflow: hidden;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,.1);
+    overflow: hidden;
 }
+.figure.product img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
 
 .product-overlay{
 	position: relative;
 	overflow: hidden;
+
 }
 
 
@@ -86,6 +94,7 @@ transition: all 0.3s;
 display: flex;
 align-items: center;
 justify-content: center;
+margin-bottom: 80px;
 }
 
 
@@ -95,11 +104,12 @@ justify-content: center;
 }
 
 .product-overlay .caption-body{
-	background-color: white;
+background-color: white;
 border-radius: 0.5em;
-padding: 1em;
+padding: 2em;
 transform:translateY(2em);
 transition: all 0.3s;
+
 }
 
 .product-overlay:hover .caption-body{
@@ -136,12 +146,12 @@ background-color: initial;
 
  }
 
-}
+
 
 
 .product-overlay .caption-body{
 	transform: none;
-	padding: 0;
+	padding: 60px;
 }
 
 
