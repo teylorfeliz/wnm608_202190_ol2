@@ -1,5 +1,9 @@
 .carousel {
+<<<<<<< HEAD
     height: 100vh;
+=======
+    height: 30vh;
+>>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
     min-height: 13em;
     position: relative;
     overflow: hidden;
@@ -26,7 +30,11 @@
 }
 
 .carousel .slide.moving {
+<<<<<<< HEAD
     transition:all 0.5s;
+=======
+    transition:all 0.3s;
+>>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 }
 .carousel .slide.left,
 .carousel .slide.right,

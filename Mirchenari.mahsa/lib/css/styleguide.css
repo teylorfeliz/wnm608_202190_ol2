@@ -189,7 +189,10 @@ width:80%;
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 .nav-crumbs .active a,
 .nav-crumbs a:hover {
 background-color: transparent;
@@ -201,7 +204,10 @@ text-decoration: underline;
 
 .nav-crumbs li :not(:first-child)::before{
 content: '/';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 }
 
 
@@ -286,10 +292,17 @@ content: '/';
 	padding: 1em;
 	overflow: hidden;
 	position: relative;
+<<<<<<< HEAD
 
 }
 .card.soft {
 
+=======
+
+}
+.card.soft {
+
+>>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 	border-radius: 0.5em;
 	margin-top: 1em;
 	margin-bottom: 1em;
