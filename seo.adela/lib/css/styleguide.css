@@ -85,6 +85,11 @@ li.productname a{
 	color: black;
 }
 
+li.userlist a {
+	color: black;
+}
+
+
 /* LAYOUT CLASSES */
 
 
@@ -288,6 +293,7 @@ li.productname a{
 	list-style: none;
 	margin-left: 50px;
 	margin-right: 50px;
+	margin-top: 20px;
 }
 
 .nav-division li{
@@ -755,11 +761,13 @@ form {
 }
 
 .form-control{
-	margin: 1em 0;
+	margin: 1em 1em;
 }
 .form-input {
 	border-bottom: 1px solid var(--color-neutral-light);
 	padding: 0.5em 0em;
+	margin-bottom: 15px;
+	margin-left: 10px;
 }
 
 .form-input:focus {
@@ -1118,16 +1126,55 @@ input.form-button-login {
 
 
 
+/* User Admin */
+
+a.admin {
+	font-size: 25px;
+}
 
 
+ul.user li{
+	color: black;
+}
 
+a.back {
+	color: black;
+}
 
+a.back li {
+	color: blue;
+}
 
+.form-control2 {
+	margin:  1em 1em;
+	display: flex;
+}
 
+.form-button2 {
+	background-color: var(--color-main-dark);
+	border-radius: 4em;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.5em 0em;
+	color: white;
+	width: 50%;
+	font: inherit;
+	-webkit-appearance:  none;
+	border-width: 0;
+	outline: 0;
+	margin: 0 2em;
+}
 
+.form-button2:hover{
+	text-decoration: none;
+	background-color: none;
+}
 
+.form-button2:active {
+	background-color: var(--color-main-light);
+}
 
-
-
-
+h2.ulist {
+	margin-left: 20px;
+}
 
