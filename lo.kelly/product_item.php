@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include "parts/meta.php";?>
-    <title>Product Item</title>
+    <title>Soap | Island Soapworks</title>
 </head>
 <body>
 
@@ -10,9 +10,9 @@
 
     <div class="container" id="productitem">
         <div class="card soft">
-            <h2>Product Item</h2>
+            <h2>Soap</h2>
 
-          <p>This is item # <?= $_GET['id']?></p>
+          <p>This is soap # <?= $_GET['id']?></p>
         </div>
     </div>
 </body>

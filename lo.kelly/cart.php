@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="css/storetheme.css">
 <link rel="stylesheet" href="lib/css/styleguide.css">
  <link rel="stylesheet" href="lib/css/gridsystem.css">
-    <title>About | Island Soapworks</title>
+    <title>Cart | Island Soapworks</title>
 </head>
 <body>
     <?php include "parts/navbar.php";?>

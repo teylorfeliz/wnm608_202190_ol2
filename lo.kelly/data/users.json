@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Kelly Lo",
+        "type": "Student",
+        "email": "kellylo0620@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Howard Chiu",
+        "type": "Student",
+        "email": "haohao@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Eddie",
+        "type": "Cat",
+        "email": "eddieiscute@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Rey Rey",
+        "type": "Dog",
+        "email": "reyrey@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Buzz Lightyear",
+        "type": "Student",
+        "email": "b.lightyear@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Woody",
+        "type": "Cowboy",
+        "email": "woody@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    },
+    {
+        "name": "Alien",
+        "type": "Alien",
+        "email": "wearefriends@gmail.com",
+        "classes": [
+            123,
+            456,
+            789
+        ]
+    }
+]
