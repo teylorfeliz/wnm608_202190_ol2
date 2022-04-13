@@ -25,15 +25,15 @@ echo <<<HTML
     <h2>$user->name</h2>
     <div>
         <label class="form-label">Type</label>
-        <input type="text" placeholder="$user->type" class="form-input">
+        <input type="text" placeholder="Please enter..." value="$user->type" class="form-input">
     </div>
     <div>
         <label class="form-label">Email</label>
-        <input type="search" placeholder="$user->email" class="form-input">
+        <input type="search" placeholder="Please enter..." value="$user->email" class="form-input">
     </div>
     <div>
         <label class="form-label">Classes</label>
-        <input type="number" placeholder="$classes" class="form-input">
+        <input type="text" placeholder="Please enter..." value="$classes" class="form-input">
     </div>
 </form>
 
