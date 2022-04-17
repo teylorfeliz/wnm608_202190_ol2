@@ -38,7 +38,7 @@
 		<div class="grid gap">
 				<div class="col-xs-12 col-md-4">
 					<figure class="figure product">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<img src="img/red3.jpg">
 				    <figcaption> 
 				    	<div>Product Name</div> 
 				    	<div>$3.99</div>

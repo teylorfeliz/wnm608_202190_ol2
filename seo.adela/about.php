@@ -13,7 +13,7 @@
 
 
 
-	<div class="view-window2" style="background-image:url('img/petcrewryg1.jpg')"></div>
+	<div class="view-window2" style="background-image:url('img/seoah3.jpeg')"></div>
 
 
 	<div class="ceop display-flex">

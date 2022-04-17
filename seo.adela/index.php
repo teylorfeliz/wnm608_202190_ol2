@@ -26,8 +26,8 @@
 
 	<h1 class="newpro">NEW PRODUCT</h1>
 	<div class="flex advertisement">
-		<img src="https://via.placeholder.com/900x800?text=product">
-		<img src="https://via.placeholder.com/500x800?text=product" alt="">
+		<img src="img/collardog.png" class="newdog">
+		<img src="img/collarall.png" class="newproduct">
 	</div>
 
 	<h1 class="newpro"> BEST SELLERS </h1>
@@ -47,10 +47,10 @@
 	</div>
 
 	<div class="last">
-		<div class="loginbox">
-			<h1>Join us</h1>
+		<div>
+			<h1 class="newpro">Join us</h1>
 		</div>
-		<div class="view-window2" style="background-image:url('img/petcrewryg1.jpg')"></div>
+		<div class="view-window2" style="background-image:url('img/redgreenyellowtop.jpg')"></div>
 	</div>
 
 	<div class="container2 display-flex">
@@ -73,7 +73,7 @@
 			<h2>Review</h2>
 			<div class="post">
 				<div class="reviewuser">
-					<img src="https://via.placeholder.com/500x800?text=product" alt="">
+					<img src="https://via.placeholder.com/500x800?text=product" alt class="reviewimg">
 				</div>
 				<div class="reviewname">Alex Kim</div>
 			</div>

@@ -247,7 +247,7 @@ li.userlist a {
 }
 
 .nav-material a:hover{
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-sub-light);
 	color: inherit;
 }
 
@@ -258,7 +258,7 @@ li.userlist a {
 	left: 0;
 	width: 100%;
 	height: 0;
-	background-color: var(--color-neutral-dark);
+	background-color: var(--color-main-dark);
 	transition: all 0.3s;
 }
 
@@ -422,8 +422,7 @@ div#tableofcontents {
 
 .box img {
     width: 100%;
-    padding: 28px 6px;
-    /* margin: 0 0 -61px 14px; */
+    padding: 3px 6px;
     align-content: center;
     position: relative;
 }
@@ -435,20 +434,24 @@ ul.content li {
 /* ADVERTISEMENT */
 
 .newpro {
-	margin-left: 3em;
+	margin-left: 2em;
+	margin-top: 1em;
 }
+
 .advertisement {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	margin: auto;
 	width: 100%;
-	background-color: black;
+	background-color: transparent;
 }
 
 .last{
 	position: relative;
 }
+
+
 
 /* CARD */
 
@@ -955,7 +958,7 @@ label {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
-	margin-top: 60px;
+	margin-top: 150px;
 	display: inline-block;
 }
 
@@ -1177,4 +1180,39 @@ a.back li {
 h2.ulist {
 	margin-left: 20px;
 }
+
+a.login {
+	margin-right: 10px;
+}
+
+img.reviewimg {
+	margin-left: 40px;
+}
+
+.newdog {
+	width: 900px;
+	height: 800px;
+}
+
+.newproduct {
+	width: 700px;
+	height: 800px;
+}
+
+.reviewarticle {
+    margin-left: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
