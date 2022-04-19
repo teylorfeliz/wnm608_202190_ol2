@@ -8,9 +8,8 @@
 </head>
 <body>
 <div class="view-window" style="background-image: url(img/gold.jpeg);">
-	
-	
-<?php include 'parts/navbar.php';?>
+
+	<?php include 'parts/navbar.php';?>
 
 </div>
 

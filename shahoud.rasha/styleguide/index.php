@@ -1,45 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-
-
-	<meta name="viewport" content="width=device-width">
-	<title>Gilded</title>
-
-	<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css">
-	<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css">
-	<link rel="stylesheet" type="text/css" href="../css/storetheme.css">
-
-
+	
+	<?php include "../parts/meta.php"; ?>
 
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	
-	
-
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-stretch logo">
-				<img class="logo-img" src="../img/gold-watch.jpg">
-			</div>
-			<div class="flex-stretch title"><h1>Gilded</h1></div>
-			<!-- nav.nav>ul>li*4>a[href=#article$]>{link$ -->
-			<nav class="flex-stretch nav main-nav">
-				<ul class="container display-flex">
-					<li><a href="../index.php">Home</a></li>
-					<li><a href="../about.php">About</a></li>
-					<li><a href="../products.php">Products</a></li>
-					<li><a href="../cart.php">Cart</a></li>
-					<li><a href="index.php">Styleguide</a></li>
-
-
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<?php include '../parts/navbar.php';?>
 
 
 	<div class="container" id="tableofcontents">
@@ -161,7 +131,7 @@
 			</div>
 
 			<h2>View Window</h2>
-			<div class="view-window" style="background-image: url(../img/gold.jpeg);"></div>
+			<div class="view-window" style="background-image: url(img/gold.jpeg);"></div>
 
 
 
@@ -257,16 +227,16 @@
 			<div class="container">
 				<div class="grid gap xs-small md-meduim">
 					<div class="col-xs-6 col-md-3"><div class="card soft">
-						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+						<img src="img/annie-claude-unsplash.jpg" alt="" class="media-image">
 					</div></div>
 					<div class="col-xs-6 col-md-3"><div class="card soft">
-						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+						<img src="img/annie-claude-unsplash.jpg" alt="" class="media-image">
 					</div></div>
 					<div class="col-xs-6 col-md-3"><div class="card soft">
-						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+						<img src="img/annie-claude-unsplash.jpg" alt="" class="media-image">
 					</div></div>
 					<div class="col-xs-6 col-md-3"><div class="card soft">
-						<img src="../img/annie-claude-unsplash.jpg" alt="" class="media-image">
+						<img src="img/annie-claude-unsplash.jpg" alt="" class="media-image">
 					</div></div>
 
 				</div>
@@ -378,7 +348,7 @@
 	<div class="card">
 		<h3>Basic Figure</h3>
 		<figure class="figure">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>Product</figcaption>
 		</figure>
 	</div>
@@ -388,20 +358,20 @@
 	<div class="grid gap">
 
 		<div class="col-xs-12 col-md-4"><figure class="figure">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>Product</figcaption>
 		</figure></div>
 
 
 		<div class="col-xs-12 col-md-4"><figure class="figure">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>Product</figcaption>
 		</figure></div>
 
 
 
 		<div class="col-xs-12 col-md-4"><figure class="figure">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>Product</figcaption>
 		</figure></div>
 
@@ -412,7 +382,7 @@
 	<h3>Product Grid</h3>
 	<div class="grid gap">
 		<div class="col-xs-12 col-md-4"><figure class="figure Product">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div>Product Name</div>
 				<div>3.99$</div>
@@ -420,7 +390,7 @@
 		</figure></div>
 
 		<div class="col-xs-12 col-md-4"><figure class="figure product">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div>Product Name</div>
 				<div>3.99$</div>
@@ -429,7 +399,7 @@
 
 
 		<div class="col-xs-12 col-md-4"><figure class="figure product">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div>Product Name</div>
 				<div>3.99$</div>
@@ -443,7 +413,7 @@
 	<h3>Product Overlay</h3>
 	<div class="grid gap">
 		<div class="col-xs-12 col-md-4"><figure class="figure product-overlay">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div class="caption-body">
 					<div>Product Name</div>
@@ -454,7 +424,7 @@
 
 
 		<div class="col-xs-12 col-md-4"><figure class="figure product-overlay">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div class="caption-body">
 					<div>Product Name</div>
@@ -465,7 +435,7 @@
 
 
 		<div class="col-xs-12 col-md-4"><figure class="figure product-overlay">
-			<img src="../img/fig-1.jpeg">
+			<img src="img/fig-1.jpeg">
 			<figcaption>
 				<div class="caption-body">
 					<div>Product Name</div>
@@ -686,16 +656,7 @@
 
 		</div>
 
-		<footer class="footer">
-
-			
-			<p>Contact Us</p>
-			<a href="https://www.instagram.com/rasha.shahoud.design/"><img src="../img/instagram.png" style="width: 40px;"></a>
-			<a href="https://www.instagram.com/rasha.shahoud.design/"><img src="../img/email.png" style="width: 40px;"></a>
-
-			<p>Copyright © 2022 Rasha Alzaitoun Shahoud - AAU WNM 608 Assignment</p>
-			
-		</footer>
+		<?php include '../parts/footer.php';?>
 
 	</body>
 	</html>
