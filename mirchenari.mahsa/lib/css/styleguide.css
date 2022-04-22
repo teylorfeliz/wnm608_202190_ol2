@@ -47,7 +47,8 @@ body {
 margin: 0;
 font-size: 100%;
 font-family:Futura,sans-serif;
-background-color: var(--color-sub-light);
+
+
 }
 
 h1,
@@ -66,24 +67,29 @@ a {
 	text-decoration: none;
 }
 
-<<<<<<< Updated upstream
+
 
 
 .footer{
-    background-color: var(--color-main-dark-blue);
+    background-color: black;
     color: var(--color-white);
     text-align: left;
-    padding: 8px;
-    font-size: 12px;
+    padding: 7px;
+    font-size: 10px;
     font-family: Futura,sans-serif;
-
-
+  margin-top: 100px;
 
 
 
 
 }
 
+p{
+	text-align: justify;
+	word-spacing: normal;
+	alignment-baseline: auto;
+
+}
 
 /* LAYOUT CLASSES */
 
@@ -91,6 +97,7 @@ a {
 	max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
+
 }
 
 
@@ -115,6 +122,10 @@ width:80%;
 
 .flex-justify-center { justify-content: center; }
 
+.flex-column{flex-direction: column;
+
+}
+
 
 
 /* small classes*/
@@ -124,9 +135,9 @@ width:80%;
 	vertical-align: text-bottom;
 }
 
-<<<<<<< Updated upstream
+
 .hidden{display: none;}
-=======
+
 
 
 
@@ -195,10 +206,8 @@ width:80%;
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
+
 .nav-crumbs .active a,
 .nav-crumbs a:hover {
 background-color: transparent;
@@ -210,10 +219,7 @@ text-decoration: underline;
 
 .nav-crumbs li :not(:first-child)::before{
 content: '/';
-<<<<<<< HEAD
 
-=======
->>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 }
 
 
@@ -370,28 +376,35 @@ content: '/';
 
 
 .navbar{
-	background-color:var(--color-main-dark-blue);
+	background-color:black;
 	color: var(--color-white);
 	line-height: var(--header-height);
-	margin-bottom: 50PX;
-	height: 80px;
+
+	height: 100px;
 }
 
 
 .navbar h1 {
-	font-size: 2em;
+	font-size: 3em;
 	margin: 0;
 	font-family: Helvetica,sans-serif;
-	color: var(--color-main-medium);
+	color: var(--color-sub-gold);
+	margin-top: 30px;
+margin-left: -120px;
+margin-bottom: 0;
+
 }
 
 .navbar a {
-	padding: 0 1em;
+	padding: 0 3em;
+	margin-top: 30px;
+
+
 
 }
 
 .navbar ul a:hover {
-  color: var(--color-main-dark-blue);
+  color: var(--color-sub-light);
 }
 
 
@@ -406,17 +419,14 @@ content: '/';
 	padding: 1em;
 	overflow: hidden;
 	position: relative;
-<<<<<<< HEAD
+
 
 }
+
+
 .card.soft {
 
-=======
 
-}
-.card.soft {
-
->>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 	border-radius: 0.5em;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -491,13 +501,33 @@ content: '/';
 	overflow: hidden;
 	position: relative;
 	width: 100%;
+	height: 40%;
+
+
+
+
 	border-radius: 0.5m;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
 
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 
 	
 }
+
+.card-section~.card-section{
+	border-top: 1px solid var(--color-neutral-light);
+
+
+}
+
+.card-section {
+	padding: 1em;
+
+}
+
+
+
+
 
 
 
@@ -567,7 +597,7 @@ padding: 30px;
 
 
 
-/*Figure*/
+
 
 ./*FIGURES*/
 .figure{
@@ -589,10 +619,9 @@ padding: 30px;
 
 
 
-=======
 .view-window{
-  height: 550px;
-width: 800px;
+
+width: 1030px;
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -646,22 +675,23 @@ width: 800px;
 }
 .form-button{
     padding: 0.5em 1em;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     cursor: pointer;
     text-align: center;
     background-color: var(--color-sub-gold);
     width: 200px;
-    margin-left: 200px;
+ margin-left: 40px;
     margin-top: 20px;
+
 
 }
 
 .form-button:hover{
     text-decoration: none;
-    background-color: var(--color-main-light);
+    background-color: var(--color-neutral-medium);
 }
 .form-button:active{
-    background-color: var(--color-main-medium);
+    background-color: var(--color-neutral-dark);
 }
 
 
@@ -719,7 +749,6 @@ width: 800px;
 /*TOGGLE*/
 
 
-<<<<<<< Updated upstream
 .toggle label{
     font-size: 1em;
     display: inline-block;
@@ -743,7 +772,7 @@ width: 800px;
 .toggle input:checked + label::after{
    transform: translateX(1em);
 }
-=======
+
 
 /*Tables*/
 
@@ -762,7 +791,7 @@ width: 800px;
 
 .table.striped tbody tr :nth-child(odd){
 	background-color: var(--color-neutral-light);
->>>>>>> Stashed changes
+
 }
 
 
