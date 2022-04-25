@@ -12,7 +12,7 @@
 	--color-neutral-light: #ccccccff;
 	--color-neutral-medium: #818181ff;
 	--color-neutral-dark: #434343ff;
-	--color-sub-light: #bef6e9ff;
+	--color-sub-light: #feafaeff;
 	--color-sub-medium: #ff8280ff;
 	--color-sub-dark: #f74e4cff;
 	--color-main-light: #79f6daff;
@@ -66,7 +66,7 @@ li, button {
 }
 
 p{
-	font-family: Georgia;
+	font-family: Montserrat,sans-serif;
 }
 
 header {
@@ -148,6 +148,8 @@ li.userlist a {
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
+
+.flex-column { flex-direction: column; }
 
 
 /* Small Classes */
@@ -493,6 +495,14 @@ ul.content li {
 
 	.card.flat {
 		padding: 0;
+	}
+
+	.card-section~.card-section {
+    	border-top: 1px solid var(--color-neutral-light);
+	}
+
+	.card-section {
+    	padding: 1em;
 	}
 
 	.view-window2 {
@@ -934,6 +944,16 @@ label {
 	margin:  10px 10px;
 }
 
+.double-button {
+    width: 45%;
+    margin: 1em 1em;
+    border-radius: 4em;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.9em;
+    margin-left: 2em;
+
+}
 
 .welcome-text {
     text-align: center;
@@ -1202,14 +1222,6 @@ img.reviewimg {
 .reviewarticle {
     margin-left: 3rem;
 }
-
-
-
-
-
-
-
-
 
 
 
