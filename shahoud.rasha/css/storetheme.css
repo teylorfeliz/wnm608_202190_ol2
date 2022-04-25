@@ -1,10 +1,17 @@
 :root{
 	--color-offwhite:  #F4F4F4;
-	
+
+	--color-neutral-light: #eee;
+	--color-neutral-medium: #999;
+	--color-neutral-dark: #555;
+
 	--color-main-light: #F9F0A6;
 	--color-main-medium-light:  #D5974D;
 	--color-main-medium: #FCC435;
 	--color-main-dark: #4D201E;
+
+	--color-black: #0F0F0F ;
+	--color-white: #FEFCFF ;
 }
 
 
@@ -59,10 +66,35 @@ body{
 
 
 
-.figure.product{
+.product.figure {
 	border-radius: 0.5em;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	overflow: hidden;
+	height: 100%;
+	transition: all 0.3s;
+	width: 100%;
+	vertical-align: text-bottom;
+	object-fit: fill;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.product.figure img {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.product.figure a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+	text-decoration: none;
 }
 
 .product-overlay{
@@ -121,4 +153,22 @@ body{
 		padding: 0;
 	}
 }
+
+
+.images-main img{
+	width: 100%;
+	height: 40vh;
+	object-fit: contain;
+}
+
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+
+
+
+
 

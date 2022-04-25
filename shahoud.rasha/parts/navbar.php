@@ -9,7 +9,7 @@
 		<ul class="container display-flex">
 			<li><a href="index.php">Home</a></li>
 			<li><a href="about.php">About</a></li>
-			<li><a href="products.php">Products</a></li>
+			<li><a href="product_list.php">Products</a></li>
 			<li><a href="cart.php">Cart</a></li>
 			<li><a href="styleguide/index.php">Styleguide</a></li>
 			

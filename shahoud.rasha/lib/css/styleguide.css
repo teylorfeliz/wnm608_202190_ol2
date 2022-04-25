@@ -53,13 +53,12 @@ header{
 	float: center;
 	padding-left: 0;
 	padding-top: 0;
+
 	
 
 }
 
-.title h1{
-	padding: 0;
-}
+
 
 .colorscheme {
 	margin-top: 1em;
@@ -140,7 +139,11 @@ h6{
 }
 
 h1{
-	font-family: Aria 24 Bold;
+	font-family: Arial Bold ,var(--font-sans);
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 100%;
+	font-family: Aria 400 Bold;
 }
 
 h2{
@@ -159,6 +162,7 @@ a{
 a:hover{
 	text-decoration: underline;
 }
+
 
 
 .tableofcontents ul{
@@ -185,6 +189,8 @@ a:hover{
 
 .flex-align-center{align-items: center;}
 .flex-justify-center{justify-items: center;}
+
+.flex-column {flex-direction: column;}
 
 /* Small Classes */
 
@@ -321,7 +327,7 @@ a:hover{
 	line-height: var(--header-height);
 }
 
-,navbar h1 {
+.navbar h1 {
 	font-size: 0.75em;
 	margin: 0;
 	font-family: var(--font-sans) ;
@@ -570,11 +576,13 @@ a:hover{
 	width: 100%;
 	vertical-align: text-bottom;
 
+
 }
 
 
 .figure figcaption{
 	padding: 1em;
+	align-self: baseline;
 }
 
 
@@ -586,6 +594,17 @@ a:hover{
 	width: 100%;
 }
 
+
+
+.card-section {
+	padding: 1em;
+
+}
+
+
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-medium);
+}
 
 
 

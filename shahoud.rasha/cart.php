@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php 
+
+		include_once "lib/php/functions.php";
+		include_once "parts/templates.php";
+
+$cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +16,6 @@
 
 </head>
 <body>
-<div class="view-window" style="background-image: url(img/gold.jpeg);">
 	
 	
 
@@ -17,20 +25,55 @@
 </div>
 
 
-<div class="container">
-	<article id="article1" class="article card soft">
+<div class="container card soft">
+	
 	<div class="display-flex flex-alugn-center">
 		<div class="flex-stretch">
-			<h2>Cart</h2>
+				<h2>In Your Cart</h2>
+				<div class="grid gap">
+				<div class="col-xs-12 col-md-7">
+					<div class="card soft">
+						<?= array_reduce($cart,'cartListTemplate') ?>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-5">
+					<div class="card soft flat">
+						<div class="card-section display-flex">
+							<div class="flex-stretch"><strong>Sub Total</strong></div>
+								<div class="flex-none">&dollar;3:50</div>
+						</div>
+
+
+
+						<div class="card-section display-flex">
+							<div class="flex-stretch"><strong>Taxes</strong></div>
+								<div class="flex-none">&dollar;3:50</div>
+						</div>
+
+
+
+
+
+						<div class="card-section display-flex">
+							<div class="flex-stretch"><strong>Total</strong></div>
+								<div class="flex-none">&dollar;7:00</div>
+						</div>
+
+
+
+						<div class="card-section">
+							<a href="product_checkout.php" class="form-button">Checkout</a>
+						</div>
+
+
+
+
+					</div>
+				</div>
+				</div>
 		</div>
 		
-	</div>
-		<dive class="article-body">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Distinctio, magni aliquid, blanditiis molestias ratione reprehenderit ipsa placeat, voluptatibus excepturi deleniti iste quaerat laborum earum sapiente laboriosam quae sint, est veritatis tempora explicabo saepe natus! Amet quo, similique iure nobis nulla.</p>
-			<p>Nemo tempora alias quas nihil, doloribus, eos tempore voluptatibus aliquam impedit eligendi consectetur neque veniam, totam cum autem dolor in tenetur nisi saepe rem. Officia placeat nam ipsam explicabo corrupti quis ducimus praesentium molestiae, sapiente dignissimos quisquam numquam impedit voluptatum.</p>
-			<p>Obcaecati totam non ducimus similique exercitationem, eligendi, accusantium. Maxime sed delectus nobis, blanditiis facere qui harum pariatur veniam accusamus soluta, nihil suscipit voluptates obcaecati voluptatum. Aspernatur, ipsa quisquam velit ea ab quidem dolorem est, doloremque ipsum quis non quia ipsam?</p>
-		</dive>
-	</article>
+	
 	
 </div>
 
