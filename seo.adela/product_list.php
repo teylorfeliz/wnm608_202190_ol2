@@ -12,11 +12,9 @@
 		<?php include "parts/navbar.php"; ?>
 
 
-	<div class="card">
-			<h3>Material Nav</h3>
-
-			
-			<nav class="nav nav-material">
+	<div>
+		
+			<nav class="nav nav-material2">
 				<ul>
 				<li><a href="product_category.php?id=1">Food</a></li>
 				<li><a href="product_category.php?id=2">Treats</a></li>
@@ -25,9 +23,8 @@
 		</nav>
 	</div>
 	
-	<div class="card">
-			<h3>Product Ad</h3>
-
+	<div>
+	
 			<figure class="figure">
 				<img src="https://via.placeholder.com/400x100?text=product" alt="">
 				<figcaption>Product</figcaption>

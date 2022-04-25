@@ -207,6 +207,7 @@ li.userlist a {
 	color: inherit;
 }
 
+.nav-material2 ul,
 .nav-material ul,
 .nav-crumbs ul,
 .nav-pills ul,
@@ -215,7 +216,7 @@ li.userlist a {
 	display: flex;
 }
 
-
+.nav-material2 li,
 .nav-material li,
 .nav-stretch li {
 	flex: 1 1 auto;
@@ -265,6 +266,32 @@ li.userlist a {
 }
 
 .nav-material a:hover::after {
+	height: 4px;
+}
+
+.nav-material2 a {
+	padding: 0.5em 1em;
+	position: relative;
+	background-color: var(--color-sub-medium);
+}
+
+.nav-material2 a:hover{
+	background-color: var(--color-main-medium);
+	color: inherit;
+}
+
+.nav-material2 a::after{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: var(--color-sub-dark);
+	transition: all 0.3s;
+}
+
+.nav-material2 a:hover::after {
 	height: 4px;
 }
 
