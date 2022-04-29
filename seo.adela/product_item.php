@@ -2,16 +2,16 @@
 
 include_once "lib/php/functions.php";
 
-$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` =".$_GET['id'])[0];
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
 $images = explode(",", $product->images);
 
-$image_elements = array_reduce($images, function($r,$o){
+$image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='img/$o'>";
 });
 
 
-//print_p($product);
+//print_p($_SESSION);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -43,16 +43,20 @@ $image_elements = array_reduce($images, function($r,$o){
 			</div>
 		</div>
 		<div class="col-xs-12 col-md-5">
-			<div class="card soft">
+			<form class="card soft" method= "post" action="cart_actions.php?action=add-to-cart">
+
+				<input type="hidden" name="product-id" value="<?= $product->id ?>">
+
 				<div class="card-section">
 					<h2 class="product-title"><?= $product->name ?></h2>
 					<div class="product-price">&dollar;<?= $product->price ?></div>
 				</div>
 
 				<div class="card-section">
+					<div class="form-control">
 					<label for="product-amount"C class="form-label">Amount</label>
-					<div class="form-select" id="product-amount">
-						<select>
+					<div class="form-select">
+						<select id="product-amount" name="product-amount">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -66,10 +70,25 @@ $image_elements = array_reduce($images, function($r,$o){
 						</select>
 					</div>
 				</div>
-				<div>
-					<a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add To Cart</a>
+
+					<div class="form-control">
+						<label for="product-color"C class="form-label">Color</label>
+
+					<div class="form-select">
+						<select id="product-color" name="product-color">
+							<option>red</option>
+							<option>green</option>
+							<option>orange</option>
+						</select>
+					</div>
+					</div>
 				</div>
-			</div>
+
+
+				<div class="card-section">
+					<input type="submit" class="form-button" value="Add To Cart">
+				</div>
+			</form>
 		</div>
 	</div>
 

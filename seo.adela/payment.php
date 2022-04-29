@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include_once "lib/php/functions.php"; ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -95,7 +95,7 @@
 
 			<div class="form-control">
 				<a href="cart.php"><button class=double-button>Cancel</button></a>
-				<button class=double-button>Checkout</button>
+				<a class="complete" href="product_confirmation.php"><button class=double-button>Complete Checkout</button></a>
 			</div>
 
 

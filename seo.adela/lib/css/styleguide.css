@@ -879,6 +879,12 @@ span {
 	color: white;
 }
 
+
+.form-button.inline{
+	width: 5em;
+	background-color: var(--color-neutral-light);
+}
+
 .form-button:hover{
 	text-decoration: none;
 	background-color: none;
