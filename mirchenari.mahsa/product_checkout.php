@@ -1,21 +1,54 @@
-<!DOCTYPE html>
+<?php
+            
+include_once "lib/php/functions.php";
+include_once "parts/templates_1.php";
+
+//$cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (6,7,10)");
+$cart_items = getCartItems();
+
+?><!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	
-	<title>Checkout Page</title>
-	<?php include "parts/meta.php"; ?>
+    <meta charset="UTF-8">
+    
+    <title>Checkout Page</title>
+    <?php include "parts/meta.php"; ?>
 
 
 </head>
 <body>
 
 <?php include "parts/navbar.php"; ?>
-	
 
-	<div class="container">
-		<div class="card soft">
-			<h2>Product Checkout</h2>
+
+
+
+
+<div class="container">
+        <h2>PRODUCT CHECKOUT</h2>
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-7">
+                <div class="card ">
+                    <?= array_reduce($cart_items, 'cartListTemplate') ?>
+                </div>
+
+            </div>
+    
+
+            <div class="col-xs-12 col-md-5">
+                <div class="card ">
+                    <?= cartTotals() ?>
+                     </div>
+       
+ 
+
+
+
+   
+    
 
 <form class="form">
     <h3>Address</h3>
@@ -24,8 +57,8 @@
           <input id="address-street" type="text"  placeholder="Street name" class="form-input">
         </div>  
          <div class="form-control">
-         	<div class="grid gap">
-         		<div class="col-xs-12 col-md-6">
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-6">
             <label for="address-city" class="form-label">City</label>
           <input id="address-city" type="text"  placeholder="City" class="form-input">
         </div>
@@ -36,12 +69,12 @@
           </div>
             </div>
             <div class="form-control">
-         	<div class="grid gap">
-         		<div class="col-xs-12 col-md-6">
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-6">
             <label for="address-zip" class="form-label">Zip Code</label>
           <input id="address-zip" type="text"  placeholder="Zip Code" class="form-input">
         </div>
-             		<div class="col-xs-12 col-md-6">
+                    <div class="col-xs-12 col-md-6">
             <label for="address-country" class="form-label">Country</label>
           <input id="address-country" type="text"  placeholder="Country" class="form-input">
         </div>
@@ -83,11 +116,12 @@
         </div>
          
     </form>
-
-
 </div>
 
 </div>
+</div>
+</div>
+<?php include "parts/footer.php"; ?>
 
 </body>
 

@@ -1,4 +1,9 @@
-s<!DOCTYPE html>
+<?php  
+  include_once "lib/php/functions.php"; 
+resetCart();
+
+  
+     ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -14,19 +19,19 @@ s<!DOCTYPE html>
 	
 
 	<div class="container">
-		<div class="card light">
+		<div class="card dark">
 			<p>Thank you for your purchase</p>
-			<p>Order Number :09876880 </p>
-</div>
+		
 
-			<p>Items </p>
-			<p><a href="product_list.php">Continue Shopping > </a></p>
-	
+			
+<p><a href="product_list.php">Continue Shopping > </a></p>
 
 </div>
 
+
 </div>
 
+</div>
 </body>
 
 
