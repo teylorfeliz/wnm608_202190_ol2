@@ -60,6 +60,9 @@ h5,
 h6 {
 font-family: Helvetica;
 }
+h2{
+	    margin-top:4em;
+}
 
 
 a {
@@ -78,7 +81,7 @@ a {
     padding: 7px;
     font-size: 10px;
     font-family: Futura,sans-serif;
-  margin-top: 100px;
+  margin-top: 150px;
 
 
 
@@ -417,8 +420,8 @@ margin-bottom: 0;
 
 .card {
 	background-color: var(--color-white);
-	margin-top: 6em;
-	margin-bottom:18em;
+	margin-top: 2em;
+	margin-bottom:5em;
 	padding: 1em;
 	overflow: hidden;
 	position: relative;
@@ -443,10 +446,13 @@ margin-bottom: 0;
 .card.hard {
 	border-radius: 0.2em;
 	border:  2px solid var(--color-neutral-medium);
+	justify-items: center;
 }
 .card.dark {
 	background-color: var(--color-neutral-dark);
 		color: var(--color-neutral-light);
+		 width: 20em;
+    margin-bottom: 40em;
 }
 .card.medium {
 	background-color: var(--color-neutral-medium);
@@ -685,6 +691,9 @@ width: 1030px;
 
 
 }
+.form-button.inline{
+	width: initial;
+	}
 
 .form-button:hover{
     text-decoration: none;
@@ -835,3 +844,5 @@ width: 1030px;
  	padding: 3em ;
 
  }
+
+
