@@ -1,7 +1,7 @@
 <?php
 
 
-Function productListTemplate ($r,$o) {
+function productListTemplate ($r,$o) {
 return $r.<<<HTML
 <a class="col-xs-12 col-md-4" href="product_item.php?id=$o->id">
 	<figure class="figure product display-flex flex-column">
@@ -17,10 +17,11 @@ return $r.<<<HTML
 
 HTML;
 }
+
 function selectAmount($amount=1,$total=10) {
 	$output = "<select name='amount'>";
 	for($i=1;$i<=$total;$i++) {
-		$output .= "<option ".($i=amount?"selected":"").">$i</option>";
+		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
 	}
 	$output .= "</select>";
 	return $output;
@@ -44,6 +45,7 @@ return $r.<<<HTML
 	<div class="flex-none">
 		<div>&dollar;$totalfixed</div>
 		<form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
+			<input type="hidden" name="id" value="$o->id">
 			<div class="form-select" style="font-size: 0.8em">
 				$selectamount
 			</div>

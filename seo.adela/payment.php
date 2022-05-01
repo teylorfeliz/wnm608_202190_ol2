@@ -49,7 +49,7 @@
 					</div>
 
 					<div class="form-control">
-						<input type="submit" class="form-button" value="Submit">
+						<input type="submit" class="form-button" value="OK">
 					</div>
 			</form>
 
@@ -85,7 +85,7 @@
 					</div>
 
 					<div class="form-control">
-						<input type="submit" class="form-button" value="Submit">
+						<input type="submit" class="form-button" value="OK">
 					</div>
 				</form>
 
@@ -94,7 +94,7 @@
 
 
 			<div class="form-control">
-				<a href="cart.php"><button class=double-button>Cancel</button></a>
+				<a href="product_cart.php"><button class=double-button>Cancel</button></a>
 				<a class="complete" href="product_confirmation.php"><button class=double-button>Complete Checkout</button></a>
 			</div>
 

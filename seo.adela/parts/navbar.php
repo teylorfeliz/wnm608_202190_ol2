@@ -18,10 +18,12 @@ include_once "lib/php/functions.php";
 			</nav>
 
 			<ul class="cta">
-				<li><a href="product_cart.php">
-					<span>Cart</span>
+					<li><a class="cart" href="product_cart.php">
+					<span><img src="img/shoppingcart.png" class="cart_img" style="width:22px; height:22px;"></span>
+					</a></li>
+
 					<span class="badge"><?= makeCartBadge(); ?></span>
-				</a></li>
+				
 				</li><a class="login" href="login.php"><button>Log In</button></a></li>
 			</ul>
 	</header>

@@ -25,10 +25,10 @@ include_once "parts/templates.php";
 		</nav>
 	</div>
 	
-	<div>
+	<div class="">
 	
-			<figure class="figure">
-				<img src="https://via.placeholder.com/400x100?text=product" alt="">
+			<figure class="figure display-flex flex-column">
+				<img src="img/main.jpeg" alt class="col-xs-12 col-md-4 adpic">
 				<figcaption>Product</figcaption>
 			</figure>
 	</div>

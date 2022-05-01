@@ -12,7 +12,7 @@ resetCart();
 </head>
 <body>
 
-	<? php include "parts/navbar.php"; ?>
+	<?php include "parts/navbar.php"; ?>
 
 	<div class="styleguidecontainer">
 		<div class="card soft">
