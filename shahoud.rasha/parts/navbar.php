@@ -1,4 +1,8 @@
-<header class="navbar">
+<?php 
+	include_once "lib/php/functions.php";
+
+?>
+	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-stretch logo">
 				<img class="logo-img" src="img/gold-watch.jpg">
@@ -10,7 +14,11 @@
 			<li><a href="index.php">Home</a></li>
 			<li><a href="about.php">About</a></li>
 			<li><a href="product_list.php">Products</a></li>
-			<li><a href="cart.php">Cart</a></li>
+			<li><a href="cart.php">
+				<span>Cart</span>
+				<span class="badgs"><?=makeCartBadge(); ?></span>
+
+				</a></li>
 			<li><a href="styleguide/index.php">Styleguide</a></li>
 			
 		</ul>

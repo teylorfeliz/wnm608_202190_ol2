@@ -478,6 +478,10 @@ a:hover{
 	border:  solid 2px var(--color-neutral-dark);
 }
 
+.form-button.inline{
+	width: 20%;
+}
+
 .form-button:hover{
 	Text-decoration: none;
 }
