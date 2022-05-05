@@ -61,7 +61,8 @@ h6 {
 font-family: Helvetica;
 }
 h2{
-	    margin-top:4em;
+	    margin-top:2em;
+	    color: var(--color-neutral-medium);
 }
 
 
@@ -421,7 +422,7 @@ margin-bottom: 0;
 .card {
 	background-color: var(--color-white);
 	margin-top: 2em;
-	margin-bottom:5em;
+	margin-bottom:18.5em;
 	padding: 1em;
 	overflow: hidden;
 	position: relative;
@@ -451,7 +452,7 @@ margin-bottom: 0;
 .card.dark {
 	background-color: var(--color-neutral-dark);
 		color: var(--color-neutral-light);
-		 width: 20em;
+		 width: 60em;
     margin-bottom: 40em;
 }
 .card.medium {
@@ -685,8 +686,9 @@ width: 1030px;
     cursor: pointer;
     text-align: center;
     background-color: var(--color-sub-gold);
-    width: 200px;
- margin-left: 40px;
+    width: 180px;
+
+ margin-right: 70px;
     margin-top: 20px;
 
 
@@ -704,7 +706,9 @@ width: 1030px;
 }
 
 
-
+.form-select{
+	margin-top: -22px;
+}
 
 /*Hotdog*/
 
@@ -713,7 +717,7 @@ width: 1030px;
 	border-radius: 2em;
 	padding: 0.5em 1.5em;
 	display: flex;
-	width: 90%;
+	width: 95%;
 }
 
 .hotdog.dark{
@@ -737,6 +741,7 @@ width: 1030px;
     background-color: var(--color-neutral-light);
     border-radius: 0.2em;
     cursor: pointer;
+    margin-top: 40px;
 }
 .form-select{
     position: relative;
