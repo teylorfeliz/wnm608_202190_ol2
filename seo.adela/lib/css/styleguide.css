@@ -392,7 +392,11 @@ ul.cta {
 
 img.cart_img {
     margin-top: 4px;
-    margin-right: -10px;
+    margin-right: -20px;
+}
+
+img.cart_img.cartimg2 {
+    margin-right: 12px;
 }
 
 .advertisement {
@@ -522,6 +526,10 @@ ul.content li {
 
 	.card.flat {
 		padding: 0;
+	}
+
+	.card.none {
+		background-color: transparent;
 	}
 
 	.card-section~.card-section {
@@ -875,7 +883,7 @@ span {
 	border-radius: 4em;
 	cursor: pointer;
 	text-align: center;
-	padding: 0.5em 0em;
+	padding: 0.5em 1em;
 	color: white;
 }
 
@@ -1234,9 +1242,9 @@ h2.ulist {
 	margin-left: 20px;
 }
 
-a.login {
+//*a.login {
 	margin-right: 10px;
-}
+}*//
 
 img.reviewimg {
 	margin-left: 40px;
@@ -1278,3 +1286,11 @@ img.adpic {
     margin: 0 431px;
 }
 
+.filterbutton.form-select {
+    margin: 0;
+    color: white;
+}
+
+.secondfilter.flex-none {
+	padding-right: 0.3em;
+}

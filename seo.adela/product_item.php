@@ -78,7 +78,7 @@ $image_elements = array_reduce($images,function($r,$o){
 						<select id="product-color" name="product-color">
 							<option>red</option>
 							<option>green</option>
-							<option>orange</option>
+							<option>yellow</option>
 						</select>
 					</div>
 					</div>
