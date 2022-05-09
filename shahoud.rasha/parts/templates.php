@@ -39,14 +39,14 @@ function cartListTemplate($r,$o) {
 	<div class="flex-stretch">
 		<strong>$o->name ($o->amount)</strong>
 		<form action="cart_actions.php?action=delet-cart-item" method="post">
-		<input type="hidden" name="id" value="o->id">
+		<input type="hidden" name="id" value="$o->id">
 		<input type="submit" class="form-button inline" value="Delete" style="font-size: 0.8em;">
 		</form>
 	</div>
 	<div class="flex-none">
 		<div>&dollar;$totalfixed</div>
 		<form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
-		<input type="hidden" name="id" value="o->id">
+		<input type="hidden" name="id" value="$o->id">
 		<div class="form-select" style="font-size: 0.8em;">
 			 $selectamount
 		</div>
@@ -99,10 +99,6 @@ function cartTotals() {
 
 HTML;
 }
-
-
-
-
 
 
 
