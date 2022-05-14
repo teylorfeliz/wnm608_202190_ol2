@@ -1,2 +1,15 @@
-# wnm608_202190_ol2
-WNM 608 OL2 (Spring 2022)
+# Mahsa Mirchenari
+
+## Relevant Links
+- https://mahsas.com
+- https://mahsas.com/wnm608/mirchenari.mahsa
+- https://mahsas.com/wnm608/mirchenari.mahsa/styleguide
+- https://mahsas.com/wnm608/mirchenari.mahsa/index.php
+- https://mahsas.com/wnm608/mirchenari.mahsa/admin/index.php
+
+
+
+## Extra Links
+- https://mahsas.com/wnm608/mirchenari.mahsa/admin/users.php
+- https://mahsas.com/wnm608/mirchenari.mahsa/notes
+- https://mahsas.com/wnm608/mirchenari.mahsa/notes/reading_data.php
