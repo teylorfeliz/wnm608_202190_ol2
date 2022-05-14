@@ -42,7 +42,7 @@ function selectAmount($amount=1,$total=10){
 
 
 function cartListTemplate($r,$o) {
-$totalfixed = number_format($o->total,2,'','');
+$totalfixed = number_format($o->total,2,'.','');
 $selectamount = selectAmount($o->amount,10);
 
 
@@ -82,9 +82,9 @@ function cartTotals() {
 
 	$cartprice = array_reduce($cart,function($r,$o){return $r + $o->total;},0);
 
-	$pricefixed = number_format($cartprice,2,'','');
-	$taxfixed = number_format($cartprice*0.0725,2,'','');
-	$taxedfixed = number_format($cartprice*1.0725,2,'','');
+	$pricefixed = number_format($cartprice,2,'.','');
+	$taxfixed = number_format($cartprice*0.0725,2,'.','');
+	$taxedfixed = number_format($cartprice*1.0725,2,'.','');
 
 
 
