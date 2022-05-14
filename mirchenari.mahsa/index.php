@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<?php  
+  include_once "lib/php/functions.php";  
+     include_once "parts/templates.php";
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	
-	<title>Home</title>
+    <meta charset="UTF-8">
+    
+    <title>Home</title>
 
 <meta name="viewport" content="width=device-width">
 
@@ -86,82 +89,19 @@
 
 
 <div class=" card light ">
-  <h3>BEST SELLER</h3>
+  <h3>BEST SELLER PRODUCTS</h3>
+  <?php recommendedCategory("WOMEN"); ?>
+   <h3>LATEST PRODUCTS</h3>
+     <?php recommendedCategory("MEN"); ?>
 
+  </div>
  
 
-<div class="grid gap">
-            <div class="col-xs-4">
-                <figure class="figure product">
-                   <img src="https://storage.covet.pics/postassets/8860117/309da6000513cfb04c96ed07ff4bac9d" alt=""></a>
-                    <figcaption>
-                    
-                        <div>The Caviar Shoulder Bag</div>
-                
-                    </figcaption>
-                </figure>
-            </div>
-                  <div class="col-xs-4">
-                <figure class="figure product">
-                  <img src="https://storage.covet.pics/postassets/8923077/5787cfb523faa7707f9171c2a60d7cb6" alt=""></a>
-                    <figcaption>
-                    
-                        <div>NIMANY T-Shirts</div>
-                
-                    </figcaption>
-                </figure>
-            </div>
-                  <div class="col-xs-4">
-                <figure class="figure product">
-                  <img src="https://storage.covet.pics/postassets/9023182/3fe5227eb70bf44d9569c6cba183465e" alt=""></a>
-                    <figcaption>
-                    
-                        <div>The Caviar Clutch</div>
-                
-                    </figcaption>
-                </figure>
-            </div>
-              <div class="col-xs-4">
-                <figure class="figure product">
-                   <img src="https://storage.covet.pics/postassets/10811595/ef46193acf1ee218bf7f580aa3083278" alt=""></a>
-                    <figcaption>
-                    
-                        <div>The  Dragon Cross-Body Bag </div>
-                
-                    </figcaption>
-                </figure>
-            </div>
-                  <div class="col-xs-4">
-                <figure class="figure product">
-                 <img src="https://storage.covet.pics/postassets/8694938/4b8ba5194c4ee0303ea685e55e6bb637" alt=""></a>
-                    <figcaption>
-                    
-                        <div>NIMANY Art </div>
-                
-                    </figcaption>
-                </figure>
-            </div>
-                  <div class="col-xs-4">
-                <figure class="figure product">
-                   <img src="https://storage.covet.pics/postassets/7572548/5a713bf10ba0b5e2727b527cb192f486" alt=""></a>
-                    <figcaption>
-                    
-                        <div>CAVIAR BAG (GOLD HARDWARE)</div>
-                
-                    </figcaption>
-                </figure>
-            </div>
 
+  </div>
 
-   </div>
-    
- </div>
- </div>
-
- </div>
-
-      
- 
+   
+     </div>
 
 <?php include "parts/footer.php"; ?>
 
