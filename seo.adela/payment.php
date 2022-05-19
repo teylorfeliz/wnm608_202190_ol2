@@ -1,4 +1,8 @@
-<?php include_once "lib/php/functions.php"; ?><!DOCTYPE html>
+<?php 
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+$cart = getCartItems();
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,7 +17,9 @@
 	<?php include "parts/navbar.php"; ?>
 
 <div class="styleguidecontainer">
-	<div class="card">
+	<div class="grid gap">
+		<div class="col-xs-12 col-md-7">
+			<div class="card">
 		<h2>Product Checkout</h2>
 
 		<h3>Address</h3>
@@ -88,18 +94,34 @@
 						<input type="submit" class="form-button" value="OK">
 					</div>
 				</form>
+		</div>
+	</div>
 
 
-		<li class="productname"><a href="product_item.php?id=3">Product</a></li>
-
-
-			<div class="form-control">
-				<a href="product_cart.php"><button class=double-button>Cancel</button></a>
+<div class="col-xs-12 col-md-5">
+	<div class="card">
+		<h2>Item Review</h2>
+		<div class="card-section">
+		<?= array_reduce($cart,function($r,$o){
+			$totalfixed = number_format($o->total,2,'.','');
+			return $r."<div class='display-flex'>
+				<div class='flex-stretch'>$o->name</div>
+				<div class='flex-none'>&dollar;$totalfixed</div>
+			</div>";
+		}) ?>
+	</div>
+	<?= cartTotals(); ?>
+	<div class="form-control">
+				<a href="product_cart.php"><button class=double-button1>Cancel</button></a>
 				<a class="complete" href="product_confirmation.php"><button class=double-button>Complete Checkout</button></a>
 			</div>
-
-
-	</div>
+	<div>
 </div>
+</div>
+</div>
+
+
+
+
 </body>
 </html>

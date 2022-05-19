@@ -1,4 +1,8 @@
-<?php include_once "lib/php/functions.php"; ?><!DOCTYPE html>
+<?php 
+include_once "lib/php/functions.php";
+include_once "parts/templates.php"; 
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,7 +11,7 @@
 	<?php include "parts/meta.php"; ?>
 
 </head>
-<body>
+<body class="flush">
 	
 	<?php include "parts/navbar.php"; ?>
 
@@ -17,20 +21,38 @@
 
 	<div class="intro_text">
 			<h1>MAKING PET'S LIFE BETTER</h1>
-			<p>We make healthy and organic food for our pet.</p>
-			<p>Amet laborum rem repellendus a obcaecati, </p>
+			<p class="firstp">We make healthy and organic food for our pet.Amet laborum rem repellendus a obcaecati,Amet laborum rem repellendus a obcaecati.</p>
+			<p class="firstp"> Amet laborum rem repellendus a obcaecati! </p>
 			<div class="welcome-text">
-			<a href="#"> More</a>
+			<a href="about.php" class="aboutmore"> More </a>
 		    </div>
 	</div>
 
-	<h1 class="newpro">NEW PRODUCT</h1>
-	<div class="flex advertisement">
-		<img src="img/collardog.png" class="newdog">
-		<img src="img/collarall.png" class="newproduct">
+	<div class="styleguidecontainer">
+		<h2> Latest Products</h2>
+			<?php
+
+			$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category` = 'treat' ORDER BY `date_create` DESC LIMIT 3");
+
+			recommendedProducts($result);
+
+			?>
+
 	</div>
 
-	<h1 class="newpro"> BEST SELLERS </h1>
+	<div class="styleguidecontainer">
+		<h2> Latest Accessory</h2>
+			<?php
+
+			recommendedCategory("accessory");
+
+			?>
+
+	</div>
+
+
+<div class="styleguidecontainer">
+		<h2> Best Sellers</h2>
 
 	<div class="product flex">
 		<div class="box box1">
@@ -45,12 +67,10 @@
 			<img src="img/green3.jpg"> 
 		</div>
 	</div>
+</div>
 
 	<div class="last">
-		<div>
-			<h1 class="newpro">Join us</h1>
-		</div>
-		<div class="view-window2" style="background-image:url('img/redgreenyellowtop.jpg')"></div>
+		<div class="view-window2" style="background-image:url('img/redgreenyellowtopad.png')"></div>
 	</div>
 
 	<div class="container2 display-flex">
@@ -69,20 +89,7 @@
 		</article>
 	</div>
 
-		<div class="review">
-			<h2>Review</h2>
-			<div class="post">
-				<div class="reviewuser">
-					<img src="https://via.placeholder.com/500x800?text=product" alt class="reviewimg">
-				</div>
-				<div class="reviewname">Alex Kim</div>
-			</div>
-			<div class="reviewarticle">
-				<div class="reviewarticle_content">This is good</div>
-				<div class="date">Feb 12</div>
-			</div>
-		</div>
-
+	
 		
 </body>
 </html>

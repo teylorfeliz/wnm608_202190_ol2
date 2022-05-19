@@ -1,6 +1,7 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
@@ -31,13 +32,13 @@ $image_elements = array_reduce($images,function($r,$o){
 	<?php include "parts/navbar.php"; ?>
 
 <div class="styleguidecontainer">
-	<div class="grid gap">
+	<div class="grid gap items">
 		<div class="col-xs-12 col-md-7">
-			<div class="card soft flat">
-				<div class="images-main">
+			<div class="card light flat">
+				<div class="images-main thumbs">
 					<img src="img/<?= $product->thumbnail ?>">
 				</div>
-				<div class="images-thumbs">
+				<div class="images-thumbs thumbs">
 					<?= $image_elements ?>
 				</div>
 			</div>
@@ -49,6 +50,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
 				<div class="card-section">
 					<h2 class="product-title"><?= $product->name ?></h2>
+					<div class="product-category"><?= $product->category ?></div>
 					<div class="product-price">&dollar;<?= $product->price ?></div>
 				</div>
 
@@ -95,6 +97,11 @@ $image_elements = array_reduce($images,function($r,$o){
 	<div class="card">
 		<p><?= $product->description ?></p>
 	</div>
+
+	<h2>Recommended Products</h2>
+	<?php
+		recommendedSimilar($product->category,$product->id);
+	?>
 </div>
 
 

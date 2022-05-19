@@ -16,7 +16,7 @@ function file_get_json($filename) {
 
 
 
-include "auth.php";
+include_once "auth.php";
 function makeConn() {
 	$conn = new mysqli(...MYSQLIAuth());
 	if($conn->connect_errno) die($conn->connect_error);
@@ -24,7 +24,14 @@ function makeConn() {
 	return $conn;
 }
 
-
+function makePDOConn() {
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch (PDOException $e) {
+ 		die($e->getMessage());
+	}
+	return $conn;
+}
 
 function makeQuery ($conn,$qry) {
 	$result = $conn->query($qry);

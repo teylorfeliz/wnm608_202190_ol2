@@ -3,7 +3,7 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-//$cart = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` IN (4,7,10)");
+$cart = getCart();
 
 $cart_items = getCartItems();
 
@@ -23,31 +23,46 @@ $cart_items = getCartItems();
 
 <div class="styleguidecontainer">
 		<h2>Shopping Cart</h2>
-		<div class="grid gap">
+
+		<?php
+
+		if(count($cart)) {
+			?>
+			<div class="grid gap">
 			<div class="col-xs-12 col-md-7">
-				<div class="card soft">
+				<div class="card shadow">
 					<?= array_reduce($cart_items,'cartListTemplate') ?>
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-5">
-				<div class="card soft flat">
+				<div class="card colors">
 					<?= cartTotals() ?>
+					<div class="card-section">
+						<a href="payment.php" class="form-button">Checkout</a>
+					</div>
 				</div>
 			</div>
 		</div>
+		<?php
+		} else {
+		?>
+			<div class="card light">
+				<p class="nocart">No items in cart</p>
+			</div>
 
-	<div class="card soft">
-		<p>What do you got in there?</p>
-		 <li class="productname"><a href="product_item.php?id=3">Product</a></li>
+				<h3>Other Recommendations</h3>
+				<?php recommendedAnything(6); ?>
 
-		<div class="btn-area">
-				<a class="buy" href="shop.php"><button type="submit">KEEP SHOPPING</button></a>
-		</div>
-
-	</div>
-
+				<div class="btn-area">
+					<a class="buy" href="product_list.php"><button type="submit">KEEP SHOPPING</button></a>
+				</div>
+		
+			<?php
+		}
+		?>
 </div>
 
 
-	</body>
+
+</body>
 </html>

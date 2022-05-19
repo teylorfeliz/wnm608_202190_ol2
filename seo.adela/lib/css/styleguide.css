@@ -1,5 +1,3 @@
-
-
 /* CSS RESET */
 
 *, *::after, *::before {
@@ -17,7 +15,7 @@
 	--color-sub-dark: #f74e4cff;
 	--color-main-light: #79f6daff;
 	--color-main-medium: #04c2bb;
-	--color-main-dark: #078075ff;
+	--color-main-dark: #1fa094ff;
 
 	--color-black: #000;
 	--color-white: #fff;
@@ -74,6 +72,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--color-main-medium);
+	margin-bottom: 1em;
 }
 
 h2.styletable {
@@ -99,7 +98,6 @@ li.userlist a {
 	margin-right: auto;
 	margin-left: auto;
 	align-items: center;
-	background-color: var(--color-main-medium);
 }
 
 
@@ -115,6 +113,13 @@ li.userlist a {
 
 .styleguidecontainer{
 	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+}
+
+.styleguidecontainer2{
+	max-width: 1500px;
 	margin-right: auto;
 	margin-left: auto;
 	align-items: center;
@@ -143,13 +148,15 @@ li.userlist a {
 .display-block { display: block; }
 .display-inline-block { display: inline-block; }
 
-.flex-stretch { flex: 4 4 auto; }
+.flex-stretch { flex: 1 1 auto; }
 .flex-none { flex: none; }
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
 
 .flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap:wrap; }
+
 
 
 /* Small Classes */
@@ -164,14 +171,13 @@ li.userlist a {
 
 .nav ul {
 	list-style-type: none;
+	margin-top: 0;
 	margin-bottom: 0;
-	padding-left: 1em;
-	padding-bottom: 5px;
 }
 
 .nav a {
 	display: block;
-	padding: 0 0.5em;
+	padding: 0 1em;
 }
 
 .nav a:hover{
@@ -214,7 +220,7 @@ li.userlist a {
 .nav-flex ul,
 .nav-stretch ul{
 	display: flex;
-}
+align-items: center;}
 
 .nav-material2 li,
 .nav-material li,
@@ -296,32 +302,57 @@ li.userlist a {
 }
 
 .navbar {
-	max-width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	align-items: center;
-	display: flex;	
+    background-color: var(--color-main-medium);
+    color: white;
+    line-height: var(--header-height);
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding: 8px 12px; */
+    margin-bottom: 0;
 }
 
 .navbar img{
-	padding-top: 6px;
-	padding-left: 27px;
+	/*padding-top: 6px;
+	padding-left: 27px;*/
 }
 
 .navbar h1 {
-	font-size: 2em;
+	font-size: 1em;
 	font-family: 'Comfortaa', cursive;
 	margin-top: 10px;
     margin-bottom: 10px;
 }
 
+.navbar_menu {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar_menu li{
+	padding: 8px 12px;
+}
+
+.navbar_icons{
+	list-style: none;
+	color: white;
+	display: flex;
+	padding-left: 0;
+}
+
+.navbar_icons li{
+	padding: 10px 2px;
+}
 
 .nav-division {
 	display: flex;
 	justify-content: flex-end;
 	list-style: none;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 6em;
+	margin-right: 6em;
 	margin-top: 20px;
 }
 
@@ -346,8 +377,16 @@ li.userlist a {
 	align-items: center;
 }
 
+.flush>.navbar {
+	margin-bottom: 0;
+}
+
+.nav-flex ul{
+	justify-content: space-evenly;
+}
+
 button {
-	padding: 7px 14px;
+	padding: 0.5em 1em;
 	background-color: var(--color-sub-medium);
 	border: none;
 	border-radius: 50px;
@@ -377,8 +416,8 @@ button:hover {
 img.logoimg{
 	width: 150px;
     padding-top: 10px;
-    margin-left: 2em;
-    margin-top: 5px;
+    margin-top: 15px;
+	margin-left: 1em;
 }
 
 ul.cta {
@@ -387,12 +426,12 @@ ul.cta {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding-right: 2em;
 }
 
 img.cart_img {
-    margin-top: 4px;
-    margin-right: -20px;
+    margin-top: 13px;
+    margin-right: -61px;
+    margin-left: -1em;
 }
 
 img.cart_img.cartimg2 {
@@ -505,13 +544,28 @@ ul.content li {
 	.card.soft {	
     	border-radius: 2.5em;
     	box-shadow: 0 0 5px rgb(0 0 0 / 10%);
-    	border: 3px solid var(--color-main-dark);
+    	border: 2px solid var(--color-main-dark);
 	}
 
+	.card.light {	
+    	border-radius: 2.5em;
+    	box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+	}
+
+	.card.shadow {	
+    	border-radius: 0.3em;
+    	box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+	}
 
 	.card.hard {
 		border-radius: 0.3em;
 		border: 2px solid var(--color-neutral-medium)	
+	}
+
+	.card.colors {
+		border-radius: 0.3em;
+		border: 2px solid var(--color-main-dark);
+		box-shadow: 0 0 5px rgb(0 0 0 / 10%);	
 	}
 
 	.card.dark {
@@ -538,6 +592,11 @@ ul.content li {
 
 	.card-section {
     	padding: 1em;
+	}
+
+	[class*='col-']>.card{
+		margin: 0;
+		height: 100%;
 	}
 
 	.view-window2 {
@@ -777,8 +836,8 @@ ul.content li {
 }
 
 .ceointro {
-    margin-left: 10px;
-    margin-right: auto;
+    margin-left: 2em;
+    margin-right: 2em;
     margin-top: 250px;
     align-content: center;
 }
@@ -887,17 +946,28 @@ span {
 	color: white;
 }
 
+.form-button2 {
+	background-color: var(--color-sub-medium);
+	border-radius: 4em;
+	cursor: pointer;
+	text-align: center;
+	padding: 0.7em 1em;
+	color: white;
+}
 
+.form-button2.inline,
 .form-button.inline{
 	width: 5em;
 	background-color: var(--color-neutral-light);
 }
 
+.form-button2:hover,
 .form-button:hover{
 	text-decoration: none;
 	background-color: none;
 }
 
+.form-button2:active,
 .form-button:active {
 	background-color: var(--color-main-light);
 }
@@ -972,13 +1042,13 @@ label {
 }
 
 .signbutton input {
-	height: 35px;
+	height: 43px;
     color: white;
     background-color: var(--color-main-medium);
     border: none;
     border-radius: 1em;
-    width: 80px;
-    margin-right: 5px;n
+    width: 110px;
+    margin-right: 5px;
 }
 
 .eventbutton {
@@ -986,14 +1056,21 @@ label {
 }
 
 .double-button {
-    width: 45%;
+    width: 70%;
     margin: 1em 1em;
     border-radius: 4em;
     cursor: pointer;
     text-align: center;
     padding: 0.9em;
-    margin-left: 2em;
+}
 
+.double-button1{
+	background-color: var(--color-neutral-light);
+    margin: 1em 1em;
+    border-radius: 4em;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.9em;
 }
 
 .welcome-text {
@@ -1067,9 +1144,6 @@ ul.signup {
     list-style: none;
 }
 
-
-
-
 input[type="submitlogin"] {
     border-style: none;
     width: 6em;
@@ -1089,9 +1163,7 @@ input.form-button-login {
 	text-align: center;
 	padding: 0.5em 0em;
 	color: white;
-
 }
-
 
 .form-button-login:hover{
 	text-decoration: none;
@@ -1136,6 +1208,7 @@ input.form-button-login {
 .int-area:first-child {
 	margin-top: 0;
 }
+
 .int-area input {
 	width: 100%;
 	padding: 20px 10px 10px;
@@ -1165,6 +1238,8 @@ input.form-button-login {
 
 .btn-area {
 	margin-top: 30px;
+	width: 100%;
+	margin-left: 0.5em;
 }
 
 .btn-area button {
@@ -1187,7 +1262,6 @@ input.form-button-login {
 	color: #999;
 	text-decoration: none;
 }
-
 
 
 /* User Admin */
@@ -1214,29 +1288,6 @@ a.back li {
 	display: flex;
 }
 
-.form-button2 {
-	background-color: var(--color-main-dark);
-	border-radius: 4em;
-	cursor: pointer;
-	text-align: center;
-	padding: 0.5em 0em;
-	color: white;
-	width: 50%;
-	font: inherit;
-	-webkit-appearance:  none;
-	border-width: 0;
-	outline: 0;
-	margin: 0 2em;
-}
-
-.form-button2:hover{
-	text-decoration: none;
-	background-color: none;
-}
-
-.form-button2:active {
-	background-color: var(--color-main-light);
-}
 
 h2.ulist {
 	margin-left: 20px;
@@ -1264,17 +1315,13 @@ img.reviewimg {
     margin-left: 3rem;
 }
 
-
 span.badge {
     text-align: center;
-    padding-left: 0;
-    padding-right: 1em;
-    margin-left: 0;
-    margin-right: 1em;
-    margin-top: 5px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: -4px;
     color: white;
 }
-
 
 img.adpic {
     width: fit-content;
@@ -1294,3 +1341,98 @@ img.adpic {
 .secondfilter.flex-none {
 	padding-right: 0.3em;
 }
+
+.nocart{ 
+	color: var(--color-sub-medium);
+}
+
+.navbar_toogleBtn {
+	position: absolute;
+	right: 32px;
+	display: none;
+	font-size: 24px;
+	color: white;
+}
+
+label.toogle {
+    color: white;
+}
+
+
+h2.listtitle {
+	margin-left: 1em;
+}
+
+ul.stylenav {
+	background-color: var(--color-neutral-medium);
+}
+
+nav.nav.nav-flex.flex-none {
+    padding-left: 15em;
+}
+
+p.cartp {
+	margin-left: 1em;
+	margin-bottom: 2em;
+}
+
+.card-inside.flex-stretch {
+    margin-left: 1em;
+}
+
+.gap.grid.items {
+    margin-top: 2em;
+}
+
+
+.images-thumbs.thumbs {
+    margin-top: 2em;
+}
+
+.images-main.thumbs {
+    margin-top: 1em;
+}
+
+img.thumbpic {
+	width: 100%;
+}
+
+a.aboutmore {
+    border: 1px solid white;
+    padding: 0.5em 1em;
+}
+
+a.login {
+    margin-bottom: 5px;
+}
+
+button.loginbutton {
+    margin-top: 10px;
+}
+
+ul.tablecnt {
+	margin-left: 1em;
+}
+
+.adquote_container {
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    width: 100%;
+    margin-top: 8em;
+    z-index: 1;
+}
+
+p.firstp {
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 <?php 
 include_once "lib/php/functions.php";
 resetCart();
-?><<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -17,7 +17,7 @@ resetCart();
 	<div class="styleguidecontainer">
 		<div class="card soft">
 			<h2>Thank you for your purchase!</h2>
-			<p><a href="product_list.php"> Continue Shopping</a></p>
+			<div class="flex-none" class="continue"><a href="product_list.php"><button class="form-button">Continue Shopping</button></a></div>
 		</div>
 	</div>
 	

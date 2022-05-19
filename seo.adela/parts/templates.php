@@ -35,7 +35,7 @@ return $r.<<<HTML
 	<div class="flex-none images-thumbs">
 		<img src="img/$o->thumbnail">
 	</div>
-	<div class="flex-stretch">
+	<div class="card-inside flex-stretch">
 		<strong>$o->name</strong>
 		<form action="cart_actions.php?action=delete-cart-item" method="post">
 		<input type="hidden" name="id" value="$o->id">
@@ -77,14 +77,37 @@ return <<<HTML
 	<div class="flex-stretch"><strong>Actual Total</strong></div>
 	<div class="flex-none">&dollar;$taxedfixed</div>
 </div>
-<div class="card-section">
-	<a href="payment.php" class="form-button">Checkout</a>
-</div>
+
 HTML;
 }
 
 
 
+
+
+
+
+
+function recommendedProducts($a) {
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+
+function recommendedCategory($cat,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category` = '$cat' ORDER BY `date_create` DESC LIMIT $limit");
+	recommendedProducts($result);
+}
+function recommendedSimilar($cat,$id=0,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+	recommendedProducts($result);
+}
+function recommendedAnything($limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() DESC LIMIT $limit");
+	recommendedProducts($result);
+}
 
 
 

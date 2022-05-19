@@ -20,7 +20,7 @@ include_once "parts/templates.php";
 		<?php include "parts/navbar.php"; ?>
 
 	<div class="styleguidecontainer">
-			<h2>Product List</h2>
+			<h2 class="listtitle">Product List</h2>
 
 			<div class="form-control">
 				<form class="hotdog light" id="product-search">
@@ -30,7 +30,7 @@ include_once "parts/templates.php";
 
 <div class="form-control">
 	<div class="card none">
-	<div class="display-flex"> 
+	<div class="display-flex flex-wrap"> 
 			<div class="flex-stretch display-flex">
 			 	<div class="secondfilter flex-none">
 			 		<button data-filter="category" data-value="" type="button" class="form-button">All</button>
