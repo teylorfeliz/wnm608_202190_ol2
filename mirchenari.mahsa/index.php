@@ -15,7 +15,7 @@
 
     <?php include "parts/meta.php"; ?>
 </head>
-<body>
+<body class="flush">
     
 <?php include "parts/navbar.php"; ?>
 
@@ -88,9 +88,11 @@
 <div class="container" >
 
 
-<div class=" card light ">
+<div class=" card soft ">
   <h3>BEST SELLER PRODUCTS</h3>
   <?php recommendedCategory("WOMEN"); ?>
+    </div>
+    <div class=" card soft ">
    <h3>LATEST PRODUCTS</h3>
      <?php recommendedCategory("MEN"); ?>
 

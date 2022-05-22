@@ -8,7 +8,7 @@
 /* main css */
 body {
 
-background-color:#CCCCC6;
+
 }
 
 
@@ -156,7 +156,12 @@ background-color:#CCCCC6;
 }
 
 
+ span.badge:not(:empty)::before{
+ 	content: '(';
+ }
 
 
-
+ span.badge:not(:empty)::after{
+ 	content: ')';
+ }
 

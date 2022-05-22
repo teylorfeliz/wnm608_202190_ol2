@@ -1,9 +1,6 @@
 .carousel {
-<<<<<<< HEAD
-    height: 100vh;
-=======
-    height: 30vh;
->>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
+    height:70vh ;
+  width: 100vh;
     min-height: 13em;
     position: relative;
     overflow: hidden;
@@ -15,26 +12,22 @@
     width: 100%;
 }
 .carousel .slides {
-	position:relative;
+    position:relative;
 }
 .carousel .slide {
-	position:absolute;
-	top:0;
-	left:0;
-	display:flex;
-	align-items:center;
-	justify-content: center;
-	background-color:white;
-	z-index:1;
-	opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color:white;
+    z-index:1;
+    opacity:0;
 }
 
 .carousel .slide.moving {
-<<<<<<< HEAD
-    transition:all 0.5s;
-=======
     transition:all 0.3s;
->>>>>>> 5aaf8b0c2280138cf7f7b7f0b5c394e344081839
 }
 .carousel .slide.left,
 .carousel .slide.right,
@@ -63,7 +56,7 @@
     z-index:5;
 }
 .carousel [class*='control-'] {
-	pointer-events:initial;
+    pointer-events:initial;
 }
 
 .carousel .control-left,
@@ -75,10 +68,10 @@
     font-size:2em;
 }
 .carousel .control-left {
-	left:1rem;
+    left:1rem;
 }
 .carousel .control-right {
-	right:1rem;
+    right:1rem;
 }
 .carousel .control-pagination {
     display: flex;
@@ -88,9 +81,9 @@
     transform: translateX(-50%);
 }
 .carousel .control-dot {
-	padding:1rem;
-	font-size:2em;
-	line-height:1rem;
+    padding:1rem;
+    font-size:2em;
+    line-height:1rem;
     transition:all 0.3s;
     position:relative;
     transform:scale(1,1);
@@ -102,5 +95,5 @@
 .carousel .control-dot,
 .carousel .control-left,
 .carousel .control-right {
-	cursor:pointer;
+    cursor:pointer;
 }

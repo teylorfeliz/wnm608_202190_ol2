@@ -20,7 +20,7 @@
 
 <div class="container" >
 
-
+<div class="card light" >
   <h3>ABOUT US</h3>
   <p>Nima Behnoud is a digital artist and entrepreneur living in New York City. He graduated from Fashion Institute of Technology with a BA in Graphic Design and a MA in Global Fashion Management. He started his career as a graphic designer for advertising agencies in California. He moved to New York in 1999, where he worked as a creative director for Cartier, L'Oreal and Jacob & Co (Jacob The Jeweler) he made video campaigns with footballers Cristiano Ronaldo and Lionel Messi. </p>
   <p>Nima’s artistic journey is based on his life-long love for painting and illustration. Mixing silk screening, digital media and fabric pigments, he created a unique style early in his career. He had sold-out solo exhibitions of his fine art works in New York, Paris and Dubai. His works became an inspiration for launching a clothing and accessories brand NIMANY in 2005. NIMANY, which was based on Nima’s cumulative experience of years in computer graphics, fine arts and luxury markets, went on to become more successful than most could have imagined: It found a large cult following that has remained loyal to Nima’s work, whether paintings, luxury hand-bags or fragrances which were launched in 2017. Its limited designs, sold exclusively through NIMANY’s online boutique and Fred Segal boutiques, have continued to be met with an enthusiastic reception from a growing market. </p>

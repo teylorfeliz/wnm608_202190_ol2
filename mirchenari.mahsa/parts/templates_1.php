@@ -24,11 +24,11 @@ HTML;
 
 
 function selectAmount($amount=1,$total=10){
-	$output = "<select name='amount'>";
+
 	for($i=1;$i<=$total;$i++){
 		$output .= "<option ".($i==$amount?"selected":"").">$i</option>";
 	}
-	$output .= "</select>";
+
 	return $output;
 }
 
@@ -56,8 +56,7 @@ return $r.<<<HTML
 			
 <form action="cart_actions.php?action=delete-cart-item" method="post">
 <input type="hidden" name="id" value="$o->id">
-<input type="submit" class="form-button inline" value="Delete" style="font-size: 0.8em">
-</form>
+
 		
 		</div>
 		<div class="flex-none">
@@ -65,9 +64,7 @@ return $r.<<<HTML
 		<form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
 		<input type="hidden" name="id" value="$o->id">
 		
-			<div class="form-select" style="font-size:0.8em">
-			$selectamount
-		</div>
+			
 	</form>
  </div> 
 </div>

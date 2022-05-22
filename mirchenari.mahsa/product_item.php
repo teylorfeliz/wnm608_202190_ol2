@@ -49,7 +49,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
                     <div class="card-section">
                         <h2 class="product-title"><?= $product->name ?></h2>
-                            <h2 class="product-category"><?= $product->category?></h2>
+                      
                         <div class="product-price">&dollar;<?= $product->price ?></div>
                     </div>
 

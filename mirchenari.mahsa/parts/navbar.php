@@ -1,4 +1,4 @@
-=	<?php
+	<?php
 
 
 	include_once "lib/php/functions.php";
