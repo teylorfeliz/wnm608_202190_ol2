@@ -1368,7 +1368,7 @@ ul.stylenav {
 }
 
 nav.nav.nav-flex.flex-none {
-    padding-left: 15em;
+    padding-left: 4em;
 }
 
 p.cartp {
@@ -1430,6 +1430,9 @@ p.firstp {
 }
 
 
+.flex-stretch.navi {
+    margin-left: 25em;
+}
 
 
 

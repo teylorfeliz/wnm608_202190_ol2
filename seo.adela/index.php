@@ -21,8 +21,8 @@ include_once "parts/templates.php";
 
 	<div class="intro_text">
 			<h1>MAKING PET'S LIFE BETTER</h1>
-			<p class="firstp">We make healthy and organic food for our pet.Amet laborum rem repellendus a obcaecati,Amet laborum rem repellendus a obcaecati.</p>
-			<p class="firstp"> Amet laborum rem repellendus a obcaecati! </p>
+			<p class="firstp">We make healthy and organic food for our pet.</p>
+			<p class="firstp"> Our product is safe for all.</p>
 			<div class="welcome-text">
 			<a href="about.php" class="aboutmore"> More </a>
 		    </div>
@@ -82,8 +82,8 @@ include_once "parts/templates.php";
 				<div class="flex-none"><small>more→</small></div>
 			</div>
 			<div class="article-body">
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, eaque modi qui blanditiis veritatis, ipsam rem neque sed accusamus tenetur quasi eos, ipsum optio beatae cumque debitis labore necessitatibus cupiditate sit! Consequuntur fugit, quod laborum non, magnam ipsa quasi assumenda.</p>
-				<p>Aut tenetur ab quos quas non consequatur voluptatibus mollitia, ad accusamus odio repudiandae enim adipisci amet sequi velit illum quae quo reiciendis laborum quibusdam eligendi sit similique quisquam. Velit modi quos eligendi quas provident eos laudantium odit dicta laborum, dolorem!</p>
+				<p>Welcome! Petcrew website is now open for all customers. </p>
+				<p>During the first month of the grand opening, we offer 15% discount coupon to our customers. Please join us and get the deal!</p>
 				
 			</div>
 		</article>

@@ -16,6 +16,7 @@ include_once "lib/php/functions.php";
 			<div class="flex-none menu-button">	
 					<label for="menu">&equiv;</label>
 			</div>
+			<div class="flex-stretch navi"></div>
 			<nav class="nav nav-flex flex-none">
 				<ul>	
 					<li><a href="index.php">Home</a></li>
