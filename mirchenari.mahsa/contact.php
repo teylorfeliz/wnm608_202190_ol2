@@ -20,13 +20,16 @@
 <div class="container" >
 
 
-<div class=" card light " >
-  <h3>CONTACT US</h3>
-  <h5>CONTACT FOR ONLINE ORDERS & EXCHANGE</h5>
+<div class=" card " >
+  <h2>CONTACT US</h2>
+
+  <h4>CONTACT FOR ONLINE ORDERS & EXCHANGE</h4>
+
 
   <p>If you have questions regarding shipping rates, returns and refunds please visit our return policy and exceptions carefully. If you still would like to get in touch with us regarding your existing or future orders please email: orders@nimany.com</p>
+  
 
-  <h5>PRESS & PR INQUIRIES</h5>
+  <h4>PRESS & PR INQUIRIES</h4>
 
 
   <p>For all press inquiries and material requests please email: nicole.savoy@nimany.com 
@@ -34,7 +37,7 @@ For previously schedueled phone contacts please reach out to Contact Number: (21
 
 
 
-  <h5>WHOLESALE</h5>
+  <h4>WHOLESALE</h4>
 
   <p>For wholesale inquiries please send an email with information below to:
 
@@ -58,7 +61,7 @@ If you are placing a personal bulk order (24 pcs+) and would like to receive dis
 <div class="container" >
 
 
-<div class=" card light " id="paragraphs">
+<div class=" card light ">
   <h3>SEND MESSAGE</h3>
 
 <form>

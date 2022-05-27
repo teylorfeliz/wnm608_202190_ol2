@@ -26,7 +26,7 @@ $cart_items = getCartItems();
 
 
 	<div class="container">
-		<div class="card">
+		<div class="card ">
 		<h2>IN YOUR CART</h2>
 
 <?php
@@ -81,14 +81,12 @@ if(count($cart)){
 
 </div>
 
-	</div>
-<?php 
-include "parts/footer.php";
- ?>
-
+    </div>
+       
+          
+   
 </body>
 </html>
-
 
 
 

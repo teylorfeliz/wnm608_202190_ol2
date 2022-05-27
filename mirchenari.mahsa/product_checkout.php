@@ -25,11 +25,11 @@ $cart =  getCartItems();
 <body>
 
 <div class="container">
-    <div class="card hard">
+
     <div class="grid gap">
 
     <div class="col-xs-12 col-md-5">
-        <div class="card hard">
+        <div class="card  ">
         <h2>Item Review</h2>
             <div class="card-section">
             <?php
@@ -48,7 +48,7 @@ $cart =  getCartItems();
 
 
         <div class="col-xs-12 col-md-7">
-    <div class="card soft">
+    <div class="card ">
         <h2>Checkout</h2>
 
        <form class="form">
@@ -123,6 +123,7 @@ $cart =  getCartItems();
     </div>
 </div>
 
+</div>
 </div>
     <?php include "parts/footer.php";?>
 

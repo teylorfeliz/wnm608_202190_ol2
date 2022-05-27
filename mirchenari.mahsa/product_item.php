@@ -90,8 +90,8 @@ $image_elements = array_reduce($images,function($r,$o){
 
 
        
-   <div class="card soft">
-        <h2>Recommended Products</h2>
+   <div class="card light">
+        <h3>RECOMMENDED PRODUCTS</h3>
         <?php
         recommendedSimilar($product->category,$product->id);
         ?>
