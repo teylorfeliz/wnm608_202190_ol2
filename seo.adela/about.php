@@ -14,7 +14,7 @@
 
 	<div class="ceop display-flex">
 		<div class="ceopic">
-			<img src="img/ceo.jpg" alt="">
+			<img src="img/ceo.jpg" alt="" class="ceopic">
 		</div>
 		<div class="ceointro">
 			<h2>ADELA SEO</h2>

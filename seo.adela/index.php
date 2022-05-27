@@ -50,25 +50,9 @@ include_once "parts/templates.php";
 
 	</div>
 
+	<div class="empty"></div>
 
-<div class="styleguidecontainer">
-		<h2> Best Sellers</h2>
-
-	<div class="product flex">
-		<div class="box box1">
-			<img src="img/yellow2.jpg"> 
-		</div>
-
-		<div class="box box2">
-			<img src="img/red3.jpg"> 
-		</div>
-
-		<div class="box box3">
-			<img src="img/green3.jpg"> 
-		</div>
-	</div>
-</div>
-
+	
 	<div class="last">
 		<div class="view-window2" style="background-image:url('img/redgreenyellowtopad.png')"></div>
 	</div>
