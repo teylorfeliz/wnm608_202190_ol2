@@ -6,6 +6,9 @@ $filename = "../data/users.json";
 $users = file_get_json($filename);
 
 
+
+
+
 $empty_user =(object)[
 	"name"=>"",
 	"type"=>"",
@@ -159,18 +162,21 @@ $form = <<<HTML
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<?php include '../parts/navbar.php';?>
-
-
 	
+<header class="navbar">
+	<div class="container display-flex">
+		<div class="flex-none">
+			<h1>User Admin</h1>
+			<nav class="nav nav-flex flex-none">
+				<ul>
+					<li><a href="<?=$_SERVER['PHP_SELF']?>">Users List</a></li>
+					<li><a href="<?=$_SERVER['PHP_SELF']?>?id=new">Add New User</a></li>
 
-	<nav class="nav nav-flex flex-none">
-		<ul>
-			<li><a href="<?=$_SERVER['PHP_SELF']?>">Users List</a></li>
-			<li><a href="<?=$_SERVER['PHP_SELF']?>?id=new">Add New User</a></li>
-
-		</ul>
-	</nav>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
 
 
 	<div class="container">

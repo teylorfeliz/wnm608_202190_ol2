@@ -44,6 +44,7 @@ header{
 	margin: 10px;
 	padding: 5px;
 	align-items: center;
+	border-radius: 20px;
 }
 
 
@@ -53,12 +54,14 @@ header{
 	float: center;
 	padding-left: 0;
 	padding-top: 0;
-
-	
-
 }
 
+.flex-stretch.title a{
+	text-decoration: none;
+	padding: 0;
 
+
+}
 
 .colorscheme {
 	margin-top: 1em;
@@ -191,6 +194,7 @@ a:hover{
 .flex-justify-center{justify-items: center;}
 
 .flex-column {flex-direction: column;}
+.flex-wrap {flex-wrap:  wrap;}
 
 /* Small Classes */
 
@@ -325,6 +329,7 @@ a:hover{
 	background-color: var(--color-neutral-light);
 	color: var(--color-neutral-dark);
 	line-height: var(--header-height);
+	margin-bottom: 1em;
 }
 
 .navbar h1 {
@@ -337,6 +342,8 @@ a:hover{
 .navbar a{
 	padding: 0 0.7em;
 }
+
+
 
 /*CARD*/
 
@@ -391,7 +398,20 @@ a:hover{
 }
 
 
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-medium);
+}
 
+
+.card-section {
+	padding: 1em;
+
+}
+
+[class*='col-']>.card {
+	height: 100%;
+	margin: 0;
+}
 
 /*Tables*/
 .table{
@@ -478,9 +498,7 @@ a:hover{
 	border:  solid 2px var(--color-neutral-dark);
 }
 
-.form-button.inline{
-	width: 20%;
-}
+
 
 .form-button:hover{
 	Text-decoration: none;
@@ -599,16 +617,6 @@ a:hover{
 }
 
 
-
-.card-section {
-	padding: 1em;
-
-}
-
-
-.card-section~.card-section {
-	border-top: 1px solid var(--color-neutral-medium);
-}
 
 
 

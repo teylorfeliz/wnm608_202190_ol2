@@ -21,7 +21,7 @@ include_once "parts/templates.php";
 </head>
 
 <body>
-	<div class="view-window" style="background-image: url(img/gold.jpeg);">
+	<div>
 		
 		
 
@@ -40,17 +40,17 @@ include_once "parts/templates.php";
 		</div>
 		<div class="form-control ">
 			<div class="card soft">
-				<div class="display-flex">
+				<div class="display-flex flex-wrap">
 					<div class="flex-stretch display-flex">
 			
 						<div class="flex-none">
-							<button data-filter="category" data-value="White" type="button">White</button>
+							<button data-filter="color" data-value="acrylic" type="button">Acrylic</button>
 						</div>
 						<div class="flex-none">
-							<button data-filter="category" data-value="Gold" type="button">Gold</button>
+							<button data-filter="color" data-value="Gold" type="button">Gold</button>
 						</div>
 						<div class="flex-none">
-							<button data-filter="category" data-value="" type="button">All</button>
+							<button data-filter="color" data-value="" type="button">All</button>
 						</div>
 					</div>
 		<div class="flex-none">

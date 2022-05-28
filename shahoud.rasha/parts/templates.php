@@ -38,7 +38,7 @@ function cartListTemplate($r,$o) {
 	</div>
 	<div class="flex-stretch">
 		<strong>$o->name ($o->amount)</strong>
-		<form action="cart_actions.php?action=delet-cart-item" method="post">
+		<form action="cart_actions.php?action=delete-cart-item" method="post">
 		<input type="hidden" name="id" value="$o->id">
 		<input type="submit" class="form-button inline" value="Delete" style="font-size: 0.8em;">
 		</form>
@@ -62,9 +62,7 @@ function cartListTemplate($r,$o) {
 function cartTotals() {
 
 	$cart = getCartItems();
-
 	$cartprice = array_reduce($cart,function($r,$o){return $r + $o->total;},0);
-
 	$pricefixed = number_format($cartprice,2,'.','');
 	$taxfixed  = number_format($cartprice*0.0725,2,'.','');
 	$taxedfixed = number_format($cartprice*1.0725,2,'.','');
@@ -93,9 +91,7 @@ function cartTotals() {
 
 
 
-						<div class="card-section">
-							<a href="product_checkout.php" class="form-button">Checkout</a>
-						</div>
+						
 
 HTML;
 }
@@ -104,5 +100,31 @@ HTML;
 
 
 
+
+function recommendedProducts($a) {
+	$products = array_reduce($a,'productListTemplate');
+	echo <<<HTML
+	<div class="grid gap productlist">$products</div>
+	HTML;
+}
+
+
+function recommendedColor($color,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `color` = '$color' ORDER BY `date_create` DESC LIMIT $limit");
+
+	recommendedProducts($result);
+}
+
+function recommendedAnything($limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() LIMIT $limit");
+
+	recommendedProducts($result);
+}
+
+function recommendedSimilar($color,$id=0,$limit=3) {
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `color` = '$color' AND `id` <> $id ORDER BY rand() LIMIT $limit");
+
+	recommendedProducts($result);
+}
 
 ?>
