@@ -4,14 +4,14 @@
 include "../lib/php/functions.php";
  
 $empty_product = (object)[
-	"name"=>"",
-	"price"=>"",
-	"description"=>"",
-	"dimension"=>"",
-	"color"=>"",
-	"thumbnail"=>"",
-	"images"=>"",
-	"quantity"=>""
+	"name"=>"Pen",
+	"price"=>"4.99",
+	"description"=>"I only about it from Zelda",
+	"dimension"=>"4",
+	"color"=>"Gold",
+	"thumbnail"=>"gold.jpeg",
+	"images"=>"gold.jpeg",
+	"quantity"=>"20"
 ];
 
 
@@ -35,7 +35,7 @@ try {
 				`date_modify`=NOW()
 			WHERE `id`=?
 			");
-		$statement->excute([
+		$statement->execute([
 			$_POST['product-name'],
 			$_POST['product-price'],
 			$_POST['product-quantity'],
@@ -66,7 +66,7 @@ try {
 			)
 			VALUES (?,?,?,?,?,?,?,?,NOW(),NOW())
 			");
-		$statement->excute([
+		$statement->execute([
 			$_POST['product-name'],
 			$_POST['product-price'],
 			$_POST['product-quantity'],
@@ -82,7 +82,7 @@ try {
 
 		case "delete":	
 		$statement = $conn->prepare("DELETE FROM `products` WHERE id=?");
-		$statement->excute([$_GET['id']]);
+		$statement->execute([$_GET['id']]);
 		header("location:{$_SERVER['PHP_SELF']}");
 		break;
 	}
@@ -115,10 +115,10 @@ HTML;
 
 
 function showProductPage($o){
-	$id = $_GET['id'];
 
+	$id = $_GET['id'];
 	$addoredit = $id == "new" ? "Add" : "Edit";
-	$createorupdate = $id == "new" ? "Create" : "update";
+	$createorupdate = $id == "new" ? "create" : "update";
 	$images = array_reduce(explode(",",$o->images),function($r,$o){return $r."<img src='img/$o'>";});
 
 
@@ -283,8 +283,8 @@ HTML;
 			if(isset($_GET['id']))  {
 			showProductPage(
 				$_GET['id']=="new"?
-				$empty_product : 
-					$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = ".$_GET['id'])[0]
+					$empty_product : 
+					makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = ".$_GET['id'])[0]
 			);
 			} else {
 
@@ -307,7 +307,7 @@ HTML;
 					}
 
 					
-						?>
+					?>
 						
 						<php } ?>
 					</ul>
