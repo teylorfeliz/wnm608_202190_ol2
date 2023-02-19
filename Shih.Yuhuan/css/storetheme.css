@@ -1,0 +1,9 @@
+
+
+:root {
+	--color-neutral-light:#FFF8F3;
+}
+
+body {
+	background-color:var(--color-neutral-light) ;
+}
