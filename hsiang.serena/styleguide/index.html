@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS styleguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../lib/css/styleguide.css">
+    <link rel="stylesheet" href="../lib/css/gridsystem.css">
+    <link rel="stylesheet" href="../css/storetheme.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container display-flex">
+            <div class="flex-none">
+                <h1>Styleguide</h1>
+            </div>
+
+            <div class="flex-stretch"></div>
+            <!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->
+            <nav class="flex-none nav">
+                <ul class="container display-flex">
+                    <li><a href="#tableofcontents">Table of contents 🔥</a></li>
+                    <li><a href="#article2">Shop 🎁</a></li>
+                    <li><a href="#article3">Offers ⚡</a></li>
+                    <li><a href="#article4">Bag 🛍️</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="tableofcontents">
+        <h2 id="table-of-contents">Table of Contents</h2>
+        <div class="card">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#typography">Typography</a></li>
+                    <ul>
+                        <li><a href="#headings">Headings</a></li>
+                        <li><a href="#paragraphy">Paragraphy</a></li>
+                    </ul>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#viewwindow">View Window</a></li>
+                    <li><a href="#navigations">Navigations</a></li>
+                    <li><a href="#gridsystem">Grid System</a></li>
+                    <li><a href="#flexsystem">Flex System</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <ul>
+                        <li><a href="#inputs">Inputs</a></li>
+                        <li><a href="labels">Labels</a></li>
+                        <li><a href="controls">Controls</a></li>
+                        <li><a href="buttons">Buttons</a></li>
+                        <!-- <li><a href="hotdog">Hotdog</a></li> -->
+                    </ul>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container" id="typography">
+        <h2>Typography</h2>
+        <div class="card medium" id="headings">
+            <h2>Typography</h2>
+
+            <h3>Headings</h3>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </div>
+
+        <div class="card dark" id="paragraphy">
+
+            <h3>Paragraphs</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem odit nostrum reiciendis obcaecati
+                nesciunt in iste! Enim, dignissimos exercitationem rerum neque consectetur voluptas repudiandae ad
+                porro, ratione et nostrum ipsa?</p>
+            <p>Itaque ab magni sint quibusdam. Dolorem fugiat tempore vitae deleniti quas voluptate ea, maiores eos
+                error atque cupiditate qui libero cumque quibusdam ipsum quod possimus similique? Quod aperiam aut amet.
+            </p>
+            <p>Deserunt excepturi, adipisci ex dolores, porro unde repudiandae error harum dignissimos exercitationem
+                illo magnam accusantium provident sapiente. Sint, accusantium id? Aspernatur cum ut, vel dicta nihil
+                explicabo placeat dolorum cumque.</p>
+        </div>
+
+        <div class="form-control">
+            <a href="#" class="form-button">Back to the Top</a>
+            </div>
+    </div>
+
+    <div class="container" id="cards">
+        <h2>Cards</h2>
+
+        <div class="grid gap">
+            <div class="col-xs-12 col-md-4">
+                <div class="card">Card</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card soft">Card soft</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card hard">Card Hard</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card flat">Card Flat</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card dark">Card Dark</div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="card medium">Card Medium</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>View Window</h2>
+    </div>
+
+    <div class="container" id="navigations">
+        <h2>Navigations</h2>
+
+        <script>
+            const makeNav = (classes = '') => {
+                const links = ['Home', 'Store', 'About'];
+                let ran = Math.floor(Math.random() * links.length);
+                document.write(`
+                <div>
+                    <nav class="${classes}">
+                <ul>
+                    ${links.reduce((r, o, i) => {
+                    return r + `<li class="${ran == i ? 'active' : ''}"><a herf="#">${o}</a></li>`;
+                }, '')}
+                </ul>
+                    </nav>   
+                </div>    
+                `);
+            }
+        </script>
+
+        <div class="card soft">
+            <h3>Basic Nav</h3>
+
+            <script> makeNav('nav') </script>
+
+            <!-- nav.nav>ul>li*4>a[href=#]>{Link $} -->
+            <nav class="nav">
+                <ul>
+                    <li><a herf="#">Link 1</a></li>
+                    <li><a herf="#">Link 2</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="card medium">
+            <h3>Flex Nav</h3>
+
+            <script> makeNav('nav nav-flex')</script>
+
+            <!-- nav.nav>ul>li*4>a[href=#]>{Link $} -->
+            <nav class="nav nav-flex">
+                <ul>
+                    <li><a herf="#">Link 3</a></li>
+                    <li><a herf="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="card soft">
+            <h3>Stretch Nav</h3>
+
+            <script> makeNav('nav nav-streth')</script>
+
+            <!-- nav.nav>ul>li*4>a[href=#]>{Link $} -->
+            <nav class="nav nav-streth">
+                <ul>
+                    <li><a herf="#">Link 1</a></li>
+                    <li><a herf="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="card soft">
+            <h3>Pills Nav</h3>
+
+            <script> makeNav('nav nav-pills')</script>
+
+            <!-- nav.nav>ul>li*4>a[href=#]>{Link $} -->
+            <nav class="nav nav-pills">
+                <ul>
+                    <li><a herf="#">Link 1</a></li>
+                    <li><a herf="#">Link 2</a></li>
+                    <li><a herf="#">Link 3</a></li>
+                    <li><a herf="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="card dark">
+            <h3>Crumbs Nav</h3>
+
+            <script> makeNav('nav nav-crumbs')</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Material Nav</h3>
+
+            <script> makeNav('nav nav-material')</script>
+        </div>
+
+        <script>
+            $("#navigations a").on("click", function (e) {
+                e.preventDefault();
+                $(this).closest("li").addClass("active")
+                    .siblings().removeClass("active")
+            })
+        </script>
+
+    <div class="form-control">
+    <a href="#" class="form-button">Back to the Top</a>
+    </div>
+
+    </div>
+
+    <div class="container">
+        <h2>Grid System</h2>
+    </div>
+
+    <div class="container">
+        <h2>Flex System</h2>
+    </div>
+
+    <script>
+        const makeTable = (classes = '') => {
+            const head = ['', 'ID', 'Name', 'Email', 'Phone'];
+            const body = [
+                ['522', 'Willington Eddie', 'Eddie.willington@adeccona.com', '857-600-0428'],
+                ['512', 'Pun Benson', 'benson.pun@stevenscreekbmw.com', '408-961-3145'],
+                ['522', 'William Wang', 'weisaid@gmail.com', '646-290-0325'],
+                ['514', 'Ao Yu', 'aochengyu@gmail.com', '213-590-7266'],
+                ['516', 'Yun Hsiang', 'seremahsiang@gmail.com', '720-569-6788'],
+            ];
+            // let ran = Math.floor(Math.random()*links.length);
+            document.write(`
+            <table class="${classes}">
+                <thead><tr>${head.reduce((r, o) => r + `<th>${o}</th>`, '')}</tr></thead>
+                <tbody>${body.reduce((r, o, i) => r +
+                `<tr>${[i + 1, ...o].reduce((r, o) => r + `<td>${o}</td>`, '')
+                }</tr>`, '')
+                }</tbody>
+            </table>
+            `);
+        }
+    </script>
+    <div class="container" id="tables">
+        <h2>Tables</h2>
+
+        <div class="card medium">
+            <h3>Basic Table</h3>
+
+            <script>makeTable("table")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Table</h3>
+
+            <script>makeTable("table striped")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined Vertical</h3>
+
+            <script>makeTable("table lined vertical")</script>
+        </div>
+
+        <div class="card dark">
+            <h3>Striped Lined Horizontal</h3>
+
+            <script>makeTable("table lined horizontal")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined Border</h3>
+
+            <script>makeTable("table lined vertical border striped")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Striped Lined All</h3>
+
+            <script>makeTable("table lined all")</script>
+        </div>
+
+        <div class="card soft">
+            <h3>Combinations</h3>
+
+            <script>makeTable("table lined vertical horizontal border striped")</script>
+        </div>
+
+            <div class="form-control">
+            <a href="#" class="form-button">Back to the Top</a>
+            </div>
+
+        <h2 id="figures">Figures</h2>
+
+        <div class="card">
+            <h3>Basic Figures</h3>
+            <figure class="figure">
+                <img src="../img/basicfigure.jpg" alt="">
+                <figcaption>Product</figcaption>
+            </figure>
+
+            <h3>Figure Grid</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure">
+                        <img src="../img/500ring01.jpg" alt="">
+                        <figcaption>Product</figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure">
+                        <img src="../img/500ring02.jpg" alt="">
+                        <figcaption>Product</figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure">
+                        <img src="../img/500ring03.jpg" alt="">
+                        <figcaption>Product</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <h3>Product Grid</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="../img/500ring04.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="../img/500ring05.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product">
+                        <img src="../img/500ring06.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+
+            <h3>Product Overlay</h3>
+            <div class="grid gap">
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="../img/500ring11.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="../img/500ring08.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <figure class="figure product-overlay">
+                        <img src="../img/500ring09.jpg" alt="">
+                        <figcaption>
+                            <div class="caption-body">
+                                <div>Product Name</div>
+                                <div>$32.99</div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-control">
+        <a href="#" class="form-button">Back to the Top</a>
+        </div>
+
+    <div class="container" id="forms">
+        <h2>Forms</h2>
+
+        <h3>Inputs</h3>
+
+        <div class="card soft">
+            <h3>Default Inputs</h3>
+            <form>
+                Text - <input type="text"><br>
+                Number - <input type="number"><br>
+                Password - <input type="password"><br>
+                Url - <input type="url"><br>
+                Email - <input type="email"><br>
+                Local Date - <input type="datetime-local"><br>
+                Date - <input type="date"><br>
+                Search - <input type="search">
+            </form>
+
+            <h3>Form Input</h3>
+            <form>
+                <input type="text" placeholder="Text" class="form-input">
+                <input type="number" placeholder="Number" class="form-input">
+                <input type="password" placeholder="Password" class="form-input">
+                <input type="search" placeholder="Search" class="form-input">
+            </form>
+
+            <h3>Form Control</h3>
+            <form>
+                <div>
+                    <label class="form-control">First Name</label>
+                    <input type="text" placeholder="Text" class="form-input">
+                </div>
+                <div>
+                    <label class="form-control">Last Name</label>
+                    <input type="number" placeholder="Number" class="form-input">
+                </div>
+                <div>
+                    <label class="form-control">Phone</label>
+                    <input type="password" placeholder="Password" class="form-input">
+                </div>
+                <div class="form-control display-flex">
+                    <div class="flex-none">
+                    <label class="form-control">Phone</label>
+                    </div>
+                    <div class="flex-stretch">
+                    <input type="search" placeholder="Search" class="form-input">
+                    </div>
+                    <div class="flex-none">
+                    <label class="form-control">Address</label>    
+                    </div>
+                    <div class="flex-stretch">
+                    <input type="search" placeholder="Search" class="form-input">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <h3>Buttons</h3>
+
+        <div class="card dark">
+            <h3>Default Buttons</h3>
+            <button>Button</button>
+
+            <h3>Form Buttons</h3>
+            <div class="form-control">
+                <button type="button" class="form-button">Button</button>
+            </div>
+            <div class="form-control">
+                <input type="button" class="form-button" value="Input">
+            </div>
+
+        </div>
+
+        <div class="form-control">
+            <a href="#" class="form-button">Back to the Top</a>
+        </div>
+        
+        <!-- <h2>Hotdog</h2>
+
+        <div class="card soft">
+
+        </div> -->
+        
+    </div>
+
+
+
+</body>
+</html>
