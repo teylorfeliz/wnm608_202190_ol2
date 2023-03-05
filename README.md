@@ -1,2 +1,6 @@
-# wnm608_202190_ol2
-WNM 608 OL2
+# Shih Yuhuan
+
+## Relevant Links
+- joyshih.com
+- joyshih.com/wnm608/Shih.Yuhuan
+- joyshih.com/wnm608/Shih.Yuhuan/styleguide
