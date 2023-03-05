@@ -4,6 +4,27 @@
 	--color-neutral-light:#FFF8F3;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color:var(--color-neutral-light) ;
 }
+
+.back {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 70px;
+    bottom: 50px;
+    border-radius: 50%;
+    background-color:#f6c668;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    line-height: 45px;
+    text-decoration: none;
+    text-decoration-color:#f6c668;
+  }
