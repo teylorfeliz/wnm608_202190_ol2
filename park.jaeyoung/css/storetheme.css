@@ -1,7 +1,33 @@
 
 :root {
 	--color-offwhite: #f4f4f4;
+
+    --color-main-light: #84B2EE;
+    --color-main-medium:#78C184;
+    --color-main-dark: #456CF0;
 }
-body{
+
+.body{
 	background-color: var(--color-offwhite) ;
+	font-family: Poppins;
+}
+
+
+
+@media (max-width:800px) {
+	.container {
+		padding-left: 1em;
+		padding-right: 1em;	
+	}
+	.navbar h1 {
+		padding-left: 0.5em;
+	}
+}
+@media (max-width:400px) {
+	.navbar .display-flex {
+		display: block;
+	}
+	.navbar .nav li {
+		line-height: 2em;
+	}
 }

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Styleguide</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+
+
+	<script type="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+<!-- header>h1+p -->
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+		<h1>Styleguide</h1>
+	</div>
+	<div class="flex-stretch"></div>
+	<nav class="flex-none nav">
+		<ul class="container display-flex">
+			<li ><a href="#tableofcontents">Home</a></li>
+			<li ><a href="#tableofcontents">Store</a></li>
+			<li ><a href="#tableofcontents">Contact</a></li>
+
+		</ul>
+	</nav>
+</div>
+	</header>
+
+	<div class="container" id="tableofcontents">
+			<h2>Table of Contents</h2>
+			<div class="card">
+			<nav class="nav">
+				<ul>
+					<li><a href="#typography">Typography</a></li>
+					<ul>
+						<li><a href="#heading">Headings</a></li>
+						<li><a href="#paragraphs">Paragraphs</a></li>
+					</ul>
+					<li><a href="#cards">Cards</a></li>
+					<li><a href="#viewindow">View Window</a></li>
+					<li><a href="#navigations">Navigations</a></li>
+					<li><a href="#gridsystem">Grid System</a></li>
+					<li><a href="#flexsystem">Flex System</a></li>
+
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container" id="typography">
+			<h2>Typography</h2>
+
+		<div class="card soft" id="headings">		
+			<h3>Headings</h3>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+		<div class="card soft" id="paragraphs">
+			<h3>Paragraphs</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, unde possimus animi necessitatibus nemo. Quam adipisci unde ipsam porro at fugiat soluta eius molestiae dolores perferendis voluptas quod tempora, quas.</p>
+			<p>Beatae ullam praesentium suscipit est eos quam natus aperiam molestias quaerat dignissimos nobis perferendis provident hic fugit aliquam illum incidunt, sed maxime. Aut repellat accusamus error aspernatur expedita est soluta.</p>
+			<p>Temporibus perspiciatis officiis reiciendis explicabo nostrum qui sunt illo? Cupiditate est incidunt consequuntur voluptates iste. Nisi odio illo doloremque ab modi. Obcaecati illo facere omnis quaerat, explicabo nesciunt aspernatur laudantium!</p>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+		<h2>Cards</h2>
+
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<div class="card">Card</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card soft">Card Soft</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card hard">Card Hard</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card flat">Card Flat</div>	
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card dark">Card Dark</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card medium">Card Medium</div>
+			</div>
+		</div>
+	</div>
+
+
+
+		<div class="container">
+		<h2>View Window</h2>
+			</div>
+
+
+
+		<div class="container" id="navigations">
+		<h2>Navigations</h2>
+
+		<script>
+		const makeNav = (classes='') => {
+			const links = ['home','store','about'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write(`
+			<div>
+				<nav class="${classes}">
+				<ul>
+				${links.reduce((r,o,i)=>{
+					return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+				},'')}
+				</ul>
+			</nav>
+			</div>
+			`);
+		}
+		</script>
+
+		<div class="card soft">	
+			<h3>Basic Nav</h3>
+
+			<script>makeNav('nav')</script>
+		</div>
+
+		<div class="card soft">	
+			<h3>Flex Nav</h3>
+
+			<script>makeNav('nav nav-flex')</script>
+		</div>
+
+		<div class="card soft">	
+			<h3>Stretch Nav</h3>
+
+			<script>makeNav('nav nav-stretch')</script>
+		</div>
+
+		<div class="card soft">	
+			<h3>Pills Nav</h3>
+
+			<script>makeNav('nav nav-pills')</script>
+		</div> 
+
+		<div class="card soft">	
+			<h3>Crumbs Nav</h3>
+
+			<script>makeNav('nav nav-crumbs')</script>
+		</div>
+
+		<div class="card soft">	
+			<h3>Material Nav</h3>
+
+			<script>makeNav('nav nav-material')</script>
+		</div>
+
+		<script>
+			$("#navigations a").on("click",function(e){
+				e.preventDefault();
+				$(this).closest("li").addClass("active")
+					.siblings().removeClass("active")
+			})
+		</script>
+	</div>
+
+
+		<div class="container">
+		<h2>View Window</h2>
+			</div>
+
+
+		<div class="container">
+		<h2>Grid System</h2>
+			</div>
+<div class="container">
+		<div class="card">
+			<h2>Grid</h2>
+				<div class="grid">
+					<div class="col-xs-6">column 6</div>
+					<div class="col-xs-6">column 6</div>
+				</div>
+				<div class="grid gap xs-small md-medium">
+					<div class="col-xs-4">column 4</div>
+					<div class="col-xs-4">column 4</div>
+					<div class="col-xs-4">column 4</div>
+		
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+		
+		
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-6">column 6</div>
+				</div>
+			</div>
+		</div>
+
+<div class="container">
+		<div class="card">
+			<h2>Responsive Grid</h2>
+				<div class="grid">
+					<div class="col-xs-12 col-md-6">column 6</div>
+					<div class="col-xs-12 col-md-6">column 6</div>
+				</div>
+				<div class="grid">
+					<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+					<div class="col-xs-12 col-md-4 col-xl-6">column 4</div>
+					<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+		
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+					<div class="col-xs-3">column 3</div>
+				<div class="grid ten gap">
+					
+				</div>
+		
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+					<div class="col-xs-2">column 2</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+		<h2>Flex System</h2>
+			</div>
+
+
+		<div class="container">
+		<h2>Tables</h2>
+			</div>
+
+
+
+			<div class="container">
+		<article id="article1" class="article card soft">
+			<div class="display-flex flex-align-center">
+				<div class="flex-stretch">
+
+					<h2 id="figures">Figures</h2>
+		
+	<div class="card">	
+	<h3>Basic Figure</h3>
+
+			<figure class="figure">
+				<img src="https://phoenixrvpark.com/wp-content/uploads/iStock-1337586097.jpg" alt="">
+				<figcaption>Book Now</figcaption>
+			</figure>
+		</div>
+
+		
+
+			<div class="container">
+			<div class="grid gap xs-small md-medium">
+				<!--.col-xs-6.col-md-3*4>.card>{Card} -->
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src="https://www.venture-rv.com/images/2023/2023-Venture-RV-Sonic-SN190VRB-Ultra-Lite-Travel-Trailer.jpg?v=92722" alt="" class="media-image">
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src="https://www.venture-rv.com/images/2023/2023-Venture-RV-Stratus-SR261VRB-Ultra-Lite-Travel-Trailer.jpg" alt="" class="media-image">
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3"> 
+					<div class="card soft">
+						<img src="https://www.lightninrv.com/wp-content/uploads/251A9942-Copy.jpg" alt="" class="media-image">
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="card soft">
+						<img src="https://www.lightninrv.com/wp-content/gallery/b-touring/251A9964.jpg" alt="" class="media-image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
