@@ -52,10 +52,12 @@
                     <li><a href="#forms">Forms</a></li>
                     <ul>
                         <li><a href="#inputs">Inputs</a></li>
-                        <li><a href="labels">Labels</a></li>
-                        <li><a href="controls">Controls</a></li>
-                        <li><a href="buttons">Buttons</a></li>
-                        <!-- <li><a href="hotdog">Hotdog</a></li> -->
+                        <li><a href="#labels">Labels</a></li>
+                        <li><a href="#controls">Controls</a></li>
+                        <li><a href="#buttons">Buttons</a></li>
+                        <li><a href="#hotdog">Hotdog</a></li>
+                        <li><a href="#select">Select</a></li>
+                        <li><a href="#checkboxes">Checkboxes</a></li>
                     </ul>
 
                 </ul>
@@ -425,7 +427,7 @@
 
         <h3>Inputs</h3>
 
-        <div class="card soft">
+        <div class="card soft" id="inputs">
             <h3>Default Inputs</h3>
             <form>
                 Text - <input type="text"><br>
@@ -449,11 +451,11 @@
             <h3>Form Control</h3>
             <form>
                 <div>
-                    <label class="form-control">First Name</label>
+                    <label class="form-control" id="labels">First Name</label>
                     <input type="text" placeholder="Text" class="form-input">
                 </div>
                 <div>
-                    <label class="form-control">Last Name</label>
+                    <label class="form-control" id="controls">Last Name</label>
                     <input type="number" placeholder="Number" class="form-input">
                 </div>
                 <div>
@@ -477,10 +479,11 @@
             </form>
         </div>
 
+        <div class="container" id="buttons">
 
         <h3>Buttons</h3>
 
-        <div class="card dark">
+        <div class="card dark" id="buttons">
             <h3>Default Buttons</h3>
             <button>Button</button>
 
@@ -497,12 +500,101 @@
         <div class="form-control">
             <a href="#" class="form-button">Back to the Top</a>
         </div>
+        </div>
+        </div>
         
-        <!-- <h2>Hotdog</h2>
+        <h2>Hotdog</h2>
+
+        <div class="card soft" id="hotdog">
+            <div class="form-control">
+                <form>
+                    <input type="search" class="hotdog" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form>
+                    <input type="search" class="hotdog dark" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form class="card dark">
+                    <input type="search" class="hotdog light" placeholder="Search">
+                </form>
+            </div>
+            <div class="form-control">
+                <form class="hotdog">
+                    <span>&equiv;</span>
+                    <input type="search" placeholder="Search">
+                </form>
+            </div>
+
+            <div class="form-control">
+                <form class="hotdog">
+                    <input type="search" placeholder="Search">
+                    <span>&equiv;</span>
+                </form>
+            </div>
+        </div>
+
+        <h2 id="select">Select</h2>
+        <div class="card soft" id="select">
+            <div class="form-select">
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="display-flex">
+            <div class="flex-stretch"></div>
+            <div class="flex-stretch"></div>
+            <div class="flex-none"></div>
+            <div class="card soft" id="selectShort">
+                <div class="form-select">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+                </div>
+        </div>
+        </div>
+        </div>
+
+        <h2 id="checkboxes">Check Boxes</h2>
 
         <div class="card soft">
+            <h3>Basic Checkbox</h3>
+            <label>Label <input type="checkbox" id="input-1"></label>
+            <label for="input-1">Label</label>
 
-        </div> -->
+        <h3>Heart Checkbox</h3>
+        <div class="favorite">
+            <input type="checkbox" id="heart-example" class="hidden">
+            <label for="heart-example">&hearts;</label>
+        </div>
+        <h3>Toggle</h3>
+        <div class="toggle">
+            <input type="checkbox" id="toggle-1" class="hidden">
+            <label for="toggle-1"></label>
+        </div>
+        <div class="display-flex flex-align-center">
+            <div class="flex-stretch">
+                <label for="toggle-2" class="form-label">Display Warning?</label>
+            </div>
+            <div class="flex-none">
+                <div class="toggle" style="font-size: 2em;">
+                    <input type="checkbox" id="toggle-2" class="hidden">
+                    <label for="toggle-2"></label>
+                </div>
+            <div class="flex-stretch"></div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
         
     </div>
 

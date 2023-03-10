@@ -46,14 +46,11 @@
     --font-arapey-regular: Arapey;
 }
 
-
-
 body {
     margin: 0;
     font-size: 100%;
     font-family: var(--font-arapey-regular);
 }
-
 
 /* h1,
 h2,
@@ -74,8 +71,6 @@ a:hover {
     text-decoration: underline;
 }
 
-
-
 /* LAYOUT CLASSES */
 .container {
     max-width: 800px;
@@ -86,7 +81,6 @@ a:hover {
 #table-of-contents {
     margin-top: 3em;
 }
-
 
 .display-flex {
     display: flex;
@@ -120,20 +114,13 @@ a:hover {
     justify-content: center;
 }
 
-
-
 /* Small classes */
 
 .media-image {
     max-width: 100%;
     vertical-align: text-bottom;
-
 }
-
-
-
-
-
+.hidden { display: none;}
 
 /* COMPONENT CLASSES */
 
@@ -153,6 +140,8 @@ a:hover {
     background-color: var(--color-lotus);
     color: var(--color-white);
     text-decoration: none;
+    padding-top: 3px;
+    transition: .6s;
 }
 
 .nav .active a {
@@ -197,7 +186,6 @@ a:hover {
 .nav-material a {
     padding: 0.5em 1em;
     position: relative;
-
 }
 
 .nav-material .active a {
@@ -332,16 +320,19 @@ a:hover {
 
 #article1 .article-body button {
     background: #a75d66;
-    color: #ebe4de;
+    color: var(--color-neutral-lightgrey);
     border: 1.5px solid #f6c9bb;
     padding: 12px 35px;
     border-radius: 5px;
     cursor: pointer;
     font-family: var(--font-arapey-regular);
+    font-size: 1em;
+    font-weight: 1px;
 }
 
 #article1 .article-body button:hover {
     opacity: 0.7;
+    background-color: var(--color-darkpurple);
 }
 
 /* #article2 {
@@ -426,6 +417,21 @@ a:hover {
 /* FORMS */
 .form-control {
     margin: 1em 0;
+}
+
+.hotdog input,
+.hotdog,
+.form-button,
+.form-input,
+.form-item {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: var(--color-orange);
+    width: 100%;
+    outline: 0;   
 
 }
 .form-input {
@@ -439,6 +445,7 @@ a:hover {
     width: 100%;
     border-bottom: 1px solid var(--color-main-medium);
     outline: 0;
+    padding: 0.5em 1em;
 }
 
 .form-input:focus {
@@ -474,3 +481,59 @@ a:hover {
     background-color: var(--color-indianred);
     color: var(--color-neutral-lightgrey);
 }
+
+.hotdog {
+    background-color: var(--color-blotus);
+    color: var(--color-rosered);
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    display: flex;
+}
+
+.hotdog.dark {
+    background-color: var(--color-darkgreen) ;
+    color: var(--color-neutral-lightgrey);
+}
+
+.hotdog.light {
+    background-color: var(--color-rosered);
+    color: var(--color-indianred);
+}
+.form-select > select {
+    appearance: none;
+    padding: 0.5em 1em;
+    background-color: var(--color-dustyrose)  ;
+    border-radius: 0.3em;
+    color: var(--color-neutral-lightgrey);
+    cursor: pointer;
+    width: 100%;
+}
+.form-select {
+    position: relative;
+}
+
+.form-select::after {
+    content:'▾';
+    font-family: arial,sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-lightgreen);
+}
+
+#selectShort {
+    background: var(--color-rosered);
+    padding: 0.3em;
+}
+
+#selectShort .form-select {
+    width: 50px;
+}
+
+#selectShort .form-select::after {
+    right: 0.5em;
+}
+
