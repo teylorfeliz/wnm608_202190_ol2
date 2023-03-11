@@ -10,7 +10,23 @@ html {
 
 body {
 	background-color:var(--color-neutral-light) ;
+    padding-bottom: 4em;
 }
+
+
+.favorite label {
+    transition: all 0.3s;
+    display: inline-block;
+    transform: scale(1,1);
+}
+
+.favorite input:checked + label {
+    color:red;
+    transform: scale(1.5,1.5);
+}
+
+
+
 
 .back {
     position: fixed;
