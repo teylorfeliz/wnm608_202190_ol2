@@ -24,7 +24,23 @@
 
 body {
     background-color: var(--color-white);
+    padding-bottom: 4em;
 }
+
+
+
+.favorite label {
+    transition: all 0.3s;
+    display: inline-block;
+    transform: scale(1,1);
+    color: var(--color-theme-light);
+}
+.favorite input:checked + label {
+    color: red;   
+    transform: scale(1.3,1.3);
+}
+
+
 
 
 
@@ -101,7 +117,7 @@ body {
 }
 
 .product-overlay:hover img {
-    transform: scale(1.4,1.4);
+    transform: scale(1.2);
 }
 
 @media (max-width:600px) {

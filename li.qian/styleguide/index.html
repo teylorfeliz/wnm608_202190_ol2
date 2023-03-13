@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CSS Styleguide</title>
 
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/projectstyleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
 
@@ -37,8 +37,7 @@
 			<div class="card">
 			<nav class="nav">
 			<ul>
-				<li><a href="#typography">Typogarphy</a></li>
-			
+				<li><a href="#typography">Typogarphy</a></li>	
 
 			<ul>
 				<li><a href="#headings">Headings</a></li>
@@ -49,7 +48,18 @@
 				<li><a href="#navigations">Navigations</a></li>
 				<li><a href="#gridsystem">Grid System</a></li>
 				<li><a href="#flexsystem">flex System</a></li>
+				<li><a href="#tables"></a>Tables</li>
 				<li><a href="#figures">Figures</a></li>
+				<li><a href="#forms"></a>Forms</li>
+
+				<ul>
+					<li><a href="#input"></a>Input</li>
+					<li><a href="#labels"></a>Labels</li>
+					<li><a href="#controls"></a>Controls</li>
+					<li><a href="#buttons"></a>Buttons</li>
+					<li><a href="#hotdog"></a>Hotdog</li>
+				</ul>
+
 			</ul>
 			</nav>
 		</div>
@@ -455,6 +465,212 @@
 	<!-- 275-container -->
 	</div>
 
+
+	<!-- Forms and Inputs -->
+	<div class="container" id="forms">
+		<h2>Forms</h2>
+
+		<h2>inputs</h2>
+
+		<div class="card soft">
+			<h3>Default Inputs</h3>
+			<form>
+				<input type="text" name=""><br>
+				<input type="number" name=""><br>
+				<input type="password" name=""><br>
+				<input type="url" name=""><br>
+				<input type="email" name=""><br>
+				<input type="datetime-local" name=""><br>
+				<input type="date" name=""><br>
+				<input type="search" name="">
+			</form>
+
+			<h3>Form Input</h3>
+			<form>
+				<input type="text" placeholder="Text" class="form-input">
+				<input type="number" placeholder="Number" class="form-input" name="">
+				<input type="password" placeholder="password" class="form-input" name="">
+				<input type="search" placeholder="Search" class="form-input" name="">
+			</form>
+
+			<h3>Form Label</h3>
+			<form>
+				<label class="form-label">Example</label>
+				<input type="text" placeholder="Text" class="form-input">
+				<label class="form-label">Example</label>
+				<input type="number" placeholder="Number" class="form-input" name="">
+				<label class="form-label">Example</label>
+				<input type="password" placeholder="password" class="form-input" name="">
+				<label class="form-label">Example</label>
+				<input type="search" placeholder="Search" class="form-input" name="">
+			</form>
+
+			<h3>Form Control</h3>
+			<form>
+				<div class="form-control">	
+					<label class="form-label">Example</label>
+					<input type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-control">
+					<label class="form-label">Example</label>
+					<input type="number" placeholder="Number" class="form-input" name="">
+				</div>
+				<div class="form-control">
+					<label class="form-label">Example</label>
+					<input type="password" placeholder="password" class="form-input" name="">
+				</div>
+
+
+				<!-- Stretch Label -->
+				<div class="form-control display-flex flex-align-center">
+					<div class="flex-none">
+						<label class="form-label">Example</label>
+					</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search" class="form-input flex-stretch" name="">
+					</div>
+					<div class="flex-none">
+						<label class="form-label">Example</label>
+					</div>
+					<div class="flex-stretch">
+						<input type="search" placeholder="Search" class="form-input flex-stretch" name="">
+					</div>
+				</div>
+			</form>
+
+
+
+		</div>
+
+			<!-- Bottons -->
+			<h3>Buttons</h3>
+
+			<div class="card soft">
+				<h3>Default Buttons</h3>
+
+				<button>Button</button>
+
+				<h3>Basic Buttons</h3>
+            	<div class="form-control">
+            	    <a href="#buttons" class="basic-button">Basic Buttons</a>
+            	</div>
+
+				<h3>Form Buttons</h3>
+
+				<div class="form-control">
+					<button type="button" class="form-button">Buttons</button>
+				</div>
+				<div class="form-control">
+					<input type="button" class="form-button" value="Input">
+				</div>
+				<div class="form-control">
+					<a href="#" class="form-button">Anchor</a>
+				</div>
+			</div>
+
+
+		<!-- Hotdog -->
+		 <h2>Hotdog</h2>
+
+		 <div class="card soft" id="hotdog">
+		 	<div class="form-control">
+		 		<form>
+		 			<input type="search" class="hotdog" placeholder="Search">		 			
+		 		</form>		 		
+		 	</div>
+		 	<div class="form-control">
+		 		<form>
+		 			<input type="search" class="hotdog dark" placeholder="Search">		 			
+		 		</form>		 		
+		 	</div>
+		 	<div class="form-control">
+		 		<form class="card dark">
+		 			<input type="search" class="hotdog light" placeholder="Search">		 			
+		 		</form>		 		
+		 	</div>
+		 	<div class="form-control">
+		 		<form class="hotdog">
+		 			<span>&equiv;</span>
+		 			<input type="search" placeholder="Search">
+		 		</form>
+		 	</div>
+		 	<div class="form-control">
+		 		<form class="hotdog">		 			
+		 			<input type="search" placeholder="Search">
+		 			<span>&equiv;</span>
+		 		</form>
+		 	</div>
+		 </div>
+
+
+		 <!-- select -->
+
+		 <h2 id="select">Select</h2>
+
+		 <div class="card soft">
+		 	<div class="form-select">
+		 		<select name="" id="">
+		 			<option value="">1</option>
+		 			<option value="">2</option>
+		 			<option value="">3</option>
+		 			<option value="">4</option>
+		 		</select>
+		 	</div>
+
+		 	<div class="display-flex">
+		 		<div class="flex-stretch"></div>
+		 		<div class="flex-none">
+		 			<div class="form-select">
+		 				<select name="" id="">
+		 					<option value="">1</option>
+		 					<option value="">2</option>
+		 					<option value="">3</option>
+		 					<option value="">4</option>
+		 				</select>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+
+
+		 <!-- Checkbox -->
+		 <h2 id="checkboxes">Check Boxes</h2>
+
+		 <div class="card soft">
+		 	<h3>Basic Checkbox</h3>
+            <label>Label <input type="checkbox" id="input-1"></label>
+            <label for="input-1">Label</label>
+
+            <h3>Heart Checkbox</h3>
+            <div class="favorite">
+            	<input type="checkbox" id="heart-example" class="hidden">
+            	<label for="heart-example">&hearts;</label>
+            </div>
+
+            <!-- Toggle -->
+            <h3>Toggle</h3>
+            <div class="toggle">
+            	<input type="checkbox" id="toggle-1" class="hidden">
+            	<label for="toggle-1"></label>
+            </div>
+
+            <div class="display-flex flex-align-center">
+            	<div class="flex-stretch">
+                    <label for="toggle-2" class="form-label" style="color: var(--color-text-medium);">Display Warning?</label>
+                </div>
+            	<div class="flex-none">
+            		<div class="toggle" style="font-size: 2em;">
+            			<input type="checkbox" id="toggle-2" class="hidden">
+            			<label for="toggle-2"></label>
+            		</div>
+            	</div>
+            </div>
+
+            
+            
+        </div>
+<!-- LAST -->
+	</div>
 
 
 

@@ -6,9 +6,14 @@
 	<title>Cool Website</title>
 
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<!-- <link rel="stylesheet" href="lib/css/styleguide.css"> -->
+	<link rel="stylesheet" href="lib/css/projectstyle.css">
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
+
+	<link rel="stylesheet" href="https://use.typekit.net/sut4alb.css">
+
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 	
@@ -16,17 +21,17 @@
 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
-				<h1>Cool website</h1>
+				<h1 style="font-family: --font-theme-title:june-expt-variable, sans-serif; color: var(--color-white);">Clover's Fresh</h1>
 			<!-- <p>Such a cool website</p> -->
 			</div>
 			<div class="flex-stretch"></div>
 	<!-- nav.nav>ul>li*4>a[href=#article$]>{link $} -->
 		<nav class="flex-none nav">
 			<ul class="container display-flex">
-				<li><a href="#article1">link 1</a></li>
-				<li><a href="#article2">link 2</a></li>
-				<li><a href="#article3">link 3</a></li>
-				<li><a href="#article4">link 4</a></li>
+				<li><a href="#article1">Home</a></li>
+				<li><a href="#article2">Product</a></li>
+				<li><a href="#article3">About</a></li>
+				<li><a href="#article4">Cart</a></li>
 			</ul>
 		</nav>
 		</div>
@@ -35,36 +40,23 @@
 
 
 	<div class="container">
-		<div class="card soft">
-			<h2>Grid</h2>
-			<div class="grid">
-				<div class="col-xs-6">column 6</div>
-				<div class="col-xs-6">column 6</div>
-			</div>
-			<div class="grid gap">
-				<div class="col-xs-4">column 4</div>
-				<div class="col-xs-4">column 4</div>
-				<div class="col-xs-4">column 4</div>
-			
-			
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-3">column 3</div>
-			
-			
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-3">column 3</div>
-				<div class="col-xs-6">column 6</div>
-			</div>
-		</div>
+		<!-- <h2 id="figures">Figures</h2> -->
+
+	<div class="card">
+		<!-- <h3>Basic Figure</h3> -->
+
+		<figure class="figure product-overlay">
+			<img src="http://via.placeholder.com/600x300" alt="">
+			<!-- <figcaption>Product</figcaption> -->
+		</figure>
+	</div>
 	</div>
 
 
 	<div class="container">
-		<div class="card soft">
-			<h2>Responsive Grid</h2>
-			<div class="grid">
+		<div class="card soft" style="text-align: center;">
+			<h2 style="padding-bottom:20px;">Category</h2>
+			<!-- <div class="grid">
 				<div class="col-xs-12 col-md-6">column 6</div>
 				<div class="col-xs-12 col-md-6">column 6</div>
 			</div>
@@ -78,14 +70,14 @@
 				<div class="col-xs-3">column 3</div>
 				<div class="col-xs-3">column 3</div>
 				<div class="col-xs-3">column 3</div>
-				</div>
+			</div> -->
 				<div class="grid ten gap">				
-				<div class="col-xs-2">column 2</div>
-				<div class="col-xs-2">column 2</div>
-				<div class="col-xs-2">column 2</div>
-				<div class="col-xs-2">column 2</div>
-				<div class="col-xs-2">column 2</div>
-			</div>
+					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Dairy & Eggs</div>
+					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Meat</div>
+					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Fresh Fruit</div>
+					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Frozen</div>
+					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Bread</div>
+				</div>
 		</div>
 	</div>
 
@@ -94,58 +86,151 @@
 		<div class="grid gap xs-small md-medium"> 
 			<div class="col-xs-6 col-md-3">
 				<div class="card soft">
-					<img src="img/500.jpeg" class="media-image" alt="" width="250">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0;  color: var(--color-text-dark)">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
 				</div>
 			</div>
 			<div class="col-xs-6 col-md-3">
 				<div class="card soft">
-					<img src="img/500.jpeg" class="media-image" alt="" width="250">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
 				</div>
 			</div>
 			<div class="col-xs-6 col-md-3">
 				<div class="card soft">
-					<img src="img/500.jpeg" class="media-image" alt="" width="250">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
 				</div>
 			</div>
 			<div class="col-xs-6 col-md-3">
 				<div class="card soft">
-					<img src="img/500.jpeg" class="media-image" alt="" width="250">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
 				</div>
+
+			</div>
+		</div>
+
+		<div class="grid gap xs-small md-medium"> 
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0;  color: var(--color-text-dark)">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="grid gap xs-small md-medium"> 
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0;  color: var(--color-text-dark)">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="card soft">
+					<figure class="figure">
+						<img src="http://via.placeholder.com/250x250" class="media-image" alt="" width="250">
+						<figcaption style="font-size: 1.3em; padding-bottom: 0 color: var(--color-text-dark);">Product</figcaption>
+						<figcaption style="color: var(--color-text-medium);">$3.99</figcaption>
+					</figure>
+				</div>
+
 			</div>
 		</div>
 	</div>
 	
 
 <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*3>Lorem40 -->
-	<div class="container">
-		<article id="article1" class="article card soft">
+	<div style="margin-top: 5em; padding-top:1em; margin-bottom: 0;">
+		<article id="article1" class="article" style=" height: 18em; background-color: var(--color-theme-dark);">
 			<div class="display-flex flex-align-center">
 				<div class="flex-stretch">
-					<h2>Article 1</h2>
+					<h2 style="padding-top: 1em; text-align: center; color: var(--color-text-light); ">Article 1</h2>
 				</div>	
-				<div class="flex-none">
+				<!-- <div class="flex-none">
 					<small>5:20am</small>
-				</div>	
+				</div> -->	
 			</div>
-			<div class="article-body">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quas, odio non, accusantium sapiente, libero laboriosam eveniet repudiandae aspernatur alias distinctio provident? Quidem vitae dolores, eaque aspernatur illo architecto ut temporibus, tempore! Amet, tempore autem? Neque unde suscipit quidem totam.</p>
-				<p>Reprehenderit quod architecto, exercitationem rem eius facere laborum voluptatem beatae cumque nemo? Vitae tenetur quaerat reprehenderit voluptas soluta, quis possimus nam itaque accusantium. Odio ab rem voluptates perspiciatis, alias magni repudiandae, a aliquid molestias! Tenetur ratione libero maiores omnis magni.</p>
-				<p>Deleniti magnam, molestias minima architecto, possimus aspernatur mollitia, necessitatibus consequuntur ratione cumque cum, totam esse. Aspernatur, nulla quidem aliquam quae doloribus delectus doloremque voluptatibus suscipit mollitia? Et esse dignissimos aspernatur veritatis sapiente blanditiis nisi alias voluptate, nihil incidunt cumque placeat.</p>
+			<div class="article-body" style="width: 800px; padding-bottom:20px; margin:0 auto; color: var(--color-text-light);">
+				<p style="font-size: 1.3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quas, odio non, accusantium sapiente, libero laboriosam eveniet repudiandae aspernatur alias distinctio provident? Quidem vitae dolores, eaque aspernatur illo architecto ut temporibus, tempore! Amet, tempore autem? Neque unde suscipit quidem totam.</p>
 			</div>
 		</article>
-		<article id="article2" class="article card hard">
+		<!-- <article id="article2" class="article card hard">
 			<h2>Article 2</h2>
 			<div class="article-body">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Facere voluptatibus, architecto accusamus distinctio quas nostrum atque. Vero iure error doloribus alias quam asperiores dolorum aliquid explicabo dolores soluta quas officia enim repellat voluptatem deleniti tenetur animi, officiis autem, optio, numquam!</p>
 				<p>Illum dignissimos impedit perspiciatis vitae, sequi libero harum soluta ad mollitia culpa alias, quas, quam enim aliquam explicabo necessitatibus placeat, beatae. Corporis suscipit consequatur adipisci quidem provident? Quaerat eum dignissimos optio ad quas. Possimus ut hic numquam maxime facilis quo.</p>
 				<p>Quaerat assumenda perferendis corporis velit earum aspernatur laborum error ipsa quae alias? Voluptates aliquam ullam consequatur porro ipsa amet laboriosam incidunt eligendi repellendus qui! Aspernatur odit inventore nisi accusantium ullam doloribus fugiat distinctio, delectus saepe nulla odio praesentium dolores natus!</p>
 			</div>
-		</article>
-		</div>
-		<div class="view-window" style="background-image: url(img/long.jpeg);">
-
-		</div>
-		<div class="container">
+		</article> -->
+	</div>
+		<!-- <div class="view-window" style="background-image: url(img/long.jpeg);"></div> -->
+		<!-- <div class="container">
 		<article id="article3" class="article card medium">
 			<h2>Article 3</h2>
 			<div class="article-body">
@@ -163,6 +248,6 @@
 			</div>
 		</article>
 	</div>
-
+ -->
 </body>
 </html>

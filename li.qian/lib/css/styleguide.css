@@ -43,9 +43,7 @@
 body {
   margin: 0;
   font-size: 100%;
-/*  font-family: var(--font-sans);*/
-
-  font-family: var(--font-theme-body);
+  font-family: var(--font-sans);
 }
 
 /*ASSIGNMENT*/
@@ -124,14 +122,12 @@ a:hover {
 
 .nav a:hover {
   background-color: var(--color-theme-light);
-/*  color: var(--color-white);*/
-  color: var(--color-text-light); 
+  color: var(--color-white);
   text-decoration: none;
 }
 
 .nav .active a {
-/*  background-color: var(--color-main-light);*/
-  background-color: var(--color-theme-medium);
+  background-color: var(--color-main-light);
   color: inherit;
 }
 
@@ -193,8 +189,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 0;
-/*  background-color: var(--color-main-medium);*/
-  background-color: var(--color-theme-medium);
+  background-color: var(--color-main-medium);
   transition: all 0.3s;
 }
 
@@ -204,18 +199,15 @@ a:hover {
 
 
 .navbar {
-  background-color: var(--color-theme-dark);
-  color: var(--color-text-light);
-/*  background-color: var(--color-neutral-dark);*/
-/*  color: var(--color-white);*/
+  background-color: var(--color-neutral-dark);
+  color: var(--color-white);
   line-height: var(--header-height);
 }
 
 .navbar h1 {
   font-size: 1em;
   margin: 0;
-/*  font-family: var(--font-sans);*/
-  font-family: var(--font-theme-title);
+  font-family: var(--font-sans);
   font-variation-settings: "STYL" 0;
 }
 
@@ -226,8 +218,7 @@ a:hover {
 
 /* CARD */
 .card {
-/*  background-color: var(--color-white);*/
-  background-color: var(--color-theme-bg);
+  background-color: var(--color-white);
   margin-top: 1em;
   margin-bottom: 1em;
   padding: 1em;
@@ -243,19 +234,16 @@ a:hover {
 
 .card.hard {
   border: 0.3em;
-/*  border: 2px solid var(--color-neutral-medium);*/
-  border: 2px solid var(--color-theme-medium);
+  border: 2px solid var(--color-neutral-medium);
 }
 
 .card.dark {
-/*  background-color: var(--color-neutral-dark);
-  color: var(--color-neutral-light);*/
-  background-color: var(--color-theme-dark);
-  color: var(--color-text-light);
+  background-color: var(--color-neutral-dark);
+  color: var(--color-neutral-light);
 }
 
 .card.medium {
-  background-color: var(--color-theme-medium);
+  background-color: var(--color-neutral-medium);
 }
 
 .card.flat {
@@ -288,8 +276,7 @@ a:hover {
 
 
 .table.striped tbody tr:nth-child(odd) {
-/*  background-color:var(--color-neutral-light);*/
-  background-color: var(--color-theme-light);
+  background-color:var(--color-neutral-light);
 }
 
 
@@ -297,20 +284,17 @@ a:hover {
 .table.lined.all td:not(:first-child),
 .table.lined.vertical th:not(:first-child),
 .table.lined.vertical td:not(:first-child){
-/*  border-left: 1px solid var(--color-neutral-medium);*/
-  border-left: 1px solid var(--color-theme-medium);
+  border-left: 1px solid var(--color-neutral-medium);
 }
 
 .table.lined.all tbody tr,
 .table.lined.all tbody tr {
-/*  border-top: 1px solid var(--color-neutral-medium);*/
-  border-top: 1px solid var(--color-theme-medium);
+  border-top: 1px solid var(--color-neutral-medium);
 }
 
 .table.lined.all,
 .table.lined.border {
-/*  border: 1px solid var(--color-neutral-medium);*/
-  border: 1px solid var(--color-theme-medium);
+  border: 1px solid var(--color-neutral-medium);
 }
 
 
@@ -318,8 +302,7 @@ a:hover {
 /*Figure*/
 .figure {
   margin: 0;
-/*  background-color:var(--color-white);*/
-  background-color: var(--color-theme-dark);
+  background-color:var(--color-white);
   color: var(--color-text-light);
   text-align: center;
 }
