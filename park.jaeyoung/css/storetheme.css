@@ -5,12 +5,38 @@
     --color-main-light: #84B2EE;
     --color-main-medium:#78C184;
     --color-main-dark: #456CF0;
+    font: Poppins;
 }
 
 .body{
 	background-color: var(--color-offwhite) ;
 	font-family: Poppins;
+	padding-bottom:4em;
 }
+
+
+
+
+
+.favorite label {
+	transition: all 0.3s;
+	position: relative;
+	transform: scale(1,1);
+	color: var(--color-main-dark);
+}
+.favorite input:checked + label {
+	color: red;	
+	transform: scale(1.5,1.5);
+}
+
+
+
+
+
+
+
+
+
 
 
 
