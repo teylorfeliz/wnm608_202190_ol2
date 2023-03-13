@@ -7,8 +7,15 @@
 
 :root {
 	--color-neutral-light:#eee;
-	--color-neutral-medium:#999;
-	--color-neutral-dark:#555;
+	--color-neutral-mediumblue:#70DFDF;
+	--color-neutral-darkblue:#0085FF;
+
+	--color-main-light:#light blue;
+	--color-main-medium:#blue;
+	--color-main-dark:#dark blue;
+
+	--color-lightyellow-:#FFE3B3;
+	--color-darkyellow:#FFC872;
 
 	--color-black-:#000;
 	--color-white:#fff;
@@ -26,7 +33,20 @@ body {
 	margin: 0;
 	font-size: 100%;
 	font-family:var(--font-sans);
+	padding-bottom: 4em;
 }
+
+.favorite label {
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1.1);
+	color: var(--color-neutral-light);
+}
+.favorite input:checked + label {
+	color: red;
+	transform: scale(1.5,1,5);
+}
+
 
 h1,
 h2,
@@ -73,6 +93,22 @@ a:hover {
 
 
 
+
+
+/*small classes*/
+
+.media-image {
+	max-width:100%;
+	vertical-align: text-bottom;
+}
+.hidden { display: none;}
+
+
+
+
+
+
+
 /*component classes*/
 
 .nav ul {
@@ -81,10 +117,90 @@ a:hover {
 	margin-bottom: 0;
 	padding-left: 0;
 }
+	.nav a {
+		display: block;
+		padding: 0.2em 0.5em;
+	}
+	.nav a:hover {
+		background-color: var(--color-main-medium);
+		color: var(--color-white);
+		text-decoration: none;
+	}
+/*	這個東西讓nav active 下面出現藍色框框-------------------------------*/
+	.nav .active a {
+		background-color: var(--color-main-light);
+		color: inherit;
+	}
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+	display: flex;
+}
+
+.nav-material li, 
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a {
+	border-radius: 2em;
+	padding: 0.5em 1em;
+}
+
+
+.nav-crumbs a {
+	display: inline-block;
+}
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: underline;
+}
+.nav-crumbs li:not(:first-child)::before {
+	content:'/';
+}
+
+
+.nav-material a {
+	padding: 0.5em 1em;
+	position: relative;
+}
+.nav-material .active a {
+	background-color: transparent;
+	color: inherit;
+}
+.nav-material a:hover {
+	background-color:var(--color-neutral-light);
+	color: inherit;
+}
+/*<-------------------------------                -transition: all 0.3s價格藍條緩緩升起*/
+.nav-material a::after{
+	content:'';
+	position: absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:0;
+	background-color:var(--color-main-medium);
+	transition: all 0.3s;  
+}
+
+.nav-material .active a::after {
+	height:4px;
+}
+
+
+
+
 
 
 .navbar {
-	background-color: var(--color-neutral-dark);
+	background-color: var(--color-neutral-darkblue);
 	color: var(--color-white);
 	line-height:var(--header-height);
 }
@@ -116,15 +232,16 @@ a:hover {
 	}
 	.card.hard {
 		border-radius: 0.2em;
-		border:2px solid var(--color-neutral-medium) ;
+		border:2px solid var(--color-neutral-mediumblue) ;
 	}	
 	.card.dark {
-  background-color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-darkblue);
   color: var(--color-neutral-light);
 }
 
 .card.medium {
-  background-color: var(--color-neutral-medium);
+  background-color: var(--color-neutral-mediumblue);
+  color: #013b3b;
 }
 
 .card.flat {
@@ -141,6 +258,307 @@ a:hover {
   background-position: center;
   background-attachment: fixed;
 }
+
+
+
+
+
+/*table*/
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 0.2em 0.5em;
+}
+
+
+.table.striped tbody tr:nth-child(odd) {
+    background-color: var(--color-neutral-light);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+    border-left: 2px solid var(--color-main-medium);
+}
+
+.table.lined.all tbody tr,
+.table.lined.all tbody tr {
+    border-top: 1px solid var(--color-main-medium);
+}
+
+.table.lined.all,
+.table.lined.border {
+    border: 1px solid var(--color-main-medium);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+    border-left: 2px solid var(--color-main-medium);
+}
+
+.table.lined.all tbody tr,
+.table.lined.all tbody tr {
+    border-top: 1px solid var(--color-main-medium);
+}
+
+.table.lined.all,
+.table.lined.border {
+    border: 1px solid var(--color-main-medium);
+}
+
+
+/* Figure */
+.figure {
+    margin: 0;
+    background-color: var(--color-white);
+    /*color: var(--color-main-medium);
+    border-radius: 0.7em;
+	overflow: hidden;*/
+}
+
+.figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+
+.figure figcaption {
+    padding: 1em;
+/*    text-align: center;*/
+}
+
+
+.figure.product {
+	border-radius: 0.7em;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+
+.product-overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.product-overlay figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product-overlay:hover figcaption {
+	opacity:1;
+}
+
+.product-overlay .caption-body {
+	background-color: white;
+	border-radius: 0.5em;
+	padding: 1em;
+	transform: translateY(2em);
+	transition: all 0.3s;
+}
+
+.product-overlay:hover .caption-body {
+	transform: translateY(0);
+}
+
+.product-overlay img {
+	transform: scale(1,1);
+	transition: all 0.3s;
+}
+
+.product-overlay:hover img {
+	transform: scale(1.4,1.4);
+}
+
+
+@media (max-width:600px) {
+	.product-overlay figcaption {
+		position: relative;
+		display: block;
+		top: initial;
+		left: initial;
+		width: 100%;
+		height: initial;
+		opacity: 1;
+		background-color: initial;
+	}
+	.product-overlay .caption-body {
+		transform: none;
+		padding: 0;
+
+	}
+}
+
+
+/*FORMS*/
+.form-control{
+	margin: 1em 0;
+}
+.form-select>select,
+.hotdog input,
+.hotdog,
+.form-button,
+.form-input,
+.form-item {
+		display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+   
+}
+.form-input {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    border-bottom: 1px solid var(--color-main-light);
+    outline: 0;
+}
+.form-input:focus {
+
+    border-bottom-color: var(--color-neutral-darkblue);
+}
+.form-label {
+    font-size: 0.8em;
+    color: var(--color-main-medium);
+    display: block;
+    width: 100%;
+}
+
+
+.form-button {
+    display: inline-block;
+    background-color: var(--color-neutral-light);
+    border-width: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+    border-radius: 0.2em;
+    cursor: pointer;
+    text-align: center;
+}
+.form-button:hover {
+    text-decoration: none;
+}
+.form-button:active {
+    background-color: var(--color-main-light);
+    color: var(--color-main-medium);
+}
+
+
+/*HOTDOG*/
+
+.hotdog {
+    background-color: var(--color-neutral-light);
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    display: flex;
+}
+.hotdog.dark {
+    background-color: var(--color-neutral-darkblue) ;
+    color: var(--color-neutral-light);
+}
+
+.hotdog.light {
+    background-color: var(--color-white);
+    color: var(--color-black-);
+}
+
+
+/*SELECT*/
+
+.form-select > select {
+    padding: 0.5em 1.3em;
+    background-color: var(--color-neutral-light) ;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+.form-select {
+    position: relative;
+}
+
+.form-select::after {
+    content:'▾';
+    font-family: arial,sans-serif;
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    right: 0.2em;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--color-main-medium);
+}
+
+
+
+/*TOGGLE*/
+
+.toggle label {
+	font-size: 1.3em;
+/*	font-size: 1.3rem;*/
+	display: inline-block;
+	width: 2em;
+	height: 1em;
+	border: 0.1em solid var(--color-neutral-darkblue);
+	border-radius: 1em;
+	position: relative;
+}
+.toggle label::after {
+	content: '';
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	border-radius: 1em;
+	position: absolute;
+	background-color: var(--color-neutral-mediumblue);
+	transition: all 0.3s;
+}
+.toggle input:checked + label::after {
+	transform: translateX(1em);
+	background-color: var(--color-neutral-darkblue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
