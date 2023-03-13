@@ -48,8 +48,13 @@
 					<li><a href="#navigations">Navigations</a></li>
 					<li><a href="#gridsystem">Grid System</a></li>
 					<li><a href="#flexsystem">Flex System</a></li>
-
-
+					<li><a href="#forms">Forms</a></li>
+					<ul>
+						<li><a href="#inputs">Inputs</li>
+						<li><a href="#labels">Labels</a></li>
+						<li><a href="#controls">Controls</a></li>
+						<li><a href="#buttons">Buttons</a></li>
+					</ul>
 				</ul>
 			</nav>
 		</div>
@@ -259,7 +264,7 @@
 
 					<h2 id="figures">Figures</h2>
 		
-	<div class="card">	
+	<div class="container">	
 	<h3>Basic Figure</h3>
 
 			<figure class="figure">
@@ -273,6 +278,7 @@
 			<div class="container">
 			<div class="grid gap xs-small md-medium">
 				<!--.col-xs-6.col-md-3*4>.card>{Card} -->
+
 				<div class="col-xs-6 col-md-3">
 					<div class="card soft">
 						<img src="https://www.venture-rv.com/images/2023/2023-Venture-RV-Sonic-SN190VRB-Ultra-Lite-Travel-Trailer.jpg?v=92722" alt="" class="media-image">
@@ -296,10 +302,162 @@
 			</div>
 		</div>
 	</div>
+</div>
+	<div class="container" id="forms">
+		<h2>Forms</h2>
 
-	
+		<h2>Inputs</h2>
+
+		<div class="card soft">
+			<h3>Default Inputs</h3>
+			<form>
+				<input type="text"><br>
+				<input type="number"><br>
+				<input type="password"><br>
+				<input type="url"><br>
+				<input type="email"><br>
+				<input type="datetime-local"><br>
+				<input type="date"><br>
+				<input type="search">
+			</form>
+
+			<h3>Form Input</h3>
+			<form>
+				<input type="text" placeholder="Text" class="form-input">
+				<input type="number" placeholder="Number" class="form-input">
+				<input type="password" placeholder="Password" class="form-input">
+				<input type="search" placeholder="Search" class="form-input">
+			</form>
+		</div>
+
+			<h3>Form Label</h3>
+			<form>
+				<label class="form-label">Example</label>
+				<input type="text" placeholder="Text" class="form-input">
+				<label class="form-label">Example</label>
+				<input type="number" placeholder="Number" class="form-input">
+				<label class="form-label">Example</label>
+				<input type="password" placeholder="Password" class="form-input">
+				<label class="form-label">Example</label>
+				<input type="search" placeholder="Search" class="form-input">
+			</form>	
+
+			<h3>Form Control</h3>
+			<form>
+				<div class="form-contol">
+					<label class="form-label">Example</label>
+					<input type="text" placeholder="Text" class="form-input">
+				</div>
+				<div class="form-contol">
+					<label class="form-label">Example</label>
+					<input type="number" placeholder="Number" class="form-input">
+				</div>
+				<div class="form-contol">
+					<label class="form-label">Example</label>
+					<input type="password" placeholder="Password" class="form-input">
+				</div>
+				<div class="form-contol display-flex flex-align-center">
+					<div class="flex-none">
+						<label class="form-label">Example</label></div>
+					<div class="flex-stretch"><input type="search" placeholder="Search" class="form-input"></div>
+					<div class="flex-none">
+						<label class="form-label">Example</label></div>
+					<div class="flex-stretch"><input type="search" placeholder="Search" class="form-input"></div>
+				</div>
+			</form>
+		</div>
 
 
+		<h3>Buttons</h3>
+
+		<div class="card soft">
+			<h3>Default Buttons</h3>
+
+			<button>Button</button>
+
+			<h3>Form Buttons</h3>
+
+			<div class="form-contol">
+				<button type ="button" class="form-buttons">Button</button></div>
+			<div class="form-contol">
+				<input type ="button" class="form-buttons" value="input"></div>
+			<div class="form-contol">
+				<a href="#" class="form-buttons">Anchor</a></div>
+		</div>
+
+
+
+	<h2>Hotdog</h2>
+
+	<div class="card soft">
+		<div class="form-control">
+			<form>
+				<input type="search" class="hotdog" placeholder="Search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form>
+				<input type="search" class="hotdog dark" placeholder="Search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form class="card dark">
+				<input type="search" class="hotdog light" placeholder="Search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form>
+				<input type="search" class="hotdog" placeholder="Search">
+			</form>
+		</div>
+		<div class="form-control">
+			<form class="hotdog">
+				<span>&equiv;</span>
+				<input type="search" placeholder="Search">
+			</form>
+		</div>
+
+		<div class="form-control">
+			<form class="hotdog">
+				<input type="search" placeholder="Search">
+				<span>&equiv;</span>
+			</form>
+	</div>
+	</div>
+
+	<h2 id="select">Select</h2>
+	<div class="card soft">
+		<div class="form-select">
+			<select>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<h2 id="checkboxes">Check Boxes</h2>
+
+	<div class="card soft">
+		<h3>Basic Checkbox</h3>
+		<label>Label <input type="checkbox" id="input-1"></label>
+		<label for="input-1"> Label</label>
+
+		<h3>Heart Checkbox</h3>
+		<div class="favorite">
+			<input type="checkbox" id="heart-example" class="hidden">
+			<label for="heart-example">&hearts;</label>
+		</div>
+
+		<h3>Toggle</h3>
+		<div class="toggle">
+			<input type="checkbox" id="toggle-1" class="hidden">
+			<label for="toggle-1"></label>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>
