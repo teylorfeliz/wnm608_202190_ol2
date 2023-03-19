@@ -54,7 +54,7 @@ a:hover {
 /* LAYOUT CLASSES */
 
 .container{
-	max-width:800px;
+	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -83,8 +83,9 @@ a:hover {
 	vertical-align: text-bottom;
 }
 
-
-
+.hidden {
+	display: none;
+}
 
 
 
@@ -177,13 +178,13 @@ a:hover {
 }
 
 .navbar {
-	background-color: var(--color-neutral-dark);
+	background-color: var(--color-main-dark);
 	color: var(--color-white);
 	line-height: var(--header-height);
 }
 
 	.navbar h1{
-		font-size: 1em;
+		font-size: 2em;
 		margin:0;
 		font-family: var(--font-sans) ;
 	}
@@ -234,6 +235,145 @@ a:hover {
 		background-attachment: fixed   ;
 	}
 
+
+
+
+/*TABLES*/
+.table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.table th,
+.table td {
+	text-align: left;
+	padding: 0.2em 0.45em;
+}
+
+.table.striped tbody tr:nth-child(odd) {
+	background-color: var(--color-main-light);
+}
+
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child), 
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+	border-left: 1px solid var(--color-neutral-medium);
+}
+
+
+.table.lined.all tbody tr,
+.table.lined.all tbody tr {
+	border-top: 1px solid var(--color-neutral-medium);
+}
+
+
+.table.lined.all,
+.table.lined.border {
+	border: 1px solid var(--color-neutral-medium);
+}
+
+
+
+/*FORM*/
+.form-control {
+	margin:1em 0;
+}
+.hotdog input,
+.hotdog,
+.form-button,
+.form-input,
+.form-item {
+	display: inline-block;
+	background-color: transparent;
+	border-width: 0;
+	font:inherit;
+	-webkit-appearance:none;
+	color: inherit;
+	width: 100%;
+	outline: 0;
+}
+
+.form-input {
+	border-bottom: 1px solid var(--color-neutral-light);
+	padding: 0.5em 1em;
+}
+
+.form-input:focus {
+	border-bottom-color: var(--color-main-light);
+}
+
+
+.form-label {
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	display: inlineblock;
+	width: 100%;
+
+}
+
+.form-button {
+	background-color: var(--color-neutral-light);
+	padding: 0.5em 0;
+	border-radius: 0.2em;
+	cursor: pointer;
+	text-align: center;
+	border-radius: 2em;
+}
+.form-button:hover {
+	text-decoration: none;
+}
+.form-button:active {
+	background-color: var(--color-main-light);
+}
+
+
+.hotdog {
+	background-color: var(--color-neutral-light);
+	border-radius: 1em;
+	padding: 0.5em 1.5em;
+	display: flex;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.hotdog.dark {
+	background-color: var(--color-main-light);
+	color: var(--color-neutral-light);
+}
+
+.hotdog.light {
+	background-color: var(--color-white );
+	color: var(--color-black);
+}
+
+
+/*Toggle*/
+.toggle label {
+	font-size:1.5em;
+	display: inline-block;
+	width: 2em;
+	height: 1em;
+	border: 0.1em solid var(--color-neutral-medium);
+	background-color: var(--color-neutral-medium);
+	border-radius: 1em;
+	position: relative ;
+}
+
+.toggle ::after {
+	content:'';
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	position: absolute;
+	background-color: var(--color-neutral-light);
+	transition: all 0.3s;
+}
+
+.toggle input:checked + label::after {
+	transform: translateX(1em);
+}
 
 
 
