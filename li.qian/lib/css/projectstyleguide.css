@@ -73,7 +73,9 @@ a:hover {
   text-decoration: underline;
 }
 
-
+h2 {
+  margin-top: 50px;
+}
 
 /* LAYOUT CLASSES */
 
@@ -129,7 +131,7 @@ a:hover {
 .nav a:hover {
   background-color: var(--color-theme-light);
 /*  color: var(--color-white);*/
-  color: var(--color-text-light); 
+  color: var(--color-white); 
   text-decoration: none;
 }
 
@@ -186,7 +188,7 @@ a:hover {
 }
 
 .nav-material a:hover {
-  background-color: var(--color-neutral-light);
+  background-color: var(--color-theme-light);
   color: inherit;
 }
 
@@ -478,7 +480,7 @@ a:hover {
   display: inline-block;
   width: 2em;
   height: 1em;
-  border: 0.3em solid var(--color-theme-light);
+  border: 0.1em solid var(--color-theme-light);
   border-radius: 1em;
   position: relative;   
 }
