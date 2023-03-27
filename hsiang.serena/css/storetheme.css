@@ -157,3 +157,7 @@ body {
 .toggle input:checked + label::after {
     transform: translateX(1em);
 }
+
+.product-list {
+    margin-top: 6em;
+}
