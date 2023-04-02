@@ -1,7 +1,7 @@
 
 
 :root {
-	--color-neutral-light:#FFF8F3;
+	--color-white:#FFFFFF;
 }
 
 html {
@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background-color:var(--color-neutral-light) ;
+	background-color:var(--color-white) ;
     padding-bottom: 4em;
 }
 
