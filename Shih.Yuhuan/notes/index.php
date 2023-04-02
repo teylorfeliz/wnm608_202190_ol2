@@ -84,6 +84,16 @@
 	 echo "<hr>";
 	 echo "<pre>",print_r($colorsObject),"</pre>";
 
+
+
+	 // Function
+    function print_p($v) {
+        echo "<pre>", print_r($v),"</pre>";
+    }
+
+    print_p($_GET);
+    ?>
+
 	  ?>
 	
 

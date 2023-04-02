@@ -1,0 +1,54 @@
+[
+    {
+        "name": null,
+        "type": "Teacher",
+        "email": "joyhuan10@gmail.com",
+        "classes": [
+            "608",
+            "617",
+            "820",
+            "980"
+        ]
+    },
+    {
+        "name": "Joy A",
+        "type": "Singer",
+        "email": "joy000@gmail.com",
+        "classes": [
+            "701",
+            " 608",
+            " 617",
+            " 820"
+        ]
+    },
+    {
+        "name": "Joy B",
+        "type": "Teacher",
+        "email": "joy111@gmail.com",
+        "classes": [
+            "601,608,617,940"
+        ]
+    },
+    {
+        "name": "Joy C",
+        "type": "Doctor",
+        "email": "joy2220@gmail.com",
+        "classes": [
+            601,
+            608,
+            617,
+            820
+        ]
+    },
+    {
+        "name": "Joy D",
+        "type": "Chef",
+        "email": "joy333@gmail.com",
+        "classes": [
+            601,
+            608,
+            617,
+            820
+        ]
+    }
+]

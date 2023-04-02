@@ -389,7 +389,8 @@ a:hover {
 
 /* Form */
 .form-control {
-	margin: 1em 0;
+	margin: 1.2em 0;
+	align-items: center;
 }
 
 .form-select>select,
@@ -409,22 +410,40 @@ a:hover {
 
 }
 
-.form-input {
-	border-bottom: 1px solid var(--color-main-medium);
+
+.input.form {
+	padding: 0.2em;
+	font-size: 1em;
+	color: var(--color-neutral-medium);
+	margin: 0.2em;
 
 }
 
-.form-input:focus {
-	padding: 0.5em 1em;
-	border-bottom-color: var(--color-sub-medium);
+.form-inputs {
+	border: 0.2px solid var(--color-neutral-medium);
+	padding: 0.5em;
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	margin: 0.2em;
+
+}
+
+.form-inputs:focus {
+/*	border: 0.2px solid #20B2AA;*/
+	box-shadow: 0 0 0.5em #20B2AA;
+	margin: 0.2em;
 }
 
 .form-label {
 	display: block;
-	font-size: 0.8em;
+	font-size: 1em;
 	color: var(--color-main-dark);
 	font-weight: bold;
 	width: 100%;
+	line-height: 2em;
+	margin: 0.2em;
+	
+	
 
 }
 
@@ -435,6 +454,7 @@ a:hover {
     padding: 0.5em 1em;
     cursor: pointer;
     text-align: center;
+
 
 }
 
@@ -625,6 +645,25 @@ a:hover {
 	transform: scale(1.4,1.4);
 }
 
+/*	--color-neutral-light:#053426;
+	--color-neutral-medium:#999999;
+	--color-neutral-dark: #1A1A1A;
+
+	--color-main-light: #FFF8F3;
+    --color-main-medium: #FFD79A;
+    --color-main-dark: #053426;
+
+    --color-sub-light: #CFE8E8;
+    --color-sub-medium: #B76846;
+    --color-sub-dark: #BC3100;
+
+	--color-black: #000;
+    --color-white: #FFF;*/
+
+.sub-dark {
+	background-color:var(--color-sub-dark) ;
+}
+
 
 @media (max-width:600px) {
 	.product-overlay figcaption {
@@ -640,8 +679,12 @@ a:hover {
 	.product-overlay .caption-body {
 		transform: none;
 		padding: 0;
-
 	}
+
+	.navbar a img {
+		padding: 0 !important;
+	}
+
 }
 
 
