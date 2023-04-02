@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Hamilton Cline",
+        "type": "Teacher",
+        "email": "hcline@academyart.edu",
+        "classes": [608, 617, 820]
+    },
+    {
+        "name": "Pheobe Buffay",
+        "type": "Singer",
+        "email": "pheobe@earthlink.net",
+        "classes": [601, 610, 608, 617, 820]
+    },
+    {
+        "name": "Joey Tribbiani",
+        "type": "Actor",
+        "email": "joeytribs@aol.com",
+        "classes": [601, 608, 617, 820]
+    },
+    {
+        "name": "Chandler Bing",
+        "type": "Who Knows",
+        "email": "bingtastic@yyahoo.com",
+        "classes": [601, 608, 617, 820]
+    },
+    {
+        "name": "Monica Gellar",
+        "type": "Chef",
+        "email": "mgellar1973@hotmail.com",
+        "classes": [601, 608, 617, 820]
+    },
+    {
+        "name": "Ross Gellar",
+        "type": "Professor",
+        "email": "rgellar1970@hotmail.com",
+        "classes": [601, 608]
+    }
+]
