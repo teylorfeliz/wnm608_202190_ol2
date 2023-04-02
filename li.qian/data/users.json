@@ -1,0 +1,36 @@
+[
+	{
+		"name" : "Qian Li",
+		"type" : "Student",
+		"email" : "clover19990306@gmail.com",
+		"classes" : [608]
+	},
+
+	{
+		"name" : "Haiyin Li",
+		"type" : "Student",
+		"email" : "yil17@gmail.com",
+		"classes" : [608,318]
+	},
+
+	{
+		"name" : "Wanlin Cui",
+		"type" : "Student",
+		"email" : "wanlinCui@gmail.com",
+		"classes" : [816]
+	},
+
+	{
+		"name" : "Rizhao Dong",
+		"type" : "Student",
+		"email" : "r1483453439@gmail.com",
+		"classes" : [603]
+	},
+
+	{
+		"name" : "Ross Gellar",
+		"type" : "Professor",
+		"email" : "clover19990306@gmail.com",
+		"classes" : [608,618]
+	}
+]
