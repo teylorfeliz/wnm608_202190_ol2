@@ -6,7 +6,7 @@
         <div class="flex-stretch"></div>
         <div class="nav nav-flex flex-none">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="best_seller.php">Best Seller 🔥</a></li>
                 <li><a href="shop.php">Shop 🎁</a></li>
                 <li><a href="offers.php">Offers ⚡</a></li>
