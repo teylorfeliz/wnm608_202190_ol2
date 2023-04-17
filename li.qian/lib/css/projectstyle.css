@@ -110,6 +110,40 @@ a:hover {
 }
 
 
+/*user list*/
+.nav-text ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav-text a {
+  color: var(--color-text-dark);
+  display: block;
+  padding: 0.5em;
+}
+
+.nav-text a:hover {
+  background-color: var(--color-theme-medium);
+  color: var(--color-white); 
+  text-decoration: none;
+}
+
+.nav-text a:active{
+/*  background-color: var(--color-theme-light);*/
+/*  color: var(--color-white);*/
+  color: var(--color-theme-medium); 
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.nav-text .active a {
+/*  background-color: var(--color-main-light);*/
+  background-color: var(--color-theme-medium);
+  color: inherit;
+}
+
 
 
 
@@ -123,15 +157,14 @@ a:hover {
 }
 
 .nav a {
+  color: var(--color-text-light);
   display: block;
   padding: 0.2em 0.5em;
 }
 
 .nav a:hover {
-/*  background-color: var(--color-theme-light);*/
-/*  color: var(--color-white);*/
-  color: var(--color-theme-light); 
-  transform: scale(1.2);
+  color: var(--color-text-light); 
+  transform: scale(1.1);
   text-decoration: none;
 }
 
@@ -148,6 +181,11 @@ a:hover {
   background-color: var(--color-theme-medium);
   color: inherit;
 }
+
+
+
+
+
 
 
 .nav-material ul,
@@ -215,6 +253,8 @@ a:hover {
 .nav-material .active a::after{
   height: 4px;
 }
+
+
 
 
 .navbar {
@@ -510,3 +550,9 @@ a:hover {
   transform: translateX(1.02em);
   background-color: var(--color-theme-medium);
 }
+
+
+
+
+
+

@@ -120,11 +120,11 @@ a:hover {
   padding: 0.2em 0.5em;
 }
 
-.nav a:hover {
+/*.nav a:hover {
   background-color: var(--color-theme-light);
   color: var(--color-white);
   text-decoration: none;
-}
+}*/
 
 .nav .active a {
   background-color: var(--color-main-light);
@@ -155,12 +155,12 @@ a:hover {
   display: inline-block;
 }
 
-.nav-crumbs .active a,
+/*.nav-crumbs .active a,
 .nav-crumbs a:hover {
   background-color: transparent;
   color: inherit;
   text-decoration: underline;
-}
+}*/
 
 .nav-crumbs li:not(:first-child)::before {
   content: '/';
@@ -177,10 +177,10 @@ a:hover {
   color: inherit;
 }
 
-.nav-material a:hover {
+/*.nav-material a:hover {
   background-color: var(--color-neutral-light);
   color: inherit;
-}
+}*/
 
 .nav-material a::after{
   content: '';
