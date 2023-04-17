@@ -1,32 +1,36 @@
 [
 	{
-		"name":"Joey Li",
-		"type":"Student",
-		"email":"xli130@art.edu",
-		"classes":[608,601,605]
+		"name" : "Joey Li",
+		"type" : "Student",
+		"email" : "xli608@art.edu",
+		"classes" : [608,601,612]
 	},
+
 	{
-		"name":"Toey Li",
-		"type":"Driver",
-		"email":"xli130@art.edu",
-		"classes":[608,601,605]
+		"name" : "Ioey Li",
+		"type" : "florist",
+		"email" : "xli608@art.edu",
+		"classes" : [608,601,615]
 	},
+
 	{
-		"name":"Loey Li",
-		"type":"Singer",
-		"email":"xli130@art.edu",
-		"classes":[608,601,605]
+		"name" : "Roey Li",
+		"type" : "Designer",
+		"email" : "xli608@art.edu",
+		"classes" : [608,621,612]
 	},
+
 	{
-		"name":"Koey Li",
-		"type":"Cooker",
-		"email":"xli130@art.edu",
-		"classes":[608,601,605]
+		"name" : "Toey Li",
+		"type" : "Artist",
+		"email" : "xli608@art.edu",
+		"classes" : [658,601,612]
 	},
+
 	{
-		"name":"Poey Li",
-		"type":"Designer",
-		"email":"xli130@art.edu",
-		"classes":[608,601,605]
+		"name" : "Moey Li",
+		"type" : "Professor",
+		"email" : "xli608@art.edu",
+		"classes" : [608,601,622]
 	}
 ]

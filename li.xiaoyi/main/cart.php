@@ -19,11 +19,13 @@
 			<div class="flex-stretch"></div>
 				<nav class="flex-none nav">
 				<ul class="container display-flex">
-				<li><a href="#arrival">New Arrivals</a></li>
-				<li><a href="#navigations">Collections</a></li>
-				<li><a href="#account">Account</a></li>
-				<li><a href="#cart">Cart</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="collections.php">Collections</a></li>
+				<li><a href="account.php">Account</a></li>
+				<li><a href="cart.php">Cart</a></li>
 			</ul>
 				</nav>
 		</div>
 	</header>
+</body>
+</html>

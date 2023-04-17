@@ -92,7 +92,7 @@ a:hover{
 .nav ul{
 	list-style-type:none;
 	margin-top:0;
-	margin-bottom:0;
+	margin-bottom:30px;
 	padding-left: 0;	
 }
 
@@ -193,6 +193,7 @@ a:hover{
 	margin-top:25px;
 	font-family:var(--font-sans);
 	color:var(--color-white);
+	text-decoration: none;
 }
 
 .navbar a{
