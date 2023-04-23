@@ -21,8 +21,8 @@
 
 
 <div class="container">	    
-     <div class="card flat" style="text-align: center;">
-     	<p style="font-size:24px; line-height: 34px;">Many new to camping feel overwhelmed when they prepare 
+	<div class="card flat" style="text-align: center;">
+		<p style="font-size:24px; line-height: 34px;">Many new to camping feel overwhelmed when they prepare 
 the gear and schedule the plan. There are a lot of questions that will arise, particularly when they are starting from scratch, like How to start? Where to go camping? What is essential gear?<br> <br> 
 Therefore, Camping.com make prep easier to help beginner campers find and purchase their camping gear. 
 In addition to providing detailed product information on the website, it also recommends suitable products and the order they should invest in it through filters.</p>
@@ -32,3 +32,4 @@ In addition to providing detailed product information on the website, it also re
 
 </body>
 </html>
+

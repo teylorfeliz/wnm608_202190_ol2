@@ -220,9 +220,9 @@ HTML;
  				</li>";
  			};
             
-                echo "<div class='form-control'>
-                <a href='admin/users.php?id={$count}' class='basic-button'>Add User</a>
-                </div>";
+                // echo "<div class='form-control'>
+                // <a href='admin/users.php?id={$count}' class='basic-button'>Add User</a>
+                // </div>";
 
  			?>
                 </ul>

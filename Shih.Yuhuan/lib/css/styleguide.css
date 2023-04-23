@@ -118,6 +118,8 @@ a:hover {
 
 .flex-align-star { display:flex;align-items:flex-start; }
 
+.flex-column {flex-direction:column;}
+
 
 /* SMALL CLASSES */
 
@@ -316,6 +318,14 @@ a:hover {
 		color: var(--color-neutral-dark);
 	}
 
+	.card-section~.card-section {
+		border-top: 1px solid var(--color-neutral-medium);
+	}
+
+	.card-section {
+		padding: 1em;
+	}
+
 
 	.view-window {
 		height: 60vh;
@@ -403,7 +413,7 @@ a:hover {
     background-color: transparent;
     border-width: 0;
     font: inherit;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     color: inherit;
     width: 100%;
     outline: 0;
@@ -421,7 +431,7 @@ a:hover {
 
 .form-inputs {
 	border: 0.2px solid var(--color-neutral-medium);
-	padding: 0.5em;
+/*	padding: 0.5em;*/
 	font-size: 0.8em;
 	color: var(--color-neutral-medium);
 	margin: 0.2em;
@@ -454,6 +464,7 @@ a:hover {
     padding: 0.5em 1em;
     cursor: pointer;
     text-align: center;
+    margin: 0;
 
 
 }
@@ -528,7 +539,7 @@ a:hover {
 
 
 .form-select::after {
-	content:'▼';
+	/* content:'▼'; */
 	font-family: arial,sans-serif;
 	font-size:1.2em;
 	position: absolute;
@@ -585,20 +596,45 @@ a:hover {
 
 .figure img {
     width: 100%;
+    height: 250px;
+    padding: 10px;
+    object-fit: contain;
     vertical-align: text-bottom;
 }
 
 .figure figcaption {
     padding: 1em;
     text-align: center;
+    background-color: #053426;
+    width: 100%;
+    height: 110px;
+    justify-content: flex-start;
 }
+
 
 
 .figure.product {
 	border-radius: 0.7em;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 	overflow: hidden;
+	height: 100%;
+	background-color: white;
+	transition:all 0.3s;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	-o-transition:all 0.3s;
 }
+
+.productlist a {
+	text-decoration: none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 
 .product-overlay {
@@ -644,6 +680,7 @@ a:hover {
 .product-overlay:hover img {
 	transform: scale(1.4,1.4);
 }
+
 
 /*	--color-neutral-light:#053426;
 	--color-neutral-medium:#999999;
