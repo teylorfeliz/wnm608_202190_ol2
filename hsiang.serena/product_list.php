@@ -14,7 +14,7 @@
     </style>
     <div class="container">
         <div class="card soft product-container">
-            <h2 class="title">Our Best Seller</h2>
+            <h2 class="title">Shop</h2>
         <?php
 
             include_once "lib/php/functions.php";
@@ -25,7 +25,8 @@
                 "
                     SELECT `id`, `name`, `price`, `images`, `thumbnail`
                     FROM `products`
-                    LIMIT 4;
+                    ORDER BY `date_create` DESC
+                    LIMIT 12;
                 "
             );
             

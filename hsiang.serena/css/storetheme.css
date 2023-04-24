@@ -62,12 +62,25 @@ body {
     }
 }
 
-
-
 .figure.product {
     border-radius: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.figure.product:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.figure.product img:hover {
+    cursor: pointer;
+}
+
+.productlist a {
+    text-decoration: none;
+    font-weight: initial;
 }
 
 .product-overlay {
@@ -158,6 +171,23 @@ body {
     transform: translateX(1em);
 }
 
-.product-list {
-    margin-top: 6em;
+.product-container {
+    margin-top: 5em;
+}
+
+.product-price {
+    margin-bottom: 15px;
+}
+
+.images-main img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.images-thumbs img {
+    width: 8em;
+    height: 6em;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: -15px;
 }
