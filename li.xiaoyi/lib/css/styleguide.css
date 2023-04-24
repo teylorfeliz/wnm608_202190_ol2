@@ -76,6 +76,8 @@ a:hover{
 .flex-align-center{align-items:center;}
 .flex-justify-center{justify-content:center;}
 
+.flex-column{flex-direction:column;}
+
 /*Small Classes*/
 
 .media-image{
@@ -236,6 +238,14 @@ a:hover{
 
 .card.flat{
 	padding:0;
+}
+
+.card-section~.card-section{
+	border-top:1px solid var(--color-neutral-light);
+}
+
+.card-section{
+	padding:1em;
 }
 
 

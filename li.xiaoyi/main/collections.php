@@ -27,186 +27,33 @@
 				</nav>
 		</div>
 	</header>
+	<div class="container">
+			<h2>Product List</h2>
+			
 
-	<div class="container" id="navigations">
-		<h2>Collections</h2>
+			<?php
 
-		 <script>
-            const makeNav = (classes ='') => {
-                const links = ['Rings', 'Bracelets', 'Necklaces','Earrings'];
-                let ran = Math.floor(Math.random()*links.length);
-                document.write( `
-                <div>
-                    <nav class="${classes}">
-                <ul>
-                    ${links.reduce((r, o, i) => {
-                        return r + `<li class="${ran==i? 'active' : ''}"><a herf="#">${o}</a></li>`;
-                    },'')}
-                </ul>
-                </nav>   
-                </div>    
-                `);
-        }
-        </script>
+			include_once "../lib/php/functions.php";
+			include_once "../parts/templates.php";
 
-		<div class="card soft">
-			<script>makeNav('nav nav-material')</script>
-		</div>
+			$result = makeQuery(
+					makeConn(),
+				"
+					SELECT *
+					FROM `products`
+				 	ORDER BY `date_create` DESC 
+				 	LIMIT 12
+				"
+			);
 
-		<script>
-		$("#navigations a").on("click",function(e){
-			e.preventDefault();
-			$(this).closest("li").addClass("active")
-				.siblings().removeClass("active")
-		})
-		</script>
+			echo "<div class='productlist grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
 
-	</div>
-	
+			?>
 
-	<div class="container" id ="rings">
-		<h2>Rings</h2>
-		<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Rings</div>
-								<div>$299</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Necklace</div>
-								<div>$499</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Bracelets</div>
-								<div>$399</div>
-							</div>
-						</figcaption>
-					</div>
-				</div>
+
+		
 	</div>
 
-	<div class="container" id="bracelets">
-		<h2>Bracelets</h2>
-		<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Rings</div>
-								<div>$299</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Necklace</div>
-								<div>$499</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Bracelets</div>
-								<div>$399</div>
-							</div>
-						</figcaption>
-					</div>
-				</div>
-	</div>
-
-	<div class="container" id="necklaces">
-		<h2>Necklaces</h2>
-		<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Rings</div>
-								<div>$299</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Necklace</div>
-								<div>$499</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Bracelets</div>
-								<div>$399</div>
-							</div>
-						</figcaption>
-					</div>
-				</div>
-	</div>
-
-	<div class="container" id="earrings">
-		<h2>Earrings</h2>
-		<div class="grid gap">
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Rings</div>
-								<div>$299</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Necklace</div>
-								<div>$499</div>
-							</div>
-						</figcaption>
-					</div>
-					<div class="col-xs-12 col-md-4">
-						<figure class="figure product-overlay">
-						<img src="https://via.placeholder.com/400x400?text=product" alt="">
-						<figcaption>
-							<div class="caption-body">
-								<div>Bracelets</div>
-								<div>$399</div>
-							</div>
-						</figcaption>
-					</div>
-				</div>
-	</div>
 
 </body>
 </html>

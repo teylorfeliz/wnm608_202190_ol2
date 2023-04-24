@@ -47,15 +47,32 @@ body{
 	}
 }
 
-.figure.product{
+
+.figure.product-overlay{
 	border-radius:0.5em;
 	box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
 	overflow:hidden;
+	height:100%;
+	transition:all 0.3s;
+}
+
+.product-overlay.figure img{
+	height:100%;
+	object-fit: contain;
+}
+
+.productlist a {
+	text-decoration: none;
+}
+
+.product-overlay.figure:hover{
+	box-shadow:0 2px 15px rgba(0,0,0,0.2);
 }
 
 .product-overlay{
 	position: relative;
 	overflow: hidden;
+	border-radius:0.5em;
 }
 
 .product-overlay figcaption{
@@ -71,6 +88,7 @@ body{
 	align-items:center;
 	justify-content: center;
 }
+
 
 .product-overlay:hover figcaption{
 	opacity: 1;
@@ -111,4 +129,16 @@ body{
 		transform:none;
 		padding:0;
 	}
+}
+
+.images-main img{
+	width:100%;
+	height:50vh;
+	object-fit:contain;
+}
+
+.images-thumb img{
+	width:8em;
+	height:6em;
+	object-fit: contain;
 }
