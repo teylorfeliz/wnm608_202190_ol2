@@ -1,3 +1,7 @@
+<?php
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +25,24 @@
     <?php include "parts/banner.php"?>
 
     <div class="container offers">
-        Offers Page
+        <div class="card soft margin-top-5em">
+            <h2 class="title">Offers</h2>
+            <?php
+
+                $result = makeQuery(
+                    makeConn(), 
+                    "
+                        SELECT `id`, `name`, `price`, `images`, `thumbnail`
+                        FROM `products`
+                        WHERE `category` = 'Bundle'
+                        ORDER BY `date_create` DESC;
+                    "
+                );
+                
+                echo "<div class='grid gap productlist'>", array_reduce($result, 'productListTemplate'), "</div>";
+            
+            ?>
+        </div>
     </div>
 
 </body>

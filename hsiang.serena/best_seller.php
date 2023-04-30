@@ -1,8 +1,9 @@
+<?php include_once "lib/php/functions.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shop</title>
+    <title>Best Seller</title>
     <?php include "parts/meta.php"?>
 </head>
 <body>
@@ -13,8 +14,8 @@
         }
     </style>
     <div class="container">
-        <div class="card soft product-container">
-            <h2 class="title">Our Best Seller</h2>
+        <div class="card soft margin-top-5em">
+            <h2 class="title">Our Best Seller Products</h2>
         <?php
 
             include_once "lib/php/functions.php";
@@ -25,7 +26,7 @@
                 "
                     SELECT `id`, `name`, `price`, `images`, `thumbnail`
                     FROM `products`
-                    LIMIT 4;
+                    WHERE `id` in (4, 7, 11);
                 "
             );
             

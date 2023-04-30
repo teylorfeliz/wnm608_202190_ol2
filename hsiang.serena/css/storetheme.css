@@ -171,7 +171,7 @@ body {
     transform: translateX(1em);
 }
 
-.product-container {
+.margin-top-5em {
     margin-top: 5em;
 }
 
@@ -190,4 +190,11 @@ body {
     object-fit: contain;
     margin-top: 10px;
     margin-left: -15px;
+}
+
+span.badge:not(:empty)::after {
+    content: ')';
+}
+span.badge:not(:empty)::before {
+    content: '(';
 }

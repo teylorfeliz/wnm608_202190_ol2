@@ -1,7 +1,10 @@
 <?php 
+
+    session_start();
+
     // Function
-    function print_p($value) {
-        echo "<pre>",print_r($value),"</pre>";
+    function print_p($value, $key = '') {
+        echo "<pre style='margin-top: 100px;'>",$key,"<br>",print_r($value),"</pre>";
     }
 
     function file_get_json($filename) {
@@ -28,15 +31,6 @@
             $a[] = $row;
         }
         return $a;
-
-    }
-    
-    function sum($a) {
-        $total = 0;
-        for ($i = 0; $i < count($a); $i++) {
-            $total += $a[$i]->price;
-        }
-        return $total;
     }
 
     function countTax($amount, $taxRate = 0.0975) {
@@ -46,5 +40,103 @@
     function grandTotal($a) {
         return number_format(sum($a) + countTax(sum($a)), 2, '.', '');
     }
-    
+
+    /* BAG FUNCTIONS */
+
+    function array_find($array, $fn) {
+        foreach ($array as $o) {
+            if ($fn($o)) {
+                return $o;
+            }
+        }
+        return false;
+    }
+
+    function getBag() {
+        return isset($_SESSION['bag']) ? $_SESSION['bag'] : [];
+    }
+
+    function addToBag($id, $amount, $color) {
+        $bag = getBag();
+
+        $p = array_find($bag, function($o) use($id, $color) {
+            return $o->id == $id && $o->color == $color;
+        });
+
+        if ($p) {
+            $p->amount += $amount;
+        } else {
+            $_SESSION['bag'][] = (object)[
+                "id" => $id,
+                "amount" => $amount,
+                "color" => $color,
+            ];
+        }
+
+    }
+
+    function resetBag() {
+        $_SESSION['bag'] = [];
+    }
+
+    function bagItemByIdAndColor($id, $color) {
+        return array_find(getBag(),function($o) use($id, $color) {
+            return $o->id==$id && $o->color==$color;
+        });
+    }
+
+    function bagItemById($id) {
+        return array_find(getBag(),function($o) use($id) {return $o->id==$id;});
+    }
+
+    function countBagItemById($id) {
+        $items = array_filter(getBag(),function($o) use($id) {return $o->id==$id;});
+        return array_reduce($items, function($r, $o) {
+            return $r + $o->amount;
+        }, 0);
+    }
+
+    function makeBagBadge() {
+        $bag = getBag();
+        if(count($bag)==0) {
+            return "";
+        } else {
+            return array_reduce($bag,function($r,$o){return $r+$o->amount;},0);
+        }
+    }
+
+    function getBagItems() {
+        $bag = getBag();
+
+        if (empty($bag)) {
+            return [];
+        }
+
+        $ids = implode(
+            ",", 
+            array_map(function($o) {
+                return $o->id;
+            }, $bag)
+        );
+
+        $data = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN ($ids)");
+
+        return array_map(function($o) use($data) {
+            $itemById = array_find($data, function($p) use($o) { return $o->id == $p->id; });
+            $o->name = $itemById->name." (".$o->color.")";
+            $o->description = $itemById->description;
+            $o->total = $o->amount * $itemById->price;
+            $o->category = $itemById->category;
+            $o->thumbnail = $itemById->thumbnail;
+            return $o;
+        }, $bag);
+
+        // return array_map(function($o) use($bag) {
+        //     $p = bagItemById($o->id);
+        //     // $amount = countBagItemById($o->id);
+        //     $o->amount = $p->amount;
+        //     $o->total = $amount * $o->price;
+        //     return $o;
+        // }, $data);
+    }
 ?>

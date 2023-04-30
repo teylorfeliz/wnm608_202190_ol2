@@ -1,3 +1,8 @@
+<?php
+    include_once "lib/php/functions.php";
+    include_once "parts/templates.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,26 +18,23 @@
         }
     </style>
     <div class="container">
-        <div class="card soft product-container">
+        <div class="card soft margin-top-5em">
             <h2 class="title">Shop</h2>
-        <?php
+            <?php
 
-            include_once "lib/php/functions.php";
-            include_once "parts/templates.php";
-
-            $result = makeQuery(
-                makeConn(), 
-                "
-                    SELECT `id`, `name`, `price`, `images`, `thumbnail`
-                    FROM `products`
-                    ORDER BY `date_create` DESC
-                    LIMIT 12;
-                "
-            );
+                $result = makeQuery(
+                    makeConn(), 
+                    "
+                        SELECT `id`, `name`, `price`, `images`, `thumbnail`
+                        FROM `products`
+                        WHERE `category` != 'Bundle'
+                        ORDER BY `date_create` DESC;
+                    "
+                );
+                
+                echo "<div class='grid gap productlist'>", array_reduce($result, 'productListTemplate'), "</div>";
             
-            echo "<div class='grid gap productlist'>", array_reduce($result, 'productListTemplate'), "</div>";
-        
-        ?>
+            ?>
         </div>
     </div>
 

@@ -484,6 +484,10 @@ a:hover {
     cursor: pointer;
     text-align: center;
 }
+.form-button.inline {
+    width: initial;
+}
+
 .form-button:hover {
     text-decoration: none;
 
@@ -544,6 +548,7 @@ a:hover {
     width: 50px;
 }
 
+.form-select.short::after,
 #selectShort .form-select::after {
     right: 0.5em;
 }

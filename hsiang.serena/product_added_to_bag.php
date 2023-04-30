@@ -2,6 +2,9 @@
     include_once "lib/php/functions.php";
 
     $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` = ". $_GET['id'])[0];
+    $bag_product = bagItemByIdAndColor($_GET['id'], $_GET['color']);
+    $bag = getBag();
+    $total_count = countBagItemById($_GET['id']);
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +19,9 @@
     <?php include "parts/navbar.php"; ?>
 
     <div class="container">
-        <div class="card soft product-container">
-            <h2> You added <?= $product->name ?> to your bag </h2>
+        <div class="card soft margin-top-5em">
+            <h2> You added <?= $bag_product->color ?> <?= $product->name ?> to your bag. </h2>
+            <p> There are now <?= $total_count ?> <?= $product->name ?> in your bag. </p>
             <div class="display-flex">
                 <div class="flex-none"><a href="product_list.php">Continue Shopping</a></div>
                 <div class="flex-stretch"></div>
