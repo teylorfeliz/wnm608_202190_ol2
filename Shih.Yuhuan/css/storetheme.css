@@ -49,6 +49,14 @@ body {
 
 }
 
+span.badge:not(:empty)::after {
+    content:')';
+}
+
+span.badge:not(:empty)::before {
+    content:'(';
+}
+
 .favorite label {
     transition: all 0.3s;
     display: inline-block;
