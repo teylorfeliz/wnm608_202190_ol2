@@ -5,7 +5,9 @@
 	<title>Document</title>
 </head>
 <body>
-	<?php phpinfo(); ?>
+	<?php 
+	phpinfo(); 
+	?>
 
 	<?php 
 	echo "Hello world";

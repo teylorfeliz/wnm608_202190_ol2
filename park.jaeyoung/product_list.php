@@ -1,28 +1,43 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/function.php";
+include_once "parts/templates.php";
+   
+?><!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Product List</title>
+    <meta charset="UTF-8">
 
     <?php include "parts/meta.php"; ?>
+
+    	<title>Product List</title>
+
+  
 </head>
 <body>
 
     <?php include "parts/navbar.php"; ?>
 
-    <div class="container">
-    	<div class="card soft">
-    		<h2>Product List</h2>
+<div class="container">
+ <h2>Product List</h2>
+        <?php
 
-    		<!--ul>li*4>a[href="product_item.php"]>{product $}-->
-    		<ul>
-    			<li><a href="product_item.php?id=1">product 1</a></li>
-    			<li><a href="product_item.php?id=2">product 2</a></li>
-    			<li><a href="product_item.php?id=3">product 3</a></li>
-    			<li><a href="product_item.php?id=4">product 4</a></li>
-    		</ul>
-    	</div>
-    </div>
 
+        $result = makeQuery(
+            makeConn(),
+             "
+             SELECT *
+              FROM `products`
+              ORDER BY `price` ASC
+              LIMIT 12
+              "
+          );
+
+        echo "<div class='productlist grid gap'>", array_reduce($result,'productListTemplate'),"</div>" ;
+
+        ?>
+   
+            </div>
+</div>
 </body>
 </html>

@@ -72,6 +72,8 @@ a:hover {
 .flex-align-center { align-items:center; }
 .flex-justify-center { justify-content:center; }
 
+.flex-column { flex-direction:column; }
+
 
 
 
@@ -222,7 +224,12 @@ a:hover {
 		padding: 0;
 	}
 
-
+	.card-section~.card-section {
+	border-top: 1px solid var(--color-netral-light);
+	}
+	.card-section {
+	padding: 1em;
+	}
 
 	
 
@@ -319,6 +326,11 @@ a:hover {
 	text-align: center;
 	border-radius: 2em;
 }
+
+.form-button.inline {
+	width: initial;
+
+}
 .form-button:hover {
 	text-decoration: none;
 }
@@ -393,7 +405,17 @@ a:hover {
 
 
 
+.images-main img {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;
+}
 
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
 
 
 

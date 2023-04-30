@@ -3,9 +3,56 @@
 include "../lib/php/function.php";
 
 
-$users = file_get_json("../data/users.json");
+$filename = "../data/users.json";
 
-$save = "Save Changes";
+$users = file_get_json($filename);
+
+$empty_user = (object)[
+    "name"=>"",
+    "type"=>"",
+    "email"=>"",
+    "classes"=>[]
+
+];
+
+
+//file_put_contents json_encode explode $=POST
+//CRUD,Create Read Update Delete
+
+//Print_p([$_GET,$_POST]);
+
+if(isset($_GET['action'])) {
+    switch ($_GET['action']) {
+        case "update":
+            $users[$_GET['id']]-> name = $_POST['user-name'];
+            $users[$_GET['id']]-> type = $_POST['user-type'];
+            $users[$_GET['id']]-> email = $_POST['user-email'];
+            $users[$_GET['id']]-> classes = explode(",", $_POST['user-classes']);
+
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+            break;
+        case "create":
+            $empty_user -> name = $_POST['user-name']
+            $empty_user -> type = $_POST['user-type'];
+            $empty_user -> email = $_POST['user-email'];
+            $empty_user -> classes = explode(",", $_POST['user-classes']);
+
+            $id = count($users);
+
+            $users[] = $empty_user;
+
+            file_put_contents ($filename,json_decode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
+            break;
+        case "delete":
+            array_splice($users,$_GET['id'],1);
+            file_put_contents($filename,json_encode($users));
+            header ("location:{$_SERVER['PHP_SELF']}");
+            break;
+    }
+}
+
 
 
 function showUserPage($user) {
