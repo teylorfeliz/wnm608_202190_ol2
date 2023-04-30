@@ -11,7 +11,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r."<img src='img/store/$o.jpg'>";
 });
 
-// print_p($image_elements);
+//print_p($_SESSION);
 
 ?>
 
@@ -32,6 +32,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	
 
 	<div class="container">
+		<h3>Go Back</h3>
 		<div class="grid gap product-display">
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
@@ -47,45 +48,72 @@ $image_elements = array_reduce($images,function($r,$o){
 			</div>	
 		
 			<div class="col-xs-12 col-md-5">
-				<div class="card soft">
+				<form class="card soft" method="post" action="cart_actions.php?action=add-to-cart">
 
-				<div class="card-section">
-					<h2 class="product-title"><?= $product->brand ?>&nbsp;<?= $product->name ?></h2>
-					<div class="product-price">&dollar;<?= $product->price ?></div>				
-				</div>
+					<input type="hidden" name="product-id" value="<?= $product->id ?>">
 
-				<div class="card-section">
-					<label for="product-amount" class="form-label">Amount</label>
-					<div class="form-select" id="product-amount">
-					<select>
-                    	<option>1</option>
-                    	<option>2</option>
-                    	<option>3</option>
-                    	<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-                	</select>
-					</div>
-				</div>
+						<div class="card-section">
+							<h2 class="product-title"><?= $product->brand ?>&nbsp;<?= $product->name ?></h2>
+							<div class="product-price">&dollar;<?= $product->price ?></div>				
+						</div>
+
+						<div class="card-section">
+							<div class="form-cotrol">
+								<label for="product-amount" class="form-label">Amount</label>
+								<div class="form-select">
+										<select id="product-amount" name="product-amount">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+								</div>
+							</div>
+						
+							<div class="form-cotrol">
+								<label for="product-size" class="form-label">Size</label>
+								<div class="form-select">
+										<select id="product-size" name="product-size">
+											<option>S</option>
+											<option>M</option>
+											<option>L</option>
+											<option>XL</option>
+										</select>										
+								</div>							
+								
+							</div>
+							
+						</div>	
+						<div class="card-section">
+								<input type="submit" class="form-button" value="Add to Cart">
+								</div>
+
+						
+
+				</form>
+
+			</div>
 
 					
-				<div class="card-section">
-					<a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add to Cart</a>
-				</div>
 				
 				
-				</div>
-			</div>
-						
+			
+				
 		</div>
+
 		<div class="card hard" >
 				<p><?= $product->description ?></p>
 			</div>
+						
 	</div>
+		
+	
 
 	
 	

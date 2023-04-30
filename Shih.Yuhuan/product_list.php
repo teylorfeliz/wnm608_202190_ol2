@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<?php include "parts/meta.php"; ?>
-</head>
-<body>
-
-	<?php include "parts/navbar.php"; ?>
-	
-	<div class="container">
-		<div class="card">
-			<h2>Product List</h2>
-
-			<?php
-				
-				include_once "lib/php/functions.php";
+<?php
+include_once "lib/php/functions.php";
 				if(isset($_GET['product'])){
 					$product = $_GET['product'];
 				} else {
@@ -23,6 +9,23 @@
 
 				include_once "parts/templates.php";
 
+
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+	<?php include "parts/meta.php"; ?>
+</head>
+<body>
+
+	<?php include "parts/navbar.php"; ?>
+	
+	<div class="container">
+		
+		<div class="card">
+			<h2>Product List</h2>
+
+			<?php
+				
 				$result = makeQuery(
 					makeConn(),
 					// "SELECT `id`,`name`,`price`

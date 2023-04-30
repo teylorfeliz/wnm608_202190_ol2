@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include_once "lib/php/functions.php";	?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -12,31 +12,10 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-</head>
+    </head>
 <body>
 
-    <header class="navbar">
-        <div class="container display-flex">
-			<div class="flex-none">
-				<a href="index.html"><img src="img/logo.png" style="width:85px; padding:15%"></a>
-			</div>
-
-            <div class="flex-stretch"></div>          
-            <nav class="flex-none nav">
-                <ul class="container display-flex">
-                    <li><a href="/about.php" style="font-weight: 400;">&nbsp;&nbsp;About Us&nbsp;&nbsp;</a></li>
-                    <li><a href="product.php" style="font-weight: 400;">&nbsp;&nbsp;Products&nbsp;&nbsp;</a></li>
-                    <li><a href="deals.php" style="font-weight: 400;">&nbsp;&nbsp;Deals&nbsp;&nbsp;</a></li>
-                    <li><a href="explore.php" style="font-weight: 400;">&nbsp;&nbsp;Explore&nbsp;&nbsp;</a></li>
-                </ul>
-                <!-- <div style="width:300px;height:60px"></div> -->
-                <ul class="container display-flex">
-                    <li><a href="login.php" style="font-weight: 400;">&nbsp;&nbsp;Login&nbsp;&nbsp;</a></li>
-                    <li><a href="/cart.php" style="font-weight: 400;">&nbsp;&nbsp;Cart&nbsp;&nbsp;</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+	<?php include "parts/navbar.php"; ?>
 	<h2></h2>
     <div class="container display-flex banner">
 
