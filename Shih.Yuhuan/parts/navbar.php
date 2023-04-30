@@ -1,4 +1,11 @@
 
+<?php
+	
+	include_once "lib/php/functions.php";    
+
+	?>
+
+
 <header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
@@ -12,7 +19,10 @@
 					<li><a href="deals.php">Deals</a></li>
 					<li><a href="explore.php">Explore</a></li>
 					<li><a href="login.php">Login</a></li>
-					<li><a href="cart.php">Cart</a></li>
+					<li><a href="cart.php">
+						<span>Cart</span>
+						<span class="badge"><?= makeCartBadge() ?></span>
+					</a></li>
 				</ul>
 				
 			</nav>
