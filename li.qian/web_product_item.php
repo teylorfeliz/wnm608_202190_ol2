@@ -4,9 +4,13 @@ include_once "lib/php/functions.php";
 
 $product = makeQuery(makeConn(),"SELECT * FROM `product` WHERE `id`=".$_GET['id'])[0];
 
+$images = explode(",",$product->images);
+
+$image_elements = array_reduce($images,function($r,$o){
+	return $r."<img src='img/$o'>";
+});
 
 
-// print_p($product);
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -37,38 +41,56 @@ $product = makeQuery(makeConn(),"SELECT * FROM `product` WHERE `id`=".$_GET['id'
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-5">
-				<div class="card soft flat">
-					<div class="card-section display-flex">
+				<form class="card soft flat" method="post" action="web_cart_action.php?action=add-to-card">
+
+					<input type="hidden" name="product-id" value="<?= $product->name ?>">
+
+					<div class="card-section">
 						<h2 class="product_title"><?= $product->name ?></h2>
 						<div class="product_price">&dollar;<?= $product->price ?></div>
 					</div>
 
-					<div class="card-section display-flex">
-						<label for="product-amount" class="form-label">Amount</label>
-						<div class="form-select" id="product-amount">
-							<select name="" id="">
-							<option value="">1</option>
-							<option value="">2</option>
-							<option value="">3</option>
-							<option value="">4</option>
-							<option value="">5</option>
-							<option value="">6</option>
-							<option value="">7</option>
-							<option value="">8</option>
-							<option value="">9</option>
-							<option value="">10</option>
-						</select>
+					<div class="card-section">
+						<div class="form-control">						
+							<label for="product-amount" class="form-label">Amount</label>
+							<div class="form-select">
+								<select id="product-amount" name="product-amount">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+								</select>
+							</div>		
 						</div>
+					
+					<!-- <div class="form-control">
+						<label for="product-color" class="form-label">Color</label>
+						<div class="form-select">
+							<select name="product-color" id="product-color">
+								<option value="">red</option>
+								<option value="">green</option>
+							</select>							
+						</div>
+					</div>  -->
 						
 					</div>
 
-					<div class="card-section display-flex">
-						<a href="web_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add To Cart</a>
+
+					<div class="card-section">
+						<input type="submit" class="form-button" value="Add To Cart">
 					</div>
 
-					<div class="card-section display-flex">
-						<p><?= $product->description ?></p>
-					</div>
+					
+				</form>
+				
+				<div class="card soft ">
+					<p><?= $product->description ?></p>
 				</div>
 			</div>			
 		</div>
