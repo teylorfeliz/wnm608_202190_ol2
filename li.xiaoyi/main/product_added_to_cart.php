@@ -3,7 +3,7 @@
 include_once "../lib/php/functions.php";
 $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-
+$cart_product = cartItemById($_GET['id']);
 ?>
 
 
@@ -12,36 +12,19 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Confirmation</title>
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
-	<link rel="stylesheet" href="../lib/css/gridsystem.css">	
-	<link rel="stylesheet" href="../css/storetheme.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<?php include "../parts/meta.php"; ?>
 </head>
 <body>
 
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-none">
-				<h1>Jowelry</h1>
-			</div>
-			<div class="flex-stretch"></div>
-				<nav class="flex-none nav">
-				<ul class="container display-flex">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="collections.php">Collections</a></li>
-				<li><a href="account.php">Account</a></li>
-				<li><a href="cart.php">Cart</a></li>
-			</ul>
-				</nav>
-		</div>
-	</header>
+	<?php include "../parts/navbar.php"; ?>
 
 	<div class="container">
 		<div class="card soft">
 			<h2>You added <?= $product->name ?> to your cart</h2>
+			<p>There are now <?= $cart_product->amount ?> of <?= $product->name?> in your cart.</p>
+
 			<div class="display-flex">
 				<div class="flex-none"><a href="collections.php">Continue Shopping</a></div>
 				<div class="flex-stretch"></div>

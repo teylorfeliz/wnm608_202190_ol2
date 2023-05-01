@@ -14,56 +14,38 @@ $image_elements = array_reduce($images,function($r,$o){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<title>Cart</title>
-	<link rel="stylesheet" href="../lib/css/styleguide.css">
-	<link rel="stylesheet" href="../lib/css/gridsystem.css">	
-	<link rel="stylesheet" href="../css/storetheme.css">
-
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	<script src="../js/product_thumbs.js"></script>
-
+	<?php include "../parts/meta.php"; ?>
 </head>
 <body>
 
-	<header class="navbar">
-		<div class="container display-flex">
-			<div class="flex-none">
-				<h1>Jowelry</h1>
-			</div>
-			<div class="flex-stretch"></div>
-				<nav class="flex-none nav">
-				<ul class="container display-flex">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="collections.php">Collections</a></li>
-				<li><a href="account.php">Account</a></li>
-				<li><a href="cart.php">Cart</a></li>
-			</ul>
-				</nav>
-		</div>
-	</header>
+	<?php include "../parts/navbar.php"; ?>
 
 	<div class="container">
 		<div class="grid gap">
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
-					<div class="images-main"><img src="../img/<?=$product->thumbnail ?>"></div>
-					<div class="images-thumb">
-					<?= $image_elements ?>
-					</div>
+					  <div class="images-main">
+                        <img src="../img/<?= $product->thumbnail ?>">
+                    </div>
+                    <div class="images-thumb">
+                        <?= $image_elements ?>
+                    </div>
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-5">
-				<div class="card soft flat">
+				<form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+					<input type="hidden" name="product-id" value="<?= $product->id ?>">
 					<div class="card-section">
 						<h2 class="product-name"><?=$product->name ?></h2>
 						<div class="product-price">&dollar;<?=$product->price ?></div>
 					</div>
 					<div class="card-section">
+					<div class="form-control">
 						<label for="product-amount">Amount</label>
-						<div class="form-select" id="product-amount">
-							<select>
+						<div class="form-select">
+							<select id="product-amount" name="product-amount">
 								<option>1</option>
 								<option>2</option>
 								<option>3</option>
@@ -77,10 +59,23 @@ $image_elements = array_reduce($images,function($r,$o){
 							</select>
 						</div>
 					</div>
-					<div class="card-section">
-						<a href="product_added_to_cart.php?id=<?= $product->id ?>" class="form-button">Add To Cart</a>
+
+					<div class="form-control">
+						<label for="product-material">Material</label>
+						<div class="form-select">
+							<select id="product-material" name="product-material">
+								<option>Silver</option>
+								<option>Gold</option>
+								<option>Rose Gold</option>
+								<option>Platium</option>
+							</select>
+						</div>
 					</div>
 				</div>
+				<div class="card-section">
+            		<input type="submit"  class="form-button" value="Add To Cart">
+        		</div>
+				</form>
 			</div>
 		</div>
 		<div class="card soft dark">

@@ -58,6 +58,8 @@ a:hover{
 
 /* LAYOUT */
 
+
+
 .container{
 	max-width:1200px;
 	margin-right:auto;
@@ -353,6 +355,10 @@ a:hover{
     border-radius:0.2em;
     cursor: pointer;
   	text-align:center;
+}
+
+.form-button.inline{
+	width:initial;
 }
 
 .form-button:hover{

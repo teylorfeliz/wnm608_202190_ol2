@@ -4,9 +4,9 @@
 
 <!--<base href="http://xyart.art/AAU/wnm608/li.xiaoyi"></!-->
 
-<link rel="stylesheet" href="../lib/css/styleguide.css">
-<link rel="stylesheet" href="../lib/css/gridsystem.css">	
-<link rel="stylesheet" href="../css/storetheme.css">
+<link rel="stylesheet" type="text/css" href="../lib/css/styleguide.css<?= '?v='.time() ?>">
+<link rel="stylesheet" type="text/css" href="../lib/css/gridsystem.css<?= '?v='.time() ?>">
+<link rel="stylesheet" type="text/css" href="../css/storetheme.css<?= '?v='.time() ?>">
 
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
