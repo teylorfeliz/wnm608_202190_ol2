@@ -14,22 +14,18 @@
 
     </head>
 <body>
+    
+    <?php include "parts/navbar.php"; ?>
 
-	<?php include "parts/navbar.php"; ?>
-	<h2></h2>
-    <div class="container display-flex banner">
+	
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="img/img1.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+    </div>
 
-		        <div class="bannertext"><h2>Forest, Starry night,<br>Campfire,what else do you need?
-					</h2>
 
-
-					<p><a href="#buttons" class="basic-button">Shop camping & hiking</a></p>
-
-				</div>
-				<div class="bannerimg"><img src="img/glamping.jpg"></div>   
-
-					
-		    </div>
 
 	<div class="container">	    
      <div class="card medium" style="text-align: center;">
@@ -49,50 +45,57 @@
             <div class="grid gap">
                 <div class="col-xs-12 col-md-3">
                     <figure class="figure">
-                        <img src="img/backpack.jpg" style="width: 400; height: 400;" alt="backpack">
-                        <figcaption>Backpack</figcaption>
+                        <a href="product_list.php?product=Backpacks" style="text-decoration: none;"><img src="img/backpack.jpg" style="width: 400; height: 400;" alt="backpack">
+                        <figcaption>Backpack</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <figure class="figure">
+                        <a href="product_list.php?product=Camp_Furniture" style="text-decoration: none;">
                         <img src="img/campfurniture.jpg" style="width: 400; height: 400;" alt="backpack">
-                        <figcaption>Camp Furniture</figcaption>
+                        <figcaption>Camp Furniture</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <figure class="figure">
+                        <a href="product_list.php?product=Clothing" style="text-decoration: none;">
                         <img src="img/clothing.jpg" style="width: 400; height: 400;" alt="Clothing">
-                        <figcaption>Clothing</figcaption>
+                        <figcaption>Clothing</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <figure class="figure">
+                        <a href="product_list.php?product=Footwear" style="text-decoration: none;">
                         <img src="img/footwear.jpg" style="width: 400; height: 400;" alt="Footwear">
-                        <figcaption>Footwear</figcaption>
+                        <figcaption>Footwear</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <figure class="figure">
+                        <a href="product_list.php?product=Tents" style="text-decoration: none;">
                         <img src="img/tent.jpg" style="width: 400; height: 400;" alt="Tents">
-                        <figcaption>Tents</figcaption>
+                        <figcaption>Tents</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                 	<figure class="figure">
-                    <img src="img/lighting.jpg" style="width: 400; height: 400;" alt="Lighting">
-                        <figcaption>Lighting</figcaption>
+                        <a href="product_list.php?product=Lighting" style="text-decoration: none;">
+                        <img src="img/lighting.jpg" style="width: 400; height: 400;" alt="Lighting">
+                        <figcaption>Lighting</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                 	<figure class="figure">
+                    <a href="product_list.php?product=Sleeping_Bags" style="text-decoration: none;">
                     <img src="img/sleepingbag.jpg" style="width: 400; height: 400;" alt="Sleepingbag">
-                        <figcaption>Sleepingbag</figcaption>
+                    <figcaption>Sleepingbag</figcaption></a>
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-3">
                 	<figure class="figure">
-                    <img src="img/padsandhammocks.jpg" style="width: 400; height: 400;" alt="Pads & Hammocks">
-                        <figcaption>Pads & Hammocks</figcaption>
+                    <a href="product_list.php?product=Health_and_Safety" style="text-decoration: none;">
+                    <img src="img/padsandhammocks.jpg" style="width: 400; height: 400;" alt="Health & Safe">
+                        <figcaption>Health & Safe</figcaption></a>
                     </figure>
                 </div>
             </div>

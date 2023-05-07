@@ -32,7 +32,9 @@ $image_elements = array_reduce($images,function($r,$o){
 	
 
 	<div class="container">
-		<h3>Go Back</h3>
+		<div class="card"><input class="basic-button" type ="button" onclick="history.back()" value="&larr; Go Back"></input></div>
+			
+			
 		<div class="grid gap product-display">
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
