@@ -88,10 +88,10 @@ a:hover {
 .flex-stretch { flex: 1 1 auto; }
 .flex-none { flex: none; }
 
-.flex-align-center {align-items: center; }
-.flex-justify-center {justify-content: center; }
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
 
-
+.flex-column { flex-direction:column; }
 
 
 
@@ -249,6 +249,17 @@ a:hover {
 }
 
 
+.card-section~.card-section {
+	border-top: 1px solid var(--color-neutral-light);
+}
+.card-section {
+	padding: 1em;
+}
+
+
+
+
+
 
 .view-window {
   height: 50vh;
@@ -339,7 +350,26 @@ a:hover {
 	border-radius: 0.7em;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 	overflow: hidden;
+	height: 100%;
+	transition: all 0.3s;
 }
+.product.figure img {
+	height: 100%;
+	object-fit: contain;
+}
+
+.productlist a {
+	text-decoration:none;
+	font-weight: initial;
+}
+
+.product.figure:hover {
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2) ;
+}
+
+
+
+
 
 
 .product-overlay {
@@ -406,6 +436,33 @@ a:hover {
 }
 
 
+
+.images-main img {
+	width: 100%;
+	height: 40vh;
+	object-fit: contain;
+}
+
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
+	object-fit: contain;
+}
+
+
+span.badge:not(:empty)::after {
+  content: ')';
+}
+span.badge:not(:empty)::before {
+  content: '(';
+}
+
+
+
+
+
+
+
 /*FORMS*/
 .form-control{
 	margin: 1em 0;
@@ -463,6 +520,10 @@ a:hover {
     border-radius: 0.2em;
     cursor: pointer;
     text-align: center;
+}
+
+.form-button.inline {
+	width: initial;
 }
 .form-button:hover {
     text-decoration: none;

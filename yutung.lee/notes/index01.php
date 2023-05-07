@@ -10,10 +10,11 @@
 	echo "<div> Hello World </div>";
 	echo "<div> Goodbye World </div>";
 
-
+	//Variables
 	$a = 5;
 
 	echo $a;
+
 
 	// String Interpolation
 	echo "<div>I have $a things</div>";
@@ -45,12 +46,13 @@
 	echo "<div>b + a" . " = c</div>";
 	echo "<div>$b + $a = ".($a+$b)."</div>";
 
-
 	?>
+
 
 	<hr>
 	<div>This is my name</div>
 	<div>
+
 
 	<?php  
 
@@ -61,26 +63,25 @@
 
 	echo $fullname;
 
+
 	?>
 	<hr>
-	<?php 
-
+	<?php  
 
 	// Superblobal
-	// ?name=Joey
+	// in the URL + ?name=Joey
+
 	echo "<a href='?name=Joey'>visit</a><br>";
 	echo "<div>My name is {$_GET['name']}</div>";
 
+	// ?name= Joey&type=textarea
 
-
-// ?name= Joey&type=textarea
 	echo "<a href='?name=Joey&type=textarea'>visit</a><br>";
 	echo "<{$_GET['type']}>My name is {$_GET['name']}</{$_GET['type']}>";
 
 
-
-	 ?>
-	 <hr>
+	?>
+	<hr>
 	<?php 
 
 	// array
@@ -102,6 +103,7 @@
 	<div style="color:<?= $colors[1] ?>">
 		This text is green	
 	</div>
+
 
 	<hr>
 	<?php 
@@ -133,17 +135,18 @@
 	echo "<hr>";
 
 	// array index notation
-	echo $colors[0]."<br>";
+	echo $colo[0]."<br>";
 	echo $colorsAssociative['red']."<br>";
 	echo $colorsAssociative[$colors['0']]."<br>";
 
  	// object property notation
  	echo $colorsObject->red."<br>";
  	echo $colorsObject->{$colors[0]}."<br>";
-	
-	?>
 
-	<hr>
+
+ 	?>
+
+ 	<hr>
 
 	<?php
 
@@ -164,5 +167,6 @@
 
 
 	?>
+
 </body>
 </html>

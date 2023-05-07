@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include_once "lib/php/functions.php"; ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -16,10 +16,10 @@
 
 
 	<div class="container">
-        <div class="card soft">
+        <div class="card">
             <!-- <h3>Basic Figures</h3> -->
             <figure class="figure">
-                <img src="http://via.placeholder.com/400x200?text=product" alt="">
+                <img src="https://petble.care/wp-content/uploads/2021/04/PetbleCare_Blog_%E5%AF%B5%E7%89%A9%E4%BF%9D%E9%9A%AA-%E6%98%82%E8%B2%B4%E5%8C%96%E9%A9%97%E6%AA%A2%E6%9F%A5%E9%83%BDclaim%E5%88%B0_content_image.jpg" alt="">
                 <!-- <figcaption>Product</figcaption> -->
             </figure>
 
@@ -35,7 +35,7 @@
 	</div>
  -->
 
-
+<!-- 
  	<div class="container" id="navigations">
  		 <script>
             const makeNav = (classes = '') => {
@@ -137,7 +137,7 @@
 <div class="container">
 	<div class="grid gap xs-small md-medium">
 		<!-- .col-xs-6.col-md-3*4>.card>{card} -->
-		<div class="col-xs-6 col-md-3">
+<!-- 		<div class="col-xs-6 col-md-3">
 			<div class="card soft">
 				<img src="https://via.placeholder.com/500" alt="" class="media-image">
 			</div>
@@ -158,11 +158,11 @@
 			</div>
 		</div>						
 	</div>
-</div>
-
+</div> 
+ -->
 <!-- div.container>article.article#article$*4>h2{Article $}+div.article-body>p*3>lorem40 -->
 
-<div class="container">
+<!-- <div class="container">
 	<article id="article" class="article card soft">
 		<div class="display-flex flex-align-center">	
 			<div class="flex-stretch">
@@ -207,7 +207,7 @@
 			<p>Architecto facere deleniti nemo quos quisquam obcaecati temporibus quaerat! Voluptas, adipisci! Veniam, recusandae eveniet sit vero magni impedit aut placeat eius veritatis consequatur nemo, iste unde repellat dolorum, laborum animi alias odit ducimus, voluptatem atque vitae quis rem? Dolor, nostrum.</p>
 		</div>
 	</article>
-</div>
+</div> -->
 
 
 

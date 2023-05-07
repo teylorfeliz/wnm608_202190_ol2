@@ -30,3 +30,11 @@ body {
 		line-height:2em;
 	}
 }
+
+.figure.product {
+	border-radius: 0.7em;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+

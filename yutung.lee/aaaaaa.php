@@ -3,136 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pet Paradise</title>
+	<title>Cool Website</title>
 
-	
-	<?php include "parts/mainmeta.php"; ?>
-
-
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
+	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
 
-	<?php include "parts/mainnavbar.php"; ?>
+<!-- header>h1+p -->
+<header class="navbar">
+	<div class="container display-flex">
+	<div class="flex-none">
+		<h1>Cool website</h1>
+	</div>		
+	<div class="flex-stretch"></div>
+		<!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->
+		<nav class="flex-none nav">
+			<ul class="container display-flex">
+				<li><a href="#article1">Link 1</a></li>
+				<li><a href="#article2">Link 2</a></li>
+				<li><a href="#article3">Link 3</a></li>
+				<li><a href="#article4">Link 4</a></li>
+			</ul>
+		</nav>
+	</div>	
+</header>
 
 
-	<div class="container">
-        <div class="card soft">
-            <!-- <h3>Basic Figures</h3> -->
-            <figure class="figure">
-                <img src="http://via.placeholder.com/400x200?text=product" alt="">
-                <!-- <figcaption>Product</figcaption> -->
-            </figure>
+<div class="container">
+	<div class="card soft">
+		<h2>Grid</h2>
+		<div class="grid">
+			<div class="col-xs-6">column 6</div>
+			<div class="col-xs-6">column 6</div>
+		</div>
+		<div class="grid gap xs-small md-medium">
+			<div class="col-xs-4">column 4</div>
+			<div class="col-xs-4">column 4</div>
+			<div class="col-xs-4">column 4</div>
 
-    	</div>
-    </div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
 
-<!-- 	<div class="container">
-		<div class="card">
-			<figure class="figure product-overlay">
-				
-			</figure>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-6">column 6</div>
 		</div>
 	</div>
- -->
+</div>
 
+<div class="container">
+	<div class="card soft">
+		<h2>Responsive Grid</h2>
+		<div class="grid">
+			<div class="col-xs-12 col-md-6">column 6</div>
+			<div class="col-xs-12 col-md-6">column 6</div>
+		</div>
+		<div class="grid">
+			<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+			<div class="col-xs-12 col-md-4 col-xl-6">column 4</div>
+			<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
 
- 	<div class="container" id="navigations">
- 		 <script>
-            const makeNav = (classes = '') => {
-                const links = ['home', 'store', 'about'];
-                let ran = Math.floor(Math.random() * links.length);
-                document.write(`
-                <div>
-                    <nav class="${classes}">
-                <ul>
-                    ${links.reduce((r, o, i) => {
-                    return r + `<li class="${ran == i ? 'active' : ''}"><a herf="#">${o}</a></li>`;
-                }, '')}
-                </ul>
-                    </nav>   
-                </div>    
-                `);
-            }
-        </script>
-
-   <div class="card soft">
-        <h3>Meterial Nav</h3>
-
-        <script>makeNav('nav nav-material') </script>
-    </div>
-
-
-    <script>
-       	$("#navigations a").on("click", function (e) {
-                e.preventDefault();
-                $(this).closest("li").addClass("active")
-                    .siblings().removeClass("active")
-            })
-    </script>
-
- </div>
-
- 	<div class="container">
-		<div class="grid gap">
-            <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-           <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-             <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-           <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <figure class="figure product">
-                    <img src="http://via.placeholder.com/400x400?text=product" alt="">
-                    <figcaption>
-                        <div>Product Name</div>
-                        <div>$3.99</div>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			<div class="col-xs-3">column 3</div>
+			</div>
+			<div class="grid ten gap">
+			<div class="col-xs-2">column 2</div>
+			<div class="col-xs-2">column 2</div>
+			<div class="col-xs-2">column 2</div>
+			<div class="col-xs-2">column 2</div>
+			<div class="col-xs-2">column 2</div>
+		</div>
 	</div>
-
-
-
+</div>
 
 <div class="container">
 	<div class="grid gap xs-small md-medium">
