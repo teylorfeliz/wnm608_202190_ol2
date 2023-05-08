@@ -14,7 +14,7 @@ include_once "lib/php/functions.php";
 	
 		<nav class="flex-none nav">
 			<ul class="container display-flex">
-				<li><a href="home.php">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="web_product_list.php">Product</a></li>
 				<li><a href="web_about.php">About</a></li>
 				<li><a href="web_cart.php">

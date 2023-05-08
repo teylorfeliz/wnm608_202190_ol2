@@ -6,14 +6,40 @@
 	<title>Clover's Fresh</title>
 
 
-	<!-- meta -->
-	<?php include "parts/web_meta.php"; ?>
-</head>
+<?php include "parts/web_meta.php"; ?>
+
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+
+<link rel="stylesheet" href="https://use.typekit.net/sut4alb.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script></head>
 <body>
 	
 	<!-- header> -->
-	<?php include "parts/header.php"; ?>
-
+	
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+				<h1 style="font-family: --font-theme-title:june-expt-variable, sans-serif; color: var(--color-white);">Clover's Fresh</h1>
+			
+			</div>
+			<div class="flex-stretch"></div>
+	
+		<nav class="flex-none nav">
+			<ul class="container display-flex">
+				<li><a href="home.php">Home</a></li>
+				<li><a href="web_product_list.php">Product</a></li>
+				<li><a href="web_about.php">About</a></li>
+				<li><a href="web_cart.php">
+					<span>Cart</span>
+					<span class="badge"></span>
+				</a></li>
+			</ul>
+		</nav>
+		</div>
+	</header>
 
 
 	<div class="container">
@@ -23,14 +49,21 @@
 		<!-- <h3>Basic Figure</h3> -->
 
 		<figure class="figure product-overlay">
-			<img src="http://via.placeholder.com/600x300" alt="">
+			<img src="img/fruit_home.jpeg" alt="">
 			<!-- <figcaption>Product</figcaption> -->
 		</figure>
 	</div>
 	</div>
 
 	<!-- product -->
-	<?php include "parts/products.php"; ?>
+	
+	<div class="container">
+		<div class='productlist grid gap'></div>
+	</div>
+	
+	
+	
+
 
 
 	<!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*3>Lorem40 -->
@@ -38,15 +71,15 @@
 		<article id="article1" class="article" style=" height: 18em; background-color: var(--color-theme-dark);">
 			<div class="display-flex flex-align-center">
 				<div class="flex-stretch">
-					<h2 style="padding-top: 1em; text-align: center; color: var(--color-text-light); ">Article 1</h2>
+					<h2 style="padding-top: 1em; text-align: center; color: var(--color-text-light); ">Clover's Fresh</h2>
 				</div>	
 				<!-- <div class="flex-none">
 					<small>5:20am</small>
 				</div> -->	
 			</div>
 	
-			<div class="article-body" style="width: 800px; padding-bottom:20px; margin:0 auto; color: var(--color-text-light);">
-				<p style="font-size: 1.3em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quas, odio non, accusantium sapiente, libero laboriosam eveniet repudiandae aspernatur alias distinctio provident? Quidem vitae dolores, eaque aspernatur illo architecto ut temporibus, tempore! Amet, tempore autem? Neque unde suscipit quidem totam.</p>
+			<div class="article-body" style="width: 800px; padding-bottom:50px; margin:0 auto; color: var(--color-text-light);">
+				<p style="font-size: 1.3em; padding-bottom:50px;">we pride ourselves on providing only the freshest and highest quality fruits available. From juicy berries and exotic tropical fruits to crisp apples and sweet citrus, our selection is sure to please even the most discerning taste buds. Come visit us and experience the vibrant colors, aromas, and flavors of our delicious fruits today!</p>
 			</div>
 		</article>
 

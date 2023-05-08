@@ -46,6 +46,7 @@ return $r.<<<HTML
     </div>
     <div class="flex-none">
         <div>&dollar;$totalfixed</div>
+        
         <form action="web_cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
         <input type="hidden" name="id" value="$o->id">
         <div class="form-select" style="font-size:0.8em">

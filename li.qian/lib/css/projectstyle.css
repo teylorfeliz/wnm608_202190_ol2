@@ -463,6 +463,10 @@ a:hover {
 
 }
 
+.form-button.inline {
+  width: initial;
+}
+
 .basic-button:hover {
   text-decoration: none;
   background-color: var(--color-theme-medium);
