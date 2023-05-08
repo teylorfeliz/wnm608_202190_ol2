@@ -553,3 +553,14 @@ a:hover {
     right: 0.5em;
 }
 
+.form-select.sort::after {
+    right: 0.1em;
+}
+
+.btn-container {
+    margin-right: 0.5em;
+}
+
+.btn-container .form-button {
+    border-radius: 0.5em !important;
+}
