@@ -1,12 +1,12 @@
 <?php
 
 include_once "../lib/php/functions.php";
-$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id']) [0];
 
 $images = explode(",", $product->images);
 
 $image_elements = array_reduce($images,function($r,$o){
-	return $r."<img src='../img/$o'>";
+    return $r."<img src='../img/$o'>";
 });
 
 ?>
@@ -17,6 +17,7 @@ $image_elements = array_reduce($images,function($r,$o){
 	
 	<title>Cart</title>
 	<?php include "../parts/meta.php"; ?>
+	<script scr="../js/product_thumbs.js"></script>
 </head>
 <body>
 
