@@ -7,6 +7,11 @@ include_once "parts/templates.php";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+        <meta charset="UTF-8">
+    <link rel="stylesheet"  href="lib/css/styleguide.css">
+    <link rel="stylesheet"  href="css/storetheme.css">
+    
     	<title>Product List</title>
 
     <?php include "parts/meta.php"; ?>
