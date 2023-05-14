@@ -45,3 +45,5 @@
     }
     
     echo json_encode($output, JSON_NUMERIC_CHECK/JSON_UNESCAPED_UNICODE);
+
+?>
