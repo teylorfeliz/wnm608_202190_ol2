@@ -1,3 +1,34 @@
+// debug for me:
+
+// const query = (options) => {
+// 	return fetch('data/api.php',{
+// 		method:'POST',
+// 		body: JSON.stringify(options),
+// 		headers:{'Content-Type':'application/json'}
+// 	}).then(d=>d.json());
+// }
+
+
+
+// const templater = f => a =>
+// 	(Array.isArray(a)?a:[a])
+// 	.return((r,o,i,a)=>r+f(o,i,a),'');
+
+
+
+// const query = (options) => {
+// 	return fetch('data/api.php', {
+// 		method: 'POST',
+// 		body: JSON.stringify(options),
+// 		headers: { 'Content-Type': 'application/json' }
+// 	}).then(d => d.json());
+// }
+
+// const templater = f => a =>
+// 	(Array.isArray(a) ? a : [a])
+// 	.reduce((r, o, i, a) => r + f(o, i, a), '');
+
+
 const query = (options) => {
 	return fetch('data/api.php',{
 		method:'POST',
@@ -6,6 +37,6 @@ const query = (options) => {
 	}).then(d=>d.json());
 }
 
-const templater = f => a =>
+const templater = f => a => 
 	(Array.isArray(a)?a:[a])
 	.reduce((r,o,i,a)=>r+f(o,i,a),'');

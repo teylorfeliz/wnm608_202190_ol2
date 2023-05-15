@@ -10,11 +10,38 @@ $data = json_decode(file_get_contents("php://input"));
 
 switch($data->type) {
 	case "products_all":
-		$output['result'] = makeQuery(makeConn(),"SELECT *
-			FROM `products`
-			ORDER BY `date_create` DESC
+		$output['result'] = makeQuery(makeConn(),"SELECT * 
+			FROM `product` 
+			ORDER BY `category` DESC 
 			LIMIT 12");
 		break;
+
+	case "product_search":
+		$output['result'] = makeQuery(makeConn(),"SELECT * 
+			FROM `product` 
+			WHERE 
+				`name` LIKE '%$data->search%' OR
+				`description` LIKE '%$data->search%' OR
+				`category` LIKE '%$data->search%'
+			ORDER BY `category` DESC 
+			LIMIT 12");
+		break;
+
+	case "product_filter":
+		$output['result'] = makeQuery(makeConn(),"SELECT * 
+			FROM `product` 
+			WHERE `$data->column` LIKE '$data->value'
+			ORDER BY `category` DESC 
+			LIMIT 12");
+		break;
+
+	case "product_sort":
+		$output['result'] = makeQuery(makeConn(),"SELECT * 
+			FROM `product` 
+			ORDER BY `$data->column` $data->dir
+			LIMIT 12");
+		break;
+
 	default: $output['error'] = "No Valid Type";
 }
 

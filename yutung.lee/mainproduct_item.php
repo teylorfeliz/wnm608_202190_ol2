@@ -1,3 +1,5 @@
+
+
 <?php 
 
 include_once "lib/php/functions.php";
@@ -7,7 +9,7 @@ $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id
 $images = explode(",", $product->images);
 
 $image_elements = array_reduce($images,function($r,$o){
-	return $r. "<img src='img/$o'>";
+	return $r. "<img src='http://www.yutunglee.com/Development/home/yvn86jesdiy5/public_html/Development/wnm608_202190_ol2/yutung.lee/img/$o'>";
 });
 
 //print_p($_SESSION);
