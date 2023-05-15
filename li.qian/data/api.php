@@ -12,7 +12,7 @@ switch($data->type) {
 	case "products_all":
 		$output['result'] = makeQuery(makeConn(),"SELECT * 
 			FROM `product` 
-			ORDER BY `catagory` DESC 
+			ORDER BY `category` DESC 
 			LIMIT 12");
 		break;
 
@@ -22,8 +22,8 @@ switch($data->type) {
 			WHERE 
 				`name` LIKE '%$data->search%' OR
 				`description` LIKE '%$data->search%' OR
-				`catagory` LIKE '%$data->search%'
-			ORDER BY `catagory` DESC 
+				`category` LIKE '%$data->search%'
+			ORDER BY `category` DESC 
 			LIMIT 12");
 		break;
 
@@ -31,7 +31,7 @@ switch($data->type) {
 		$output['result'] = makeQuery(makeConn(),"SELECT * 
 			FROM `product` 
 			WHERE `$data->column` LIKE '$data->value'
-			ORDER BY `catagory` DESC 
+			ORDER BY `category` DESC 
 			LIMIT 12");
 		break;
 

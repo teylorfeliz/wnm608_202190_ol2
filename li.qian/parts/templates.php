@@ -83,3 +83,22 @@ function cartTotals(){
 	HTML;
 }
 
+
+
+function recommendedProducts($a) {
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML 
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+
+ffunction recommendedCategory($cat, $limit = 3) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `product` WHERE `category` = ? ORDER BY `date_create` DESC LIMIT ?", [$cat, $limit]);
+    recommendedProducts($result);
+}
+
+function recommendedSimilar($cat, $id = 0, $limit = 3) {
+    $result = makeQuery(makeConn(), "SELECT * FROM `product` WHERE `category` = ? ORDER BY rand() DESC LIMIT ?", [$cat, $limit]);
+    recommendedProducts($result);
+}

@@ -56,11 +56,18 @@
 	</div>
 
 	<!-- product -->
+
 	
 	<div class="container">
-		<div class='productlist grid gap'></div>
+			<div class='productlist grid gap'></div>
+			
+			<!--recommendedCategory("fruit"); -->
+
+		
 	</div>
 	
+
+
 	
 	
 

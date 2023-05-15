@@ -184,8 +184,7 @@ HTML;
 
 			<?php
 
-			for($i=0;$i<count($users
-			);$i++){
+			for($i=0; $i<count($users); $i++){
 				echo "<li>
 					<a href='admin/users.php?id=$i'>{$users[$i]->name}</a>	
 				</li>";
@@ -201,41 +200,3 @@ HTML;
 
 </body>
 </html>
-
-
-
-
-<!-- 	
-	<div>
-	<strong>Type</strong>
-	<span>$user->type</span>
-	</div>
-	<div>
-	<strong>Email</strong>
-	<span>$user->email</span>
-	</div>
-	<div>
-	<strong>Classes</strong>
-	<span>$classes</span>
-	</div> 
-
-
-
-
-	<div style="padding:2em;">
-	<h2>$user->name</h2>
-
-	<form>
-		<label for="type">Type:</label><br>
-		<input style="width: 300px; margin-bottom: 5px; margin-top: 3px;" type="text" name="type" placeholder="$user->type"><br>
-		<label for="email">Email:</label><br>
-		<input style="width: 300px; margin-bottom: 5px; margin-top: 3px;" type="text" name="email" placeholder="$user->email"><br>
-		<label for="classes">Classes:</label><br>
-		<input style="width: 300px; margin-bottom: 5px; margin-top: 3px;" type="text" name="classes" placeholder="$classes"><br>
-		<input style="margin-top: 10px;" type="submit" value="Submit">
-	</form>
-
-
-
-</div>
--->

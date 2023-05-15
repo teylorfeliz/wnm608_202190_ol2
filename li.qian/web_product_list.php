@@ -25,7 +25,7 @@ include_once "parts/templates.php";
 
 	<!-- <div class="container">
 			<div class="card soft" style="text-align: center;">
-			<h2 style="padding-bottom:20px;">Category</h2>
+			<h2 style="padding-bottom:20px;">catagory</h2>
 
 				<div class="grid ten gap">				
 					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Dairy & Eggs</div>

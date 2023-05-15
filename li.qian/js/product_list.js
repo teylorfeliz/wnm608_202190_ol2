@@ -27,10 +27,10 @@ $(()=>{
 
 	$(".js-sort").on("change",function(e){
 		(
-			this.value==1 ? query({type:'product_sort',column:'category',dir:'DESC'}) :
-			this.value==2 ? query({type:'product_sort',column:'category',dir:'ASC'}) :
-			this.value==1 ? query({type:'product_sort',column:'price',dir:'ASC'}) :
-			this.value==2 ? query({type:'product_sort',column:'price',dir:'DESC'}) :
+			this.value==1 ? query({type:'product_sort',column:'date_create',dir:'DESC'}) :
+			this.value==2 ? query({type:'product_sort',column:'date_create',dir:'ASC'}) :
+			this.value==3 ? query({type:'product_sort',column:'price',dir:'ASC'}) :
+			this.value==4 ? query({type:'product_sort',column:'price',dir:'DESC'}) :
 			query({type:'products_all'})
 		).then(showResults);
 	})
