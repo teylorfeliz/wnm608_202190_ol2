@@ -37,7 +37,7 @@ const listItemTemplate = templater(o=>`
         
         
         <figcaption class="flex-none">
-            <div>&dollar;${o.price.toFixed(2)}</div>
+            <div>&dollar;${parseFloat(o.price).toFixed(2)}</div>
             <div>${o.name}</div>            
         </figcaption>
     </figure>

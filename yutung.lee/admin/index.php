@@ -14,12 +14,12 @@ $empty_product = (object)[
 
 
 //LOGIC
-try  {
+try {
 	$conn = makePDOConn();
 	switch($_GET['action']) {
 		case "update":
 			$statement = $conn->prepare("UPDATE
-				`product`
+				`products`
 				SET 
 					`name`=?,
 					`price`=?,
@@ -44,7 +44,8 @@ try  {
 			header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
 			break;
 		case "create":
-			header("location:{$_SERVER['PHP_SELF']}?id=id");
+
+			header("location:{$_SERVER['PHP_SELF']}?id=$id");
 			break;
 		case "delete":	
 			header("location:{$_SERVER['PHP_SELF']}");
@@ -244,3 +245,6 @@ $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img 
 
 	</div>
 </body>
+
+
+

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost:3306
--- 產生時間： 2023 年 05 月 16 日 05:17
+-- 產生時間： 2023 年 05 月 18 日 02:42
 -- 伺服器版本： 5.7.41-cll-lve
 -- PHP 版本： 7.4.30
 
@@ -34,8 +34,8 @@ CREATE TABLE `products` (
   `url` varchar(256) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `category` varchar(32) NOT NULL,
-  `data_create` datetime NOT NULL,
-  `data_modify` datetime NOT NULL,
+  `date_create` datetime NOT NULL,
+  `date_modify` datetime NOT NULL,
   `description` text NOT NULL,
   `thumbnail` varchar(128) NOT NULL,
   `images` varchar(256) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `products` (
 -- 傾印資料表的資料 `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `url`, `price`, `category`, `data_create`, `data_modify`, `description`, `thumbnail`, `images`, `quantity`) VALUES
+INSERT INTO `products` (`id`, `name`, `url`, `price`, `category`, `date_create`, `date_modify`, `description`, `thumbnail`, `images`, `quantity`) VALUES
 (1, 'Hill\'s: Chicken Recipe', '', '61.99', 'Cat', '2023-05-15 16:07:02', '2023-05-15 16:07:02', 'dsvcscscc', 'catfood_thumb.png', 'catfood02_thumb.png,catfood03_thumb.png', 60),
 (2, 'Hill\'s: Light Chicken Recipe', '', '59.99', 'Cat', '2023-05-15 16:07:02', '2023-05-15 16:07:02', 'davdvdvsvz', 'catfood01_thumb.png', 'catfood_thumb.png,catfood03_thumb.png', 70),
 (3, 'Purina: Salmon Recipe', '', '17.98', 'Cat', '2023-05-15 16:07:02', '2023-05-15 16:07:02', 'csdcscv sv ', 'catfood02_thumb.png', 'catfood02_thumb.png', 50),
