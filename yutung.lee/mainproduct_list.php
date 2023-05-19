@@ -1,5 +1,4 @@
 <?php
-
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
@@ -10,10 +9,8 @@ include_once "parts/templates.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Product List</title>
 
-	
 
 	<?php include "parts/mainmeta.php"; ?>
-
 	<script src="lib/js/functions.js"></script>
 	<script src="js/templates.js"></script>
 	<script src="js/product_list.js"></script>
