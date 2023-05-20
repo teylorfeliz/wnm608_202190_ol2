@@ -20,20 +20,7 @@ include_once "parts/templates.php";
 	<!-- Header -->
 	<?php include "parts/mainnavbar.php"; ?>
 
-	<!-- <div class="container">
-			<div class="card soft" style="text-align: center;">
-			<h2 style="padding-bottom:20px;">catagory</h2>
 
-				<div class="grid ten gap">				
-					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Dairy & Eggs</div>
-					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Meat</div>
-					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Fresh Fruit</div>
-					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Frozen</div>
-					<div class="col-xs-2" style="padding-bottom: 0.5em; font-size: 1.3em;">Bread</div>
-				</div>
-		</div>
-	</div> -->
-	
 
 
 	<div class="container">
@@ -46,7 +33,7 @@ include_once "parts/templates.php";
 		</div>
 		<div class="form-control">
 			<div class="card soft">
-			<div class="display-flex">
+			<div class="display-flex flex-wrap">
 				<div class="flex-stretch display-flex">
 				<div class="flex-none">
 					<button data-filter="category" data-value="" type="button" class="form-button" style="padding: 5px; margin: 5px;">All</button>

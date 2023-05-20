@@ -9,16 +9,18 @@ include_once "lib/php/functions.php";
 <base href="http://www.yutunglee.com/Development/home/yvn86jesdiy5/public_html/Development/wnm608_202190_ol2/yutung.lee/">
 
 
-
+<input type="checkbox" id="menu" class="hidden">
 <header class="navbar">
 	<div class="container display-flex">
 	<div class="flex-none">
 		<h1>Pet Paradise</h1>
 	</div>		
 	<div class="flex-stretch"></div>
-		<!-- nav.nav>ul>li*4>a[href=#article$]>{Link $} -->
-		<nav class="flex-none nav">
-			<ul class="container display-flex">
+	<div class="flex-none menu-button">
+		<label for="menu">&equiv;</label>
+	</div>
+		<nav class="nav nav-flex flex-none ">
+			<ul>
 				<li><a href="mainpage.php">Home</a></li>
 				<li><a href="mainproduct_list.php">Product</a></li>
 				<li><a href="mainabout.php">About</a></li>

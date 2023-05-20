@@ -13,7 +13,7 @@ include_once "parts/templates.php";
 
 
 </head>
-<body>
+<body class="flush">
 
 	<?php include "parts/mainnavbar.php"; ?>
 
