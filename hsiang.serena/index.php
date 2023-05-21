@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
-<body>
+<body class="flush">
 	<!-- header>h1+p -->
 	<header class="navbar">
 		<div class="container display-flex">

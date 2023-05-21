@@ -7,7 +7,6 @@
             header("location:product_added_to_bag.php?id={$_POST['product-id']}&color={$_POST['product-color']}");
             break;
         case "update-bag-item":
-            // $p = bagItemById($_POST['id']);
             $p = bagItemByIdAndColor($_POST['id'], $_POST['color']);
             $p->amount = $_POST['amount'];
             header("location:product_bag.php");

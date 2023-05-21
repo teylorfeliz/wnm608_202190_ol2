@@ -16,7 +16,6 @@
     try {
         if(isset($_GET['action'])) {
             $conn = makePDOConn();
-            // echo "test ".$_GET['action'];
             switch($_GET['action']) {
                 case "update":
                     $statement = $conn->prepare("UPDATE
@@ -234,7 +233,6 @@
                         $empty_product :
                         makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
                 );
-                // showProductPage();
             } else {
                 ?>
                 <h2>Product List</h2>

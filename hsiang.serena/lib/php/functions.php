@@ -139,13 +139,5 @@
             $o->thumbnail = $itemById->thumbnail;
             return $o;
         }, $bag);
-
-        // return array_map(function($o) use($bag) {
-        //     $p = bagItemById($o->id);
-        //     // $amount = countBagItemById($o->id);
-        //     $o->amount = $p->amount;
-        //     $o->total = $amount * $o->price;
-        //     return $o;
-        // }, $data);
     }
 ?>

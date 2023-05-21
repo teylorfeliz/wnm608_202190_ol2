@@ -15,7 +15,6 @@
     <script src="js/product_list.js"></script>
     <script>
         query({ type: 'products_all' }).then(d => {
-            // console.log('d', d);
             $(".productlist").html(listItemTemplate(d.result));
         });
     </script>
@@ -38,7 +37,7 @@
             </div>
             <div class="form-control">
                 <div class="card soft">
-                    <div class="display-flex">
+                    <div class="display-flex flex-wrap">
                         <div class="flex-stretch display-flex">
                             <div class="flex-none btn-container">
                                 <button data-filter="category" data-value="" type="button" class="form-button">All</button>

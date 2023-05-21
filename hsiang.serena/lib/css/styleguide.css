@@ -118,6 +118,10 @@ a:hover {
     flex-direction: column;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 /* Small classes */
 
 .media-image {
@@ -226,6 +230,7 @@ a:hover {
     top: 0;
     width: 100%;
     z-index: 10;
+    margin-bottom: 0;
 }
 
 .navbar h1 {
@@ -236,6 +241,10 @@ a:hover {
 
 .navbar a {
     padding: 0 0.5em;
+}
+
+.flush.navbar {
+    margin-bottom: 0;
 }
 
 .banner {
@@ -292,6 +301,11 @@ a:hover {
 .card.flat {
     border-radius: 0.5em;
     padding: 0em;
+}
+
+[class*='col-']>.card {
+    height: 100%;
+    margin: 0;
 }
 
 .card-section~.card-section {
