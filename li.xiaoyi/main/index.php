@@ -12,7 +12,7 @@ include "../parts/templates.php";
 	<title>Home</title>
 	<?php include "../parts/meta.php"; ?>
 </head>
-<body>
+<body class="flush">
 
 	<?php include "../parts/navbar.php"; ?>
 	<div class="container">
