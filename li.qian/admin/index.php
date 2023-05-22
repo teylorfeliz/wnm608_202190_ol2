@@ -1,90 +1,83 @@
 <?php
 
 include "../lib/php/functions.php";
-include "../lib/parts/templates.php";
+
 
 $empty_product = (object)[
-	"name"=>"Durian",
-	"description"=>"I only know about this from Zelda",
-	"price"=>"12.99",
-	"category"=>"fruit",
-	"images"=>"fruit_apples_1.jpg",
-	"quantity"=>"23"
+    "name"=>"apple",
+    "description"=>"sweet",
+    "price"=>"3.99",
+    "category"=>"fruit",
+    "images"=>"fruit_apples_1.jpg",
+    "quantity"=>"23"
 ];
 
 
 
-
-
-
-//LOGIC
+// 	LOGIC
 try {
-	$conn = makePDOConn();
-	switch ($_GET['action']) {
-		case "update":
-			$statement = $conn->prepare("UPDATE
-				`product`
-				SET 
-					`name`=?,
-					`price`=?,
-					`quantity`=?,
-					`category`=?,
-					`description`=?,
-					`images`=?,
-					`date_modify`=NOW()
-				WHERE `id`=?
-				");
-			$statement->execute([
-				$_POST['product-name'],
-				$_POST['product-price'],
-				$_POST['product-quantity'],
-				$_POST['product-category'],
-				$_POST['product-description'],
-				$_POST['product-images'],
-				$_GET['id']
-			]);
-			header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
-			break;
-		case "create":
-			$statement = $conn->prepare("INSERT INTO
-				`product`
-				(
-					`name`,
-					`price`,
-					`quantity`,
-					`category`,
-					`description`,
-					`images`,
-					`date_create`,
-					`date_modify`
-				)
-				VALUES (?,?,?,?,?,?,NOW(),NOW())
-				");
-			$statement->execute([
-				$_POST['product-name'],
-				$_POST['product-price'],
-				$_POST['product-quantity'],
-				$_POST['product-category'],
-				$_POST['product-description'],
-				$_POST['product-images']
-			]);
-			$id = $conn->lastInsertID();
-			header("location:{$_SERVER['PHP_SELF']}?id=$id");
-			break;
-		case "delete":
-			$statement = $conn->prepare("DELETE FROM `product` WHERE id=?");
-			$statement->execute([$_GET['id']]);
-			header("location:{$_SERVER['PHP_SELF']}");
-			break;
-	}
+    $conn = makePDOConn();
+    switch($_GET['action']) {
+        case "update":
+            $statement = $conn->prepare("UPDATE
+                `product`
+                SET
+                    `name`=?,
+                    `description`=?,
+                    `price`=?,
+                    `category`=?,
+                    `images`=?,
+                    `quantity`=?,
+                    `date_modify`= NOW()
+                WHERE `id`=?
+                ");
+            $statement->execute([
+                $_POST['product-name'],
+                $_POST['product-description'],
+                $_POST['product-price'],
+                $_POST['product-category'],
+                $_POST['product-images'],
+                $_POST['product-quantity'],
+                $_GET['id']
+            ]);
+            header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+            break;
+        case "create":
+            $statement = $conn->prepare("INSERT INTO
+                `product`
+                (
+                    `name`,
+                    `description`,
+                    `price`,
+                    `category`,
+                    `images`,
+                    `quantity`,
+                    `date_create`,
+                    `date_modify`
+                )
+                VALUES (?,?,?,?,?,?,Now(),NOW())
+                ");
+            $statement->execute([
+                $_POST['product-name'],
+                $_POST['product-description'],
+                $_POST['product-price'],
+                $_POST['product-category'],
+                $_POST['product-images'],
+                $_POST['product-quantity']
+            ]);
+            $id = $conn->lastInsertId();
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
+            break;
+        case "delete":
+            $statement = $conn->prepare("DELETE FROM `product` WHERE id=?");
+            $statement->execute([$_GET['id']]);
+            header("location:{$_SERVER['PHP_SELF']}");
+            break;
+    }
 } catch (PDOException $e) {
-	die($e->getMessage());
+    echo $e->getMessage();
+    die($e->getMessage());
 }
-
-
-
-
-
 
 
 
@@ -93,35 +86,35 @@ try {
 
 // TEMPLATES
 function productListItem($r,$o) {
-return $r.<<<HTML
-<div class="card soft">
-	<div class="display-flex">
-		<div class="flex-none images-thumbs"><img src='img/$o->images'></div>
-		<div class="flex-stretch" style="padding:1em">$o->name</div>
-		<div class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$o->id" class="form-button" style="padding:0.5em; right-margin:0.5em;">Edit</a></div>
-	</div>
-</div>
-HTML;
+    return $r.<<<HTML
+    <div class="card soft">
+        <div class="display-flex">
+            <div class="flex-none images-thumbs"><img src='img/$o->images'></div>
+            <div class="flex-stretch" style="padding:1em">$o->name</div>
+            <div class="flex-none"><a href="{$_SERVER['PHP_SELF']}?id=$o->id" class="form-button" style="padding:0.5em; margin-right:0.5em;">Edit</a></div>
+        </div>
+    </div>
+    HTML;
 }
 
 
 
-function showProductPage($o) {
+function showProductPage($o){
+    $id = $_GET['id'];
+    $addoredit = $id == "new" ? "Add" : "Edit";
+    $createorupdate = $id == "new" ? "create" : "update";
+    $images = array_reduce(explode(",", $o->images), function($r, $o){
+        return $r."<img src='../img/$o'>";
+    });
 
-$id = $_GET['id'];
-$addoredit = $id == "new" ? "Add" : "Edit";
-$createorupdate = $id == "new" ? "create" : "update";
-//$images = explode(",", $o->image);
-$images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img src='img/$o'>";});
 
-
-
-// heredoc
-$display = <<<HTML
-<div>
-	<h2>$o->name</h2>
-	<div class="form-control">
-		<label class="form-label" style="color: gray;">Price</label>
+    // heredoc
+    $display = <<<HTML
+    <div>
+        <h2>$o->name</h2>
+        <div class="form-control">
+            <label class="form-control">
+            <label class="form-label" style="color: gray;">Price</label>
 		<span>&dollar;$o->price</span>
 	</div>
 	<div class="form-control">
@@ -138,7 +131,7 @@ $display = <<<HTML
 	</div> 
 	<div class="form-control">
 		<label class="form-label" style="color: gray;">Image</label>
-		<span class="images-thumbs"><img src='img/$o->images'></span>
+		<span class="images-thumbs"><img src="img/$o->images"></span>
 	</div>
 </div>
 HTML;
@@ -233,26 +226,23 @@ HTML;
 	<div class="container">
 
 			<?php
+            if (isset($_GET['id'])) {
+                echo showProductPage(
+                    $_GET['id'] == "new" ?
+                        $empty_product :
+                        makeQuery(makeConn(), "SELECT * FROM `product` WHERE `id`=".$_GET['id'])[0]
+                );
+           
+            } else {
+                ?>
+				<h2>Product List</h2>
+				<?php
 
-			if(isset($_GET['id'])) {
-				showProductPage(
-					$_GET['id']=="new" ?
-						$empty_product :
-						makeQuery(makeConn(),"SELECT * FROM `product` WHERE `id`=".$_GET['id'])[0]
-				);
-			} else {
+				$result = makeQuery(makeConn(),"SELECT * FROM `product` ORDER BY `date_create` DESC");
 
+				echo array_reduce($result,'productListItem');				
 			?>
-			<h2>Product List</h2>
-			<?php
-
-			$result = makeQuery(makeConn(),"SELECT * FROM `product` ORDER BY `date_create` DESC");
-
-			echo array_reduce($result,'productListItem');
-
-			}
-
-			?>		
+			<?php } ?>		
 	</div>
 
 </body>

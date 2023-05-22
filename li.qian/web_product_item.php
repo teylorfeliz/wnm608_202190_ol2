@@ -43,7 +43,7 @@ $image_elements = array_reduce($images,function($r,$o){
 			<form class="card soft flat" method="post" action="web_cart_action.php?action=add-to-cart">
 				<input type="hidden" name="product-id" value="<?= $product->id ?>">
 				<div class="card-section">
-					<h2 class="product_title"><?= $product->id ?></h2>
+					<h2 class="product_title"><?= $product->name ?></h2>
 					<div class="product_price">&dollar;<?= $product->price ?></div>
 				</div>
 
@@ -71,11 +71,12 @@ $image_elements = array_reduce($images,function($r,$o){
 					<input type="submit" class="form-button" value="Add To Cart">
 				</div>
 			</form>
-				
-				<div class="card soft ">
-					<p><?= $product->description ?></p>
-				</div>
-		</div>			
+
+			<div class="card soft ">
+				<p><?= $product->description ?></p>
+			</div>	
+		</div>		
+		
 		</div>
 
 		<h2>Recommended Products</h2>

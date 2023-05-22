@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+include "lib/php/functions.php";
+include "parts/templates.php";
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -15,7 +19,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/sut4alb.css">
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script></head>
-<body>
+<body class="flush">
 	
 	<!-- header> -->
 	
@@ -58,12 +62,18 @@
 	<!-- product -->
 
 	
-	<div class="container">
-			<div class='productlist grid gap'></div>
-			
-			<!--recommendedCategory("fruit"); -->
+<!-- 	<div class="container">			
+		<h2>Latest Fruit</h2>
+		<?php recommendedCategory("fruit"); ?>
+		<h2>Latest Vegetables</h2>
+		<?php recommendedCategory("vegetable"); ?>		
+	</div> -->
 
-		
+	<div class="container">
+		<h2>Latest Fruit</h2>
+		<?php recommendedCategory("fruit"); ?>
+		<h2>Latest Vegetables</h2>
+		<?php recommendedCategory("vegetable"); ?>
 	</div>
 	
 

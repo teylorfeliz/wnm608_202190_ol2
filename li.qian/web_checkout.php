@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+
+// $cart_items = getCartItems();
+$cart = getCartItems();
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,12 +22,32 @@
 	<?php include "parts/header.php"; ?>
 
 	<div class="container">
-		<div class="card soft">
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-5">
+				<div class="card soft">
+					<h2>Item Review</h2>
+					<div class="card-section">
+					<?php 
+					echo array_reduce($cart,function($r,$o){
+						$totalfixed = number_format($o->total,2,'.','');
+						return $r."<div class='display-flex'>
+							<div class='flex-stretch'>$o->name</div>
+							<div class='flex-stretch'>&dollar;$totalfixed</div>
+						</div>";
+					}) ?>
+				</div>
+				<?= cartTotals(); ?>
+				</div>
+			</div>
+
+
+
+			<div class="col-xs-12 col-md-7">
+				<div class="card soft">
 			<h2>Product Checkout</h2>
 
-			<h3>Address</h3>
-			
 			<form class="form">
+				<h3>Address</h3>
 				<div class="form-control">	
 					<label class="address-street" class="form-label">Street</label>
 					<input id="address-street" type="text" placeholder="Street name" class="form-input">
@@ -54,8 +83,9 @@
 
 			</form>
 
-			<h3>Payment</h3>
+			
 			<form action="form">
+				<h3>Payment</h3>
 				<div class="form-control">
 					<label for="pament-name" class="form-label">Full Name</label>
 					<input id="payment-name" type="text" placeholder="Name" class="form-input">
@@ -86,10 +116,11 @@
 				</div>
 
 			</form>
-
+			</div>
+			</div>
 
 			
-		</div>
+		</div>		
 	</div>
 
 

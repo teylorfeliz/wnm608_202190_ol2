@@ -5,7 +5,7 @@ include_once "parts/templates.php";
 
 ?><!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="flex-wrap">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Product List</title>
@@ -49,7 +49,7 @@ include_once "parts/templates.php";
 		</div>
 		<div class="form-control">
 			<div class="card soft">
-			<div class="display-flex">
+			<div class="display-flex flex-wrap">
 				<div class="flex-stretch display-flex">
 				<div class="flex-none">
 					<button data-filter="category" data-value="" type="button" class="form-button" style="padding: 5px; margin: 5px;">All</button>
