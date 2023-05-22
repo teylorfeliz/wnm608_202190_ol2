@@ -17,7 +17,7 @@ resetCart();
 
 		<div class="container">
 			<div class="card soft">
-				<h2>Thank you for your purchases</h2>
+				<h2>Thank you for your purchases!</h2>
 				<p><a href="product_list.php">Continue shopping</a></p>
 			</div>
 		</div>

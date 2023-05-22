@@ -19,7 +19,7 @@ include_once "lib/php/function.php";
             <span>Cart</span>
             <span class="badge"><?= makeCartBadge(); ?></span>
         </a></li>
-        <li><a href="#">Account</a></li>
+
     	</ul>
     </nav>
 </div>

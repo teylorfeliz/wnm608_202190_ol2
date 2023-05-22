@@ -1,32 +1,20 @@
 <?php
-
 include_once "lib/php/function.php";
-
-?>
-<!DOCTYPE html>
+include_once "parts/templates.php";
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RVtoME</title>
-
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-   	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+	<?php include "parts/meta.php";?>
 </head>
-<body>
+<body class="flush">
 
-	<!-- header> -->
 	<?php include "parts/navbar.php"; ?>
 
 
-
 	<div class="container">
-
-
-	<div class="card">
+	<div class="card soft">
 
 
 		<figure class="figure product">
@@ -36,9 +24,34 @@ include_once "lib/php/function.php";
 	</div>
 	</div>
 
-	<!-- product -->
-	<?php include "parts/products.php"; ?>
+	<div class="container">
+		<div class="card soft">
+			<h2>Recommended Destinations</h2>
+		</div>
+	</div>
 
+
+	<div class="container">
+		<?php 
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `location`='Seattle,WA' ORDER BY `date_create` DESC Limit 3");
+		recommendedProducts($result);
+		?>
+	</div>
+
+	<div class="container">
+		<div class="card soft">
+			<h2>Delivery Available</h2>
+		</div>
+	</div> 
+
+	<div class="container">
+		<?php 
+
+	$result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='Delivery' ORDER BY `date_create` DESC Limit 3");
+		recommendedProducts($result);
+		?>
+	</div>
 
 
 

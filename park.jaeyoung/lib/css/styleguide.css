@@ -32,6 +32,7 @@ body {
 	font-family:var(--font-sans)
 }
 
+
 h1,
 h2,
 h3,
@@ -57,9 +58,14 @@ a:hover {
 	max-width:1000px;
 	margin-right: auto;
 	margin-left: auto;
+	justify-content: center;
+	align-items: center;
+
 }
 
-
+h2 {
+	text-align: ;
+}
 
 .display-flex { display:flex; }
 .display-inline-flex { display:inline-flex; }
@@ -73,6 +79,8 @@ a:hover {
 .flex-justify-center { justify-content:center; }
 
 .flex-column { flex-direction:column; }
+.flex-wrap { flex-wrap;wrap }
+
 
 
 
@@ -183,6 +191,7 @@ a:hover {
 	background-color: var(--color-main-dark);
 	color: var(--color-white);
 	line-height: var(--header-height);
+	margin-bottom:1em;
 }
 
 	.navbar h1{
@@ -190,7 +199,12 @@ a:hover {
 		margin:0;
 		font-family: var(--font-sans) ;
 	}
-
+	.navbar a{
+		padding: 0 0.5em;
+	}
+	.flush>.navbar {
+		margin-bottom:0;
+	}
 
 
 /* CARD */
@@ -207,6 +221,7 @@ a:hover {
 	.card.soft {
 		border-radius: 0.5em;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		
 	}
 	.card.hard {
 		border-radius: 0.2em;
@@ -231,7 +246,10 @@ a:hover {
 	padding: 1em;
 	}
 
-	
+	[class*='col-']>. card{
+		height: 100%;
+		margin:0;
+	}
 
 	.view-window {
 		height: 50vh;
@@ -321,10 +339,10 @@ a:hover {
 .form-button {
 	background-color: var(--color-neutral-light);
 	padding: 0.5em 0;
-	border-radius: 0.2em;
+	border-radius: 2em;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 2em;
+	margin-right:20px;
 }
 
 .form-button.inline {
@@ -338,13 +356,44 @@ a:hover {
 	background-color: var(--color-main-light);
 }
 
+.form-select {
+	appearance: none;
+ 	border:1px solid #ccc;
+ 	border-radius: 4px;
+ 	padding: 8px;
+ 	font-size: 16px;
+
+}
+
+.js-sort {
+	border:none;
+	outline: none;
+	background-color: white;
+	font-size: 16px;
+
+}
+
+#product-amount {
+		border:none;
+	outline: none;
+	background-color: white;
+	font-size: 16px;
+}
+
+#product-people {
+	border:none;
+	outline: none;
+	background-color: white;
+	font-size: 16px;
+
+}
 
 .hotdog {
 	background-color: var(--color-neutral-light);
 	border-radius: 1em;
-	padding: 0.5em 1.5em;
+	padding: 0.5em;
 	display: flex;
-	max-width: 900px;
+	max-width: 338px;
 	margin-left: auto;
 	margin-right: auto
 }
@@ -355,7 +404,7 @@ a:hover {
 }
 
 .hotdog.light {
-	background-color: var(--color-white );
+
 	color: var(--color-black);
 }
 
@@ -419,8 +468,9 @@ a:hover {
 
 
 
-
-
+.images-thumbs{
+	padding: 0 0.5em;
+}
 
 
 
