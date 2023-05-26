@@ -7,6 +7,6 @@
 - http://joyshih.com/wnm608/Shih.Yuhuan/admin/index.php
 
 ## Extra Links
-- http://joyshih.com/wnm608/Shih.YuhuanShih.Yuhuan/users.php
-- http://joyshih.com/wnm608/Shih.YuhuanShih.Yuhuan/notes
-- http://joyshih.com/wnm608/Shih.YuhuanShih.Yuhuan/notes/reading_data.php
+- http://joyshih.com/wnm608/Shih.Yuhuan/users.php
+- http://joyshih.com/wnm608/Shih.Yuhuan/notes
+- http://joyshih.com/wnm608/Shih.Yuhuan/notes/reading_data.php
