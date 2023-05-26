@@ -93,3 +93,32 @@ return <<<HTML
 
 HTML;
 }
+
+
+// function productList($rows) {
+// 	$products = array_reduce($rows,'productListTemplate');
+// 	echo "<div class='grid gap productlist'>$products</div>";
+// }
+
+function recommendedProducts($a) {
+    $products = array_reduce($a,'productListTemplate');
+	echo <<<HTML
+    <div class="grid gap productlist">$products</div>
+    HTML;
+}
+
+function recommendedAnthing($limit=3) {	
+    $result = makeQuery(makeConn(),"SELECT * FROM `products`  ORDER BY rand() LIMIT $limit");	
+    recommendedProducts($result);
+}
+
+function recommendedCategory($cat,$limit=3) {	
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit");	
+    recommendedProducts($result);
+}
+
+function recommendedSimilar($cat,$id=0,$limit=3) {	
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `category`='$cat' AND 'id'<>$id ORDER BY rand() DESC LIMIT $limit");	
+    recommendedProducts($result);
+}
+
