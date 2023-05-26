@@ -15,9 +15,11 @@
 </head>
 <body>
     <?php include "parts/navbar.php"; ?>
+    <!-- Banner -->
+    <?php include "parts/banner.php"?>
 
-    <div class="container margin-top-5em">
-        <h2 style="color: var(--color-lotus);"> In your Bag </h2>
+    <div class="container margin-top-7em">
+        <!-- <h2 style="color: var(--color-lotus);"> In your Bag </h2> -->
 
         <?php
             if (count($bag)) {
@@ -45,7 +47,7 @@
                 <p>No items in bag</p>
             </div>
 
-            <h3>Other Recommendations</h3>
+            <h3 style="color: var(--color-neutral-light);">Other Recommendations</h3>
             <?php recommendedAnything(6);?>
         <?php
             }

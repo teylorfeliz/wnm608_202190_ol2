@@ -3,13 +3,13 @@
     include "../lib/php/functions.php";
 
     $empty_product = (object)[
-        "name"=>"jealous steal your heart",
-        "price"=>"35.95",
-        "quantity"=>"20",
-        "category"=>"Ring",
-        "description"=>"Inspired by traditional eternity bands, this 18K gold ring is handcrafted with green sapphires mounted in a signature undulating profile. Every gem has been cut with multiple random facets to sparkle, even in low light.• 18K Gold• Gemstones: Green Sa",
-        "thumbnail"=>"500ring01.jpg",
-        "images"=>"500ring01.jpg"
+        "name"=>"",
+        "price"=>"",
+        "quantity"=>"",
+        "category"=>"",
+        "description"=>"",
+        "thumbnail"=>"",
+        "images"=>""
     ];
 
     // LOGIC
@@ -208,6 +208,10 @@
         /* .card.soft {
             margin-top: 6em !important;
         } */
+
+        body {
+            background-image: none;
+        }
     </style>
     
     <header class="navbar">

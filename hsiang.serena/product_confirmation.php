@@ -13,8 +13,9 @@
 </head>
 <body>
     <?php include "parts/navbar.php"; ?>
+    <?php include "parts/banner.php"?>
 
-    <div class="container margin-top-5em">
+    <div class="container margin-top-7em">
         <div class="card soft">
             <h2>Thank you for your purchase</h2>
             <p><a href="product_list.php">Continue Shopping</a></p>

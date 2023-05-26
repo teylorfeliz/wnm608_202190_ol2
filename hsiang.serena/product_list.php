@@ -21,12 +21,13 @@
 </head>
 <body>
     <?php include "parts/navbar.php"?>
+    <?php include "parts/banner.php"?>
     <style>
         .title {
             margin-top: 0px;
         }
     </style>
-    <div class="container">
+    <div class="container margin-top-7em">
         <div class="card soft margin-top-5em">
             <h2 class="title">Shop</h2>
 
@@ -38,7 +39,7 @@
             <div class="form-control">
                 <div class="card soft">
                     <div class="display-flex flex-wrap">
-                        <div class="flex-stretch display-flex">
+                        <div class="flex-stretch display-flex category">
                             <div class="flex-none btn-container">
                                 <button data-filter="category" data-value="" type="button" class="form-button">All</button>
                             </div>

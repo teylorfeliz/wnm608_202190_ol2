@@ -8,12 +8,14 @@
 </head>
 <body>
     <?php include "parts/navbar.php"?>
+    <!-- Banner -->
+    <?php include "parts/banner.php"?>
     <style>
         .title {
             margin-top: 0px;
         }
     </style>
-    <div class="container">
+    <div class="container margin-top-7em">
         <div class="card soft margin-top-5em">
             <h2 class="title">Our Best Seller Products</h2>
         <?php

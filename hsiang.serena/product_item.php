@@ -20,8 +20,9 @@
 </head>
 <body>
     <?php include "parts/navbar.php"?>
+    <?php include "parts/banner.php"?>
 
-    <div class="container">
+    <div class="container margin-top-7em">
         <div class="grid gap margin-top-5em">
             <div class="col-xs-12 col-md-7">
                 <div class="card soft">
@@ -83,7 +84,7 @@
             <p><?= $product->description ?></p>
         </div>
 
-        <h2>Recommended Products</h2>
+        <h2 style="color: var(--color-neutral-light);">Recommended Products</h2>
         <?php recommendedSimilar($product->category, $product->id); ?>
     </div>
 </body>

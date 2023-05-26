@@ -1,6 +1,6 @@
 <?php
 
-include "../lib/php/functions.php";
+include_once "../lib/php/functions.php";
 
 $notes_object = file_get_json("notes.json");
 $users_array = file_get_json("../data/users.json");
@@ -21,8 +21,8 @@ $users_array = file_get_json("../data/users.json");
             margin-top: 6em;
         }
     </style>
-    <?php include "../parts/navbar.php"?>
-    <?php include "../parts/banner.php"?>
+    <?php include_once "../parts/navbar.php"?>
+    <?php include_once "../parts/banner.php"?>
 
     <div class="container">
         <div class="card soft notes">

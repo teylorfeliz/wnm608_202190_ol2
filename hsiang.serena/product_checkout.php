@@ -14,8 +14,9 @@
 </head>
 <body>
     <?php include "parts/navbar.php"; ?>
+    <?php include "parts/banner.php"?>
 
-    <div class="container margin-top-5em">
+    <div class="container margin-top-7em">
         <div class="grid gap">
             <div class="col-xs-12 col-md-5">
                 <div class="card soft">

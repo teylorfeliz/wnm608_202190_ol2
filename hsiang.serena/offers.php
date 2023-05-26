@@ -13,7 +13,7 @@
 <body>
     <style>
         .offers {
-            margin-top: 6em;
+            margin-top: 7em;
         }
 
     </style>

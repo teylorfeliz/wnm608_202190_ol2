@@ -4,7 +4,7 @@
 <header class="navbar">
     <div class="container display-flex">
         <div class="flex-none">
-            <h1>S Jewelry Box</h1>
+            <h1><a href="index.php" style="text-decoration: none;">S Jewelry Box</a></h1>
         </div>
         <div class="flex-stretch"></div>
         <div class="flex-none menu-button">

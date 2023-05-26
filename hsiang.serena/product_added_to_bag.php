@@ -17,12 +17,13 @@
 </head>
 <body>
     <?php include "parts/navbar.php"; ?>
+    <?php include "parts/banner.php"?>
 
-    <div class="container">
+    <div class="container margin-top-7em">
         <div class="card soft margin-top-5em">
             <h2> You added <?= $bag_product->color ?> <?= $product->name ?> to your bag. </h2>
-            <p> There are now <?= $total_count ?> <?= $product->name ?> in your bag. </p>
-            <div class="display-flex">
+            <p style="margin-top: 3em;"> There are now <?= $total_count ?> <?= $product->name ?> in your bag. </p>
+            <div class="display-flex" style="margin-top: 10em;">
                 <div class="flex-none"><a href="product_list.php">Continue Shopping</a></div>
                 <div class="flex-stretch"></div>
                 <div class="flex-none"><a href="product_bag.php">Go To Bag</a></div>
