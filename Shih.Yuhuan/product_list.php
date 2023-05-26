@@ -63,9 +63,9 @@ include_once "lib/php/functions.php";
 
 	<script src="lib/js/function.js"></script>
 	<script src="js/templates.js"></script>
-	<script src="js/product_list.js"></script>
+	<script src="js/product_list.js?v=<? time()?>"></script>
 
-	
+
 	
 	<div class="container">
 		
@@ -117,7 +117,14 @@ include_once "lib/php/functions.php";
 		</div>			
 
 	</div>
-
+	
+	<footer class="bg-dark text-main-medium text-center mt-3 py-1">
+        <div class="footer-content">
+            <p>©2023 Champing.com All Rights Reserved<br>
+            </p>
+        </div>
+        
+    </footer>
 
 </body>
 </html>

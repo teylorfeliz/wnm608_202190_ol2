@@ -56,6 +56,7 @@ $image_elements = array_reduce($images,function($r,$o){
 
 						<div class="card-section">
 							<h2 class="product-title"><?= $product->brand ?>&nbsp;<?= $product->name ?></h2>
+							<div class="product-category"><?= $product->category ?></div>
 							<div class="product-price">&dollar;<?= $product->price ?></div>				
 						</div>
 
@@ -109,14 +110,26 @@ $image_elements = array_reduce($images,function($r,$o){
 				
 		</div>
 
-		<div class="card hard" >
+		<div class="card medium" style="font-size: 18px; background-color: #f4f2ed; color:#053426">
 				<p><?= $product->description ?></p>
 			</div>
-						
+		
+			
+		<h2>Recommended Products</h2>	
+
+		<?php 
+        recommendedSimilar($product->category,$product->id);
+        ?>
 	</div>
 		
 	
-
+	<footer class="bg-dark text-main-medium text-center mt-3 py-1">
+        <div class="footer-content">
+            <p>©2023 Champing.com All Rights Reserved<br>
+            </p>
+        </div>
+        
+    </footer>
 	
 	
 

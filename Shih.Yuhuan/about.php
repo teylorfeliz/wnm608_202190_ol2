@@ -7,11 +7,7 @@
 
 	<?php include "parts/navbar.php"; ?>
 	
-	<div class="container">
-		<div class="card flat">
-			<h2>About Us</h2>
-		</div>
-	</div>
+	<div class="container"></div>
 
 	<div class="view-window" style="background-image: url('img/campingtent.jpg');">
 			</div>
@@ -29,6 +25,14 @@ In addition to providing detailed product information on the website, it also re
 
 	</div>
 </div>
+
+<footer class="bg-dark text-main-medium text-center mt-3 py-1">
+        <div class="footer-content">
+            <p>©2023 Champing.com All Rights Reserved<br>
+            </p>
+        </div>
+        
+    </footer>
 
 </body>
 </html>

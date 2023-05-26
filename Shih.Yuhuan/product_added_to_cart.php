@@ -33,5 +33,8 @@ $cart_product = cartItemById($_GET['id']);
 		</div>
 	</div>
 
+	
+
+
 </body>
 </html>
