@@ -1,0 +1,198 @@
+.slideShow{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1523/500;
+    /* padding: 0 50px; */
+    box-sizing: border-box;
+}
+@media (max-width:600px){
+    .slideShow{
+        height: 225px;
+    }
+}
+.slideShow .slides{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.slideShow .slide{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* aspect-ratio: 365/118; */
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-position: center center;
+    background-size: 100%,cover;    
+    background-repeat: no-repeat;
+    opacity: 0;
+    user-select: none;
+    
+}
+
+body{
+    --interval:0px;
+}
+
+.slideShow .left-3{
+    transform: translateX(calc(-450% - var(--interval)*4));
+}
+.slideShow .left-2{
+    transform: translateX(calc(-350% - var(--interval)*3));  
+}
+.slideShow .left-1{
+    transform: translateX(calc(-250% - var(--interval)*2));
+}
+.slideShow .stage-1{
+    transform: translateX(calc(-150% - var(--interval)));
+    opacity: 1;
+}
+.slideShow .stage-2{
+    opacity: 1;
+}
+.slideShow .stage-3{
+    transform: translateX(calc(50% + var(--interval)));
+    opacity: 1;
+}
+.slideShow .right-1{
+    transform: translateX(calc(150% + var(--interval)*2));
+}
+.slideShow .right-2{
+    transform: translateX(calc(250% + var(--interval)*3));
+}
+.slideShow .right-3{
+    transform: translateX(calc(350% + var(--interval)*4));
+
+}
+
+
+.slideShow .moving{
+    transition: opacity 0.2s ease-out ,transform 0.35s ease-in-out;
+    -webkit-transition: opacity 0.2s ease-out ,transform 0.35s ease-in-out;
+    -moz-transition: opacity 0.2s ease-out ,transform 0.35s ease-in-out;
+    -ms-transition: opacity 0.2s ease-out ,transform 0.35s ease-in-out;
+    -o-transition: opacity 0.2s ease-out ,transform 0.35s ease-in-out;
+}
+
+
+
+.slideShow .controller{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+
+.slideShow .controller button{
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    font-size: 2em;
+    color: #FFD79A;
+    transition: all 0.3s;
+}   
+
+.slideShow .controller button:hover{
+    cursor: pointer;
+    color: #f6c768ae;
+}
+
+.slideShow .control-dot{
+    position: absolute;
+    word-spacing: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-25px);
+    width: fit-content;
+    user-select: none;
+    -webkit-transform: translate(-50%,-25px);
+    -moz-transform: translate(-50%,-25px);
+    -ms-transform: translate(-50%,-25px);
+    -o-transform: translate(-50%,-25px);
+}
+
+.slideShow .control-dot button{
+    border: 0px solid #053426;
+    background-color: #053426;
+    appearance: none;
+    border-radius: 100vh;
+    width: 10px;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.slideShow .control-dot button:hover{
+    background-color: #f6c768ae;
+    border: 0px solid #f6c768ae;
+}
+
+.slideShow .control-dot button.active{
+    border: 0px solid #f6c768;
+    background-color: #f6c768;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.slidetxt {
+    width: 80%;
+    text-align: center;
+    text-shadow: 0 2px 1px #333, 0px 0 3px #053426;
+    color: aliceblue;
+    word-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.slidetxt small{
+    padding: 0 2ch;
+    background-color: #33333399;
+}
+
+@media (max-width:1000px){
+    .slidetxt{
+        font-size: .7rem;
+    }
+    .slidetxt h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:600px){
+    .slidetxt{
+        font-size: .7rem;
+    }
+    .slidetxt h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:400px){
+    .slidetxt{
+        font-size: .5rem;
+    }
+    .slidetxt h1{
+        font-size: 1rem;
+    }
+}
