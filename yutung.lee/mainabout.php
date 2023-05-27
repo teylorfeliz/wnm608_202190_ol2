@@ -22,7 +22,7 @@
 	<div class="container">
         <div class="card soft">
         <h2>About Us</h2>
-        <p>ajdnakdbkaba</p>
+        <p>Take responsibility for the rest of your life by providing quality service to our adorable furry friends.</p>
     </div>
     	</div>
 

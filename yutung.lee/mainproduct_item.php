@@ -13,6 +13,11 @@ $image_elements = array_reduce($images,function($r,$o){
 	return $r. "<img src='http://www.yutunglee.com/Development/home/yvn86jesdiy5/public_html/Development/wnm608_202190_ol2/yutung.lee/img/$o'>";
 });
 
+
+
+
+
+
 //print_p($_SESSION);
 
 ?><!DOCTYPE html>
@@ -94,7 +99,7 @@ $image_elements = array_reduce($images,function($r,$o){
 				</form>
 			</div>
 		</div>
-		<div class="card soft dark">
+		<div class="card soft">
 			<p><?= $product->description ?></p>
 		</div>
 

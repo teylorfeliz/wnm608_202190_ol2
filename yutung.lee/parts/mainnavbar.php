@@ -9,12 +9,19 @@ include_once "lib/php/functions.php";
 <base href="http://www.yutunglee.com/Development/home/yvn86jesdiy5/public_html/Development/wnm608_202190_ol2/yutung.lee/">
 
 
+
+
+
+
 <input type="checkbox" id="menu" class="hidden">
 <header class="navbar">
 	<div class="container display-flex">
 	<div class="flex-none">
-		<h1>Pet Paradise</h1>
-	</div>		
+		<font color="#FFC872" size="">
+		<a href="mainpage.php">Pet Paradise</a>
+		<!-- <h1 href="mainpage.php">Pet Paradise</h1> -->
+	</div>
+	</font>		
 	<div class="flex-stretch"></div>
 	<div class="flex-none menu-button">
 		<label for="menu">&equiv;</label>

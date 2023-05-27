@@ -5,13 +5,13 @@ include "../lib/php/functions.php";
 
 
 $empty_product = (object)[
-	"name"=>"Hill's: Chicken Recipe",
-	"description"=>"cat food so nice",
-	"price"=>"61.99",
-	"category"=>"Cat",
-	"thumbnail"=>"catfood02_thumb.png,catfood03_thumb.png",
-	"images"=>"catfood_thumb.png",
-	"quantity"=>"60"
+	"name"=>"",
+	"description"=>"",
+	"price"=>"",
+	"category"=>"",
+	"thumbnail"=>"",
+	"images"=>"",
+	"quantity"=>""
 ];
 
 
@@ -19,6 +19,7 @@ $empty_product = (object)[
 
 // 	LOGIC
 try {
+	if(isset($_GET['action'])) {
 	$conn = makePDOConn();
 	switch($_GET['action']) {
 		case "update":
@@ -71,19 +72,22 @@ try {
 				$_POST['product-description'],
 				$_POST['product-thumbnail'],
 				$_POST['product-images']
-			]);
-			$id = $conn->lastInsertId();
-			header("location:{$_SERVER['PHP_SELF']}?id=$id");
-			break;
-		case "delete":
-			$statement = $conn->prepare("DELETE FROM `products` WHERE id=?");
-			$statement->execute([$_GET['id']]);
-			header("location:{$_SERVER['PHP_SELF']}");
-			break;
-	}
-} catch(PDOException $e) {
-    die($e->getMessage());
+        ]);  
+        $id= $conn->lastInsertID();   
+        header("location:{$_SERVER['PHP_SELF']}?id=$id");
+        break;
+    case "delete":
+        $statement = $conn->prepare("DELETE FROM `products` WHERE `id`=?");
+        $statement->execute([$_GET['id']]);        
+        header("location:{$_SERVER['PHP_SELF']}");
+        break;
+        }
+    }
+} catch (PDOException $e) {
+    echo $e->getMessage();
+  die($e->getMessage());
 }
+
 
 
 
@@ -171,7 +175,7 @@ $images = array_reduce(explode(",", $o->images),function($r,$o){return $r."<img 
 
 		<div class="form-control">
 			<label class="form-label" for="product-description">Description</label>
-			<textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description"</textarea>
+			<textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description</textarea>
 		</div>
 
 		<div class="form-control">

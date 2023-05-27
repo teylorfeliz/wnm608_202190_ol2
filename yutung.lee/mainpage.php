@@ -27,6 +27,15 @@ include_once "parts/templates.php";
             </figure>
 
     	</div>
+
+    	<article id="article2" class="article card hard">
+		<!-- <h2>Article 2</h2> -->
+		<div class="article-body">
+			<p>Take responsibility for the rest of your life by providing quality service to our adorable furry friends.</p>
+		
+		</div>
+	</article>
+    	</div>
     </div>
 
     <div class="container">
