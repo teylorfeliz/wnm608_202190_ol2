@@ -287,6 +287,7 @@ ul.drop-down-menu {
 	max-width: 700px;
     display: flex;
 	justify-content: space-around;
+	align-items: center;
 	flex-wrap: wrap;
     font-family: var(--font-sans);
     font-size: 16px;
@@ -313,7 +314,6 @@ ul.drop-down-menu {
     display: block;
     padding: 0;
     text-decoration: none;
-    line-height: 40px;
   }
   
  
@@ -1113,7 +1113,9 @@ input.basic-button {
 	position: absolute;
 	/*display: none;
 	*/top: 100%;
-	background-color: #172b26fc;
+	
+    line-height: 2rem;
+	background-color: #172320ec;
 	color: #eee;
 	z-index: 10;
 	box-shadow:  1px 1px 2px 1px #132922;

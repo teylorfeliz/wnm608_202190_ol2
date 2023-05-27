@@ -2,18 +2,12 @@
 
 include "../lib/php/functions.php";
 
-// $filename = "notes.json";
-// $file = file_get_contents($filename);
-// $notes_object = json_decode($file);
 
-// $filename = "notes.json";
-// $file = file_get_contents($filename);
-// $notes_object = json_decode($file);
 
 $notes_object = file_get_json("notes.json");
 $users_array = file_get_json("../data/users.json");
 
-// print_p($notes);
+
 
  ?>
  <!DOCTYPE html>
@@ -23,12 +17,10 @@ $users_array = file_get_json("../data/users.json");
  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
  	<title>Reading Data</title>
 
-
- 	<?php include "../parts/meta.php"; ?>
  </head>
  <body>
 
- 	<?php include "../parts/navbar.php"; ?>
+ 	
 
  	<div class="container">
  		<div class="card soft">
