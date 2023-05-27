@@ -6,3 +6,7 @@
 - http://joyshih.com/wnm608/Shih.Yuhuan/styleguide
 - http://joyshih.com/wnm608/Shih.Yuhuan/admin/index.php
 
+## Extra Links
+- http://joyshih.com/wnm608/Shih.Yuhuan/admin/users.php
+- http://joyshih.com/wnm608/Shih.Yuhuan/admin/notes
+- http://joyshih.com/wnm608/Shih.Yuhuan/admin/notes/reading_data.php
