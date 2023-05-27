@@ -10,7 +10,7 @@ $empty_product = (object) [
     "quantity" =>"99",    
     "description" =>"Trail 25 Pack",
     "thumbnail" =>"backpacks1101.jpg",
-    "images" =>"backpacks1101.jpg"
+    "images" =>"backpacks1101"
 
 ];
 
