@@ -72,7 +72,7 @@ $image_elements = array_reduce($images,function($r,$o){
 				</div>
 			</form>
 
-			<div class="card soft ">
+			<div class="card soft">
 				<p><?= $product->description ?></p>
 			</div>	
 		</div>		

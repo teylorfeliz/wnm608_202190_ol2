@@ -86,10 +86,12 @@ body {
     border-radius: 0.5em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    width: 250;
     height: 100%;
     transition: all 0.3s;
 }
 .product.figure img {
+    width: 250px;   
     height: 100%;
     object-fit: contain;
 }

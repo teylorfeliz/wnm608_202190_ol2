@@ -22,10 +22,12 @@ include "parts/templates.php";
 <body class="flush">
 	
 	<!-- header> -->
+	<?php include "parts/header.php"; ?>
 	
-	<header class="navbar">
+<!-- 	<header class="navbar">
 		<div class="container display-flex">
 			<div class="flex-none">
+
 				<h1 style="font-family: --font-theme-title:june-expt-variable, sans-serif; color: var(--color-white);">Clover's Fresh</h1>
 			
 			</div>
@@ -33,7 +35,7 @@ include "parts/templates.php";
 	
 		<nav class="flex-none nav">
 			<ul class="container display-flex">
-				<li><a href="home.php">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="web_product_list.php">Product</a></li>
 				<li><a href="web_about.php">About</a></li>
 				<li><a href="web_cart.php">
@@ -43,7 +45,7 @@ include "parts/templates.php";
 			</ul>
 		</nav>
 		</div>
-	</header>
+	</header> -->
 
 
 	<div class="container">

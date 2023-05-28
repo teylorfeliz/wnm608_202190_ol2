@@ -31,10 +31,13 @@ SET time_zone = "+00:00";
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
+  `date_create` datetime NOT NULL,
+  `date_modify` datetime NOT NULL,
   `price` decimal(10,0) NOT NULL,
   `catagory` varchar(32) NOT NULL,
   `description` text NOT NULL,
-  `images` varchar(256) NOT NULL
+  `images` varchar(256) NOT NULL,
+  `quantity` tinyint(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

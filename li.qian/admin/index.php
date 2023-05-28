@@ -4,12 +4,12 @@ include "../lib/php/functions.php";
 
 
 $empty_product = (object)[
-    "name"=>"apple",
-    "description"=>"sweet",
-    "price"=>"3.99",
-    "category"=>"fruit",
-    "images"=>"fruit_apples_1.jpg",
-    "quantity"=>"23"
+	"name"=>"",
+	"price"=>"",		
+	"category"=>"",
+	"description"=>"",
+	"images"=>"",
+	"quantity"=>""
 ];
 
 
@@ -23,9 +23,9 @@ try {
                 `product`
                 SET
                     `name`=?,
-                    `description`=?,
                     `price`=?,
                     `category`=?,
+                    `description`=?,
                     `images`=?,
                     `quantity`=?,
                     `date_modify`= NOW()
@@ -33,9 +33,9 @@ try {
                 ");
             $statement->execute([
                 $_POST['product-name'],
-                $_POST['product-description'],
                 $_POST['product-price'],
                 $_POST['product-category'],
+                $_POST['product-description'],
                 $_POST['product-images'],
                 $_POST['product-quantity'],
                 $_GET['id']
@@ -47,9 +47,9 @@ try {
                 `product`
                 (
                     `name`,
-                    `description`,
                     `price`,
                     `category`,
+                    `description`,
                     `images`,
                     `quantity`,
                     `date_create`,
@@ -59,9 +59,9 @@ try {
                 ");
             $statement->execute([
                 $_POST['product-name'],
-                $_POST['product-description'],
                 $_POST['product-price'],
                 $_POST['product-category'],
+                $_POST['product-description'],
                 $_POST['product-images'],
                 $_POST['product-quantity']
             ]);
