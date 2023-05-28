@@ -20,9 +20,9 @@ $image_elements = array_reduce($images,function($r,$o){
     <title>Product Item</title>
   <?php include "parts/meta.php"; ?>
 
-  <script scr="js/product_thumbs.js"></script>
+  <script scr="lib/js/product_thumbs.js"></script>
 
-    <link rel="stylesheet" href="lib/css/styleguide.css">
+<link rel="stylesheet" href="lib/css/styleguide.css">
 
 </head>
 <body>

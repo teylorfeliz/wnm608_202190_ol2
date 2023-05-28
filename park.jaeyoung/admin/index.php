@@ -2,6 +2,7 @@
 
 include "../lib/php/function.php";
 
+
 $empty_product = (object)[
 	"name"=>"",
 	"email"=>"",
@@ -211,7 +212,11 @@ HTML;
 	<meta charset="UTF-8">
 	<title>Product Admin Page</title>
 
+
     <?php include "../parts/meta.php"; ?>
+    <link rel="stylesheet" href="../lib/css/styleguide.php">
+
+
 </head>
 <body>
 
