@@ -79,6 +79,7 @@ a:hover{
 .flex-justify-center{justify-content:center;}
 
 .flex-column{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
 
 /*Small Classes*/
 
@@ -190,7 +191,10 @@ a:hover{
 	color:var(--color-white);
 	line-height:var(--header-height);
 	height:100px;
+	margin-bottom:1em;
 }
+
+
 
 .navbar h1{
 	font-size:3em;
@@ -207,6 +211,9 @@ a:hover{
 	color:var(--color-white);
 }
 
+.flush>.navbar{
+	max-resolution:0;
+}
 /* CARD */
 
 .card{
@@ -240,6 +247,11 @@ a:hover{
 
 .card.flat{
 	padding:0;
+}
+
+[class*='col-']>.card{
+	height:100%;
+	margin:0;
 }
 
 .card-section~.card-section{

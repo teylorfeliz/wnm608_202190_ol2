@@ -145,31 +145,31 @@ $form = <<<HTML
 		<h2>$addoredit Product</h2>
 		<div class = "form-control">
 			<label class="form-label" for="product-name">Name</label>
-			<input class="form-input" name="product-name" id="product-name" type="text"  placeholder="Enter the Product Name">
+			<input class="form-input" name="product-name" id="product-name" value="$o->name" type="text"  placeholder="Enter the Product Name">
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-price">Price</label>
-			<input class="form-input" name="product-price" id="product-price"type="number" min="0" max="1000" step="0.01"  placeholder="Enter the Product Price">
+			<input class="form-input" name="product-price" id="product-price" value="$o->price" type="number" min="0" max="1000" step="0.01"  placeholder="Enter the Product Price">
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-category">Category</label>
-			<input class="form-input" name="product-category" id="product-category" type="text"  placeholder="Enter the Product Category">
+			<input class="form-input" name="product-category" id="product-category" value="$o->category"type="text"  placeholder="Enter the Product Category">
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-description">Description</label>
-			<textarea class="form-input" name="product-description" id="product-description"placeholder="Enter the Product Description"></textarea>
+			<textarea class="form-input" name="product-description" id="product-description" placeholder="Enter the Product Description">$o->description</textarea>
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-stock">Stock</label>
-			<input class="form-input" name="product-stock" id="product-stock" type="number" min="0" max="1000" step="1"  placeholder="Enter the Stock Quantity">
+			<input class="form-input" name="product-stock" id="product-stock" value="$o->stock" type="number" min="0" max="1000" step="1"  placeholder="Enter the Stock Quantity">
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-thumbnail">Thumbnail</label>
-			<input class="form-input" name="product-thumbnail" id="product-thumbnail" type="text"  placeholder="Enter the Product Thumbnail">
+			<input class="form-input" name="product-thumbnail" id="product-thumbnail" value="$o->thumbnail" type="text"  placeholder="Enter the Product Thumbnail">
 		</div>
 		<div class = "form-control">
 			<label class="form-label" for="product-image">Other Images</label>
-			<input class="form-input" name="product-image" id="product-image" type="text"  placeholder="Enter the Product Images">
+			<input class="form-input" name="product-image" id="product-image" value="$o->images" type="text"  placeholder="Enter the Product Images">
 		</div>
 		<div class = "form-control">
 			<input class="form-button" type="submit" value="Save Changes">
