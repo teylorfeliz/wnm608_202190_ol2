@@ -1,0 +1,248 @@
+:root {
+    --color-neutral-light: #eee;
+    --color-neutral-medium: #999;
+    --color-neutral-dark: #555;
+    --color-neutral-lightgrey: #ebe4de;
+
+    --color-main-light: #cbebf9;
+    --color-main-medium: #2592c3;
+    --color-main-dark: #052b3c;
+
+    --color-orange: #ffa500;
+    --color-green: #5f7258;
+    --color-lightgreen: #9eb593;
+    --color-dustyrose: #a75d66;
+    --color-indianred: #cd5c5c;
+    --color-rosered: #f6c9bb;
+    --color-dustypurple: #563f59;
+    --color-darkpurple: #301934;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-darkgreen: #0c4f4e;
+    --color-lotus: #725362;
+    --color-blotus: #9a6871;
+    
+}
+
+body {
+    background-color: var(--color-lightgreen);
+    padding-bottom: 4em;
+}
+
+.favorite label {
+    transition: all 0.3s;
+    display: inline-block;
+    transform: scale(1,1);
+    color: var(--color-green);
+}
+
+.favorite input:checked + label {
+    color: var(--color-indianred);
+    transform: scale(1.5,1.5);
+}
+
+@media (max-width:800px) {
+    .container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .navbar h1 {
+        padding-left: 0.5em;
+    }
+}
+
+.menu-button label {
+    display: none;
+}
+
+@media (max-width:400px) {
+    .navbar display-flex {
+        flex-wrap: wrap;
+    }
+
+    .navbar .nav {
+        width: 100%;
+        display: none;
+    }
+
+    .navbar .nav-flex ul {
+        display: block;
+        background: var(--color-dustypurple);
+        z-index: 100;
+        position: absolute;
+    }
+
+    .navbar .nav li {
+        line-height: 2em;
+    }
+
+    .menu-button label {
+        display: block;
+        padding: 0 1em;
+    }
+
+    #menu:checked+.navbar .nav {
+        display: block;
+    }
+
+    .banner {
+        position: fixed;
+        z-index: 1;
+    }
+
+    .view-window {
+        z-index: -1;
+    }
+
+    .container,
+    .col-xs-12 {
+        position: relative;
+        z-index: 0;
+    }
+
+    .category {
+        overflow: auto;
+    }
+
+    .sort {
+        margin-top: 5px;
+    }
+}
+
+.figure.product {
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.figure.product:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+.figure.product img:hover {
+    cursor: pointer;
+}
+
+.productlist a {
+    text-decoration: none;
+    font-weight: initial;
+}
+
+.product-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-overlay figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-overlay:hover figcaption {
+    opacity: 1;
+}
+
+.product-overlay .caption-body {
+    background: #a75d66;
+    color: #ebe4de;
+    border: 1.5px solid #f6c9bb;
+    border-radius: 0.5em;
+    padding: 1em;
+    transform: translateY(2em);
+    transition: all 0.3s;
+}
+
+.product-overlay:hover .caption-body {
+    transform: translateY(0);
+}
+
+.product-overlay img {
+    transform: scale(1, 1);
+    transition: all 0.3s;
+}
+
+.product-overlay:hover img {
+    transform: scale(1.4, 1.4);
+}
+
+@media (max-width:600px) {
+    .product-overlay figcaption {
+        position: relative;
+        display: block;
+        top: initial;
+        left: initial;
+        width: 100%;
+        height: initial;
+        opacity: 1;
+        background-color: initial;
+    }
+
+    .product-overlay .caption-body {
+        transform: none;
+        padding: 5px;
+    }
+}
+
+/* Toggle */
+.toggle label {
+    font-size: 1.3em;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 0.1em solid var(--color-orange);
+    border-radius: 1em;
+    position: relative;
+}
+.toggle label::after {
+    content: '';
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 1em;
+    position: absolute;
+    background-color: var(--color-darkgreen);
+    transition: all 0.3s;
+}
+.toggle input:checked + label::after {
+    transform: translateX(1em);
+}
+
+.margin-top-7em {
+    margin-top: 7em;
+}
+
+.product-price {
+    margin-bottom: 15px;
+}
+
+.images-main img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.images-thumbs img {
+    width: 8em;
+    height: 6em;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-left: -15px;
+}
+
+span.badge:not(:empty)::after {
+    content: ')';
+}
+span.badge:not(:empty)::before {
+    content: '(';
+}
