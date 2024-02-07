@@ -1,0 +1,44 @@
+[
+	{
+		"name":"Adela Seo",
+		"type":"Student",
+		"email":"adela918seo@gmail.com",
+		"classes":[608,617,820]
+	},
+		{
+			"name":"Ben Carlson",
+			"type":"Student",
+			"email":"benc@gmail.com",
+			"classes":[609,618,821]
+		},
+		{
+			"name":"Celine Dalton",
+			"type":"Student",
+			"email":"celined@gmail.com",
+			"classes":[608,617,820]
+		},
+		{
+			"name":"Dally Key",
+			"type":"Student",
+			"email":"adela918seo@gmail.com",
+			"classes":[609,618,821]
+		},
+		{
+			"name":"Elephant Animal",
+			"type":"Student",
+			"email":"elephanta@gmail.com",
+			"classes":[608,617,820]
+		},
+		{
+			"name":"Feng Shu",
+			"type":"Student",
+			"email":"fengshu@gmail.com",
+			"classes":[609,618,821]
+		},
+		{
+			"name":"Gail Molton",
+			"type":"Student",
+			"email":"gailm@gmail.com",
+			"classes":[608,617,820]
+		}
+]
