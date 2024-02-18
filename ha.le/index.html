@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assignment 1</title>
+
+	<link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="css/storetheme.css">
+</head>
+<body>
+	
+	<!--Emmet-- header>h1+p -->
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+				<h1>MODERN HOME</h1>
+			</div>
+			
+			<div class="flex-stretch"></div>
+
+			<!-- nav.nav>ul>li*4>a[href=#articles$]>{Link $} -->
+			<nav class="flex-none nav">
+				<ul class="container display-flex">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">PRODUCTS</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li><a href="#">CART</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+	<!--.container>artcle#article$.article*2>h2{Article 
+	$}+div.article-body>p>Lorem40 -->
+
+	<div class="view-window" style="background-image: url('img/building.jpeg')"></div>
+
+
+	<div class="container content">
+		<article class="display-flex article article-block ">
+			<div  class="sidebar">
+				<div>
+					<a href="#">THE ESSENCE OF MODERN HOME FURNITURE</a>
+				</div>
+				<div>
+					<small> Sun, Feb 18, 2024</small>
+				</div>
+			</div>
+			<div class="article-body">
+				<p>Welcome to our modern home furniture collection, where form meets function in the most stylish of ways. Our curated selection of pieces is designed to complement the sleek lines and contemporary aesthetic of modern homes. From minimalist Scandinavian designs to bold, statement-making pieces, our furniture is crafted with the highest quality materials and attention to detail. Whether you're looking to furnish your living room, bedroom, or dining area, our collection has something for every corner of your modern home.</p>
+			</div>
+		</article>
+		<article class="display-flex article article-block ">
+			<div class="sidebar">
+				<div>
+					<a href="#">ELEVATE YOUR SPACE</a>
+				</div>
+				<div class="flex-none">
+					<small> Sat, Feb 17, 2024</small>
+				</div>
+			</div>
+			<div class="article-body">
+				<p>In today's fast-paced world, the modern home is more than just a place to live—it's a sanctuary, a reflection of your personal style, and a space where you can truly be yourself. Our furniture is designed to enhance the functionality and comfort of your home, while also adding a touch of sophistication and elegance. With our modern home furniture collection, you can create a space that is both inviting and inspiring, where you can relax, entertain, and make memories with your loved ones.</p>
+			</div>
+		</article>
+
+		<div class="new-arrivals container">
+			<div style="background-image: url('img/sofa.jpg')">
+				<div class="display-flex flex-align-center flex-justify-center">
+					<a href="#">NEW ARRIVALS</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<footer class=" container display-flex">
+		<div class="container flex-align-center">
+			<div class="info flex-none">
+				<h>COMPANY INFO</h4>
+				<ul>
+					<li><a href="#">ABOUT US</a></li>
+					<li><a href="#">CONTACT US</a></li>
+					<li><a href="#">OUR POLICY</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="flex-stretch"></div>
+
+	 	<form action="action_page.php" class="flex-none flex-align-center">
+			<div class="text container">
+			    <h5>Enter your email to receive 5% off first order</h5>
+			</div>
+			<div class="container">
+			    <input type="text" placeholder="Email address" name="mail" required>
+			    <label>
+			    	<input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+			    </label>
+			</div>
+
+		  	<div class="button">
+		    	<input type="submit" value="Subscribe">
+		  	</div>
+		</form>
+	</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
