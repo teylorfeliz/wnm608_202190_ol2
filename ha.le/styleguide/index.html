@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Styleguide</title>
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="../lib/css/styleguide.css">
+	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../css/storetheme.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	
+	<header class="navbar">
+		<div class="container display-flex">
+			<div class="flex-none">
+				<h1>STYLEGUIDE</h1>
+			</div>
+			
+			<div class="flex-stretch"></div>
+			<nav class="flex-none nav">
+				<ul class="container display-flex">
+					<li><a href="#tableofcontents">Table of Contents</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="container" id="tableofcontents">
+		<h3 class="card flat">Table of contents</h3>
+		<div>
+			<nav class="nav">
+				<ul>
+					<li><a href="#typography">1. Typography</a></li>
+				    <li><a href="#cards">2. Cards</a></li>
+				    <li><a href="#navigation">3. Navigation</a></li>
+				    <li><a href="#gridsystem">4. Grid System</a></li>
+				     <li><a href="#gridsystem">5. Tables</a></li>
+				    <li><a href="#gridsystem">6. Figures</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container" id="typography">
+		<h3 class="card flat">1. Typography</h3>
+		<div  id="headings">
+			<h5>Headings</h5>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+
+		<div class="smallgap"></div>
+
+		<div id="paragraphs">
+			<h5>Paragraphs</h5>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio aspernatur tempore maiores magni hic ipsum officiis. Rerum minima eum odit molestiae aut quis, autem officiis sed quos impedit! Voluptate.</p>
+			<p>Architecto, cumque omnis quaerat minus culpa natus sint beatae libero harum. Maiores est hic porro amet magni fuga accusantium nemo esse! Perspiciatis, deserunt, odit. Facere pariatur illum enim quia sunt.</p>
+			<p>Temporibus illum error consequuntur quibusdam nisi fuga ipsam, ea obcaecati? Culpa vel similique soluta voluptates tempore! Pariatur quisquam minus, veniam? Nam ratione cumque numquam officiis repellat dolorem recusandae nemo. Inventore!</p>
+		</div>
+	</div>
+
+	<div class="container" id="cards">
+		<h3 class="card flat">2. Cards</h3>
+
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<div class="card">Card</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card flat">Card Soft</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card hard">Card Hard</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card blue">Card Flat</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card pink">Card Dark</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="card orange">Card Medium</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="container" id="navigation">
+		<h3 class="card flat">3. Navigation</h3>
+
+		<script>
+		const makeNav = (classes='') =>{
+			const links = ['home', 'store', 'about'];
+			let ran = Math.floor(Math.random()*links.length);
+			document.write( `
+			<div>
+				<nav class="${classes}">
+					<ul>
+					${links.reduce((r,o,i)=>{
+						return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+					}, '')}
+					</ul>
+				</nav>
+
+			</div>
+			`);
+		}
+		</script>
+
+		<div class="card hard">
+			<h5>Basic Nav</h5>
+
+			<script>makeNav('nav')</script>
+		</div>
+
+		<div class="card hard">
+			<h5>Flex Nav</h5>
+
+			<script>makeNav('nav nav-flex')</script>
+		</div>
+
+		<div class="card hard">
+			<h5>Material Nav</h5>
+
+			<script>makeNav('nav nav-material')</script>
+		</div>
+
+		<script>
+		$("#navigation a").on("click", function(e){
+			e.preventDefault();
+			$(this).closest("li").addClass("active")
+			.siblings().removeClass("active")
+		})
+		</script>
+
+	</div>
+
+
+
+	<div class="container" id="gridsystem example">
+		<h3 class="card flat">4. Grid System</h3>
+		<div class="container">
+			<div class="grid">
+				<div class="col-xs-12 col-md-6">column 6</div>
+				<div class="col-xs-12 col-md-6">column 6</div>
+			</div>
+		
+			<div class="grid">
+				<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+				<div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+				<div class="col-xs-12 col-md-4 col-xl-6">column 4</div>
+		
+				<div class="col-xs-3">column 3</div>
+				<div class="col-xs-3">column 3</div>
+				<div class="col-xs-3">column 3</div>
+				<div class="col-xs-3">column 3</div>
+			</div>
+
+			<div class="grid ten gap">
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+				<div class="col-xs-2">column 2</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
+
+	<script>
+	const makeTable = (classes='') =>{
+		const head = ['ID', 'Office', 'Name', 'Email', 'Phone'];
+		const body = [
+			['522', "Hamilton Cline", 'hcline@academyart.edu', '555-2424'],
+			['512', "Fred McHale", 'fmchale@academyart.edu', '555-2424'],
+			['522', "Micheal Catanzaro", 'mcatanzaro@academyart.edu', '555-2424'],
+			['522', "Andrea Pimentel", 'apimentel@academyart.edu', '555-2424'],
+		];
+
+		//Let ran = Math.floor(Math.random().links.length);
+		document.write( `
+		<table class="${classes}">
+			<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+			<tbody>${body.reduce((r,o,i)=>r+
+				`<tr>${
+					[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+				}</tr>`, '')
+			}</tbody>
+		</table>
+		`);
+	}
+	</script>
+
+
+	<div class="container" id="table">
+		<h3 class="card flat">5. Table</h3>
+
+		<div class="card">
+			<h5>Striped Table</h5>
+			<script>makeTable("table striped")</script>
+		</div>
+
+
+		<div class="card">
+			<h5>Lined Horizontal Table</h5>
+			<script>makeTable("table lined horizontal")</script>
+		</div>
+
+	</div>
+
+
+
+	<div class="container">
+		<h3 class="card flat" id="figures">6. Figures</h3>
+
+		<h5>Basic Figure</h5>
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>Product</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>Product</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>Product</figcaption>
+				</figure>
+			</div>
+		</div>
+
+
+		<h5>Product Overlay</h5>
+		<div class="grid gap">
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>
+						<div class="caption-body">
+							<div>Product Name</div>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>
+						<div class="caption-body">
+							<div>Product Name</div>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<figure class="figure product-overlay">
+					<img src="https://via.placeholder.com/400x400?text=product" alt="">
+					<figcaption>
+						<div class="caption-body">
+							<div>Product Name</div>
+						</div>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+
+
+		<div class="space"></div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
