@@ -10,6 +10,10 @@
 	--color-neutral-medium:#999;
 	--color-neutral-dark:#555;
 
+	--color-main-light:lightblue;
+	--color-main-medium:blue;
+	--color-main-dark:darkblue;
+
 	--color-black:#000;
 	--color-white:#fff;
 
@@ -86,6 +90,7 @@ a:hover {
 
 
 
+
 /* COMPONENT CLASSES */
 
 .nav ul {
@@ -94,6 +99,33 @@ a:hover {
 	margin-bottom:0;
 	padding-left: 0;
 }
+	.nav a {
+		display: block;
+		padding:0.2em 0.5em;
+	}
+	.nav a:hover {
+		background-color: var(--color-main-medium);
+		color: var(--color-white);
+		text-decoration: none;
+	}
+
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+	display: flex;
+}
+
+.nav-stretch li {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.nav-pills a {
+	border-radius: 2em;
+	padding: 0.5em 1em;
+}
+
+
 
 
 .navbar {
