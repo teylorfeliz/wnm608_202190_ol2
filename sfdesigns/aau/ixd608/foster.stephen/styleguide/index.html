@@ -112,71 +112,43 @@
 		<script>
 			const makeNav = (classes='') => {
 				const links = ['home','store','about'];
-				return `
+				document.write(`
 				<div>
 					<nav class="${classes}">
 						<ul>
-						${links.reduce((r,o,i)=>}
-							return r+ `<li><a href="#">link 1</a></li>`;
-						})}
+						${links.reduce((r,o,i)=>{
+							return r+ `<li><a href="#">${o}</a></li>`;
+						},'')}
 						</ul>
 					</nav>
 				</div>
-				`;
+				`);
 			}
 		</script>	
 
 		<div class="card soft">
 			<h3>Basic Nav</h3>
-			<!-- nav.nav>ul>li*4>a[href=#]>{link $} -->
-			<nav class="nav">
-				<ul>
-					<li><a href="#">link 1</a></li>
-					<li><a href="#">link 2</a></li>
-					<li><a href="#">link 3</a></li>
-					<li><a href="#">link 4</a></li>
-				</ul>
-			</nav>
+			
+			<script>makeNav('nav')</script>
 		</div>
-	</div>
 
 		<div class="card soft">
 			<h3>Flex Nav</h3>
-			<!-- nav.nav>ul>li*4>a[href=#]>{link $} -->
-			<nav class="nav nav-flex">
-				<ul>
-					<li><a href="#">link 1</a></li>
-					<li><a href="#">link 2</a></li>
-					<li><a href="#">link 3</a></li>
-					<li><a href="#">link 4</a></li>
-				</ul>
-			</nav>
+
+			<script>makeNav('nav nav-flex')</script>
 		</div>
 
 		<div class="card soft">
 			<h3>Stretch Nav</h3>
-			<!-- nav.nav>ul>li*4>a[href=#]>{link $} -->
-			<nav class="nav nav-stretch">
-				<ul>
-					<li><a href="#">link 1</a></li>
-					<li><a href="#">link 2</a></li>
-					<li><a href="#">link 3</a></li>
-					<li><a href="#">link 4</a></li>
-				</ul>
-			</nav>
+
+			<script>makeNav('nav nav-stretch')</script>
 		</div>
 
 		<div class="card soft">
 			<h3>Pills Nav</h3>
-			<!-- nav.nav>ul>li*4>a[href=#]>{link $} -->
-			<nav class="nav nav-pills">
-				<ul>
-					<li><a href="#">link 1</a></li>
-					<li><a href="#">link 2</a></li>
-					<li><a href="#">link 3</a></li>
-					<li><a href="#">link 4</a></li>
-				</ul>
-			</nav>
+
+			<script>makeNav('nav nav-pills')</script>
+
 		</div>
 	</div>
 
