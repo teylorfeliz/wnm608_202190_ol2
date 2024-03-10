@@ -6,22 +6,18 @@
 }
 
 :root {
-	--color-neutral-light: #e3e8ee;
-	--color-neutral-medium: #b5b7b2;
-	--color-neutral-dark: #818795;
+	--color-neutral-light: #F2F2F2;
+	--color-neutral-medium: #D9DADB;
+	--color-neutral-dark: #878888;
 
-	--color-main-light: #ceffc7;
-	--color-main-medium: #9cfe8d;
-	--color-main-dark: #3ca22d;
+	--color-main-light: #D8FFBF;
+	--color-main-medium: #D4FF83;
+	--color-main-dark: #4BF056;
 
 
-	--color-black: #061019;
-	--color-white: #fff;
-	--color-offwhite: #F8F8F8;
-	--color-grey: #EEEEEE;
-	--color-orange: #FF6801;
-	--color-pink: #FADEFF;
-	--color-blue: #2D0080;
+	--color-black: #000000;
+	--color-white: #FFFFFF;
+
 
 	--header-height: 4rem;
 	--spacing: 1rem;
@@ -37,8 +33,8 @@
 }
 
 @font-face {
-    font-family: SuisseBook;
-    src: url("../../font/SuisseIntl-Book-WebM.woff2");
+    font-family: SuisseRegular;
+    src: url("../../font/SuisseIntl-Regular-WebM.woff2");
 }
 
 body {
@@ -52,7 +48,7 @@ h2, h4, h5, h6{
 }
 
 h1, h3{
-	font-family: SuisseBook;
+	font-family: SuisseRegular;
 }
 
 a{
@@ -61,17 +57,13 @@ a{
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 
 
 
 /* ------------------------- LAYOUT CLASSES -------------------------*/
 
 .container {
-	max-width: 1000px;
+	max-width: 1600px;
 	margin-right: auto;
 	margin-left: auto;	
 }
@@ -96,6 +88,7 @@ a:hover {
 	vertical-align: text-bottom;
 }
 
+.hidden { display: none; }
 
 
 /* ------------------------- COMPONENT CLASSES ------------------------- */
@@ -113,21 +106,17 @@ a:hover {
 	}
 
 	.nav a:hover{
-		background-color: var(--color-main-medium);
-		color: var(--color-white);
+		background-color: var(--color-main-light);
 		text-decoration: none;
 	}
 
 	.nav .active a{
-		background-color: var(--color-main-light);
+		font-family: SuisseRegular;
 		color: inherit;
 	}
 
 
-
 .nav-material ul,
-.nav-crumns ul,
-.nav-pills ul,
 .nav-stretch ul, 
 .nav-flex ul{
 	display: flex;
@@ -138,26 +127,6 @@ a:hover {
 .nav-stretch li{
 	flex: 1 1 auto;
 	text-align: center;
-}
-
-.nav-pills a{
-	border-radius: 2em;
-	padding: 0.5em 1em;
-}
-
-.nav-crumbs a{
-	display: inline-block;
-}
-
-.nav-crumbs .active a,
-.nav-crumbs a:hover {
-	background-color: transparent;
-	color: inherit;
-	text-decoration: underline;
-}
-
-.nav-crumbs li:not(:first-child)::before {
-	content: '/';
 }
 
 
@@ -178,7 +147,7 @@ a:hover {
 	left: 0;
 	width: 100%;
 	height: 0;
-	background-color: var(--color-main-medium);
+	background-color: var(--color-black);
 	transition: all 0.3s;
 }
 
@@ -188,7 +157,7 @@ a:hover {
 }
 
 .nav-material .active a::after{
-	height: 4px;
+	height: 3px;
 }
 
 
@@ -219,15 +188,11 @@ a:hover {
 
 
 
-
-
-
-
 /*  ------------------------- CARD COMPONENT -------------------------  */
 
 .card {
 	background-color: var(--color-white);
-	margin-top: 2em;
+	margin-top: 1.5em;
 	margin-bottom: 2em;
 	padding: 1.5em;
 
@@ -236,12 +201,11 @@ a:hover {
 }
 
 	.card.soft {
-		border-radius: 0.5em;
-		box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		background-color: var(--color-neutral-light);
 	}
 
 	.card.hard {
-		border: 1px solid var(--color-neutral-medium);
+		border: 1px solid var(--color-black);
 	}
 
 	.card.flat {
@@ -250,20 +214,13 @@ a:hover {
 		border-bottom: 1px solid var(--color-black);
 	}
 
-
-
-	.card.blue {
-		background-color: var(--color-blue);
-		color: var(--color-white);
+	.card.stylized{
+		background: linear-gradient(180deg, hsla(0, 0%, 85%, 1) 0%, 
+			hsla(0, 0%, 93%, 1) 17%, hsla(0, 0%, 97%, 1) 33%, 
+			hsla(0, 0%, 90%, 1) 72%, hsla(0, 0%, 85%, 1) 100%);
+		box-shadow: 0 2px 3px var(--color-main-dark);
 	}
 
-	.card.pink {
-		background-color: var(--color-pink);
-	}
-
-	.card.orange {
-		background-color: var(--color-orange);
-	}
 
 
 /*  ------------------------- VIEWWINDOW  ------------------------- */
@@ -291,25 +248,20 @@ a:hover {
 	padding: 0.2em 0.5em;
 }
 
+.table th:nth-child(1),
+.table td:nth-child(1){
+	text-align: left;
+	padding: 0.2em 0em;
+}
+
+
 .table.striped tbody tr:nth-child(odd){
 	background-color: var(--color-main-light);
 }
 
-.table.lined.all th:not(:first-child),
-.table.lined.all td:not(:first-child),
-.table.lined.vertical th:not(:first-child),
-.table.lined.vertical td:not(:first-child) {
-	border-left: 1px solid var(--color-main-medium);
-}
 
-.table.lined.all tbody tr,
 .table.lined.horizontal tbody tr{
 	border-top: 1px solid var(--color-black);
-}
-
-.table.lined.all,
-.table.lined.border {
-	border: 1px solid var(--color-main-medium);
 }
 
 
@@ -318,8 +270,9 @@ a:hover {
 
 .figure {
 	margin: 0;
+	padding: 0.5em;
 	background-color: var(--color-white);
-	border-bottom: 0.5px solid var(--color-black);
+	border: 0.5px solid var(--color-black);
 }
 
 .figure img {
@@ -328,7 +281,7 @@ a:hover {
 }
 
 .figure figcaption {
-	padding: 1em;
+	padding: 1em 0em;
 }
 
 .figure.product {
@@ -338,7 +291,8 @@ a:hover {
 }
 
 .product-overlay{
-	border-bottom: none;
+	border: none;
+	padding: 0;
 	position: relative;
 	overflow: hidden;
 }
@@ -349,7 +303,7 @@ a:hover {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--color-main-medium);
+	background-color: var(--color-main-light);
 	opacity: 0;
 	transition: all 0.3s;
 	display: flex;
@@ -381,6 +335,181 @@ a:hover {
 		padding: 0;
 	}
 }
+
+
+
+/*  ------------------------- FORMS  ------------------------- */
+
+/* Inputs */
+
+.form-control{
+	margin: 1em 0;
+}
+
+.form-item,
+.search-button,
+.form-button,
+.form-input,
+.hotdog,
+.hotdog input,
+.form-select>select {
+	display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+}
+
+
+
+.form-input {
+	margin-top: 0.5em;
+    border-bottom: 1px solid var(--color-neutral-light);
+    padding: 0.5em 0;
+}
+
+
+.form-input:focus{
+	border-bottom-color: var(--color-neutral-dark);
+}
+
+.form-label{
+    font-size: 1em;
+    color: var(--color-black);
+    display: block;
+    width: 100%;
+}
+
+.form-control input::placeholder{
+	font-size: 1em;
+	color: var(--color-neutral-medium);
+}
+
+
+/* Buttons */
+.form-button {
+	padding: 0.5em 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+	.form-button.green{
+		background-color: var(--color-main-light);
+		width: 25%;
+	}
+
+	.form-button.black{
+		background-color: var(--color-black);
+		color: var(--color-white);
+	}
+
+
+.form-button:hover {
+	text-decoration: none;
+	font-family: SuisseRegular;
+}
+
+.form-button:active {
+	background-color: var(--color-main-light);
+}
+
+
+
+
+/* Hotdog */
+.hotdog {
+	background-color: var(--color-neutral-light);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	display: flex;
+}
+
+.hotdog-invert{
+	background-color: var(--color-black);
+	padding: 0.5em 1em;
+}
+
+.hotdog-invert form{
+	background-color: var(--color-white);
+	border-radius: 2em;
+	padding: 0.5em 1.2em;
+	display: flex;
+}
+
+
+.search-button{
+	width: 1em;
+  	padding: 0.2em;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+
+
+/* Select */
+.form-select>select {
+    padding: 0.5em 1.3em;
+    background-color: var(--color-neutral-light);
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.form-select{
+	position: relative;
+}
+
+
+.form-select::after {
+	content: '▾';
+	font-family: Arial, sans-serif;
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	right: 0.2em;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: var(--color-neutral-medium);
+}
+
+
+/* Toggle */
+.toggle label {
+	font-size: 1.3em;
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    border: 0.1em solid var(--color-neutral-medium);
+    background-color: var(--color-neutral-medium);
+    border-radius: 1em;
+    position: relative;
+}
+
+.toggle label::after {
+	content: '';
+	display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 1em;
+    position: absolute;
+    background-color: var(--color-white);
+    transition: all 0.3s;
+}
+
+.toggle input:checked + label{
+	border: 0.1em solid var(--color-black);
+	background-color: var(--color-black);
+}
+
+
+.toggle input:checked + label::after {
+	transform: translateX(1em);
+}
+
+
 
 
 
@@ -421,19 +550,37 @@ form .button{
 
 
 
-.space{
-	height: 200px;
+
+/*  ------------------------- STYLEGUIDE SHEET  ------------------------- */
+
+.whitespace{
+	height: 20vh;
 }
+
 
 .smallgap{
-	height: 1em;
+	margin-top: 1em;
+	height: 1.5em;
 }
 
-#gridsystem#example .grid div{
+.thickdivider {	
+	padding: 2em;
+	border-bottom: 1px solid var(--color-black);
+}
+
+.thindivider {
+	padding: 0.5em 0;
+	border-bottom: 0.5px solid var(--color-neutral-dark);
+}
+
+
+#gridexample .grid div{
 	border: 0.5px solid black;
 }
 
-
+.styleguide-nav a{
+	padding:  0.2em 0;
+}
 
 
 

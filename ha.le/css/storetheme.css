@@ -1,10 +1,11 @@
 
 :root{
-	--color-white: #fff;
+	--color-white: #FFFFFF;
 }
 
 body {
 	background-color: var(--color-white);
+	margin-bottom: 5em;
 }
 
 .content{
@@ -18,6 +19,24 @@ body {
 .article-body{
 	line-height: 1.3em;
 }
+
+
+
+/*Heart Checkbox*/
+.favorite label{
+	transition: all 0.3s;
+	display: inline-block;
+	transform: scale(1,1);
+	color: var(--color-neutral-medium);
+}
+
+.favorite input:checked + label{
+	color: red;
+	transform: scale(1.3, 1.3);
+}
+
+
+
 
 
 
@@ -54,8 +73,6 @@ article {
 	margin-top: 2em;
 }
 
-.sidebar { flex: 1; }
-.article-body{ flex: 3; }
 
 .article a{
 	display: block;
@@ -73,7 +90,7 @@ article {
 
 .new-arrivals div{
 	width: 100%;
-	height: 50vh;
+	height: 70vh;
 	background-size: cover;
 	background-position: center;
 }
