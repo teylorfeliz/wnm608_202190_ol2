@@ -291,3 +291,36 @@ a:hover {
 .figure figcaption {
 	padding: 1em;
 }
+
+
+
+
+
+
+
+
+/*Forms*/
+.form-control {
+	margin: 1em 0;
+}
+.form-input {
+	display: inline-block;
+	background-color: transparent;
+	border-width: 0;
+	padding: 0.5em 1em;
+	font: inherit;
+	-webkit-appearance: none;
+	color: inherit;
+	width: 100%;
+	border-bottom: 1px solid var(--color-neutral-light);
+	ouline: 0;
+}
+.form-input:focus {
+	border-bottom-color:var(--color-main-light);
+}
+.form-label {
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	display: block;
+	width: 100%;
+}
