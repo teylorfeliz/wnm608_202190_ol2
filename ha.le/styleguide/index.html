@@ -83,10 +83,12 @@
 			<div class="display-block col-xs-12 col-lg-6">
 				<div id="headings">
 					<h5>Headings</h5>
-					<h1>Heading 1</h1>
+					<h1>HEADING 1</h1>
 					<h2>HEADING 2</h2>
-					<h3>Heading 3</h3>
+					<h3>HEADING 3</h3>
 					<h4>HEADING 4</h4>
+					<h5>Heading 5</h5>
+					<h6>Heading 6</h>
 				</div>
 				<div class="thindivider"></div>
 				<div id="paragraphs">
@@ -132,7 +134,7 @@
 
 		<script>
 		const makeNav = (classes='') =>{
-			const links = ['home', 'store', 'about'];
+			const links = ['Home', 'Store', 'About'];
 			let ran = Math.floor(Math.random()*links.length);
 			document.write( `
 			<div>
@@ -157,6 +159,13 @@
 		
 			<div class="col-xs-12 col-lg-6">
 				<div class="display-block card soft">
+
+					<h5>Basic Nav</h5>
+					<script>makeNav('nav')</script>
+
+				</div>
+
+				<div class="card soft">
 
 					<h5>Flex Nav</h5>
 					<script>makeNav('nav nav-flex')</script>
@@ -260,6 +269,12 @@
 				<div class="thindivider"></div>
 				<h5>Lined Horizontal Table</h5>
 				<script>makeTable("table lined horizontal")</script>
+
+				<div class="thindivider"></div>
+				<h5>Lined Border Table</h5>
+				<script>makeTable("table lined vertical")</script>
+
+
 			</div>
 		</div>
 

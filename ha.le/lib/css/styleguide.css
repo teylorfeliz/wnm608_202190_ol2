@@ -11,8 +11,8 @@
 	--color-neutral-dark: #878888;
 
 	--color-main-light: #D8FFBF;
-	--color-main-medium: #D4FF83;
-	--color-main-dark: #4BF056;
+	--color-main-medium: #BCFF83;
+	--color-main-dark: #95F778;
 
 
 	--color-black: #000000;
@@ -37,19 +37,30 @@
     src: url("../../font/SuisseIntl-Regular-WebM.woff2");
 }
 
+@font-face {
+    font-family: SuisseBook;
+    src: url("../../font/SuisseIntl-Book-WebM.woff2");
+}
+
 body {
 	margin: 0;
 	font-size: 100%;
 	font-family: var(--font-sans);
 }
 
-h2, h4, h5, h6{
-	font-family: var(--font-sans);
-}
-
-h1, h3{
+h1, h2{
 	font-family: SuisseRegular;
 }
+
+h2{
+	font-family: SuisseBook;
+}
+
+h4, h5, h6{
+	font-family: SuisseLight;
+	font-size: 
+}
+
 
 a{
 	color: inherit;
@@ -174,10 +185,7 @@ a{
 
 
 	.navbar h1 {
-		font-size: 1.5em;
 		margin: 0;
-		font-family: var(--font-sans);
-	
 	}
 
 	.navbar a{
@@ -255,6 +263,11 @@ a{
 }
 
 
+.table.lined.vertical th:not(:first-child),
+.table.lined.vertical td:not(:first-child) {
+	border-left: 1px solid var(--color-black);
+}
+
 .table.striped tbody tr:nth-child(odd){
 	background-color: var(--color-main-light);
 }
@@ -263,6 +276,7 @@ a{
 .table.lined.horizontal tbody tr{
 	border-top: 1px solid var(--color-black);
 }
+
 
 
 
@@ -303,7 +317,7 @@ a{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--color-main-light);
+	background-color: var(--color-main-medium);
 	opacity: 0;
 	transition: all 0.3s;
 	display: flex;
@@ -312,7 +326,7 @@ a{
 }
 
 .product-overlay:hover figcaption {
-	opacity: 1;
+	opacity: 0.6;
 }
 
 
