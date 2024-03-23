@@ -6,9 +6,9 @@
 }
 
 :root {
-	--color-neutral-light: #F2F2F2;
-	--color-neutral-medium: #D9DADB;
-	--color-neutral-dark: #878888;
+	--color-neutral-light: #EBEBEB;
+	--color-neutral-medium: #B5B5B5;
+	--color-neutral-dark: #1A1A1A;
 
 	--color-main-light: #D8FFBF;
 	--color-main-medium: #BCFF83;
@@ -42,41 +42,67 @@
     src: url("../../font/SuisseIntl-Book-WebM.woff2");
 }
 
+@font-face{
+	font-family: EuclidMono;
+	 src: url("../../font/EuclidMono-Vanguard-WebXL.woff");
+}
+
 body {
 	margin: 0;
 	font-size: 100%;
 	font-family: var(--font-sans);
 }
 
-h1, h2{
-	font-family: SuisseRegular;
+header h1{
+	font-family: EuclidMono;
+	margin: 0;
+	font-size: 1.7em;
 }
 
+
 h2{
+	font-family: EuclidMono;
+	margin: 0em 0 2em 0;
+}
+
+h3, h6{
+	font-family: SuisseLight;
+}
+
+h4, h5{
 	font-family: SuisseBook;
 }
 
-h4, h5, h6{
-	font-family: SuisseLight;
-	font-size: 
+footer h5{
+	margin: 0;
 }
 
-
 a{
+	font-family: SuisseLight;
 	color: inherit;
 	font-weight: lighter;
 	text-decoration: none;
 }
 
+p{
+	font-family: SuisseLight;
+	margin: 0.5em 0 2em 0;
+}
 
 
 
 /* ------------------------- LAYOUT CLASSES -------------------------*/
 
 .container {
-	max-width: 1600px;
+	max-width: 1700px;
 	margin-right: auto;
 	margin-left: auto;	
+}
+
+.styleguide-container{
+	max-width: 1600px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .display-flex { display: flex;}
@@ -84,7 +110,7 @@ a{
 .display-block { display: block;}
 .display-inline-block { display: inline-block;}
 
-.flex-stretch { flex: 1 1 auto; }
+.flex-stretch { flex: 1 1 20px; }
 .flex-none { flex: none; }
 
 .flex-align-center { align-items: center; }
@@ -102,7 +128,8 @@ a{
 .hidden { display: none; }
 
 
-/* ------------------------- COMPONENT CLASSES ------------------------- */
+
+/* ------------------------- NAVIGATION------------------------- */
 
 .nav ul {
 	list-style-type: none;
@@ -113,31 +140,63 @@ a{
 
 	.nav a{
 		display: block;
-		padding:  0.2em 0.5em;
+		font-size: 0.85em;
+		padding:  0.2em 3em 0.2em 0;
 	}
 
 	.nav a:hover{
-		background-color: var(--color-main-light);
+		background-color: var(--color-neutral-light);
 		text-decoration: none;
 	}
 
 	.nav .active a{
-		font-family: SuisseRegular;
+		font-family: SuisseBook;
 		color: inherit;
 	}
 
 
 .nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
 .nav-stretch ul, 
 .nav-flex ul{
 	display: flex;
 }
 
+.nav-flex a:hover {
+	font-family: SuisseBook;
+	background-color: transparent;
+	color: inherit;
+}
 
 .nav-material li,
 .nav-stretch li{
 	flex: 1 1 auto;
 	text-align: center;
+}
+
+
+.nav-pills a{
+	border-radius: 2em;
+	padding: 0.5em 1em;
+}
+
+
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+	background-color: transparent;
+	color: inherit;
+	text-decoration: underline;
+}
+
+.nav-crumbs li:not(:first-child)::before {
+	content: '/';
+	padding:  0 0.5em 0 0.5em;
+}
+
+.nav-crumbs a{
+	display: inline-block;
+	padding:  0;
 }
 
 
@@ -147,7 +206,7 @@ a{
 }
 
 .nav-material a:hover{
-	background-color: var(--color-main-light);
+	background-color: var(--color-neutral-light);
 	color: inherit;
 }
 
@@ -172,26 +231,48 @@ a{
 }
 
 
+.nav-blur li{
+	transition: all ease-in-out 0.3s;
+}
 
-.navbar {
+.nav-blur ul:hover li{
+ 	opacity: .4;
+ 	filter: blur(0.0625rem);
+}
+
+.nav-blur ul li:hover{
+	opacity: 1;
+	filter: blur(0rem);
+}
+
+.nav-blur a{
+	font-family: SuisseBook;
+	padding: 0 0 0.5em 0;
+	color: var(--color-neutral-medium);
+}
+
+.nav-blur a:hover {
+	font-family: SuisseBook;
+	background-color: transparent;
+	color: inherit;
+}
+
+.nav-blur .active a{
+	font-family: SuisseBook;
+}
+
+
+
+.styleguide-navbar{
 	background-color: var(--color-white);
 	color: var(--color-black);
-	line-height: var(--header-height);
-	box-shadow: 0 10px 5px 0 rgba(255,255,255,0.1);
+	justify-content: center;
+	padding-top: 1em;
 	position: sticky;
 	top: 0px;
 	z-index: 5;
 }
 
-
-	.navbar h1 {
-		margin: 0;
-	}
-
-	.navbar a{
-		font-size: 0.9em;
-		padding: 0 1em;
-	}
 
 
 
@@ -209,17 +290,26 @@ a{
 }
 
 	.card.soft {
-		background-color: var(--color-neutral-light);
+		border-radius: 0.5em;
+		box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	}
 
 	.card.hard {
-		border: 1px solid var(--color-black);
+		border: 1px solid var(--color-neutral-medium);
 	}
 
-	.card.flat {
-		padding: 10px 0px ;
-		margin-top: 50px;
-		border-bottom: 1px solid var(--color-black);
+	.card.light {
+		background-color: var(--color-neutral-light);
+		color: var(--color-black);
+	}
+
+	.card.medium {
+		background-color: var(--color-neutral-medium);
+	}
+
+	.card.dark {
+		background-color: var(--color-neutral-dark);
+		color: var(--color-neutral-light);
 	}
 
 	.card.stylized{
@@ -230,17 +320,46 @@ a{
 	}
 
 
+/* ------------------------- DIVIDER COMPONENT ------------------------- */
+
+	.thickdivider {
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid var(--color-black);
+	}
+
+	.thindivider {
+		padding: 0.5em 0;
+		border-bottom: 0.5px solid var(--color-neutral-dark);
+	}
+
+
+	.whitespace{
+		height: 20vh;
+	}
+
+
+	.space{
+		height: 50px;
+	}
+
+	.smallgap{
+		margin-top: 1em;
+		height: 1.5em;
+	}
+
+
 
 /*  ------------------------- VIEWWINDOW  ------------------------- */
 
 .view-window {
-	height: 90vh;
+	height: 70vh;
 	position: relative;
 	overflow: hidden;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 }
+
 
 
 /*  ------------------------- TABLES  ------------------------- */
@@ -256,27 +375,26 @@ a{
 	padding: 0.2em 0.5em;
 }
 
-.table th:nth-child(1),
-.table td:nth-child(1){
-	text-align: left;
-	padding: 0.2em 0em;
+.table.striped tbody tr:nth-child(odd){
+	background-color: var(--color-neutral-light);
 }
 
-
+.table.lined.all th:not(:first-child),
+.table.lined.all td:not(:first-child),
 .table.lined.vertical th:not(:first-child),
 .table.lined.vertical td:not(:first-child) {
 	border-left: 1px solid var(--color-black);
 }
 
-.table.striped tbody tr:nth-child(odd){
-	background-color: var(--color-main-light);
-}
-
-
+.table.lined.all tbody tr,
 .table.lined.horizontal tbody tr{
 	border-top: 1px solid var(--color-black);
 }
 
+.table.lined.all,
+.table.lined.border {
+	border: 1px solid var(--color-black);
+}
 
 
 
@@ -284,7 +402,6 @@ a{
 
 .figure {
 	margin: 0;
-	padding: 0.5em;
 	background-color: var(--color-white);
 	border: 0.5px solid var(--color-black);
 }
@@ -295,7 +412,7 @@ a{
 }
 
 .figure figcaption {
-	padding: 1em 0em;
+	padding: 1em 0.5em;
 }
 
 .figure.product {
@@ -304,9 +421,12 @@ a{
 	overflow: hidden;
 }
 
+
+
+
 .product-overlay{
 	border: none;
-	padding: 0;
+	border-bottom: none;
 	position: relative;
 	overflow: hidden;
 }
@@ -317,19 +437,39 @@ a{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--color-main-medium);
+	background-color: rgba(188,255,131,0.6);
+	display: flex;
 	opacity: 0;
 	transition: all 0.3s;
-	display: flex;
+	padding: 0.7em; 
+}
+
+.product-overlay figcaption>a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.product-overlay figcaption h5{
+	margin: 0;
+	line-height: 1.5em;
+}
+
+
+
+.product-overlay:hover figcaption {
+	opacity: 1;
+
+}
+
+
+.product-overlay.center figcaption {
 	align-items: center;
 	justify-content: center;
 }
-
-.product-overlay:hover figcaption {
-	opacity: 0.6;
-}
-
-
 
 
 @media (max-width: 600px) {
@@ -351,7 +491,6 @@ a{
 }
 
 
-
 /*  ------------------------- FORMS  ------------------------- */
 
 /* Inputs */
@@ -361,12 +500,12 @@ a{
 }
 
 .form-item,
-.search-button,
-.form-button,
 .form-input,
+.basic-input,
+.message-box,
 .hotdog,
 .hotdog input,
-.form-select>select {
+.form-select>select{
 	display: inline-block;
     background-color: transparent;
     border-width: 0;
@@ -378,13 +517,11 @@ a{
 }
 
 
-
 .form-input {
-	margin-top: 0.5em;
+	margin: 0.5em 0;
     border-bottom: 1px solid var(--color-neutral-light);
     padding: 0.5em 0;
 }
-
 
 .form-input:focus{
 	border-bottom-color: var(--color-neutral-dark);
@@ -397,30 +534,38 @@ a{
     width: 100%;
 }
 
-.form-control input::placeholder{
+.form-label input::placeholder,
+.form-label textarea::placeholder{
+	font-size: 1em;
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder{
 	font-size: 1em;
 	color: var(--color-neutral-medium);
 }
 
+.form-control .form-input{
+	margin-top: 0.5em;
+	 padding: 0.5em 1em;
+}
 
 /* Buttons */
+
 .form-button {
+	display: inline-block;
+    border-width: 0;
+    font: inherit;
+    -webkit-appearance: none;
+    color: var(--color-neutral-light);
+    outline: 0;
+
+	background-color: var(--color-neutral-dark);
 	padding: 0.5em 1em;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
 }
-
-	.form-button.green{
-		background-color: var(--color-main-light);
-		width: 25%;
-	}
-
-	.form-button.black{
-		background-color: var(--color-black);
-		color: var(--color-white);
-	}
-
 
 .form-button:hover {
 	text-decoration: none;
@@ -428,19 +573,54 @@ a{
 }
 
 .form-button:active {
-	background-color: var(--color-main-light);
+	background-color: var(--color-neutral-medium);
+	border: 1px solid var(--color-black);
+}
+
+.form-button.rounded{
+    border-radius: 1em;
 }
 
 
 
+/* Search bar - Hotdog */
 
-/* Hotdog */
+.basic-input {
+	background-color: var(--color-white);
+	border: 1px solid var(--color-black);
+	padding: 0.5em 1.5em;
+	display: flex;
+}
+
+header .form-control input::placeholder{
+	font-family: EuclidMono;
+	font-size: 0.8em;
+	padding: 0.5em 0;	
+}
+
+.message-box {
+	background-color: var(--color-white);
+	border: 1px solid var(--color-black);
+	padding: 0.5em 1.5em;
+	display: flex;
+	min-height: 15vh;
+	text-align: : top;
+}
+
+
+
 .hotdog {
 	background-color: var(--color-neutral-light);
 	border-radius: 2em;
 	padding: 0.5em 1.5em;
 	display: flex;
 }
+
+.hotdog.light{
+	background-color: transparent;
+		border: 1px solid var(--color-neutral-medium);
+}
+
 
 .hotdog-invert{
 	background-color: var(--color-black);
@@ -456,10 +636,12 @@ a{
 
 
 .search-button{
+	font-size: 1.2em;
 	width: 1em;
   	padding: 0.2em;
 	background-color: transparent;
 	cursor: pointer;
+	border: 0;
 }
 
 
@@ -514,8 +696,8 @@ a{
 }
 
 .toggle input:checked + label{
-	border: 0.1em solid var(--color-black);
-	background-color: var(--color-black);
+	border: 0.1em solid var(--color-main-medium);
+	background-color: var(--color-main-medium);
 }
 
 
@@ -527,27 +709,46 @@ a{
 
 
 
+/*  ------------------------- GOOGLE ICONS ------------------------- */
+.material-symbols-sharp {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+
+
 
 /*  ------------------------- FOOTER  ------------------------- */
 footer{
-	height: 80px;
-	margin-top: 100px;
-	margin-bottom: 50px;
-	padding-bottom: 2em;
+	width: 100%;
 }
 
-footer h4 {
+.footer-body{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: var(--color-main-dark);
+	padding: 1em 0;
+}
+
+
+.footer-body h4 {
+	margin: 0;
+	padding: 0;
 	font-size: 0.8em;
 }
 
-footer ul {
+.footer-body ul {
 	list-style-type: none;
-	margin-top: 1em;
 	margin-bottom: 0;
 	padding-left: 0;
 }
 
-footer li{
+.footer-body li{
 	font-size: 0.8em;
 	line-height: 1.2em;
 }
@@ -562,39 +763,22 @@ form .button{
 }
 
 
+.footer-credit {
+	margin: 10px;
+	padding: 0 0.5em;
+}
 
-
-
-/*  ------------------------- STYLEGUIDE SHEET  ------------------------- */
-
-.whitespace{
-	height: 20vh;
+.footer-credit h6{
+	padding:0;
+	margin: 0;
 }
 
 
-.smallgap{
-	margin-top: 1em;
-	height: 1.5em;
-}
-
-.thickdivider {	
-	padding: 2em;
-	border-bottom: 1px solid var(--color-black);
-}
-
-.thindivider {
-	padding: 0.5em 0;
-	border-bottom: 0.5px solid var(--color-neutral-dark);
-}
 
 
-#gridexample .grid div{
-	border: 0.5px solid black;
-}
 
-.styleguide-nav a{
-	padding:  0.2em 0;
-}
+
+
 
 
 
