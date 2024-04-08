@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Ha Le",
+		"phone": "408 540 9401",
+		"email": "hle22@art.edu",
+		"address": "San Franciso, CA",
+		"classes": [601, 608, 617, 820]
+	},
+
+	{
+		"name": "Phoebe Buffay",
+		"phone": "408 540 9402",
+		"email": "phoebe@earthlink.net",
+		"address": "San Bruno, CA",
+		"classes": [601, 608, 617, 820]
+	},
+
+	{
+		"name": "Joey Tribbiani",
+		"phone": "408 540 9403",
+		"email": "joeytribs@aol.com",
+		"address": "Cupertino, CA",
+		"classes": [601, 608, 617, 820]
+	},
+
+	{
+		"name": "Chandler Bing",
+		"phone": "408 540 9404",
+		"email": "bingtastic@yahoo.com",
+		"address": "Las Vegas, NV, CA",
+		"classes": [601, 608, 617, 820]
+	},
+
+	{
+		"name": "Monica Gellar",
+		"phone": "408 540 9405",
+		"email": "mgellar1973@hotmail.com",
+		"address": "New York, NY",
+		"classes": [601, 608, 617, 820]
+	},
+
+	{
+		"name": "Ross Gellar",
+		"phone": "408 540 9406",
+		"email": "rgellar1971@hotmail.com",
+		"address": "Honolulu, HI",
+		"classes": [601, 608, 617]
+	}
+
+]

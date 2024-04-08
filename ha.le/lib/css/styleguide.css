@@ -71,9 +71,6 @@ h3, h6{
 
 h4, h5{
 	font-family: SuisseBook;
-}
-
-footer h5{
 	margin: 0;
 }
 
@@ -320,32 +317,40 @@ p{
 	}
 
 
-/* ------------------------- DIVIDER COMPONENT ------------------------- */
+/* ------------------------- DIVIDER COMPONENT and SPACE------------------------- */
 
-	.thickdivider {
+.thickdivider {
 		padding-bottom: 0.5em;
 		border-bottom: 1px solid var(--color-black);
-	}
+}
 
-	.thindivider {
+.thindivider {
 		padding: 0.5em 0;
-		border-bottom: 0.5px solid var(--color-neutral-dark);
-	}
+	border-bottom: 0.5px solid var(--color-neutral-dark);
+}
 
 
-	.whitespace{
+.whitespace{
 		height: 20vh;
 	}
 
 
-	.space{
+.space{
 		height: 50px;
-	}
+}
 
 	.smallgap{
-		margin-top: 1em;
-		height: 1.5em;
-	}
+	margin-top: 1em;
+	height: 1.5em;
+}
+
+.space-before-paragraph {
+	padding-top: 1em;
+}
+
+.space-after-paragraph {
+	padding-bottom: 2em;
+}
 
 
 
@@ -529,6 +534,7 @@ p{
 
 .form-label{
     font-size: 1em;
+    font-family: SuisseBook;
     color: var(--color-black);
     display: block;
     width: 100%;

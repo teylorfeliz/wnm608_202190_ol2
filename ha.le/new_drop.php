@@ -17,7 +17,7 @@
 		<?php include "parts/navbar.php"; ?>
 
 		<div class="layout-main">
-			<h4>SPRING 2024 COLLECTION</h4>
+			<h4 class="space-after-paragraph">SPRING 2024 COLLECTION</h4>
 
 			<div class="container">
 				

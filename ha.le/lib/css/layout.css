@@ -1,4 +1,26 @@
 
+/* Layout Structure: 
+
+	layout-header 
+		layout-aside   layout-main 
+							layout-main-cols 
+								layout-main-col
+
+
+	layout-body
+		layout-aside   layout-main 
+							layout-main-cols 
+								layout-main-col
+
+	layout-footer 
+		layout-aside   layout-main 
+							layout-main-cols
+								ayout-main-col
+*/
+
+
+
+
 /*Rows*/
 .layout-header,
 .layout-body{
@@ -53,7 +75,6 @@
 
 .layout-main h4{
 	margin: 0;
-	padding-bottom: 2em;
 	line-height: 1em;
 }
 
@@ -89,6 +110,9 @@
 	margin: 0;
 }
 
+.layout-header .layout-main h1{
+	margin: 0.5em 0 0 0.3em;
+}
 
 
 
@@ -135,6 +159,11 @@ footer{
 	.layout-body .layout-main-cols{
 		flex-direction: column;
 	}
+
+	.layout-body .layout-main-col{
+		padding-bottom: 2em;
+	}
+
 }
 
 

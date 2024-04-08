@@ -20,7 +20,7 @@
 
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<h4>ABOUT US</h4>
+					<h4 class="space-after-paragraph">ABOUT US</h4>
 					<div class="col-xs-12 col-md-6 col-lg-3">
 						<figure class="figure product-overlay">
 							<img src="https://via.placeholder.com/400x300?text=" alt="">

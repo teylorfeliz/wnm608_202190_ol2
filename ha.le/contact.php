@@ -25,7 +25,7 @@
 				<div class="layout-main-col">
 					<div class="container">
 						<div>
-							<h4>SEND US AN EMAIL</h4>
+							<h4 class="space-after-paragraph">SEND US AN EMAIL</h4>
 							<form>
 								<label class="form-label">First Name</label>
 								<input type="text" placeholder="" class="form-input">

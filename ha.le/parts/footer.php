@@ -2,7 +2,7 @@
 	<div class="footer-body">
 		
 		<div class="layout-aside">
-			<h>COMPANY INFO</h4>
+			<h4>COMPANY INFO</h4>
 		</div>
 		
 		<div class="layout-main">
@@ -29,7 +29,7 @@
 		
 		<div class="flex-stretch"></div>
 		<div class="flex-none">
-			<h6>© 2024 ChicHaus</h6>
+			<h6>All rights reserved</h6>
 		</div>
 	</div>
 		
