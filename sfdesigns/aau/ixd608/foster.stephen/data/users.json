@@ -1,0 +1,38 @@
+[
+	{
+		"name":"Stephen Foster",
+		"type":"Student",
+		"email":"sfii.edu@gmail.com",
+		"classes":[608,617,820]
+	},
+	{
+		"name":"Pheobe Buffay",
+		"type":"Singer",
+		"email":"smellycat@gmail.com",
+		"classes":[608,617,820]
+	},
+	{
+		"name":"Joey Tribbiani",
+		"type":"Actor",
+		"email":"sandwiches@gmail.com",
+		"classes":[608,617,820]
+	},
+	{
+		"name":"Chandler Bing",
+		"type":"Advertising",
+		"email":"sarcasm@gmail.com",
+		"classes":[608,617,820]
+	},
+	{
+		"name":"Monica Gellar",
+		"type":"Chef",
+		"email":"iknow@gmail.com",
+		"classes":[608,617,820]
+	},
+	{
+		"name":"Ross Gellar",
+		"type":"Professor",
+		"email":"dinonuggs@gmail.com",
+		"classes":[608,617,820]
+	}	
+]
