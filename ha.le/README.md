@@ -7,3 +7,7 @@
 
 - https://hle.design/aau/wnm608/ha.le/notes/reading_data.php
 - https://hle.design/aau/wnm608/ha.le/admin/users.php
+
+
+## Folders
+- Product table:  data/products.sql

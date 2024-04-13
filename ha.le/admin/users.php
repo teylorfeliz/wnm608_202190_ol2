@@ -2,16 +2,72 @@
 
 include "../lib/php/functions.php";
 
+$filename = "../data/users.json";
+$users = file_get_json($filename);
 
-// $filename = "notes.json"; 
-// $file = file_get_contents($filename);
-// $notes_object = json_decode($file);
 
-// $filename = "notes.json"; 
-// $file = file_get_contents($filename);
-// $notes_object = json_decode($file);
 
-$users = file_get_json("../data/users.json");
+
+$empty_user = (object)[
+	"name"=>"",
+	"phone"=>"",
+	"email"=>"",
+	"address"=>"",
+	"classes"=>[]
+];
+
+
+// file_put_contents json_encode explode $_post
+// CRUD, Create Read Update Delete
+
+
+//print_p([$_GET,$_POST]);
+
+if (isset($_GET['action'])) {
+	switch ($_GET['action']) {
+		case "update":
+			$users[$_GET['id']]->name = $_POST['user-name'];
+			$users[$_GET['id']]->phone = $_POST['user-phone'];
+			$users[$_GET['id']]->email = $_POST['user-email'];
+			$users[$_GET['id']]->address = $_POST['user-address'];
+			$users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
+
+			file_put_contents($filename,json_encode($users));
+			header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+			break;
+		case "create":
+			$empty_user->name = $_POST['user-name'];
+			$empty_user->phone = $_POST['user-phone'];
+			$empty_user->email = $_POST['user-email'];
+			$empty_user->address = $_POST['user-address'];
+			$empty_user->classes = explode(", ", $_POST['user-classes']);
+
+			$id = count($users);
+
+			$users[] = $empty_user;
+
+			file_put_contents($filename,json_encode($users));
+			header("location:{$_SERVER['PHP_SELF']}?id=$id");
+			break;
+		case "delete":
+			array_splice($users,$_GET['id'],1);
+			file_put_contents($filename,json_encode($users));
+			header("location:{$_SERVER['PHP_SELF']}");
+			break;
+	}
+}
+
+
+if(isset($_POST['user-name'])) {
+	$users[$_GET['id']]->name = $_POST['user-name'];
+	$users[$_GET['id']]->phone = $_POST['user-phone'];
+	$users[$_GET['id']]->email = $_POST['user-email'];
+	$users[$_GET['id']]->address = $_POST['user-address'];
+	$users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
+
+	file_put_contents($filename,json_encode($users));
+}
+
 
 
 
@@ -20,15 +76,18 @@ $users = file_get_json("../data/users.json");
 
 function showUserPage($user) {
 
+$id = $_GET['id'];
+$addoredit = $id == "new" ? "Add" : "Edit";
+$createorupdate = $id == "new" ? "create" : "update";
 $classes = implode(", ", $user->classes);
 
+$delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+
 // heredoc
-echo <<<HTML
+$displayandform =<<<HTML
 <div class="layout-main-col">
-	<nav class="nav nav-crumbs">
-		<ul>
-			<li><a href="admin/users.php">Back</a></li>
-		</ul>
+	<nav class='nav nav-crumbs'>
+		<div><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
 	</nav>
 	<div>
 		<h4 class="space-before-paragraph space-after-paragraph">$user->name</h4>
@@ -44,13 +103,20 @@ echo <<<HTML
 			<strong class="space-before-paragraph">Address:</strong>
 			<span>$user->address</span>
 		</div>
+		<div>
+			<strong class="space-before-paragraph">Classes:</strong>
+			<span>$classes</span>
+		</div>
 	</div>
+	<nav class='nav nav-crumbs space-before-paragraph'>
+		<div>$delete</div>
+	</nav>
 </div>
 <div class="layout-main-col">
 	<div class="container">
 		<div>
-			<h4 class="space-after-paragraph">User Form</h4>
-			<form action="" method="post">
+			<h4 class="space-after-paragraph">$addoredit  User</h4>
+			<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
 				<label class="form-label" for="user-name">Name</label>
 				<input type="text" placeholder="Enter your name" class="form-input" name="user-name" id="user-name" value="$user->name">
 				<label class="form-label" for="user-phone">Phone</label>
@@ -59,6 +125,8 @@ echo <<<HTML
 				<input type="text" placeholder="Enter your email address" class="form-input" name="user-email" id="user-email" value="$user->email">
 				<label class="form-label" for="user-address">Address</label>
 				<input type="text" placeholder="Enter your shipping address" class="form-input" name="user-address" id="user-address" value="$user->address">
+				<label class="form-label" for="user-classes">Classes</label>
+				<input type="text" placeholder="Enter your classes" class="form-input" name="user-classes" id="user-classes" value="$classes">
 
 				<div class="form-control">
 					<input type="submit" class="form-button" value="Save">
@@ -66,13 +134,49 @@ echo <<<HTML
 			</form>
 		</div>
 	</div>
+</div>
+HTML; 
 
+
+$form = <<<HTML
+<div class="layout-main-col">
+	<nav class='nav nav-crumbs'>
+		<div><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
+	</nav>
+</div>
+<div class="layout-main-col">
+	<div class="container">
+		<div>
+			<h4 class="space-after-paragraph">$addoredit  User</h4>
+			<form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+				<label class="form-label" for="user-name">Name</label>
+				<input type="text" placeholder="Enter your name" class="form-input" name="user-name" id="user-name" value="$user->name">
+				<label class="form-label" for="user-phone">Phone</label>
+				<input type="text" placeholder="Enter your phone number" class="form-input" name="user-phone" id="user-phone" value="$user->phone">
+				<label class="form-label" for="user-email">Email</label>
+				<input type="text" placeholder="Enter your email address" class="form-input" name="user-email" id="user-email" value="$user->email">
+				<label class="form-label" for="user-address">Address</label>
+				<input type="text" placeholder="Enter your shipping address" class="form-input" name="user-address" id="user-address" value="$user->address">
+				<label class="form-label" for="user-classes">Classes</label>
+				<input type="text" placeholder="Enter your classes" class="form-input" name="user-classes" id="user-classes" value="$classes">
+
+				<div class="form-control">
+					<input type="submit" class="form-button" value="Save">
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 HTML;
+
+
+$output = $id == "new" ? $form : $displayandform;
+
+echo <<<HTML
+$output
+HTML;
 }
-
-
 
 
 
@@ -104,7 +208,8 @@ HTML;
 					<div class="layout-main-col display-flex flex-align-center">
 						<nav class="nav nav-crumbs">
 							<ul>
-								<li><a href="admin/users.php">USER LIST</a></li>
+								<li><a href="<?= $_SERVER['PHP_SELF'] ?> ">USER LIST</a></li>
+								<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">ADD NEW USER</a></li>
 							</ul>
 						</nav> 
 					</div>
@@ -123,7 +228,7 @@ HTML;
 				<?php 
 
 				if(isset($_GET['id'])) {
-						showUserPage($users[$_GET['id']]);
+						showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
 				} else {
 
 				?>
