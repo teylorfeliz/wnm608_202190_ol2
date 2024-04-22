@@ -11,7 +11,7 @@
 	<?php include "parts/header.php"; ?>
 
 
-	<div class="container layout-body">
+	<div class="layout-body">
 
 
 		<?php include "parts/navbar.php"; ?>

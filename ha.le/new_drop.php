@@ -11,15 +11,14 @@
 	<?php include "parts/header.php"; ?>
 
 
-	<div class="container layout-body">
+	<div class="layout-body">
 
 
 		<?php include "parts/navbar.php"; ?>
 
 		<div class="layout-main">
-			<h4 class="space-after-paragraph">SPRING 2024 COLLECTION</h4>
 
-			<div class="container">
+			<div class="product-list-container">
 				
 				<div class="grid gap ">
 					<div class="col-xs-12 col-md-6 col-lg-3">

@@ -17,7 +17,16 @@
 					</ul>
 				</div>
 		
-				<div class="layout-main-col"></div>
+				<div class="layout-main-col display-flex flex-align-end">
+					<div class="display-flex flex-stretch newsletters">
+						<div class="flex-stretch">
+							<input type="text" placeholder="" class="form-input" >
+						</div>
+						<div class="form-control">
+							<button class="form-button transparent">SUBCRIBE FOR NEWSLETTERS</button> 
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

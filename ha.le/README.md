@@ -11,3 +11,7 @@
 
 ## Folders
 - Product table:  data/products.sql
+
+## Photography and Credit
+- All photos are credited to MONOLOGUE LONDON (https://www.monologuelondon.com)
+I have requested and gained persmission from ALessandro Monaco - Founder and Creative Director- to use their images. 

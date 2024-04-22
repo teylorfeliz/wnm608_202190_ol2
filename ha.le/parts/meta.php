@@ -10,3 +10,10 @@
 <link rel="stylesheet" href="lib/css/layout.css">
 <link rel="stylesheet" href="css/storetheme.css">
 
+
+
+
+
+
+
+<script type="text/javascript" src="lib/js/jquery-3.7.1.min"></script>

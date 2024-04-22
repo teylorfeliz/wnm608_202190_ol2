@@ -1,4 +1,6 @@
 font/
 
-.DS_Store
-ha.le/.DS_Store
+*.DS_Store
+*sftp-config.json
+*auth.php
+
