@@ -5,65 +5,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ChicHaus</title>
 
-	<meta name="viewport" content="width=device-width">
+	<?php include "parts/meta.php"; ?>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="lib/css/layout.css">
-	<link rel="stylesheet" href="css/storetheme.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
 
 </head>
 <body>
 	
-	<header>
-		<div class="layout-header">
-			<div class="layout-aside sitename">
-				<a href="index.php"><h1>CHICHAUS</h1></a>
-			</div>
-			
-			<div class="layout-main">
-				<div class="layout-main-cols">
-					<div class="layout-main-col" style="flex-direction: row;">
-						<div class="form-control">
-							<form>
-								<input type="search" class="basic-input" placeholder="What are you looking for?">
-							</form>
-						</div> 
-					</div>
-					<div class="layout-main-col display-flex">
-						<!-- nav.nav>ul>li*4>a[href=#articles$]>{Link $} -->
-						<nav class="nav nav-flex">
-							<ul>
-								<li><a href="cart.php">CART</a></li>
-								<li><a href="">LOG IN</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php include "parts/header.php"; ?>
 
+	<div class="layout-body landing">
 
-	<div class="layout-body">
-
-		<div class="layout-aside">
-			<div>
-				<nav class="flex-none nav nav-blur">
-					<ul>
-						<li><a href="new_drop.php">SPRING 2024</a></li>
-						<li><a href="product_list.php">PRODUCT</a></li>
-						<li><a href="about.php">ABOUT</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
+		<?php include "parts/navbar.php"; ?>
 
 		<div class="layout-main">
-			<div class="grid gap">
-				
+			<div class="layout-main-cols">
+				<div class="landing-image flex-none" >
+					<a href="new_drop.php">
+						<img src="img/landing.png" alt="newest-drop">
+						<h2 class="view-new-drop">View New Drop</h2>
+					</a>
+				</div>
 			</div>
 		</div>
 

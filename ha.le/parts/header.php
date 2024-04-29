@@ -1,4 +1,8 @@
-	
+<?php
+
+include_once "lib/php/functions.php";
+
+?>	
 
 <header>
 	<div class="layout-header">
@@ -19,7 +23,12 @@
 					<!-- nav.nav>ul>li*4>a[href=#articles$]>{Link $} -->
 					<nav class="nav nav-flex">
 						<ul>
-							<li><a href="cart.php">CART</a></li>
+							<li>
+								<a href="cart.php">
+									<span>CART</span>
+									<span class="badge"><?= makeCartBadge(); ?></span>
+								</a>
+							</li>
 							<li><a href="">LOG IN</a></li>
 						</ul>
 					</nav>

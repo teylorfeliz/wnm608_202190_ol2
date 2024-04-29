@@ -12,7 +12,7 @@
 	<?php include "parts/header.php"; ?>
 
 
-	<div class="container layout-body">
+	<div class="layout-body">
 
 		<?php include "parts/navbar.php"; ?>
 
@@ -23,13 +23,11 @@
 					<h4 class="space-after-paragraph">ABOUT US</h4>
 					<div class="col-xs-12 col-md-6 col-lg-3">
 						<figure class="figure product-overlay">
-							<img src="https://via.placeholder.com/400x300?text=" alt="">
+							<img src="img/about.png" alt="about-us">
 						</figure>
 					</div>
 				</div>
-				<div class="container">
-					
-				</div>
+			
 				<div class="layout-main-col">
 					<div>
 						<h2>With Chic-Haus, experience the transformative power of design.</h2>
