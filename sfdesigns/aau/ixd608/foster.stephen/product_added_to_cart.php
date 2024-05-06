@@ -1,10 +1,12 @@
 <?php
+    include_once "lib/php/functions.php";
+    session_start();
 
-include_once "lib/php/functions.php";
+    $product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id` = ".$_GET['id'])[0];
 
-$products = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
-
-?><!DOCTYPE html>
+    $cart_product = cartItemById($_GET['id']);
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

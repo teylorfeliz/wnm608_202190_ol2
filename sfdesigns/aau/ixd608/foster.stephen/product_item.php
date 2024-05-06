@@ -2,12 +2,12 @@
 
 include_once "lib/php/functions.php";
 
-$products = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
 
-$images = explode(",", $products->images);
+$images = explode(",", $product->images);
 
 $image_elements = array_reduce($images,function($r,$o){
-	return $r."<img src='/img/$o'>";
+	return $r."<img src='img/$o'>";
 });
 
 // print_p($product);
@@ -31,7 +31,7 @@ $image_elements = array_reduce($images,function($r,$o){
 			<div class="col-xs-12 col-md-7">
 				<div class="card soft">
 					<div class="images-main">
-						<img src="img/<?= $products->images ?>">
+						<img src="img/<?= $product->thumbnail ?>">
 					</div>
 					<div class="images-thumbs">
 						<?= $image_elements ?>
@@ -41,8 +41,8 @@ $image_elements = array_reduce($images,function($r,$o){
 			<div class="col-xs-12 col-md-5">
 				<div class="card soft flat">
 					<div class="card-section">
-						<h2 class="product-name"><?= $products->name ?></h2>
-						<div class="product-price">&dollar;<?= $products->price ?></div>
+						<h2 class="product-name"><?= $product->name ?></h2>
+						<div class="product-price">&dollar;<?= $product->price ?></div>
 					</div>
 
 					<div class="card-section">
