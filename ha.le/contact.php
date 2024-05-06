@@ -20,11 +20,11 @@
 
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<h4>CONTACT US</h4>
-					<div class="space"></div>
-					<p>Feel free to contact us. We will get back to you as soon as possible!</p>
-					<h5>Customer Service Hours:</h5>
+					<h4>CUSTOMER SERVICE</h4>
+					<div class="space"></div>	
 					<p>Monday to Friday, 9 a.m. to 8 p.m. (EST time)<br>Saturdays and Sundays from 9 a.m. to 5 p.m. (EST time)</p>
+
+					<p>Feel free to contact us. We will get back to you as soon as possible!</p>
 				</div>
 				<div class="layout-main-col">
 					<div class="container">

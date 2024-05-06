@@ -32,16 +32,20 @@
 					<div>
 						<h2>With Chic-Haus, experience the transformative power of design.</h2>
 					</div>
+
 					<div>
 						<h5>BRAND NAME</h5>
 						<p>The name “Chic-Haus” embodies the essence of our offerings. “Chic” signifies stylishness and modern elegance, while “Haus,” the German word for “home,” emphasizes the functionality and comfort we bring to your living environment. </p>
 
+						<div class="space"></div>
 						<h5>OUR INTENTION</h5>
 						<p>How can Chic-Haus strengthen one's emotional connection to furniture by enhancing appreciation for aesthetics and craftsmanship to elevate customers' living spaces?</p>
 
+						<div class="space"></div>
 						<h5>BACKGROUND</h5>
 						<p>ChicHaus is a unique furniture studio dedicated to collaborating with talented artists and skilled artisans to create limited-edition, one-of-a-kind furniture pieces. We combine the artistry and storytelling of individual creators with the impeccable craftsmanship of experienced makers. Each piece is more than just furniture; it’s a conversation starter, a reflection of your individuality, and an heirloom to be cherished.</p>
-
+						
+						<div class="space"></div>
 						<h5>MISSION</h5>
 						<p>How can Chic-Haus strengthen one's emotional connection to furniture by enhancing appreciation for aesthetics and craftsmanship to elevate customers' living spaces?</p>
 					</div>

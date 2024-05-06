@@ -27,6 +27,7 @@ $images_elements = array_reduce($images, function($r,$o){
 	<?php include "parts/meta.php"; ?>
 
 	<script src="js/product_thumbs.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	
@@ -73,7 +74,7 @@ $images_elements = array_reduce($images, function($r,$o){
 							<p><?= $product->description ?></p>
 						</div>
 						<div class="space"></div>
-						<h6>Details</h6>
+						<h5>Details</h5>
 						<p>Made to order<br><?= $product->dispatch ?></p>
 						<p>Material: <?= $product->materials ?></p>
 						<p>Dimension: <?= $product->dimensions ?></p>
@@ -105,9 +106,17 @@ $images_elements = array_reduce($images, function($r,$o){
 								</div>
 							</div>
 						</div>
+
+						<div class="space"></div>
 						<div class="form-control">
 							<input type="submit" class="form-button" value="ADD TO CART">
 						</div>
+
+
+
+
+
+
 
 					</form>
 

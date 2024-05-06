@@ -32,7 +32,8 @@
 
 .layout-header {
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	padding-top: 1em;
 }
 
 .layout-body{
@@ -96,8 +97,8 @@
 
 
 .layout-header .layout-main-col{
-	align-items: center;
 	justify-content: flex-end;
+	align-items: flex-start;
 }
 
 .layout-body .layout-main-col{

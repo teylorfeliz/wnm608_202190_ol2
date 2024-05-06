@@ -8,7 +8,7 @@ function productListTemplate($r,$o) {
 return $r.<<<HTML
 <a class="col-xs-12 col-md-6 col-lg-3" href="product_item.php?id=$o->id">
 	<figure class="figure product-overlay display-flex flex-column">
-		<div class="flex-strech">
+		<div class="flex-stretch">
 			<img src="img/$o->thumbnail" alt="">
 		</div>
 		<figcaption class="flex-none flex-column" >

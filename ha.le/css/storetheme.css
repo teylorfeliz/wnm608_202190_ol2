@@ -83,7 +83,7 @@ span.badge:not(:empty)::after {
 }
 
 
-/* landing page */
+/*  ------------------------- LANDING PAGE -------------------------  */
 
 div.landing {
 	margin-bottom: 0;
@@ -276,6 +276,9 @@ div.landing {
 }
 
 
+#billing-form{
+
+}
 
 /*  ------------------------- CONTACT -------------------------  */
 
