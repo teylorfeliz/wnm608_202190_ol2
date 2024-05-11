@@ -4,12 +4,15 @@
 - https://hle.design
 - https://hle.design/aau/wnm608/ha.le
 - https://hle.design/aau/wnm608/ha.le/styleguide
+- https://hle.design/aau/wnm608/ha.le/admin
 
-- https://hle.design/aau/wnm608/ha.le/notes/reading_data.php
+
+## Extra links
 - https://hle.design/aau/wnm608/ha.le/admin/users.php
+- https://hle.design/aau/wnm608/ha.le/notes
+- https://hle.design/aau/wnm608/ha.le/notes/reading_data.php
 
-
-## Folders
+## Files
 - Product table:  data/products.sql
 
 ## Photography and Credit

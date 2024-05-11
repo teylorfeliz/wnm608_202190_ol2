@@ -1,8 +1,10 @@
 <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
 // In the function below, add [0] at the end to output as a single object instead of an array
+
 
 $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` =".$_GET['id'])[0];
 
@@ -29,7 +31,7 @@ $images_elements = array_reduce($images, function($r,$o){
 	<script src="js/product_thumbs.js"></script>
 	<script src="js/script.js"></script>
 </head>
-<body>
+<body class="">
 	
 	<?php include "parts/header.php"; ?>
 
@@ -41,7 +43,14 @@ $images_elements = array_reduce($images, function($r,$o){
 		<div class="layout-main">
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<div class="display-flex">
+					<nav class='nav nav-crumbs'>
+						<div class="display-flex space-after-paragraph"><a href="<?php echo $_SERVER['HTTP_REFERER'] ?>" style="line-height: 1em">Back</a></div>
+					</nav>
+				</div>
+			</div>
+			<div class="layout-main-cols">
+				<div class="layout-main-col">
+					<div class="display-flex flex-wrap ">
 						<div class="flex-none">
 							<h3><?= $product->name ?></h3>
 						</div>
@@ -50,25 +59,25 @@ $images_elements = array_reduce($images, function($r,$o){
 							<h3>&dollar;<?= $product->price ?></h3>
 						</div>
 					</div>
-					<p class="space-after-paragraph"><?= $product->designer ?></p>
 
-          			<div class="grid gap product_item">
+          			<div class="grid gap product_item space-before-paragraph product-item-images">
           				<div class="col-xs-12 col-lg-11 images-main">
           					<img src="img/<?= $product->thumbnail ?>" alt="">
           				</div>
-          				<div class="display-flex col-xs-12 col-lg-1 images-thumbs">
+          				<div class="display-flex col-xs-6 col-lg-1 flex-wrap images-thumbs">
           					<?= $images_elements ?>
           				</div>
           			</div>
-
 				</div>
+
+
 				<div class="layout-main-col">
 
+					<div class="space"></div>
 					<form method="post" action="cart_actions.php?action=add-to-cart">
 
 						<input type="hidden" name="product-id" value="<?= $product->id ?>">
-						
-						<div class="doublespace"></div>
+						<h5>Design by <?= $product->designer ?></h5>
 						<div class="card hard">
 							<h5>Story</h5>
 							<p><?= $product->description ?></p>
@@ -79,18 +88,6 @@ $images_elements = array_reduce($images, function($r,$o){
 						<p>Material: <?= $product->materials ?></p>
 						<p>Dimension: <?= $product->dimensions ?></p>
 
-						<div class="space"></div>
-						<div class="display-flex flex-align-center">
-							<div class="flex-none display-flex">
-								<h5><label for="product-size" class="flex-none">SELECT SIZE</label></h5>
-								<div class="form-select flex-none" style="margin-left: 1em">
-									<select id="product-size" name="product-size"> 
-										<option>square</option>
-										<option>oval</option>
-									</select>
-								</div>
-							</div>
-						</div>
 
 						<div class="display-flex flex-align-center space-before-paragraph">
 							<div class="flex-none display-flex">
@@ -112,24 +109,43 @@ $images_elements = array_reduce($images, function($r,$o){
 							<input type="submit" class="form-button" value="ADD TO CART">
 						</div>
 
-
-
-
-
-
-
 					</form>
+				</div>
 
+				<div class="lightbox">
+					<div class="lightbox-back"></div>
+					<div class="lightbox-content"></div>
 				</div>
 			</div>
+
+			<div class="doublespace"></div>
+			<div class="layout-main-cols">
+				<div class="layout-main-col">
+					<h5>Recommended products</h5>
+					
+					<?php
+					recommendedSimilar($product->category,$product->id);
+					?>
+
+				</div>
+
+			</div>	
+
 		</div>
 	</div>
 
+	
 
 	<?php include "parts/footer.php"; ?>
 
 
 
-
 </body>
 </html>
+
+
+
+
+
+
+

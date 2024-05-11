@@ -25,7 +25,16 @@ function makeConn() {
 	if($conn->connect_errno) die($conn->connect_error);
 	$conn->set_charset('utf8');
 	return $conn;
+}
 
+
+function makePDOConn() {
+	try {
+		$conn = new PDO(...PDOAuth());
+	} catch(PDOException $e) {
+		die($e->getMessage());
+	}
+	return $conn;
 }
 
 
@@ -37,7 +46,6 @@ function makeQuery($conn,$qry) {
 		$a[] = $row;
 	}
 	return $a;
-
 }
 
 /* CART FUNCTIONS */
@@ -74,7 +82,7 @@ function cartItembyId($id) {
 function makeCartBadge() {
 	$cart = getCart();
 	if(count($cart)==0) {
-		return "";
+		return "0";
 	}else {
 		return array_reduce($cart,function($r,$o){return $r+$o->amount;},0);
 	}
@@ -97,10 +105,6 @@ function getCartItems() {
 		return $o;
 	},$data);
 }
-
-
-
-
 
 
 

@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="lib/css/gridsystem.css">
 <link rel="stylesheet" href="lib/css/layout.css">
 <link rel="stylesheet" href="css/storetheme.css">
+<link rel="stylesheet" href="css/lightbox.css">
 
 
 

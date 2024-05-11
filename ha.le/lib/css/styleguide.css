@@ -26,25 +26,29 @@
 	--font-serif: Georgia, "Times New Roman", serif;
 	--font-sans: SuisseLight, Arial, Helvetica, sans-serif;
 }
-
+ 
 @font-face {
     font-family: SuisseLight;
     src: url("../../font/SuisseIntl-Light-WebS.woff2");
+    font-weight: 1 1000;
 }
 
 @font-face {
     font-family: SuisseRegular;
-    src: url("../../font/SuisseIntl-Regular-WebM.woff2");
+    src: url("../../font/SuisseIntl-Regular-WebS.woff2");
+    font-weight: 1 1000;
 }
 
 @font-face {
     font-family: SuisseBook;
     src: url("../../font/SuisseIntl-Book-WebS.woff2");
+    font-weight: 1 1000;
 }
 
 @font-face{
 	font-family: EuclidMono;
-	 src: url("../../font/EuclidMono-Vanguard-WebXL.woff2");
+	src: url("../../font/EuclidMono-Vanguard-WebXL.woff2");
+	font-weight: 1 1000;
 }
 
 body {
@@ -67,14 +71,8 @@ h2{
 }
 
 h3 {
-	font-size: 1.5em;
-	line-height: 1em;
-}
-
-h6{
-	font-family: SuisseLight;
-	font-size: 0.7em;
-	margin: 0;
+	font-size: 1.4em;
+	padding-bottom: 0.5em;
 }
 
 h3, h4, h5{
@@ -91,6 +89,11 @@ h3, h4, h5, h6{
 	line-height: 1em;
 }
 
+h6{
+	font-family: SuisseLight;
+	font-size: 0.7em;
+	margin: 0;
+}
 
 a{
 	font-family: SuisseLight;
@@ -99,9 +102,9 @@ a{
 	
 }
 
-p{
+p, span{
 	font-family: SuisseLight;
-	font-size: 0.95em;
+	font-size: 0.9em;
 	line-height: 1.4em;
 	margin: 0.5em 0 0.5em 0;
 }
@@ -139,7 +142,7 @@ p{
 .flex-column { flex-direction: column; }
 .flex-space-between { justify-content: space-between; }
 
-
+.flex-wrap { flex-wrap: wrap; }
 
 
 
@@ -171,7 +174,7 @@ p{
 	}
 
 	.nav a:hover{
-		background-color: var(--color-neutral-light);
+		background-color: var(--color-main-medium);
 		text-decoration: none;
 	}
 
@@ -187,10 +190,6 @@ p{
 .nav-stretch ul, 
 .nav-flex ul{
 	display: flex;
-}
-
-.nav-flex a{
-	padding:  0.2em 0em 0.2em 3em;
 }
 
 .nav-flex a:hover {
@@ -371,11 +370,11 @@ p{
 }
 
 .space{
-	height: 2em;
+	height: 3em;
 }
 
 .doublespace{
-	height: 4.8em;
+	height: 6em;
 }
 
 .smallgap{
@@ -513,7 +512,7 @@ p{
 .form-item,
 .form-input,
 .basic-input,
-.message-box,
+.form-text-box,
 .hotdog,
 .hotdog input,
 .form-select>select{
@@ -527,8 +526,12 @@ p{
     outline: 0;
 }
 
+.form-control input{
+	border-radius: 0;
+}
 
 .form-input {
+	font-size: 0.9em;
 	margin: 0.5em 0;
     border-bottom: 1px solid var(--color-neutral-light);
     padding: 0.5em 0;
@@ -558,7 +561,7 @@ p{
 
 .form-control .form-label{
     font-size: 0.9em;
-    font-family: SuisseLight;
+    font-family: SuisseBook;
     color: var(--color-neutral-medium);
     display: block;
     width: 100%;
@@ -600,6 +603,11 @@ p{
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-button a{
+	text-decoration: none;
 }
 
 .form-button:hover {
@@ -633,8 +641,8 @@ p{
 
 .basic-input {
 	background-color: var(--color-white);
-	border: 1px solid var(--color-neutral-medium);
-	padding: 0.5em 1.5em;
+	border: 0.5px solid var(--color-neutral-dark);
+	padding: 0.5em 1em;
 	display: flex;
 }
 
@@ -648,13 +656,16 @@ header .form-control input::placeholder{
 	padding: 0.5em 0;	
 }
 
-.message-box {
-	background-color: var(--color-white);
-	border: 1px solid var(--color-black);
-	padding: 0.5em 1.5em;
-	display: flex;
-	min-height: 15vh;
-	text-align: : top;
+.form-text-box {
+	border: 0.5px solid var(--color-neutral-dark);
+    resize: vertical;
+    min-height: 100px;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+.form-text-box:focus {
+	border: 1px solid var(--color-main-dark);
 }
 
 
@@ -698,9 +709,10 @@ header .form-control input::placeholder{
 
 /* Select */
 .form-select>select {
-    padding: 0.4em 2.6em 0.4em 1.3em;
+    padding: 0.5em 2.6em 0.5em 1.3em;
     background-color: var(--color-white);
     border: 1px solid var(--color-neutral-medium);
+    border-radius: 0;
     cursor: pointer;
     font-size: 0.7em;
     text-transform: uppercase;

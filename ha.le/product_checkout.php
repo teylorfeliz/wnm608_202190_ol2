@@ -45,6 +45,11 @@ $cart_items = getCartItems();
 						<div class="display-flex flex-column">
 							<?= array_reduce($cart_items,'checkoutSummaryTemplate') ?>
 						</div>
+						<div class="space" style="padding-top: 0.5em; border-top: 1px solid var(--color-neutral-medium);"></div>
+						<div>
+							<?= checkoutTotals() ?>
+						</div>
+
 					</div>
 				</div>
 

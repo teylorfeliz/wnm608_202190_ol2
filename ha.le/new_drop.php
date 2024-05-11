@@ -34,7 +34,7 @@ include_once "parts/templates.php";
 					"SELECT *
 					FROM `products`
 					ORDER BY `date_create` DESC
-					LIMIT 20
+					LIMIT 8
 					"
 				);
 

@@ -18,13 +18,25 @@ let images = $(".follow-mouse");
 let index = images.index();
 let currentIndex = 0;
 
+
+const openLightbox = function(event){
+	console.log(event.target.src);
+
+	//Change the content of the lightbox
+	$(".lightbox-content").html("<img src='" + event.target.src + "'>");
+
+	//Add class active to the lightbox 
+	$(".lightbox").addClass("active");
+	$("body").addClass("light-box-opened");
+}
+
+
+
 $(function(){
 
-//*-------------------- HOME PAGE - Interactive images ------------------------*/
 
-	
 
-	//Follow mousemove 
+//Follow mousemove 
 	$(".landing-image").on("mousemove touchmove", function(event){
 		let pos = getEventXY(event);
 
@@ -39,4 +51,55 @@ $(function(){
 	})
 
 
+
 });
+
+
+
+
+//billing address
+function billingAddress() {
+    var checkBox = document.getElementById("billing-checkbox");
+    var form = document.getElementById("billing-form");
+    if (checkBox.checked == true){
+      form.style.display = "none";
+    } else {
+       form.style.display = "block";
+    }
+}; 
+
+
+
+//lightbox 
+$(function(){
+	$("body").on("click", ".product-item-images img", openLightbox);
+
+	$(".lightbox-back").on("click", function(){
+		$(".lightbox").removeClass("active");
+		$("body").removeClass("light-box-opened");
+	})
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

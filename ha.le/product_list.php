@@ -19,7 +19,6 @@ include_once "parts/templates.php";
 
 </head>
 <body>
-	
 	<header>
 		<div class="layout-header">
 			<div class="layout-aside sitename">
@@ -41,12 +40,12 @@ include_once "parts/templates.php";
 						<nav class="nav nav-flex">
 							<ul>
 								<li>
-									<a href="cart.php">
-										<span>CART</span>
+									<a href="cart.php" style="padding:  0.2em 0em 0.2em 3em;">
+										CART
 										<span class="badge"><?= makeCartBadge(); ?></span>
 									</a>
 								</li>
-								<li><a href="">LOG IN</a></li>
+								<li><a href="log_in.php" style="padding:  0.2em 0em 0.2em 3em;">LOG IN</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -65,7 +64,7 @@ include_once "parts/templates.php";
 		<div class="layout-main">
 			<div class="product-list-container">
 
-				<div class="display-flex">
+				<div class="display-flex sorting-bar">
 					<div class="form-control display-flex flex-stretch">
 						<div class="flex-none" >
 							<button data-filter="category" data-value="" type="button" class="form-button small-button transparent">All</button>
@@ -82,7 +81,7 @@ include_once "parts/templates.php";
 					</div>
 
 					<div class="form-control flex-none">
-						<div class="form-select flex-none" style="margin-left: 1em">
+						<div class="form-select flex-none">
 							<select class="js-sort"> 
 								<option value="1" >Newest</option>
 								<option value="2" >Oldest</option>

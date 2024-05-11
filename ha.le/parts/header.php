@@ -20,12 +20,12 @@ include_once "lib/php/functions.php";
 					<nav class="nav nav-flex">
 						<ul>
 							<li>
-								<a href="cart.php">
-									<span>CART</span>
-									<span class="badge"><?= makeCartBadge(); ?></span>
+								<a href="cart.php" style="padding:  0.2em 0em 0.2em 3em;">
+									<span style="font-size: 1em;">CART </span>
+									<span class="badge" style="font-size: 1em;"><?= makeCartBadge(); ?></span>
 								</a>
 							</li>
-							<li><a href="">LOG IN</a></li>
+							<li><a href="log_in.php" style="padding:  0.2em 0em 0.2em 3em;">LOG IN</a></li>
 						</ul>
 					</nav>
 				</div>

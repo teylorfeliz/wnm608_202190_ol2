@@ -23,6 +23,25 @@ HTML;
 }
 
 
+function recommendListTemplate($r,$o) {
+return $r.<<<HTML
+<a class="col-xs-3" href="product_item.php?id=$o->id">
+	<figure class="figure product-overlay display-flex flex-column">
+		<div class="flex-stretch">
+			<img src="img/$o->thumbnail" alt="">
+		</div>
+		<figcaption class="flex-none flex-column" >
+			<div class="caption-body flex-stretch">
+				<h5>$o->name</h5>
+				<h5>&dollar;$o->price</h5>
+			</div>
+		</figcaption>
+	</figure>
+</a>
+HTML;
+}
+
+
 function selectAmount($amount=1,$total=5) {
 	$ouput = "<select name='amount'>";
 	for($i=1;$i<=$total;$i++) {
@@ -39,8 +58,11 @@ function selectAmount($amount=1,$total=5) {
 function cartListTemplate($r,$o) {
 	$totalfixed = number_format($o->total,2,'.','');
 	$selectamount = selectAmount($o->amount,5);
+	$cart = getCartItems();
+	$itemsInCart = makeCartBadge();
+
 return $r.<<<HTML
-<div class="display-flex cart-list">
+<div class="display-flex list cart-list">
 	<div class="flex-none images-thumbs">
 		<img src="img/$o->thumbnail" alt="">
 	</div>
@@ -68,19 +90,6 @@ HTML;
 } 
 
 
-/*
-
-function cartDisplay($r,$o) {
-	$cart = getCartItems();
-
-	if(count($cart)<1) {
-		return "<div> Your cart is empty </div>";
-	}else {
-		return cartListTemplate($r,$o);
-	}
-} 
-
-*/
 
 
 function cartTotals() {
@@ -92,31 +101,34 @@ function cartTotals() {
 	$taxfixed = number_format($cartprice*0.0725,2,'.','');
 	$taxedfixed = number_format($cartprice*1.0725,2,'.','');
 
-return <<<HTML
-<div class="cart-totals">
-	<div class="display-flex">
-		<h5 class="flex-stretch">Total</h5>
-		<h3 class="flex-none">&dollar;$taxedfixed</h3>
-	</div>
-	<div class="space"></div>
-	<div class="display-flex">
-		<h5 class="flex-stretch">Subtotal</h5>
-		<div class="flex-none">&dollar;$pricefixed</div>
-	</div>
-	<div class="display-flex">
-		<h5 class="flex-stretch">Taxes</h5>
-		<div class="flex-none">&dollar;$taxfixed</div>
-	</div>
-	<div class="space"></div>
-	<form>
-		<div class="form-control display-flex" style="justify-content: flex-end;">
-			<a href="product_checkout.php" class="form-button">CHECK OUT</a>
+if(count($cart)==0) {
+	return "";
+}else {
+	return <<<HTML
+	<div class="cart-totals">
+		<div class="display-flex">
+			<h5 class="flex-stretch">Total</h5>
+			<h3 class="flex-none">&dollar;$taxedfixed</h3>
 		</div>
-	</form>
-</div>
-HTML;
+		<div class="space"></div>
+		<div class="display-flex">
+			<h5 class="flex-stretch">Subtotal</h5>
+			<div class="flex-none">&dollar;$pricefixed</div>
+		</div>
+		<div class="display-flex">
+			<h5 class="flex-stretch">Taxes</h5>
+			<div class="flex-none">&dollar;$taxfixed</div>
+		</div>
+		<div class="space"></div>
+		<form>
+			<div class="form-control display-flex" style="justify-content: flex-end;">
+				<a href="product_checkout.php" class="form-button">CHECK OUT</a>
+			</div>
+		</form>
+	</div>
+	HTML;
+	}
 }
-
 
 
 
@@ -127,7 +139,7 @@ function checkoutSummaryTemplate($r,$o) {
 	$totalfixed = number_format($o->total,2,'.','');
 	$selectamount = selectAmount($o->amount,5);
 return $r.<<<HTML
-<div class="display-flex cart-list">
+<div class="display-flex list checkout-list ">
 	<div class="flex-none images-thumbs">
 		<img src="img/$o->thumbnail" alt="">
 	</div>
@@ -141,6 +153,23 @@ return $r.<<<HTML
 HTML;
 }
 
+function checkoutTotals() {
+	$cart = getCartItems();
+	$cartprice = array_reduce($cart, function($r,$o){return $r + $o->total;},0);
+	$taxedfixed = number_format($cartprice*1.0725,2,'.','');
+
+return <<<HTML
+<div class="display-flex">
+	<div class="flex-none">
+		<h6 class="flex-none">Total</h6>
+	</div>
+	<div class="flex-stretch"></div>
+	<div class="flex-none">
+		<h6 class="flex-none">&dollar;$taxedfixed</h6>
+	</div>
+</div>
+HTML;
+}
 
 
 
@@ -149,9 +178,25 @@ HTML;
 
 
 
+/* Recommended lists*/
+function recommendedProducts($a) {
+$products = array_reduce($a, 'recommendListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
 
+function recommendedCategory($cat,$limit=4) {
+	$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' ORDER BY `date_create` DESC LIMIT $limit"); 
 
+	recommendedProducts($result);
+}
 
+function recommendedSimilar($cat,$id=0,$limit=4) {
+	$result = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `category`='$cat' AND `id`<>$id ORDER BY rand() DESC LIMIT $limit"); 
+
+	recommendedProducts($result);
+}
 
 ?>
 

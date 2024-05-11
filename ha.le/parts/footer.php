@@ -1,8 +1,9 @@
+
 <footer class="layout-footer">
 	<div class="footer-body">
 		
 		<div class="layout-aside">
-			<h4>COMPANY INFO</h4>
+			<h5>COMPANY INFORMATION</h5>
 		</div>
 		
 		<div class="layout-main">
@@ -17,14 +18,16 @@
 					</ul>
 				</div>
 		
-				<div class="layout-main-col display-flex flex-align-end">
-					<div class="display-flex flex-stretch newsletters">
-						<div class="flex-stretch">
-							<input type="text" placeholder="" class="form-input" >
-						</div>
-						<div class="form-control">
-							<button class="form-button transparent">SUBCRIBE FOR NEWSLETTERS</button> 
-						</div>
+				<div class="layout-main-col display-flex flex-align-end newsletters-section">
+					<div class="display-flex flex-stretch">
+						<form>
+							<div class="display-flex newsletters flex-column">
+								<div class="flex-stretch">
+									<input type="text" placeholder="SUBCRIBE FOR NEWSLETTERS" class="form-input" >
+									<a class="form-button transparent">SUBMIT</a>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -43,3 +46,8 @@
 	</div>
 		
 </footer>
+
+
+
+
+

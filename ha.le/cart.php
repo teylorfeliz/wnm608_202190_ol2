@@ -20,7 +20,6 @@ $cart_items = getCartItems();
 	<?php include "parts/meta.php"; ?>
 </head>
 <body>
-	
 	<?php include "parts/header.php"; ?>
 
 
@@ -35,7 +34,7 @@ $cart_items = getCartItems();
 				<div class="layout-main-col">
 					<div class="display-flex">
 						<div class="flex-none">
-							<h4>Cart</h4>
+							<h4><?= makeCartBadge(); ?> Item(s) in Cart</h4>
 						</div>
 						<div class="flex-stretch"></div>
 					</div>
@@ -53,8 +52,6 @@ $cart_items = getCartItems();
 			</div>
 
 		</div>
-
-
 
 	</div>
 

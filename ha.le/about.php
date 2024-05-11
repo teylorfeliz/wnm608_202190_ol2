@@ -8,7 +8,6 @@
 	
 </head>
 <body>
-	
 	<?php include "parts/header.php"; ?>
 
 
@@ -72,10 +71,9 @@
 			</div>
 
 		</div>
-     
-		</div>
-	</div>
 
+		<div class="footer-push"></div>
+	</div>
 
 	<?php include "parts/footer.php"; ?>
 
