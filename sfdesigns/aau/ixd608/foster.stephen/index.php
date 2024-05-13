@@ -1,3 +1,8 @@
+<?php
+
+	include_once "lib/php/functions.php";
+	include_once "parts/templates.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,6 @@
 	<title>Nova Media</title>	
 
 	<?php include "parts/meta.php"; ?>
-	<?php include "lib/php/functions.php"; ?>
 </head>
 <body>
 
@@ -33,6 +37,13 @@
 		<div class="card soft">
 			<h2>New Items We're Looking Forward To!</h2>	
 		</div>
+	</div>
+
+	<div class="container">
+		<h2>Latest </h2>
+		<?php recommendedCategory("li"); ?>
+		<h2>Latest </h2>
+		<?php recommendedCategory("bags"); ?>
 	</div>
 
 </body>
