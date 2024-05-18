@@ -1,16 +1,16 @@
 # Ha Le
 
 ## Relevant Links
-- https://hle.design
-- https://hle.design/aau/wnm608/ha.le
-- https://hle.design/aau/wnm608/ha.le/styleguide
-- https://hle.design/aau/wnm608/ha.le/admin
+- http://hle.design
+- http://hle.design/aau/wnm608/ha.le/index.php
+- http://hle.design/aau/wnm608/ha.le/styleguide
+- http://hle.design/aau/wnm608/ha.le/admin/index.php
 
 
 ## Extra links
-- https://hle.design/aau/wnm608/ha.le/admin/users.php
-- https://hle.design/aau/wnm608/ha.le/notes
-- https://hle.design/aau/wnm608/ha.le/notes/reading_data.php
+- http://hle.design/aau/wnm608/ha.le/admin/users.php
+- http://hle.design/aau/wnm608/ha.le/notes
+- http://hle.design/aau/wnm608/ha.le/notes/reading_data.php
 
 ## Files
 - Product table:  data/products.sql
