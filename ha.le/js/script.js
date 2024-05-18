@@ -22,19 +22,21 @@ let currentIndex = 0;
 const openLightbox = function(event){
 	console.log(event.target.src);
 
-	//Change the content of the lightbox
 	$(".lightbox-content").html("<img src='" + event.target.src + "'>");
 
-	//Add class active to the lightbox 
 	$(".lightbox").addClass("active");
 	$("body").addClass("light-box-opened");
 }
 
+const openMenu = function(){
+	$(".bigmenubox").addClass("active");
+}
+
+
+
 
 
 $(function(){
-
-
 
 //Follow mousemove 
 	$(".landing-image").on("mousemove touchmove", function(event){
@@ -49,9 +51,6 @@ $(function(){
 			transform: 'translate(' + newpos.x + 'px, ' + newpos.y + 'px)'
 		});
 	})
-
-
-
 });
 
 
@@ -83,21 +82,15 @@ $(function(){
 
 
 
+$(function(){
 
+	$(".body").on("click", ".bigmenu-button", openMenu)
 
+	$(".bigmenu-back").on("click", function(){
+		$(".bigmenubox").removeClass("active");
+	})
 
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 
 

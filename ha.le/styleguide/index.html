@@ -3,569 +3,765 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSS Styleguide</title>
+	<title>Styleguide</title>
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,200,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,-25" />
 
 	<link rel="stylesheet" href="../lib/css/styleguide.css">
 	<link rel="stylesheet" href="../lib/css/gridsystem.css">
+	<link rel="stylesheet" href="../lib/css/layout.css">
 	<link rel="stylesheet" href="../css/storetheme.css">
+	<link rel="stylesheet" href="../css/lightboxes.css">
+	<link rel="stylesheet" href="../css/styleguidesheet.css">
 
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../lib/js/jquery-3.7.1.min"></script>
 </head>
 <body>
-	
-	<header class="navbar">
-		<div class="styleguide-container display-flex">
-			<div class="flex-none">
-				<h1 style="font-family: SuisseBook; margin-top: 1em;">STYLEGUIDE</h1>
+	<header class="stg-header">
+		<div class="display-flex stg-menu-bar" style="padding: 0.3em 1.5em">
+			<div class="display-flex" style="align-self: center; flex: 1 1 0px;">
+				<h5>Styleguide</h5>
 			</div>
-			
-			<div class="flex-stretch"></div>
+			<div class="display-flex flex-align-center" style="flex: 1 1 0px;">
+				<nav>
+					<h5><a href="#table-of-contents" style="margin-left: 0.5em;">Table of Content</a></h5>
+				</nav>
+			</div>
+			<div class="display-flex flex-align-center stg-menu-button">
+				<label for="stg-menu" class="material-symbols-outlined">menu</label>
+			</div>
+
+		</div>
+
+		<input type="checkbox" id="stg-menu" class="hidden">
+		<div class="stg-menu" id="table-of-contents">
+			<div class="stg-content-cols"></div>
+			<div class="stg-content-cols">
+				<nav class="nav list-nav">
+					<ul>
+						<li><a href="#typography">Colors & Typography</a></li>
+					    <li><a href="#cards">Cards, Flex & Grid Systems</a></li>
+					    <li><a href="#navigation">Navigation</a></li>
+					    <li><a href="#table">Tables</a></li>
+					    <li><a href="#viewport">Viewport</a></li>
+					    <li><a href="#figures">Figures</a></li>
+					    <li><a href="#forms">Forms</a></li>
+					    <li><a href="#buttons">Buttons & Search bars</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</header>
 
-	<div class="styleguide-container" id="tableofcontents">
-		<div class="thickdivider"></div>
-		<div class="grid gap ">
-			<div class="col-xs-12 col-lg-6">
-				<h3 >TABLE OF CONTENTS</h3>
+
+	<div class="stg-content-wrap" style="position: absolute; top: 2em;">
+		<div class="section" id="typography">
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">Colors</p>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-main-light);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-main-medium);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-main-dark);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-neutral-light);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-neutral-medium);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-neutral-dark);"></div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4" style="height: var(--swatch-height); background-color: var(--color-black);"></div>
+					</div>
+				</div>
+
+				<div class="stg-content-cols">
+					<p class="heading">Typography</p>
+					<div>
+						<p class="divider">H1, H2</p>
+						<h1>Euclid Mono</h1>
+						<h2>Euclid Mono</h2>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">H3, H4, H5, H6</p>
+						<h3>Suisse Intl Book</h3>
+						<h4>Suisse Intl Book</h4>
+						<h5>Suisse Intl Book</h5>
+						<h6>Suisse Intl Light</h6>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Paragraphs</p>
+						<div class=""></div>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio aspernatur tempore maiores magni hic ipsum officiis. Rerum minima eum odit molestiae aut quis, autem officiis sed quos impedit! Voluptate.</p>
+						<p>Architecto, cumque omnis quaerat minus culpa natus sint beatae libero harum. Maiores est hic porro amet magni fuga accusantium nemo esse! Perspiciatis, deserunt, odit. Facere pariatur illum enim quia sunt.</p>
+						<p>Temporibus illum error consequuntur quibusdam nisi fuga ipsam, ea obcaecati? Culpa vel similique soluta voluptates tempore! Pariatur quisquam minus, veniam? Nam ratione cumque numquam officiis repellat dolorem recusandae nemo. Inventore!</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-xs-12 col-lg-6">
-				<div style="margin-top: 1em;">
-					<nav class="nav styleguide-nav">
+		</div>
+
+
+
+
+		<div class="section" id="cards">
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="flex-none heading">CARD</p>
+					<div class="flex-none">
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-4">
+								<div class="card soft">Card Soft</div>
+							</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-4">
+								<div class="card hard">Card Hard</div>
+							</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-4">
+								<div class="card light">Card Light</div>
+							</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-12 col-md-4">
+								<div class="card dark">Card Dark</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="display-flex stg-content-cols">
+					<p class="heading">FLEX & GRID SYSTEMS</p>
+					<p class="divider">Flex System</p>
+					<div class="display-flex">
+						<div class="flex-none card hard" style="margin-top: 0.5em">
+							<h5>Flex None</h5>
+						</div>
+						<div class="flex-stretch card hard" style="margin-top: 0.5em">
+							<h5>Flex Stretch</h5>
+						</div>
+						<div class="flex-none card hard" style="margin-top: 0.5em">
+							<h5>Flex None</h5>
+						</div>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">12 Columns Grid system</p>
+						<div class="grid gap">
+							<div class="col-xs-12" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">12</div>
+						</div>
+
+						<div class="grid gap">
+							<div class="col-xs-1" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">1</div>
+							<div class="col-xs-11" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">11</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-2" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">2</div>
+							<div class="col-xs-10" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">10</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-3" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">3</div>
+							<div class="col-xs-9" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">9</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-4" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">4</div>
+							<div class="col-xs-8" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">8</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-5" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">5</div>
+							<div class="col-xs-7" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">7</div>
+						</div>
+						<div class="grid gap">
+							<div class="col-xs-6" style="width: 100%; margin-top: 0.5em; padding: 1em;background-color: var(--color-neutral-light);">6</div>
+							<div class="col-xs-6" style="width: 100%; margin-top: 0.5em; padding: 1em; background-color: var(--color-neutral-light);">6</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="section" id="navigation">
+
+			<script>
+			const makeNav = (classes='') =>{
+				const links = ['HOME', 'STORE', 'ABOUT'];
+				let ran = Math.floor(Math.random()*links.length);
+				document.write( `
+				<div>
+					<nav class="${classes}">
 						<ul>
-							<li class="thindivider"><a href="#typography">Typography</a></li>
-						    <li class="thindivider"><a href="#cards">Cards</a></li>
-						    <li class="thindivider"><a href="#navigation">Navigation</a></li>
-						    <li class="thindivider"><a href="#gridsystem">Grid System</a></li>
-						    <li class="thindivider"><a href="#table">Tables</a></li>
-						    <li class="thindivider"><a href="#figures">Figures</a></li>
-
-						    <div class="grid gap">
-						    	<div class="col-xs-12 col-md-2">
-						    		<li><a href="#forms">Forms</a></li>
-						    	</div>
-						    	<div class="col-xs-12 col-md-10">
-								    <ul>
-								    	<li class="thindivider" style="margin-top: 0;"><a href="#inputs">Inputs</a></li>
-								    	<li class="thindivider"><a href="#labels">Labels</a></li>
-								    	<li class="thindivider"><a href="#controls">Controls</a></li>
-								    	<li class="thindivider"><a href="#buttons">Buttons</a></li>
-								    	<li class="thindivider"><a href="#hotdogs">Hotdogs</a></li>
-								    	<li class="thindivider"><a href="#select">Select</a></li>
-								    	<li class="thindivider"><a href="#checkboxes">Check Boxes</a></li>
-								    </ul>
-						    	</div>
-						    </div>
-
+						${links.reduce((r,o,i)=>{
+							return r+`<li class="${ran==i?'active':''}"><a href="">${o}</a></li>`;
+						}, '')}
 						</ul>
 					</nav>
+
+				</div>
+				`);
+			}
+			</script>
+
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">NAVIGATION</p>
+				</div>
+
+				<div class="stg-content-cols" style="padding-top: 3em;">
+					<div>
+						<p class="divider">Basic Nav</p>
+						<script>makeNav('nav')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Blur Nav</p>
+						<script>makeNav('nav nav-blur')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Flex Nav</p>
+						<script>makeNav('nav nav-flex')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Crumbs Nav Nav</p>
+						<script>makeNav('nav nav-crumbs')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Pills Nav</p>
+						<script>makeNav('nav nav-pills')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Stretch Nav</p>
+						<script>makeNav('nav nav-stretch')</script>
+					</div>
+					<div class="space"></div>
+					<div>
+						<p class="divider">Material Nav</p>
+						<script>makeNav('nav nav-material')</script>
+					</div>
+				</div>
+			</div>
+
+			<script>
+			$("#navigation a").on("click", function(e){
+				e.preventDefault();
+				$(this).closest("li").addClass("active")
+				.siblings().removeClass("active")
+			})
+			</script>
+
+		</div>
+
+
+
+
+		<div class="section" id="table">
+
+			<script>
+			const makeTable = (classes='') =>{
+				const head = ['ID', 'Office', 'Name', 'Email', 'Phone'];
+				const body = [
+					['522', "Hamilton Cline", 'hcline@academyart.edu', '555-2424'],
+					['512', "Fred McHale", 'fmchale@academyart.edu', '555-2424'],
+					['522', "Micheal Catanzaro", 'mcatanzaro@academyart.edu', '555-2424'],
+					['522', "Andrea Pimentel", 'apimentel@academyart.edu', '555-2424'],
+				];
+
+				//Let ran = Math.floor(Math.random().links.length);
+				document.write( `
+				<table class="${classes}">
+					<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+					<tbody>${body.reduce((r,o,i)=>r+
+						`<tr>${
+							[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+						}</tr>`, '')
+					}</tbody>
+				</table>
+				`);
+			}
+			</script>
+
+
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">Table</p>
+				</div>
+
+				<div class="stg-content-cols" style="padding-top: 3em;">
+
+					<p class="divider">Basic Table</p>
+					<div>
+						<script>makeTable("table")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Striped Table</p>
+					<div>
+						<script>makeTable("table striped")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Lined Vertical Table</p>
+					<div>
+						<script>makeTable("table lined vertical")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Lined Horizontal Table</p>
+					<div>
+						<script>makeTable("table lined horizontal")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Lined Border Table</p>
+					<div>
+						<script>makeTable("lined border table")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Lined All Table</p>
+					<div>
+						<script>makeTable("table lined all")</script>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Combination</p>
+					<div>
+						<script>makeTable("table lined border striped")</script>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
 
 
 
-	<div class="styleguide-container" id="typography">
-		<div class="whitespace thickdivider"></div>
-		<div class="grid gap">
-			<div class="display-flex col-xs-12 col-lg-6">
-				<h3>TYPOGRAPHY</h3>
-			</div>
-		
-			<div class="display-block col-xs-12 col-lg-6">
-				<div id="headings">
-					<h5>Headings</h5>
-					<h1>HEADING 1</h1>
-					<h2>HEADING 2</h2>
-					<h3>HEADING 3</h3>
-					<h4>HEADING 4</h4>
-					<h5>Heading 5</h5>
-					<h6>Heading 6</h>
-				</div>
-				<div class="thindivider"></div>
-				<div id="paragraphs">
-					<h5>Paragraphs</h5>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto optio aspernatur tempore maiores magni hic ipsum officiis. Rerum minima eum odit molestiae aut quis, autem officiis sed quos impedit! Voluptate.</p>
-					<p>Architecto, cumque omnis quaerat minus culpa natus sint beatae libero harum. Maiores est hic porro amet magni fuga accusantium nemo esse! Perspiciatis, deserunt, odit. Facere pariatur illum enim quia sunt.</p>
-					<p>Temporibus illum error consequuntur quibusdam nisi fuga ipsam, ea obcaecati? Culpa vel similique soluta voluptates tempore! Pariatur quisquam minus, veniam? Nam ratione cumque numquam officiis repellat dolorem recusandae nemo. Inventore!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-	<div class="styleguide-container" id="cards">
-		<div class="whitespace thickdivider"></div>
-
-		<h3>CARDS</h3>
-		<div class="grid gap">
-			<div class="col-xs-12 col-md-3">
-				<div class="card soft">Card Soft</div>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<div class="card hard">Card Hard</div>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<div class="card light">Card Light</div>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<div class="card medium">Card Medium</div>
-			</div>
-			<div class="col-xs-12 col-md-3">
-				<div class="card stylized">Card Stylized</div>
-			</div>
-
-		</div>
-	</div>
-
-
-
-
-
-
-
-	<div class="styleguide-container" id="navigation">
-
-		<script>
-		const makeNav = (classes='') =>{
-			const links = ['Home', 'Store', 'About'];
-			let ran = Math.floor(Math.random()*links.length);
-			document.write( `
+		<div class="section" id="viewport">
 			<div>
-				<nav class="${classes}">
-					<ul>
-					${links.reduce((r,o,i)=>{
-						return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
-					}, '')}
-					</ul>
-				</nav>
-
+				<p class="heading">Viewport</p>
+				<div class="view-window" style="background-image: url('../img/building.jpeg')"></div>
 			</div>
-			`);
-		}
-		</script>
+		</div>
 
-		<div class="whitespace thickdivider"></div>
-		<div class="grid gap">
-			<div class="col-xs-12 col-lg-6">
-				<h3>NAVIGATION</h3>
-			</div>
-		
-			<div class="col-xs-12 col-lg-6">
-				<div class="display-block card hard">
-					<h5>Basic Nav</h5>
-					<script>makeNav('nav')</script>
+
+
+		<div class="section" id="figures">
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">Figures</p>
 				</div>
 
-				<div class="card hard">
-					<h5>Flex Nav</h5>
-					<script>makeNav('nav nav-flex')</script>
+				<div class="stg-content-cols" style="padding-top: 3em;">
+					<p class="divider">Basic Figure</p>
+					<div class="grid gap">
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div><h5>Product Name</h5></div>
+									<div><h5>$0.00</h5></div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div><h5>Product Name</h5></div>
+									<div><h5>$0.00</h5></div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div><h5>Product Name</h5></div>
+									<div><h5>$0.00</h5></div>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Figure Overlay</p>
+					<div class="grid gap">
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product-overlay">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div class="caption-body">
+										<div><h5>Product Name</h5></div>
+										<div><h5>$0.00</h5></div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product-overlay">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div class="caption-body">
+										<div><h5>Product Name</h5></div>
+										<div><h5>$0.00</h5></div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<figure class="figure product-overlay">
+								<img src="https://via.placeholder.com/400x400?text=product" alt="">
+								<figcaption>
+									<div class="caption-body">
+										<div><h5>Product Name</h5></div>
+										<div><h5>$0.00</h5></div>
+									</div>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="section" id="forms">
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">Form</p>
 				</div>
 
-				<div class="card hard">
-					<h5>Material Nav</h5>
-					<script>makeNav('nav nav-material')</script>
-				</div>
-
-				<div class="card hard">
-					<h5>Blur Nav</h5>
-					<script>makeNav('nav nav-blur')</script>
-				</div>
-			</div>
-		</div>
-
-		<script>
-		$("#navigation a").on("click", function(e){
-			e.preventDefault();
-			$(this).closest("li").addClass("active")
-			.siblings().removeClass("active")
-		})
-		</script>
-
-	</div>
-
-
-
-
-
-
-
-	<div class="styleguide-container" id="gridsystem gridexample">
-		<div class="whitespace thickdivider" ></div>
-		<h3>GRID SYSTEM</h3>
-		<div class="styleguide-container">
-			
-			<div class="grid gap">
-				<div class="light col-xs-12 col-md-6 col-lg-3" style="padding: 2em; background-color: var(--color-neutral-light);">column 3</div>
-				<div class="light col-xs-12 col-md-6 col-lg-3" style="padding: 2em; background-color: var(--color-neutral-light);">column 3</div>
-				<div class="light col-xs-12 col-md-6 col-lg-3" style="padding: 2em; background-color: var(--color-neutral-light);">column 3</div>
-				<div class="light col-xs-12 col-md-6 col-lg-3" style="padding: 2em; background-color: var(--color-neutral-light);">column 3</div>
-			</div>
-
-			<div class="smallgap thindivider" style="margin-bottom: 2em;"></div>
-			<div class="grid gap">
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-				<div class="col-xs-12 col-md-4 col-lg-2" style=" padding: 2em; background-color: var(--color-neutral-light);">column 2</div>
-			</div>
-		</div>
-
-	</div>
-
-
-
-
-
-
-
-	<script>
-	const makeTable = (classes='') =>{
-		const head = ['ID', 'Office', 'Name', 'Email', 'Phone'];
-		const body = [
-			['522', "Hamilton Cline", 'hcline@academyart.edu', '555-2424'],
-			['512', "Fred McHale", 'fmchale@academyart.edu', '555-2424'],
-			['522', "Micheal Catanzaro", 'mcatanzaro@academyart.edu', '555-2424'],
-			['522', "Andrea Pimentel", 'apimentel@academyart.edu', '555-2424'],
-		];
-
-		//Let ran = Math.floor(Math.random().links.length);
-		document.write( `
-		<table class="${classes}">
-			<thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
-			<tbody>${body.reduce((r,o,i)=>r+
-				`<tr>${
-					[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
-				}</tr>`, '')
-			}</tbody>
-		</table>
-		`);
-	}
-	</script>
-
-
-	<div class="styleguide-container" id="table">
-		<div class="whitespace thickdivider"></div>
-		<div class="grid gap">
-			<div class="col-xs-12 col-lg-6">
-				<h3>TABLE</h3>
-			</div>
-
-			<div class="col-xs-12 col-lg-6">
-
-				<h5>Striped Table</h5>
-				<script>makeTable("table striped")</script>
-			
-				<div class="thindivider"></div>
-				<h5>Lined Horizontal Table</h5>
-				<script>makeTable("table lined horizontal")</script>
-
-				<div class="thindivider"></div>
-				<h5>Lined Border Table</h5>
-				<script>makeTable("table lined vertical")</script>
-
-
-			</div>
-		</div>
-
-	</div>
-
-
-
-
-
-	<div class="styleguide-container" id="figures">
-		<div class="whitespace thickdivider"></div>
-		<h3>FIGURES</h3>
-
-		<h5>Basic Figure</h5>
-		<div class="grid gap">
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>Product</figcaption>
-				</figure>
-			</div>
-
-		</div>
-
-
-		<div class="smallgap thindivider"></div>
-
-		<h5>Product Overlay</h5>
-		<div class="grid gap">
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-			<div class="col-xs-12 col-md-4 col-lg-2">
-				<figure class="figure product-overlay">
-					<img src="https://via.placeholder.com/400x400?text=product" alt="">
-					<figcaption>
-						<div class="caption-body">
-							<div>Product Name</div>
-						</div>
-					</figcaption>
-				</figure>
-			</div>
-		</div>
-
-
-
-
-
-	<div class="styleguide-container" id="forms">
-		<div class="whitespace thickdivider"></div>
-
-		<div class="grid gap">
-			<div class="col-xs-12 col-md-6">
-				<h3>FORM</h3>
-			</div>
-
-			<div class="col-xs-12 col-md-6">
-				<h4>INPUTS</h4>
-
-				<div id="input">
+				<div class="stg-content-cols" style="padding-top: 3em;">
+					<p class="divider">Default Inputs</p>
 					<form>
-						<div class="form-control">
-							<label class="form-label">Example</label>
-							<input type="text" placeholder="Text" class="form-input">
-						</div>
-						<div class="form-control">
-							<label class="form-label">Example</label>
-							<input type="number" placeholder="Number" class="form-input">
-						</div>
-						<div class="form-control">
-							<label class="form-label">Example</label>
-							<input type="password" placeholder="Password" class="form-input">
-						</div>
-						<div class="form-control display-flex flex-align-center ">
-							<div class="flex-stretch" style="margin-right: 1em;">
-								<label class="form-label">Example</label>
-								<input type="search" placeholder="Search" class="form-input">
+						<input type="text"><br>
+						<input type="number"><br>
+						<input type="password"><br>
+						<input type="url"><br>
+						<input type="email"><br>
+						<input type="datetime-local"><br>
+						<input type="date"><br>
+						<input type="search">
+					</form>
+
+					<div class="space"></div>
+					<p class="divider">Form Input</p>
+					<form>
+						<input type="text" placeholder="Text" class="form-input">
+						<input type="number" placeholder="Number" class="form-input">
+						<input type="password" placeholder="Password" class="form-input">
+						<input type="search" placeholder="Search" class="form-input">
+					</form>
+
+					<div class="space"></div>
+					<p class="divider">Form Label</p>
+					<form>
+						<label class="form-label">Example</label>
+						<input type="text" placeholder="Text" class="form-input">
+						<label class="form-label">Example</label>
+						<input type="number" placeholder="Number" class="form-input">
+						<label class="form-label">Example</label>
+						<input type="password" placeholder="Password" class="form-input">
+						<label class="form-label">Example</label>
+						<input type="search" placeholder="Search" class="form-input">
+					</form>
+
+
+					<div class="space"></div>
+					<p class="divider">Form Control</p>
+					<h5 class="space-after-paragraph">Shipping</h5>
+					<form>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">FIRST NAME</label>
+								<input type="text" placeholder="" class="form-input">
 							</div>
 							<div class="flex-stretch">
-								<label class="form-label">Example</label>
-								<input type="search" placeholder="Search" class="form-input">
+								<label class="form-label">LAST NAME</label>
+								<input type="text" placeholder="" class="form-input">
 							</div>
 						</div>
-					</form>			
-				</div>
-
-
-				<div class="thickdivider"></div>
-				<h4 id="buttons">BUTTONS</h4>
-
-				<div>
-					<div class="form-control">
-						<input type="button" class="form-button green" value="Add to Cart">
-					</div>
-
-					<div class="form-control" >
-						<a href="#" class="form-button black">CHECK OUT</a>
-					</div>
-				</div>
-
-
-				<div class="thickdivider"></div>
-				<h4 id="hotdogs">HOTDOG</h4>
-
-				<div>
-					<h5>Basic Search</h5>
-					<div class="form-control">
-						<form>
-							<input type="search" class="hotdog" placeholder="Search...">
-						</form>
-					</div> 
-
-					<div class="thindivider"></div>
-					<h5>Stylized Search</h5>
-					<div class="form-control hotdog-invert">
-						<form class="hotdog flex-align-center">
-							<input type="search" placeholder="Search...">
-							<button type="submit" class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</form>
-					</div> 
-				</div>
-
-
-				<div class="thickdivider"></div>
-				<h4 id="select">SELECT</h4>
-
-				<div>
-					<div class="form-select">
-						<select>
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-						</select>
-					</div>
-				</div>
-
-
-				<div class="thickdivider"></div>
-				<h4 id="checkboxes">CHECK BOXES</h4>
-
-				<div>
-					<h5>Basic Checkbox</h5>
-					<label>Label <input type="checkbox" id="input-1"></label>
-					<label for="input-1"> Label </label>
-
-					<div class="divider"></div>
-
-
-					<div class="space thindivider"></div>
-					<h5>Heart Checkbox</h5>
-					<div class="favorite" style="font-size: 2em;">
-						<input type="checkbox" id="heart-example" class="hidden">
-						<label for="heart-example">&hearts;</label>
-					</div>
-
-					<div class="divider"></div>
-
-
-
-					<div class="space thindivider"></div>
-					<h5>Toggle</h5>
-
-					<div class="divider"></div>
-					<div class="display-flex flex-align-center">
-						<div class="flex-stretch">
-							<label for="toggle-2" class="form-label">Display Warning?</label>
-						</div>
-						<div class="flex-none">
-							<div class="toggle">
-								<input type="checkbox" id="toggle-2" class="hidden">
-								<label for="toggle-2"></label>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">COUNTRY</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">ZIP CODE</label>
+								<input type="text" placeholder="" class="form-input">
 							</div>
 						</div>
-					</div>
+						<div class="form-control display-flex">
+							<div class="flex-stretch">
+								<label class="form-label">ADDRESS LINE 1 (STREET)</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">ADDRESS LINE 2 (APT, SUIT, UNIT)</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">STATE</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">CITY</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">EMAIL</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">PHONE</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">NOTE (OPTIONAL)</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+					</form>	
+
+					<h5 class="space-before-paragraph space-after-paragraph">Payment</h5>
+					<form>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">NAME ON CARD</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">CARD NUMBER</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">EXPIRE</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+							<div class="flex-stretch">
+								<label class="form-label">CVV</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+					</form>
+
+					<h5 class="space-before-paragraph space-after-paragraph">Contact</h5>
+					<form>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">FULL NAME</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">EMAIL</label>
+								<input type="text" placeholder="" class="form-input">
+							</div>
+						</div>
+						<div class="form-control display-flex flex-align-center">
+							<div class="flex-stretch">
+								<label class="form-label">MESSAGE</label>
+								<form>
+									<textarea type="search" class="form-text-box" placeholder=""></textarea> 
+								</form>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
-
 		</div>
 
+
+
+
+
+
+		<div class="section" id="buttons">
+			<div class="stg-content-rows">
+				<div class="display-flex stg-content-cols">
+					<p class="heading">Buttons</p>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<p class="divider">Form Buttons</p>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4 form-control">
+							<button class="form-button">Button</button>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4 form-control" style="margin-top: 1em;">
+							<input type="button" class="form-button" value="Input">
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4 form-control" style="margin-top: 1em;">
+							<a href="#" class="form-button">Anchor</a>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4 form-control" style="margin-top: 1em;">
+							<button class="form-button rounded">Rounded Button</button>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4 form-control" style="margin-top: 1em;">
+							<button class="form-button transparent" style="padding: 0;">Transparent Button</button>
+						</div>
+					</div>
+
+
+					<div class="space"></div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<p class="divider">Select</p>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<div class="display-flex">
+								<div class="flex-none">
+									<div class="form-select">
+										<select>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="space"></div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<p class="divider">Check box</p>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<label>Label <input type="checkbox" id="input-1"></label>
+							<label for="input-1"> Label </label>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<div class="favorite" style="font-size: 2em;">
+								<input type="checkbox" id="heart-example" class="hidden">
+								<label for="heart-example">&hearts;</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="space"></div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<p class="divider">Toggle</p>
+						</div>
+					</div>
+					<div class="grid">
+						<div class="col-xs-12 col-md-4">
+							<div class="toggle">
+								<input type="checkbox" id="toggle-1" class="hidden">
+								<label for="toggle-1"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="stg-content-cols">
+					<p class="heading">Search bars</p>
+
+					<p class="divider">Hotdog</p>
+					<div class="form-control">
+						<form class="hotdog light">
+							<input type="search" placeholder="Search">
+						</form>
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Expand Search Bar  - ( Click icon to activate )</p>
+					<div class="example-search-bar">
+						<div class="form-control">
+							<form class="search-bar">
+								<input type="search"
+								placeholder="Search" class="search-bar-input">
+								<button class="search-bar-button"><span class="material-symbols-outlined" style="margin: 0;">search</span></button>
+							</form>
+						</div> 
+					</div>
+
+					<div class="space"></div>
+					<p class="divider">Interactive Bar  - ( Click to activate )</p>
+					<div class="display-flex flex-align-end newsletters-section">
+						<div class="display-flex flex-stretch">
+							<form>
+								<div class="display-flex newsletters flex-column">
+									<div class="flex-stretch">
+										<input type="text" placeholder="ENTER YOUR SEARCH" class="form-input" >
+										<a class="form-button transparent">GO</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
+
+		<footer>
+			<div class="divider display-flex" style="margin-top: 1em;">
+				<div class="display-flex" style="align-self: center; flex: 1 1 0px;">
+					<h4>The End</h4>
+				</div>
+				<div class="display-flex flex-align-center" style="flex: 1 1 0px;">
+					<div class="flex-none"><h4>Wnm608 - Spring 2024</h4></div>
+					<div class="flex-stretch"></div>
+					<div class="flex-none"><h4>Ha Le</h4></div>
+				</div>
+			</div>
+			</div>
+		</footer>
 
 
 	</div>
 
-	<div class="whitespace"></div>
-
-
-
 </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html> 

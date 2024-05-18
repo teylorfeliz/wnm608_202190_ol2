@@ -3,11 +3,9 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-// In the function below, add [0] at the end to output as a single object instead of an array
-
-// $cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id` IN (1,4,6)");
-
 $cart_items = getCartItems();
+
+$cart = getcart();
 
 ?>
 
@@ -25,32 +23,56 @@ $cart_items = getCartItems();
 
 	<div class="layout-body">
 
-
 		<?php include "parts/navbar.php"; ?>
 
 		<div class="layout-main">
 
-			<div class="layout-main-cols">
-				<div class="layout-main-col">
-					<div class="display-flex">
-						<div class="flex-none">
-							<h4><?= makeCartBadge(); ?> Item(s) in Cart</h4>
+				<?php 
+
+				if(count($cart)) {
+					?>
+					<div class="layout-main-cols">
+						<div class="layout-main-col">
+							<div class="display-flex">
+								<div class="flex-none">
+									<h4><?= makeCartBadge(); ?> Item(s) in Cart</h4>
+								</div>
+								<div class="flex-stretch"></div>
+							</div>
+							<div class="space"></div>
+							<div class="display-flex flex-column">
+								<?= array_reduce($cart_items,'cartListTemplate') ?>
+							</div>						
 						</div>
-						<div class="flex-stretch"></div>
-					</div>
-					<div class="space"></div>
-					<div class="display-flex flex-column">
-						<?= array_reduce($cart_items,'cartListTemplate') ?>
-					</div>						
-				</div>
 
-				<div class="layout-main-col">
-					<div class="display-flex" style="justify-content: flex-end;">
-						<?= cartTotals() ?>
+						<div class="layout-main-col">
+							<div class="display-flex" style="justify-content: flex-end;">
+								<?= cartTotals() ?>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-
+					<?php 
+				} else {
+					?>
+					<div class="layout-main-cols">
+						<div class="layout-main-col">
+							<div class="flex-none">
+								<p style="margin: 0; line-height: 1em;">No items in cart</p>
+							</div>					
+						</div>
+					</div>
+					<div class="doublespace"></div>
+					<div class="layout-main-cols">
+						<div class="layout-main-col">
+							<h4 class="space-after-paragraph">Recommendations</h4>
+							<?php
+							recommendedAnything(8);
+							?>
+						</div>
+					</div>
+					<?php
+				}
+				?>
 		</div>
 
 	</div>

@@ -13,13 +13,17 @@ include_once "parts/templates.php";
 
 	<?php include "parts/meta.php"; ?>
 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,-25" />
+
 	<script src="lib/js/functions.js"></script>
 	<script src="js/templates.js"></script>
 	<script src="js/product_list.js"></script>
 
+	<script src="js/script.js"></script>
+
 </head>
 <body>
-	<header>
+	<header style="">
 		<div class="layout-header">
 			<div class="layout-aside sitename">
 				<a href="index.php"><h1>CHICHAUS</h1></a>
@@ -27,27 +31,36 @@ include_once "parts/templates.php";
 				
 			<div class="layout-main">
 				<div class="layout-main-cols">
-					<div class="layout-main-col" style="flex-direction: row;">
+					<div id="large-screen-search-bar" class="layout-main-col" style="flex-direction: row;">
 						<div class="form-control">
-							<form id="product-search">
-								<input type="search" class="basic-input" placeholder="What are you looking for?">
+							<form id="product-search" class="search-bar">
+								<input type="search"
+								placeholder="What are you looking for?" class="search-bar-input">
+								<button type="submit" for="product-search" class="search-bar-button"><span class="material-symbols-outlined" style="margin: 0;">search</span></button>
 							</form>
 						</div> 
-						
 					</div>
 					<div class="layout-main-col display-flex">
-						<!-- nav.nav>ul>li*4>a[href=#articles$]>{Link $} -->
 						<nav class="nav nav-flex">
 							<ul>
+								<li><a href="log_in.php">LOG IN</a></li>
 								<li>
-									<a href="cart.php" style="padding:  0.2em 0em 0.2em 3em;">
+									<a href="cart.php">
 										CART
 										<span class="badge"><?= makeCartBadge(); ?></span>
 									</a>
 								</li>
-								<li><a href="log_in.php" style="padding:  0.2em 0em 0.2em 3em;">LOG IN</a></li>
 							</ul>
 						</nav>
+					</div>
+					<div id="small-screen-search-bar" class="layout-main-col" style="flex-direction: row;">
+						<div class="form-control">
+							<form id="small-screen-product-search" class="search-bar">
+								<input type="search"
+								placeholder="What are you looking for?" class="search-bar-input">
+								<button type="submit" for="small-screen-product-search" class="search-bar-button"><span class="material-symbols-outlined" style="margin: 0;">search</span></button>
+							</form>
+						</div> 
 					</div>
 				</div>
 			</div>
@@ -58,14 +71,27 @@ include_once "parts/templates.php";
 
 
 	<div class="layout-body">
-
-		<?php include "parts/navbar.php"; ?>
+		<div class="layout-aside product-list-page" style="background-color: var(--color-white);">
+			<div class="flex-none menu-button">
+				<label for="menu" class="material-symbols-outlined">menu</label>
+			</div>
+			<input type="checkbox" id="menu" class="hidden">	
+			<div class="menu">
+				<nav class="flex-none nav nav-blur">
+					<ul>
+						<li><a href="new_drop.php">NEWEST DROP</a></li>
+						<li><a href="product_list.php">ALL PRODUCTS</a></li>
+						<li><a href="about.php">ABOUT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
 		<div class="layout-main">
 			<div class="product-list-container">
 
 				<div class="display-flex sorting-bar">
-					<div class="form-control display-flex flex-stretch">
+					<div class="form-control display-flex flex-stretch" style="line-height: 1em;"> 
 						<div class="flex-none" >
 							<button data-filter="category" data-value="" type="button" class="form-button small-button transparent">All</button>
 						</div>

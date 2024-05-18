@@ -42,9 +42,11 @@ $images_elements = array_reduce($images, function($r,$o){
 
 		<div class="layout-main">
 			<div class="layout-main-cols">
-				<div class="layout-main-col">
+				<div class="layout-main-col" style="padding-bottom: 0;">
 					<nav class='nav nav-crumbs'>
-						<div class="display-flex space-after-paragraph"><a href="<?php echo $_SERVER['HTTP_REFERER'] ?>" style="line-height: 1em">Back</a></div>
+						<div class="display-flex space-after-paragraph">
+							<a href="<?php echo $_SERVER['HTTP_REFERER'] ?>" style="line-height: 1em;">Back</a>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -64,7 +66,7 @@ $images_elements = array_reduce($images, function($r,$o){
           				<div class="col-xs-12 col-lg-11 images-main">
           					<img src="img/<?= $product->thumbnail ?>" alt="">
           				</div>
-          				<div class="display-flex col-xs-6 col-lg-1 flex-wrap images-thumbs">
+          				<div class="display-flex col-xs-12 col-lg-1 flex-wrap images-thumbs">
           					<?= $images_elements ?>
           				</div>
           			</div>
@@ -89,24 +91,26 @@ $images_elements = array_reduce($images, function($r,$o){
 						<p>Dimension: <?= $product->dimensions ?></p>
 
 
-						<div class="display-flex flex-align-center space-before-paragraph">
-							<div class="flex-none display-flex">
-								<h5><label for="product-amount" class="flex-none">QUATITY</label></h5>
-								<div class="form-select flex-none" style="margin-left: 1em">
-									<select id="product-amount" name="product-amount"> 
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
+						<div class="space"></div>
+						<div class="display-flex flex-align-center flex-wrap">
+							<div class="display-flex flex-none" style="margin-top: 1em;">
+								<h5><label for="product-amount">QUATITY</label></h5>
+								<div>
+									<div class="form-select flex-none" style="margin-left: 1em">
+										<select id="product-amount" name="product-amount"> 
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
 								</div>
 							</div>
-						</div>
-
-						<div class="space"></div>
-						<div class="form-control">
-							<input type="submit" class="form-button" value="ADD TO CART">
+							<div class="flex-stretch"></div>
+							<div class="flex-none form-control" style="margin-top: 1em;">
+								<input type="submit" class="form-button" value="ADD TO CART">
+							</div>
 						</div>
 
 					</form>
@@ -118,15 +122,15 @@ $images_elements = array_reduce($images, function($r,$o){
 				</div>
 			</div>
 
-			<div class="doublespace"></div>
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<h5>Recommended products</h5>
-					
-					<?php
-					recommendedSimilar($product->category,$product->id);
-					?>
-
+					<div class="space-before-section">
+						<h5 class="space-after-paragraph">Recommended products</h5>
+						
+						<?php
+						recommendedSimilar($product->category,$product->id);
+						?>
+					</div>
 				</div>
 
 			</div>	

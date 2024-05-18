@@ -10,7 +10,6 @@
 <body>
 	<?php include "parts/header.php"; ?>
 
-
 	<div class="layout-body">
 
 		<?php include "parts/navbar.php"; ?>

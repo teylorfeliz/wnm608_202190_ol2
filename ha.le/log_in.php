@@ -20,9 +20,9 @@
 
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<div class="container">
+					<div>
 						<h4 class="space-after-paragraph">Log In Into Your Account</h4>
-						<div class="card hard" style="width: 70%">
+						<div class="card hard log-in-form">
 							<form>
 								<div class="form-control display-flex flex-align-center">
 									<div class="flex-stretch">

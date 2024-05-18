@@ -113,7 +113,7 @@ try {
 
 function productListItem($r,$o) {
 return $r.<<<HTML
-<div class="display-flex list" style="width: 50%;">
+<div class="display-flex list">
 	<div class="flex-none images-thumbs">
 		<img src="img/$o->thumbnail" alt="product image">
 	</div>
@@ -138,7 +138,7 @@ $delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=del
 
 // heredoc
 $display =<<<HTML
-<div style="width: 90%;">
+<div >
 	<div>
 		<div class="space"></div>
 		<h3>$o->name</h3>
@@ -307,25 +307,26 @@ HTML;
 	<header>
 		<div class="layout-header">
 			<div class="layout-aside sitename">
-				<a href="index.php"><h1 style="color: var(--color-neutral-medium);">CHICHAUS</h1></a>
+				<a href="index.php"><h1 style="font-size: 1.4em; color: #d5d5d5;">CHICHAUS</h1></a>
 			</div>
 				
 			<div class="layout-main">
 				<div class="layout-main-cols">
 					<div class="layout-main-col" style="flex-direction: row;">
 						<div>
-							<a href="admin/index.php"><h3 style="font-family: var(--font-sans); line-height: 1.3em">PRODUCT ADMIN</h3></a>
+							<a href="admin/index.php"><h3 style="font-family: var(--font-sans); line-height: 1em">PRODUCT ADMIN</h3></a>
 						</div> 
 						
 					</div>
 					<div class="layout-main-col display-flex flex-align-center">
-						<nav class="nav nav-crumbs">
+						<nav class="nav nav-flex">
 							<ul>
 								<li><a href="<?= $_SERVER['PHP_SELF'] ?> ">PRODUCT LIST</a></li>
 								<li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">ADD NEW PRODUCT</a></li>
 							</ul>
 						</nav> 
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -339,6 +340,7 @@ HTML;
 		<div class="layout-aside"></div>
 
 		<div class="layout-main">
+			<div class="layout-main-cols">
 			<?php 
 
 			if(isset($_GET['id'])) {
@@ -346,12 +348,12 @@ HTML;
 					$_GET['id']=="new" ?
 						$empty_product : 
 						makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0]
-					);
+
+					); 
 			} else {
 
 				?>
 
-				<div class="layout-main-cols">
 					<div class="layout-main-col">
 						<h4 class="space-after-paragraph">Product List</h4>
 
@@ -364,6 +366,7 @@ HTML;
 
 						?>
 					</div>
+					<div class="layout-main-col"></div>
 				</div>
 			</div>
 		</div>

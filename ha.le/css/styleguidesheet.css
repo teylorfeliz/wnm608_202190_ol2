@@ -1,0 +1,300 @@
+
+body{
+	box-sizing: border-box;
+}
+
+:root {
+	--swatch-height: 55px;
+}
+
+.stg-header {
+	background-color: var(--color-main-dark); 
+	position: sticky;
+	top: 0;
+	align-items: center;
+	z-index: 3;
+}
+
+.stg-menu-bar {
+	width: 100%;
+	align-items: center;
+}
+
+	.stg-menu-bar h4,
+	.stg-menu-bar h5, 
+	.stg-menu-bar a{
+		color: var(--color-black);
+		padding: 0;
+		line-height: 1em;
+	}
+
+.stg-menu {
+	display: flex;
+	padding: 2em 1.5em;
+	border-bottom: 1.5px solid var(--color-black);
+	background-color: var(--color-white);
+
+	position: static;
+}
+
+.stg-header {
+	position: fixed;
+	top: 0;
+}
+
+.stg-menu {
+	display: none;
+	padding: 2em 1.5em;
+    border-bottom: 1.5px solid var(--color-black);
+    background-color: var(--color-white);
+}
+
+.stg-menu div:nth-child(2) {
+	padding-left: 0.8em;
+}
+
+.stg-header:hover>.stg-menu {
+	display: flex;
+	border-bottom: 2px solid var(--color-black);
+}
+
+
+.list-nav li {
+	padding: 0.5em 0;
+}
+
+.list-nav li+li{
+	border-top: 1px solid var(--color-neutral-medium);
+}
+
+
+.stg-menu-button label {
+	display: none;
+}
+
+@media (max-width: 900px){
+	.stg-menu-bar nav {
+		display: none;
+		pointer-events: none;
+		border: 0;
+	}
+
+	.stg-menu {
+		display: none;
+	}
+
+	.stg-menu div:nth-child(2) {
+		padding-left: 0;
+	}
+
+	.stg-menu ul {
+		display: block;
+	}
+
+	.stg-menu-button label {
+		display: inline-block;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	.stg-header:hover>.stg-menu {
+		display: none;
+	}
+
+	#stg-menu:checked+.stg-menu {
+		display: block;
+		position: absolute;
+        width: 100%;
+        padding: 0.5em 1.5em 2em 1.5em;
+        pointer-events: initial;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.stg-content-wrap {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 1.5em;
+}
+
+.section {
+	min-height: 95vh;
+	padding-bottom: 4em;
+	border-bottom: 1.5px solid var(--color-black);
+}
+
+.stg-content-rows {
+	display: flex;
+	flex-direction: row;
+}
+
+.stg-content-cols {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 0px;
+}
+
+.stg-content-cols+.stg-content-cols{
+	padding-left: 0.5em;
+}
+
+.heading {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: var(--color-white);
+	text-transform: uppercase;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+    padding: 0.7em 0;
+    font-family: 'SuisseLight';
+    font-size: 4em;
+    color: var(--color-black);
+}
+
+.divider {
+    border-top: 0.5px solid var(--color-neutral-dark);
+    border-bottom: 0.5px solid var(--color-neutral-dark);
+    font-size: 0.6em;
+    line-height: 2em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
+h1, h2 {
+	margin: 0;
+	padding: 0.3em 0;
+}
+
+h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0.5em 0;
+}
+
+.example-search-bar {
+	display: block;
+}
+
+.example-search-bar .search-bar {
+	-webkit-appearance: none;
+	outline: 0;
+	display: flex;
+
+	--size: 40px;
+	height: var(--size);
+	width: var(--size);
+	border: 0;
+	background-color: transparent;
+	position: relative;
+	transition: width 300ms cubic-bezier(0.74, -0.01, 0.3, 1.02);
+	overflow: hidden;
+	float: right;
+}
+
+.example-search-bar .search-bar-input {
+	-webkit-appearance: none;
+	outline: 0;
+
+	font-family: EuclidMono;
+   	font-size: 1em;
+   	line-height: calc(var(--size) - 2px);
+
+	flex-grow: 1;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0.3em 0 0.3em 0.7em;
+   	position: absolute;
+   	top: 0;
+   	left: 0;
+   	bottom: 0;
+   	opacity: 0;
+   	cursor: pointer;
+}
+
+.example-search-bar .search-bar-input:focus {
+	outline: 0;
+}
+
+.example-search-bar .search-bar-button{
+	-webkit-appearance: none;
+	outline: 0;
+    border-width: 0;
+    cursor: pointer;
+    
+    font-size: 1em;
+    color: var(--color-black);
+	background-color: transparent;
+
+	padding: 0;
+    text-align: center;
+
+    width: calc(var(--size) - 2px);
+    height: calc(var(--size) - 2px);
+    margin-left: auto;
+}
+
+.example-search-bar .search-bar-button:hover {
+	transform: scale(1.05);
+}
+
+
+.example-search-bar .search-bar:focus-within {
+	width: 100%;
+	border: 1px solid var(--color-neutral-medium);
+}
+
+.example-search-bar .search-bar:focus-within>.search-bar-input {
+	opacity: 1;
+	cursor: initial;
+	width: calc(100% - var(--size));
+}
+
+
+@media (max-width: 900px){
+	.stg-content-rows {
+		flex-direction: column;
+	}
+
+	.stg-content-cols+.stg-content-cols{
+		padding-top: 2em;
+	}
+
+	.heading {
+		padding: 0.2em 0 0.5em 0;
+		font-size: 2em;
+	}
+
+	.section {
+		margin-top: 4em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

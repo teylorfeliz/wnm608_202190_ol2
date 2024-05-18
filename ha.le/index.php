@@ -9,6 +9,10 @@
 
 	<script src="js/script.js"></script>
 
+	<script src="lib/js/functions.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/product_list.js"></script>
+
 </head>
 <body>
 	

@@ -36,17 +36,14 @@ $cart_items = getCartItems();
 
 			<div class="layout-main-cols">
 				<div class="layout-main-col">
-					<h4>PRODUCT CHECKOUT</h4>
-					<div class="space"></div>
-					<div class="checkout-summary">
+					<div class="checkout-review">
 						<div>
-							<h6 class="space-before-paragraph" style="color: var(--color-neutral-medium">Summary</h6>
+							<h6 style="color: var(--color-neutral-medium">Item review</h6>
 						</div>
-						<div class="display-flex flex-column">
-							<?= array_reduce($cart_items,'checkoutSummaryTemplate') ?>
+						<div class="display-flex flex-column space-before-paragraph">
+							<?= array_reduce($cart_items,'checkoutItemReview') ?>
 						</div>
-						<div class="space" style="padding-top: 0.5em; border-top: 1px solid var(--color-neutral-medium);"></div>
-						<div>
+						<div style="padding-top: 1em; border-top: 1px solid var(--color-neutral-medium);">
 							<?= checkoutTotals() ?>
 						</div>
 
@@ -202,14 +199,6 @@ $cart_items = getCartItems();
 							<a href="product_confirmation.php" class="form-button">COMPLETE PAYMENT</a>
 						</div>
 					</form>
-
-
-
-
-
-
-
-
 
 
 				</div>
