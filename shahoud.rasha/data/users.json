@@ -1,0 +1,29 @@
+[
+	{
+		"name" : "Blake Bell",
+		"type" : "Student",
+		"email" : "bell.blake@mail.com",
+		"classes" : [608,604,802]
+	},
+
+	{
+		"name" : "Adam Allan",
+		"type" : "Student",
+		"email" : "allan.adam@mail.com",
+		"classes" : [608,504,302]
+	},
+
+	{
+		"name" : "Austin Anderson",
+		"type" : "student",
+		"email" : "anderson.austin@mail.com",
+		"classes" : [608,502,401]
+	},
+
+	{
+		"name" : "Andrew Baker",
+		"type" : "student",
+		"email" : "baker.andrew@mail.com",
+		"classes" : [608,405,273]
+	}
+]
